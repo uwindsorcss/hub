@@ -1,0 +1,11 @@
+<center>
+	<br><br>
+	<h1>Login Page</h1><br>
+
+  <% if current_user %>
+		<p>Signed in as: <%= current_user.email %></p>
+		<%= link_to "Log out", :logout %>
+	<% else %>
+		<%= link_to "Log in", :google_auth %>
+	<% end %>
+</center>
