@@ -22,7 +22,7 @@ module UwindsorCssEventsSite
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.middleware.use OmniAuth::Builder do
-      provider :google_oauth2, ENV['GOOGLE_CLIENT'], ENV['GOOGLE_SECRET']
+      provider :google_oauth2, ENV['GOOGLE_CLIENT'], ENV['GOOGLE_SECRET'], { hd: 'uwindsor.ca', prompt: 'select_account' }
     end
   end
 end
