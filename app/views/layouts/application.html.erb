@@ -12,7 +12,7 @@
     <center>
       <br>
       <% if current_user %>
-        Signed in as: <%= current_user.email %>
+        Welcome, <%= current_user.name %>!
         <%= link_to "Log out", :logout %>
       <% else %>
         <%= link_to "Log in", :google_auth %>
