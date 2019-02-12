@@ -16,6 +16,9 @@ module UwindsorCssEventsSite
       YAML.load(File.open(env_file)).each do |key, value|
         ENV[key.to_s] = value
       end if File.exists?(env_file)
+
+      admin_file = File.join(Rails.root, 'config', 'admins.yml')
+      $ADMINS = YAML.load(File.open(admin_file))["ADMINS"]
     end
 
     # Settings in config/environments/* take precedence over those specified here.

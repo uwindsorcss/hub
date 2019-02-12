@@ -1,0 +1,12 @@
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @event.description %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<% if current_user&.is_admin? %><%= link_to 'Back', events_path %><% end %>

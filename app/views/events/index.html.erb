@@ -1,11 +1,26 @@
-<center>
-	<br><br>
-	<h1>Login Page</h1><br>
+<h1>Events</h1>
 
-  <% if current_user %>
-		<p>Signed in as: <%= current_user.email %></p>
-		<%= link_to "Log out", :logout %>
-	<% else %>
-		<%= link_to "Log in", :google_auth %>
-	<% end %>
-</center>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+
+  <% @events.each do |event| %>
+    <tr>
+      <td width=100><%= event.title %></td>
+      <td width=350><%= event.description %></td>
+      <td width=75><%= link_to 'Show', event_path(event) %></td>
+      <% if current_user&.is_admin? %>
+        <td width=75><%= link_to 'Edit', edit_event_path(event) %></td>
+      <% end %>
+    </tr>
+  <% end %>
+
+</table>
+
+<br><br>
+<% if current_user&.is_admin? %>
+  <%= link_to 'New event', new_event_path %>
+<% end %>

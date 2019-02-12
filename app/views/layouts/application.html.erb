@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <center>
+      <br>
+      <% if current_user %>
+        Signed in as: <%= current_user.email %>
+        <%= link_to "Log out", :logout %>
+      <% else %>
+        <%= link_to "Log in", :google_auth %>
+      <% end %>
+    </center>
     <%= yield %>
   </body>
 </html>
