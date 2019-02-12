@@ -1,30 +1,39 @@
-<h1>Events</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th></th>
-  </tr>
-
-  <% @events.each do |event| %>
-    <tr>
-      <td width=100><%= event.title %></td>
-      <td width=350><%= event.description %></td>
-      <td width=75><%= link_to 'Show', event_path(event) %></td>
-      <% if current_user&.is_admin? %>
-        <td width=75><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Delete', event_path(event),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-        </td>
-      <% end %>
-    </tr>
-  <% end %>
-
-</table>
-
-<br><br>
 <% if current_user&.is_admin? %>
-  <%= link_to 'New event', new_event_path %>
-<% end %>
+    <div class="center" style="padding: 30px"><%= button_to 'Add a new event'.html_safe, new_event_path, :method => :get, :class => 'waves-effect waves-light btn' %></div>
+  <% end %>
+<div class="container z-depth-3" style="background-color: #f7f7f7">
+<div style="padding: 20px">
+  <h4>Upcoming events</h4>
+  <table>
+    <% @events.each do |event| %>
+      <tr>
+        <td>
+          <div class="col s12 m7">
+            <div class="card horizontal">
+              <div class="card-stacked">
+                <div class="card-content">
+                  <h5><%= event.title %></h5>
+                  <p><%= event.description %></p>
+                </div>
+                <div class="card-action">
+                  <%= link_to 'Show', event_path(event) %>
+                  <%= link_to 'Edit', edit_event_path(event) %>
+                  <%= link_to 'Delete', event_path(event),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+
+  </table>
+  <h4>Past events</h4>
+  <table>
+  </table>
+</div>
+
+</div>
