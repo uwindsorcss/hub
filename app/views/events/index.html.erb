@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>Events</h1>
 
 <table>
@@ -29,17 +28,3 @@
 <% if current_user&.is_admin? %>
   <%= link_to 'New event', new_event_path %>
 <% end %>
-=======
-<center>
-	<br><br>
-	<h1>Login Page</h1><br>
-	<p>First git omg</p>
-
-  <% if current_user %>
-		<p>Signed in as: <%= current_user.email %></p>
-		<%= link_to "Log out", :logout %>
-	<% else %>
-		<%= link_to "Log in", :google_auth %>
-	<% end %>
-</center>
->>>>>>> bcb7ed8e2aba4b2bc19fa2974d8ec12f6e49305e
