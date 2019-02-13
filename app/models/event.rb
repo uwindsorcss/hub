@@ -4,4 +4,8 @@ class Event < ApplicationRecord
   has_many :guests, through: :registrations
 
   validates :title, :description, presence: true, length: { minimum: 3 }
+
+  def current_capacity
+    return self.users.size + self.guests.size
+  end
 end

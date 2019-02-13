@@ -45,6 +45,17 @@
           </ul>
         </div>
       </nav>
+
+      <% if flash[:error] %>
+        <div id="error_explanation" class="container error-newhtml">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+      <% if flash[:success] %>
+        <div id="success_explanation" class="container success-newhtml">
+          <p><%= flash[:success] %></p>
+        </div>
+      <% end %>
     <%= yield %>
   </body>
 </html>
