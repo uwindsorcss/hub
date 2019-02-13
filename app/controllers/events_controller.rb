@@ -50,6 +50,9 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    if current_user
+      @registration = @event.registrations.find_by(user_id: current_user.id)
+    end
   end
 
   private
