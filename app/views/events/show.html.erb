@@ -8,5 +8,15 @@
   <%= @event.description %>
 </p>
 
+<p>
+  <% if current_user %>
+    <% if @registration %>
+      <%= link_to 'Unregister', registration_path(event_id: @event.id, registration_id: @registration), method: :delete %>
+    <% else %>
+      <%= link_to 'Register', new_registration_path(event_id: @event.id, user_id: current_user.id) %>
+    <% end %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <% if current_user&.is_admin? %><%= link_to 'Back', events_path %><% end %>
