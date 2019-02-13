@@ -1,10 +1,10 @@
 <%= form_with scope: :event, url: events_path, local: true do |form| %>
   <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h3>
+    <div id="error_explanation" class="container error-newhtml">
+      <p><b>
         <%= pluralize(@event.errors.count, "error") %> prohibited
         this event from being saved:
-      </h3>
+      </b></p>
       <ul>
         <% @event.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
