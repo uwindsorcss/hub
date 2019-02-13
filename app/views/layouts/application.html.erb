@@ -18,11 +18,14 @@
           <!--<a href="http://css.uwindsor.ca/" class="brand-logo" style="padding: 0 0 0 400px; font-size: 20px;">Sign up for events!</a>-->
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="sass.html"><!--Add a menu item--></a></li>
-            <li><a href="badges.html"><!--Add a menu item--></a></li>
+            <li>
+              <a href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
+            </li>
             <li>
               <% if current_user %>
-              <ul><li>
-                Signed in as: <%= current_user.email %></li><li><%= link_to "Log out", :logout %></li></ul>
+                <ul><li>
+                  Signed in as: <%= current_user.email %></li><li><%= link_to "Log out", :logout %>
+                </li></ul>
               <% else %>
                 <%= link_to "Log in", :google_auth %>
               <% end %>
