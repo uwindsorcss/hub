@@ -41,6 +41,14 @@
             <%= form.text_field :capacity %>
           </div>
         </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <!--DATE-->
+            <i class="material-icons prefix">date</i>
+            <% form.label :date %><br>
+            <%= form.datetime_field :date, {ampm: true} %>
+          </div>
+        </div>
         <div class="row center">
           <%= form.submit 'Submit', :class => 'waves-effect waves-light btn' %>
         </div>
