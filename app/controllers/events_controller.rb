@@ -35,7 +35,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(params.require(:event).permit(:title, :description))
+    @event = Event.new(event_params)
     if current_user&.is_admin?
       if @event.save
         redirect_to @event
@@ -58,6 +58,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description)
+    params.require(:event).permit(:title, :description, :capacity)
   end
 end
