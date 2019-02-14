@@ -1,4 +1,5 @@
-
+<div id="page">
+</div>
 <% if current_user&.is_admin? %>
     <div class="center" style="padding: 30px"><%= button_to 'Add a new event'.html_safe, new_event_path, :method => :get, :class => 'waves-effect waves-light btn' %></div>
   <% end %>
@@ -35,5 +36,4 @@
   <table>
   </table>
 </div>
-
 </div>

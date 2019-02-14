@@ -1,22 +1,21 @@
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <% if current_user %>
-    <% if @registration %>
-      <%= link_to 'Unregister', registration_path(event_id: @event.id, registration_id: @registration), method: :delete %>
-    <% else %>
-      <%= link_to 'Register', new_registration_path(event_id: @event.id, user_id: current_user.id) %>
-    <% end %>
-  <% end %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<% if current_user&.is_admin? %><%= link_to 'Back', events_path %><% end %>
+<div class="container z-depth-3" style="padding: 20px 0 0 0; margin-top: 30px; background-color: #f7f7f7">
+      <div class="row container center">
+        <h4 class="center"><%= @event.title %></h4>
+        <p style="text-align:left;"><%= @event.description %><p>
+        <p>
+          <% if current_user %>
+          <div class="center" style="padding: 30px">
+            <% if @registration %>
+              <%= button_to 'Unregister', registration_path(event_id: @event.id, registration_id: @registration), method: :delete, :class => 'waves-effect waves-light btn'  %>
+            <% else %>
+              <%= button_to 'Register', new_registration_path(event_id: @event.id, user_id: current_user.id), :class => 'waves-effect waves-light btn'  %>
+            <% end %>
+            </div>
+          <% end %>
+          <div class="row">
+          <% if current_user&.is_admin? %><%= link_to 'Edit | ', edit_event_path(@event) %><% end %>
+          <%= link_to 'Back', events_path %>
+          </div>
+        </p>
+      </div>
+    </div>
