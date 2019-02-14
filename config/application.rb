@@ -10,6 +10,8 @@ module UwindsorCssEventsSite
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+    config.time_zone = 'Eastern Time (US & Canada)'
+    config.active_record.default_timezone = :local
 
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'local_env.yml')
