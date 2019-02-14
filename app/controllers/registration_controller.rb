@@ -7,9 +7,16 @@ class RegistrationController < ApplicationController
         user_id: user_id,
         event_id: event_id
       )
-      @registration.save
+      @event = Event.find(event_id)
+      if (1 + @registration.guests.size) > spots_remaining(@event)
+        redirect_to event_path(event_id), :flash => { :error => "There are #{spots_remaining(@event)} spot(s) available!" }
+      else
+        @registration.save
+        redirect_to event_path(event_id), :flash => { :success => "Successfully registered for event!" }
+      end
+    else
+      redirect_to event_path(event_id), :flash => { :error => "Something went wrong." }
     end
-    redirect_to event_path(event_id)
   end
 
   def destroy
@@ -24,5 +31,9 @@ class RegistrationController < ApplicationController
 
   def user_already_registered? (user_id, event_id)
     Registration.find_by(user_id: user_id, event_id: event_id)
+  end
+
+  def spots_remaining(event)
+    event.capacity - event.current_capacity
   end
 end
