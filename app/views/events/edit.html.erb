@@ -33,6 +33,14 @@
               <%= form.text_area :description, :class => 'materialize-textarea' %>
             </div>
           </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <!--CAPACITY-->
+              <i class="material-icons prefix">capacity</i>
+              <%= form.label :capacity %><br>
+              <%= form.text_area :capacity, :class => 'materialize-textarea' %>
+            </div>
+          </div>
           <div class="row center">
             <%= form.submit 'Update event', :class => 'waves-effect waves-light btn' %>
           </div>
