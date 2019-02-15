@@ -1,0 +1,7 @@
+<ol>
+  <% @event.all_guests.each do |guest| %>
+    <li><%= guest.name %> - <%= guest.email %></li>
+  <% end %>
+</ol>
+
+<%= link_to 'Back', event_path(@event) %>
