@@ -1,4 +1,4 @@
-<%= form_with scope: :event, url: events_path, local: true do |form| %>
+<%= form_with model: @event, local: true do |form| %>
   <% if @event.errors.any? %>
     <div id="error_explanation" class="container error-newhtml">
       <p><b>
