@@ -34,6 +34,13 @@ class EventsController < ApplicationController
     end
   end
 
+  def guests
+    @event = Event.find(params[:id])
+    unless current_user&.is_admin?
+      display_404
+    end
+  end
+
   def create
     @event = Event.new(event_params)
     if current_user&.is_admin?

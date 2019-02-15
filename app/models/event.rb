@@ -9,4 +9,8 @@ class Event < ApplicationRecord
   def current_capacity
     return self.users.size + self.guests.size
   end
+
+  def all_guests
+    self.users + self.guests
+  end
 end
