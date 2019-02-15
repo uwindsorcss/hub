@@ -6,13 +6,13 @@ The University of Windsor Computer Science Society Events site was built to prov
 
 ## Contributing
 
-Please feel free to contribute if you see an issue or think of a sweet feature! Simply fork this repo and make a pull request.
+Please feel free to contribute if you see an issue, want to complete something from our [project board](https://github.com/EricPickup/uwindsor-css-events-site/projects/2), or think of a sweet feature! Simply fork this repo and make a pull request.
 
 If this sounds like gibberish to you, you'll probably want to learn the basics of `git`. Afterwards, you can follow [this tutorial](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/) on contributing to open-source projects on GitHub.
 
 ### Setup
 
-Please follow [this tutorial](https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm) to install `ruby` and the `rails` framework.
+You can follow [these instructions](https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm) to install `ruby` and the `rails` framework.
 
 After installing rails, you need to install the dependencies (gems). Navigate to the project directory and run:
 
