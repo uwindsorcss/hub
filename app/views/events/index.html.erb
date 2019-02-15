@@ -19,10 +19,12 @@
                 </div>
                 <div class="card-action">
                   <%= link_to 'Show', event_path(event) %>
-                  <%= link_to 'Edit', edit_event_path(event) %>
-                  <%= link_to 'Delete', event_path(event),
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
+                  <% if current_user&.is_admin? %>
+                    <%= link_to 'Edit', edit_event_path(event) %>
+                    <%= link_to 'Delete', event_path(event),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+                  <% end %>
                 </div>
               </div>
             </div>
