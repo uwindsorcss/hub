@@ -7,7 +7,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="http://www.uwindsor.ca/sites/all/themes/uwindsor_bootstrap/favicon-32x32.png">
     <%= stylesheet_link_tag 'materialize.min' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
     .error-newhtml
     {
@@ -27,6 +29,11 @@
       padding-left: 20px;
       color: #4F8A10;
     }
+    textarea {
+      width: 100%;
+      height: 500px;
+      background-color: white;
+    }
     body{ background-color: #f9fbff;}
     </style>
   </head>
@@ -36,7 +43,6 @@
       <nav>
         <div class="nav-wrapper" style="background-color: #0032bc">
           <a href="/events" class="brand-logo" style="padding: 0 0 0 20px">CSS Events</a>
-          <!--<a href="http://css.uwindsor.ca/" class="brand-logo" style="padding: 0 0 0 400px; font-size: 20px;">Sign up for events!</a>-->
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="sass.html"><!--Add a menu item--></a></li>
             <li>
@@ -66,5 +72,8 @@
         </div>
       <% end %>
     <%= yield %>
+    <script>
+    $('#textarea1').autogrow();
+    </script>
   </body>
 </html>
