@@ -30,29 +30,31 @@
             <!--DESCRIPTION-->
             <i class="material-icons prefix">description</i>
             <%= form.label :description %><br>
-            <%= form.text_area :description, :class => 'materialize-textarea' %>
+            <div style="padding-top: 50px;">
+              <%= form.text_area :description, :id => '#textarea1'%>
+            </div>
           </div>
         </div>
+        <!--CAPACITY-->
         <div class="row">
           <div class="input-field col s12">
-            <!--CAPACITY-->
-            <i class="material-icons prefix">capacity</i>
+            <i class="material-icons prefix">people</i>
             <%= form.label :capacity %><br>
             <%= form.text_field :capacity %>
           </div>
         </div>
+        <!--LOCATION-->
         <div class="row">
           <div class="input-field col s12">
-            <!--LOCATION-->
-            <i class="material-icons prefix">location</i>
+            <i class="material-icons prefix">location_on</i>
             <% form.label :location %><br>
             <%= form.text_field :location %>
           </div>
         </div>
+        <!--DATE-->
         <div class="row">
           <div class="input-field col s12">
-            <!--DATE-->
-            <i class="material-icons prefix">date</i>
+            <i class="material-icons prefix">access_time</i>
             <% form.label :date %><br>
             <%= form.datetime_field :date, {ampm: true} %>
           </div>
