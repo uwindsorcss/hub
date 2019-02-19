@@ -10,6 +10,7 @@
     <link rel="shortcut icon" type="image/png" href="http://www.uwindsor.ca/sites/all/themes/uwindsor_bootstrap/favicon-32x32.png">
     <%= stylesheet_link_tag 'materialize.min' %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <%= javascript_include_tag('materialize.min.js') %>
     <style>
     .error-newhtml
     {
@@ -31,9 +32,10 @@
     }
     textarea {
       width: 100%;
-      height: 500px;
+      height: 100px;
       background-color: white;
     }
+    .color_btn{background-color: #0053db; color: white;}
     body{ background-color: #f9fbff;}
     </style>
   </head>
@@ -43,8 +45,8 @@
       <nav>
         <div class="nav-wrapper" style="background-color: #0032bc">
           <a href="/events" class="brand-logo" style="padding: 0 0 0 20px">CSS Events</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html"><!--Add a menu item--></a></li>
             <li>
               <a href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
             </li>
@@ -61,6 +63,25 @@
         </div>
       </nav>
 
+      <!--MOBILE MENU START-->
+      <ul class="sidenav" id="mobile-demo">
+      <li><p class="center"><b>CSS Events</b></p></li>
+            <li>
+            <a href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
+          </li>
+          <li>
+            <% if current_user %>
+              <ul><li class="center">
+                Signed in as: <%= current_user.email %></li><li><%= link_to "Log out", :logout %>
+              </li></ul>
+            <% else %>
+              <%= link_to "Log in", :google_auth %>
+            <% end %>
+          </li>
+      </ul>
+      <!--MOBILE MENU END-->
+
+
       <% if flash[:error] %>
         <div id="error_explanation" class="container error-newhtml">
           <p><%= flash[:error] %></p>
@@ -73,7 +94,11 @@
       <% end %>
     <%= yield %>
     <script>
-    $('#textarea1').autogrow();
+    $(document).ready(function()
+    {
+      $('.sidenav').sidenav();
+      $('.tooltipped').tooltip();
+    });
     </script>
   </body>
 </html>
