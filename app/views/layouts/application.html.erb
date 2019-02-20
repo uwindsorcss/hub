@@ -31,11 +31,12 @@
       color: #4F8A10;
     }
     textarea {
-      width: 100%;
+      width: 95%;
       height: 100px;
       background-color: white;
     }
     .color_btn{background-color: #0053db; color: white;}
+    .blueblue{ background-color: #0032bc; }
     body{ background-color: #f9fbff;}
     </style>
   </head>
@@ -44,8 +45,8 @@
 
       <nav>
         <div class="nav-wrapper" style="background-color: #0032bc">
-          <a href="/events" class="brand-logo" style="padding: 0 0 0 20px">CSS Events</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <a href="/events" class="brand-logo" style="padding: 0 0 10px 20px; margin: 0 0 0 10px 0"><%= image_tag("uwindsor_logo.png", size: "270x75") %></a>
+          <a href="javascript:void(0)" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li>
               <a href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
@@ -98,6 +99,7 @@
     {
       $('.sidenav').sidenav();
       $('.tooltipped').tooltip();
+      $('#morethanonce').live
     });
     </script>
   </body>
