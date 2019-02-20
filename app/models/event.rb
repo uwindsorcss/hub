@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   has_many :users, through: :registrations
   has_many :guests, through: :registrations
 
-  validates :title, :description, presence: true, length: { minimum: 3 }
+  validates :title, :description, :location, :date, presence: true, length: { minimum: 3 }
   validates :capacity, presence: true
 
   def current_capacity
