@@ -1,7 +1,7 @@
 <div id="page">
 </div>
 <% if current_user&.is_admin? %>
-    <div class="center" style="padding: 30px"><%= button_to 'Add a new event'.html_safe, new_event_path, :method => :get, :class => 'waves-effect waves-light btn blue'%></div>
+    <div class="center" style="padding: 30px"><%= button_to 'Add a new event'.html_safe, new_event_path, :method => :get, :class => 'waves-effect waves-light btn blueblue'%></div>
   <% end %>
 <div class="container z-depth-3" style="background-color: #f7f7f7; margin-top: 15px">
 <div style="padding: 20px">
@@ -15,7 +15,7 @@
               <div class="card-stacked">
                 <div class="card-content">
                   <h5><%= event.title %></h5>
-                  <p><%= event.description %></p>
+                  <p><%= event.date.strftime('%B %d, %Y') %></p>
                 </div>
                 <div class="card-action">
                   <%= link_to 'Show', event_path(event) %>

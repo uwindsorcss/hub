@@ -31,7 +31,7 @@
             <i class="material-icons prefix">description</i>
             <%= form.label :description %><br>
             <div style="padding-top: 50px;">
-              <%= form.text_area :description, :id => '#textarea1'%>
+              <%= form.text_area :description, :id => '#textarea1', :class => 'right'%>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="row center">
-          <%= form.submit 'Submit', :class => 'waves-effect waves-light btn blue' %>
+          <%= form.submit 'Submit', :class => 'waves-effect waves-light btn blueblue' %>
         </div>
         <div class="row center">
           <%= link_to 'Back', events_path %>
