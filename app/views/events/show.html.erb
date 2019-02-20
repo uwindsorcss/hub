@@ -13,17 +13,17 @@
       <% end %>
     <p>
     <p>
-      <% if current_user %>
-      <div class="center" style="padding: 30px">
-        <% if @registration %>
-          <%= link_to 'Unregister', registration_path(event_id: @event.id, registration_id: @registration), method: :delete, :class => 'waves-effect waves-light blue btn'  %>
-        <% elsif @event.current_capacity < @event.capacity %>
-          <%= link_to 'Register', new_registration_path(event_id: @event.id, user_id: current_user.id), :class => 'waves-effect waves-light blue btn'  %>
-        <% else %>
-          <a class="btn disabled">Event Full</a>
-        <% end %>
+      <% if current_user && @event.date.future? %>
+        <div class="center" style="padding: 30px">
+          <% if @registration %>
+            <%= link_to 'Unregister', registration_path(event_id: @event.id, registration_id: @registration), method: :delete, :class => 'waves-effect waves-light blue btn'  %>
+          <% elsif @event.current_capacity < @event.capacity %>
+            <%= link_to 'Register', new_registration_path(event_id: @event.id, user_id: current_user.id), :class => 'waves-effect waves-light blue btn'  %>
+          <% else %>
+            <a class="btn disabled">Event Full</a>
+          <% end %>
         </div>
-      <% else %>
+      <% elsif current_user.nil? %>
          <a class="btn disabled">Sign in to Register</a>
       <% end %>
       <div class="row">

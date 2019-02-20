@@ -9,7 +9,8 @@ class EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    @future_events = Event.select { |event| event.date.future? }
+    @past_events = Event.select { |event| event.date.past? }.last(5)
   end
 
   def new
