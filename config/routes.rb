@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :registration
+
+  get '/discord', to: 'pages#discord'
+  get '/discord/verifications/:id', to: 'verifications#show'
 end

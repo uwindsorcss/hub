@@ -1,0 +1,39 @@
+<div class="discord_images">
+  <div class="discord_logo">
+    <%= image_tag("discord-logo.png", height: '57', width: '50') %>
+  </div>
+  <div class="discord_logo">
+    <%= image_tag("uw-logo.png", height: '57', width: '50') %>
+  </div>
+</div>
+
+<center>
+  <p>
+    <strong>Discord User:</strong>
+    <%= @verification.discord_user if @verification %>
+  </p>
+  <% if @status.include? "has already been used" %>
+    <div class="alert alert-danger">
+      <strong>Verification status:</strong> <%= @status %>
+    </div>
+  <% elsif @status == "Please use your @uwindsor.ca email address to verify your account." %>
+    <div class="alert alert-warning">
+      <strong>Alert:</strong> <%= @status %>
+    </div>
+    <div class="alert alert-info">
+      <strong>Verification status:</strong> Your account is unverified.
+    </div>
+  <% elsif @status == "Verified" %>
+    <div class="alert alert-success">
+      <strong>Verification status:</strong> You've successfully verified your account and have full access to the Discord server.
+    </div>
+  <% elsif @status == "Unverified" %>
+    <div class="alert alert-info">
+      <strong>Verification status:</strong> Your account is unverified.
+    </div>
+  <% elsif @status == "Invalid" %>
+    <div class="alert alert-warning">
+      <strong>Verification status:</strong> You've entered an invalid or outdated verification token. Please execute the <i>~verify</i> command in Discord and use the newest link.
+    </div>
+  <% end %>
+</center>

@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190220033103) do
+ActiveRecord::Schema.define(version: 20190301065139) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.string "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "capacity"
     t.datetime "date"
     t.string "location_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "guests", force: :cascade do |t|
@@ -34,19 +34,24 @@ ActiveRecord::Schema.define(version: 20190220033103) do
   create_table "registrations", force: :cascade do |t|
     t.integer "user_id"
     t.integer "event_id"
+    t.integer "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "capacity"
     t.index ["event_id"], name: "index_registrations_on_event_id"
     t.index ["user_id"], name: "index_registrations_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'server' for column 'int'
+
+  create_table "verifications", id: :string, limit: 8, force: :cascade do |t|
+    t.integer "discord_user", limit: 8
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "verified", default: false
     t.string "email"
-    t.string "name"
-    t.string "role", default: "guest"
+    t.bigint "server"
+    t.index ["id"], name: "sqlite_autoindex_verifications_1", unique: true
   end
 
 end
