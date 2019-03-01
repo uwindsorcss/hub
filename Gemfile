@@ -57,3 +57,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'omniauth-google-oauth2'
 
 gem 'pry-rails'
+
+# Discord app
+gem "discordrb"
+gem "json"
+gem "fuzzy-string-match"
+gem 'rubysl-securerandom'
+gem 'bootstrap'
+gem 'pry-byebug'
