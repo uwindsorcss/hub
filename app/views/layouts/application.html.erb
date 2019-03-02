@@ -75,19 +75,28 @@
 
       <!--MOBILE MENU START-->
       <ul class="sidenav" id="mobile-demo">
-      <li><p class="center"><b>Computer Science Society</b></p></li>
-            <li>
-            <a href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
-          </li>
-          <li>
-            <% if current_user %>
-              <ul><li class="center">
-                Signed in as: <%= current_user.email %></li><li><%= link_to "Log out", :logout %>
-              </li></ul>
-            <% else %>
-              <%= link_to "Log in", :google_auth %>
-            <% end %>
-          </li>
+        <li><p class="center"><b>Computer Science Society</b></p></li>
+        <li>
+          <%= link_to "Events", events_path %>
+        </li>
+        <li>
+          <%= link_to "Discord", :discord_path %>
+        </li>
+        <li>
+          <a href="http://tutor.cs.uwindsor.ca/" target="_blank"">Tutoring</a>
+        </li>
+        <li>
+          <a href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
+        </li>
+        <li>
+          <% if current_user %>
+            <ul><li class="center">
+              Signed in as: <%= current_user.email %></li><li><%= link_to "Log out", :logout %>
+            </li></ul>
+          <% else %>
+            <%= link_to "Log in", :google_auth %>
+          <% end %>
+        </li>
       </ul>
       <!--MOBILE MENU END-->
 
