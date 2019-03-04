@@ -7,7 +7,11 @@ class Event < ApplicationRecord
   validates :capacity, presence: true
 
   def current_capacity
-    return self.users.size + self.guests.size
+    self.users.size + self.guests.size
+  end
+
+  def spots_remaining
+    self.capacity - self.current_capacity
   end
 
   def all_guests
