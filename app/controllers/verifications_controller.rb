@@ -4,7 +4,6 @@ class VerificationsController < ApplicationController
 
   def show
     # Need to catch error where verification is not found. Same with other "finds" (old codes are deleted when new one is created for same user, for example)
-
     @verification = Verification.find(params[:id])
     @status = "Unverified"
     if current_user
