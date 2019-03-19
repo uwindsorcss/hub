@@ -37,6 +37,7 @@
     }
     .color_btn{background-color: #0053db; color: white;}
     .blueblue{ background-color: #0032bc; }
+    .blueblue:hover{ background-color: #4286f4; }
     body{ background-color: #f9fbff;}
     </style>
   </head>
@@ -46,7 +47,7 @@
       <nav>
         <div class="nav-wrapper" style="background-color: #0032bc">
           <a href="/events" class="brand-logo" style="padding: 0 0 10px 20px; margin: 0 0 0 10px 0"><%= image_tag("uwindsor_logo.png", size: "270x75") %></a>
-          <a href="javascript:void(0)" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li>
               <%= link_to "Events", events_path %>
@@ -55,7 +56,7 @@
               <%= link_to "Discord", :discord_path %>
             </li>
             <li>
-              <a href="http://tutor.cs.uwindsor.ca/" target="_blank"">Tutoring</a>
+              <a href="http://tutor.cs.uwindsor.ca/" target="_blank">Tutoring</a>
             </li>
             <li>
               <a href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
@@ -74,7 +75,7 @@
       </nav>
 
       <!--MOBILE MENU START-->
-      <ul class="sidenav" id="mobile-demo">
+      <ul class="sidenav" id="slide-out">
         <li><p class="center"><b>Computer Science Society</b></p></li>
         <li>
           <%= link_to "Events", events_path %>
@@ -83,7 +84,7 @@
           <%= link_to "Discord", :discord_path %>
         </li>
         <li>
-          <a href="http://tutor.cs.uwindsor.ca/" target="_blank"">Tutoring</a>
+          <a href="http://tutor.cs.uwindsor.ca/" target="_blank">Tutoring</a>
         </li>
         <li>
           <a href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
@@ -112,6 +113,30 @@
         </div>
       <% end %>
     <%= yield %>
+    <footer class="page-footer" style="background-color: #0032bc;">
+          <div class="container">
+            <div class="row">
+              <div class="col l4 center s12">
+                <ul>
+                  <li><%= link_to "Discord", :discord_path %> |  
+                    <% if current_user %>
+                      Signed in as: <%= current_user.email %> | <%= link_to "Log out", :logout %>
+                    <% else %>
+                      <%= link_to "Log in", :google_auth%>
+                    <% end %>
+                    | <a class="grey-text text-lighten-3" href="http://tutor.cs.uwindsor.ca/" target="_blank">Tutoring</a> |
+                    <a class="grey-text text-lighten-3" href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            University of Windsor Computer Science Society
+            </div>
+          </div>
+        </footer>
     <script>
     $(document).ready(function()
     {
