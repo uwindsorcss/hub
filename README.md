@@ -1,5 +1,7 @@
 # University of Windsor CSS Hub
 
+http://css.uwindsor.ca
+
 ## Overview
 
 The University of Windsor Computer Science Society (CSS) Hub website was built to provide students with a hub for event listings and registration for Computer Science students, and eventually was merged with the Discord authorization bot to create one hub for CSS related things. Developing a system in-house allows us to tailor the experience for our specific needs (such as guest limits and guest list for events, and authorization with University of Windsor accounts).
