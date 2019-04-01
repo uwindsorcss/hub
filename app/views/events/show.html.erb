@@ -6,11 +6,7 @@
     <p style="text-align:left;"><b>Date: </b><%= @event.date.strftime('%B %d, %Y at %l:%M %p') %><p>
     <p style="text-align:left;">
       <b>Location: </b>
-      <% if @event.location_url&.present? %>
-        <%= link_to @event.location, @event.location_url, target: :_blank %>
-      <% else %>
-        <%= @event.location %>
-      <% end %>
+      <%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %>
     <p>
     <p>
       <% if current_user && @event.date.future? %>
