@@ -192,6 +192,7 @@ GEM
       ffi (~> 1.0)
     rbnacl (3.4.0)
       ffi
+    redcarpet (3.4.0)
     rest-client (2.1.0.rc1)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -279,7 +280,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  actionview (>= 5.1.6.2)
   bootstrap
   byebug
   capybara (~> 2.13)
@@ -295,6 +295,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.7)
   rails (~> 5.1.6, >= 5.1.6.1)
+  redcarpet
   rubysl-securerandom
   sass-rails (~> 5.0)
   selenium-webdriver
