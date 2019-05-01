@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190401000626) do
+ActiveRecord::Schema.define(version: 20190501193412) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
@@ -40,8 +40,14 @@ ActiveRecord::Schema.define(version: 20190401000626) do
     t.index ["user_id"], name: "index_registrations_on_user_id"
   end
 
-# Could not dump table "users" because of following StandardError
-#   Unknown type 'server' for column 'int'
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "name"
+    t.string "role", default: "guest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "hd"
+  end
 
   create_table "verifications", id: :string, limit: 8, force: :cascade do |t|
     t.integer "discord_user", limit: 8
@@ -50,7 +56,6 @@ ActiveRecord::Schema.define(version: 20190401000626) do
     t.boolean "verified", default: false
     t.string "email"
     t.bigint "server"
-    t.index ["id"], name: "sqlite_autoindex_verifications_1", unique: true
   end
 
 end
