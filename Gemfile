@@ -65,3 +65,6 @@ gem "fuzzy-string-match"
 gem 'rubysl-securerandom'
 gem 'bootstrap'
 gem 'pry-byebug'
+
+# Markdown rendering
+gem 'redcarpet'
