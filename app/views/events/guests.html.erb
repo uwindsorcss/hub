@@ -1,6 +1,6 @@
 <ol class="list-group">
   <% @event.all_guests.each do |guest| %>
-    <li class="list-group-item"><%= guest.name %> - <%= guest.email %></li>
+    <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
   <% end %>
 </ol>
 
