@@ -37,25 +37,25 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | Course Code | Fall | Winter | Summer/Intersession |
 |-------------|-------------|-------------|---------------------|
 | COMP-1000 | Offered | Offered | Offered |
-| COMP-1040 | Offered | Offered | Offered |
-| COMP-1060 | Offered | Offered | Not Offered |
+| COMP-1047 | Offered | Offered | Offered |
+| COMP-1060 | Offered | Not Offered | Not Offered |
 | COMP-1400 | Offered | Offered | Offered |
 | COMP-1410 | Not Offered | Offered | Offered |
-| COMP-2050 | Offered | Offered | Offered |
-| COMP-2070 | Offered | Offered | Not Offered |
-| COMP-2090 | Offered | Offered | Offered |
+| COMP-2057 | Offered | Offered | Offered |
+| COMP-2067 | Not Offered | Offered | Offered |
+| COMP-2077 | Offered | Offered | Not Offered |
+| COMP-2097 | Offered | Offered | Offered |
 | COMP-2120 | Offered | Offered | Offered |
 | COMP-2140 | Not Offered | Offered | Not Offered |
 | COMP-2310 | Offered | Not Offered | Not Offered |
-| COMP-2540 | Offered | Offered | Not Offered |
+| COMP-2540 | Offered | Offered | Offered |
 | COMP-2560 | Offered | Offered | Offered |
 | COMP-2650 | Offered | Offered | Offered |
 | COMP-2660 | Offered | Offered | Not Offered |
-| COMP-2700 | Offered | Offered | Not Offered |
-| COMP-2750 | Offered | Not Offered | Not Offered |
+| COMP-2707 | Offered | Offered | Not Offered |
 | COMP-2800 | Not Offered | Offered | Not Offered |
-| COMP-3050 | Not Offered | Offered | Offered |
-| COMP-3070 | Not Offered | Offered | Not Offered |
+| COMP-3057 | Not Offered | Offered | Offered |
+| COMP-3077 | Not Offered | Offered | Not Offered |
 | COMP-3110 | Offered | Not Offered | Not Offered |
 | COMP-3150 | Offered | Offered | Not Offered |
 | COMP-3220 | Offered | Offered | Offered |
@@ -63,28 +63,30 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-3340 | Not Offered | Offered | Offered |
 | COMP-3400 | Not Offered | Offered | Not Offered |
 | COMP-3500 | Offered | Not Offered | Not Offered |
-| COMP-3520 | Offered | Not Offered | Not Offered |
+| COMP-3520 | Not Offered | Offered | Not Offered |
 | COMP-3540 | Offered | Not Offered | Not Offered |
-| COMP-3670 | Offered | Not Offered | Not Offered |
-| COMP-3680 | Not Offered | Offered | Not Offered |
+| COMP-3670 | Offered | Not Offered | Offered |
 | COMP-3710 | Not Offered | Offered | Not Offered |
 | COMP-3770 | Offered | Not Offered | Not Offered |
 | COMP-4110 | Not Offered | Offered | Not Offered |
 | COMP-4150 | Offered | Not Offered | Not Offered |
-| COMP-4200 | Not Offered | Offered | Not Offered |
+| COMP-4200 | Offered | Not Offered | Not Offered |
 | COMP-4220 | Offered | Not Offered | Not Offered |
 | COMP-4250 | Not Offered | Offered | Not Offered |
-| COMP-4400 | Offered | Not Offered | Not Offered |
+| COMP-4400 | Offered | Not Offered | Offered |
 | COMP-4500 | Not Offered | Offered | Not Offered |
 | COMP-4540 | Not Offered | Offered | Not Offered |
-| COMP-4670 | Offered | Not Offered | Not Offered |
-| COMP-4680 | Offered | Not Offered | Not Offered |
+| COMP-4670 | Not Offered | Offered | Not Offered |
+| COMP-4700 | Offered | Not Offered | Not Offered |
 | COMP-4730 | Offered | Not Offered | Not Offered |
+| COMP-4740 | Not Offered | Offered | Not Offered |
+| COMP-4750 | Not Offered | Offered | Not Offered |
 | COMP-4770 | Not Offered | Offered | Not Offered |
 | COMP-4800 | Not Offered | Offered | Not Offered |
 | COMP-4960 | Offered | Offered | Not Offered |
 | COMP-4990 | Offered | Offered | Not Offered |
 
+*Updated Summer 2019*
 
 
 # Co-op and Internships
