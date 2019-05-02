@@ -59,13 +59,13 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     if current_user
-      @registration = @event.registrations.find_by(user_id: current_user.id)
+      @user_registration = @event.registrations.find_by(user_id: current_user.id)
     end
   end
 
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :capacity, :date, :location)
+    params.require(:event).permit(:title, :description, :capacity, :date, :location, :registration_enabled)
   end
 end

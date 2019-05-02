@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   has_many :guests, through: :registrations
 
   validates :title, :description, :location, :date, presence: true, length: { minimum: 3 }
-  validates :capacity, presence: true
+  validates :capacity, presence: true, numericality: { only_integer: true, greater_than: 0 }, if: :registration_enabled
 
   def current_capacity
     self.users.size + self.guests.size
