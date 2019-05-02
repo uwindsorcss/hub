@@ -5,10 +5,12 @@
       <%= @event.date.strftime('%B %d, %Y') %>
       (in <%= distance_of_time_in_words(Time.now, @event.date) %>)
     </h6>
-    <br>
-    <h6 class="card-subtitle mb-2 text-muted">
-      There are <%= "#{@event.current_capacity}/#{@event.capacity}" %> spots open.
-    </h6>
+    <% if @event.registration_enabled %>
+      <br>
+      <h6 class="card-subtitle mb-2 text-muted">
+        There are <%= "#{@event.spots_remaining}/#{@event.capacity}" %> spots open.
+      </h6>
+    <% end %>
     <br>
     <div class="card-text">
       <p><b>Location: </b><%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %></p>
@@ -16,24 +18,28 @@
     </div>
 
     <br>
-    <% if current_user && @event.date.future? %>
-        <% if @registration %>
-          <%= link_to 'Unregister from Event',
-            registration_path(event_id: @event.id, registration_id: @registration),
-            method: :delete,
-            class: "btn btn-danger" %>
-        <% elsif @event.current_capacity < @event.capacity %>
-          <%= link_to 'Register for Event',
-            new_registration_path(event_id: @event.id, user_id: current_user.id),
-            class: "btn btn-success" %>
-        <% else %>
-          <a class="btn btn-danger disabled">Event Full</a>
-        <% end %>
-    <% elsif current_user.nil? %>
-       <a class="btn btn-success disabled">Sign in to Register</a>
+    <% if @event.registration_enabled %>
+      <% if current_user && @event.date.future? %>
+          <% if @user_registration %>
+            <%= link_to 'Unregister from Event',
+              registration_path(event_id: @event.id, registration_id: @user_registration),
+              method: :delete,
+              class: "btn btn-danger" %>
+          <% elsif @event.current_capacity < @event.capacity %>
+            <%= link_to 'Register for Event',
+              new_registration_path(event_id: @event.id, user_id: current_user.id),
+              class: "btn btn-success" %>
+          <% else %>
+            <a class="btn btn-danger disabled">Event Full</a>
+          <% end %>
+          <% if current_user&.is_admin? %>
+            <%= link_to 'Guest List', guests_event_path(@event), class: "btn btn-primary" %>
+          <% end %>
+      <% elsif current_user.nil? %>
+         <a class="btn btn-success disabled">Sign in to Register</a>
+      <% end %>
     <% end %>
     <% if current_user&.is_admin? %>
-      <%= link_to 'Guest List', guests_event_path(@event), class: "btn btn-primary" %>
       <%= link_to 'Edit', edit_event_path(@event), class: "btn btn-warning" %>
       <%= link_to 'Delete', event_path(@event),
         method: :delete,

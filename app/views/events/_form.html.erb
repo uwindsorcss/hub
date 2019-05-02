@@ -27,21 +27,42 @@
         <%= form.text_area :description, class: "form-control" %>
       </div>
 
+      <!--REGISTRATION TOGGLE-->
+      <div class="form-check" style="margin-bottom:8px;">
+        <%= form.check_box :registration_enabled, id: "registration_checkbox", class: "form-check-input" %>
+        <%= form.label :registration_enabled, "Registration Enabled", for: "registration_checkbox", class: "form-check-label" %><br>
+      </div>
+
       <!--CAPACITY-->
-      <div class="form-group">
+      <div id="capacity" class="form-group" style="display:none;">
         <%= form.label :capacity %><br>
         <%= form.text_field :capacity, class: "form-control" %>
       </div>
 
+      <script type="text/javascript">
+        var checkbox = document.getElementById('registration_checkbox');
+        var capacity_div = document.getElementById('capacity');
+        checkbox.onchange = function() {show_capacity()};
+        $(document).on('page:change', show_capacity());
+        function show_capacity() {
+          console.log("test");
+          if(checkbox.checked) {
+            capacity_div.style['display'] = 'block';
+          } else {
+            capacity_div.style['display'] = 'none';
+          }
+        }
+      </script>
+
       <!--LOCATION-->
       <div class="form-group">
-        <% form.label :location %><br>
+        <%= form.label :location, "Location" %><br>
         <%= form.text_field :location, class: "form-control" %>
       </div>
 
       <!--DATE-->
       <div class="form-group">
-        <% form.label :date %><br>
+        <%= form.label :date %><br>
         <%= form.datetime_select :date, {ampm: true}, html_options = { class: "form-control" } %>
       </div>
 
