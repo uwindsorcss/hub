@@ -1,37 +1,29 @@
-<div class="container z-depth-3" style="padding: 20px 0 0 0; margin-top: 30px; background-color: #f7f7f7">
-  <div class="row container center">
-    <h4 class="center"><%= @event.title %></h4>
-    <p style="text-align:left;"><b>Description: </b><%= @event.description %><p>
-    <p style="text-align:left;"><b>Capacity: </b><%= "#{@event.current_capacity}/#{@event.capacity}" %><p>
-    <p style="text-align:left;"><b>Date: </b><%= @event.date.strftime('%B %d, %Y at %l:%M %p') %><p>
-    <p style="text-align:left;">
-      <b>Location: </b>
-      <%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %>
-    <p>
-    <p>
-      <% if current_user && @event.date.future? %>
-        <div class="center" style="padding: 30px">
-          <% if @registration %>
-            <%= link_to 'Unregister', registration_path(event_id: @event.id, registration_id: @registration), method: :delete, :class => 'waves-effect waves-light blue btn'  %>
-          <% elsif @event.current_capacity < @event.capacity %>
-            <%= link_to 'Register', new_registration_path(event_id: @event.id, user_id: current_user.id), :class => 'waves-effect waves-light blue btn'  %>
-          <% else %>
-            <a class="btn disabled">Event Full</a>
-          <% end %>
-        </div>
-      <% elsif current_user.nil? %>
-         <a class="btn disabled">Sign in to Register</a>
+<h4 class="center"><%= @event.title %></h4>
+<p><b>Description: </b><%= @event.description %><p>
+<p><b>Capacity: </b><%= "#{@event.current_capacity}/#{@event.capacity}" %><p>
+<p><b>Date: </b><%= @event.date.strftime('%B %d, %Y at %l:%M %p') %><p>
+<p>
+  <b>Location: </b>
+  <%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %>
+</p>
+<p>
+  <% if current_user && @event.date.future? %>
+      <% if @registration %>
+        <%= link_to 'Unregister', registration_path(event_id: @event.id, registration_id: @registration), method: :delete  %>
+      <% elsif @event.current_capacity < @event.capacity %>
+        <%= link_to 'Register', new_registration_path(event_id: @event.id, user_id: current_user.id) %>
+      <% else %>
+        <a class="btn disabled">Event Full</a>
       <% end %>
-      <div class="row">
-      <% if current_user&.is_admin? %>
-        <%= link_to 'Edit', edit_event_path(@event) %> | 
-        <%= link_to 'Guest List', guests_event_path(@event) %> | 
-        <%= link_to 'Delete', event_path(@event),
-          method: :delete,
-          data: { confirm: 'Are you sure?' } %> | 
-      <% end %>
-      <%= link_to 'Back', events_path %>
-      </div>
-    </p>
-  </div>
-</div>
+  <% elsif current_user.nil? %>
+     <a class="btn disabled">Sign in to Register</a>
+  <% end %>
+  <% if current_user&.is_admin? %>
+    <%= link_to 'Edit', edit_event_path(@event) %> | 
+    <%= link_to 'Guest List', guests_event_path(@event) %> | 
+    <%= link_to 'Delete', event_path(@event),
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %> | 
+  <% end %>
+  <%= link_to 'Back', events_path %>
+</p>

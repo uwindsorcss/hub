@@ -3,82 +3,16 @@
   <head>
     <title>UW Computer Science Society</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="shortcut icon" type="image/png" href="http://www.uwindsor.ca/sites/all/themes/uwindsor_bootstrap/favicon-32x32.png">
-    <%= stylesheet_link_tag 'materialize.min' %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <%= javascript_include_tag('materialize.min.js') %>
-    <style>
-    .error-newhtml
-    {
-      border: solid red 1px;
-      border-radius: 20px;
-      background-color: #FFD2D2;
-      margin-top: 20px;
-      padding-left: 20px;
-      color: #D8000C;
-    }
-    .success-newhtml
-    {
-      border: solid green 1px;
-      border-radius: 20px;
-      background-color: #DFF2BF;
-      margin-top: 20px;
-      padding-left: 20px;
-      color: #4F8A10;
-    }
-    textarea {
-      width: 95%;
-      height: 100px;
-      background-color: white;
-    }
-    .color_btn{background-color: #0053db; color: white;}
-    .blueblue{ background-color: #0032bc; }
-    body{ background-color: #f9fbff;}
-    </style>
   </head>
 
   <body>
-
-      <nav>
-        <div class="nav-wrapper" style="background-color: #0032bc">
-          <a href="/events" class="brand-logo" style="padding: 0 0 10px 20px; margin: 0 0 0 10px 0"><%= image_tag("uwindsor_logo.png", size: "270x75") %></a>
-          <a href="javascript:void(0)" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-              <%= link_to "Events", events_path %>
-            </li>
-            <li>
-              <%= link_to "Discord", :discord_path %>
-            </li>
-            <li>
-              <a href="http://tutor.cs.uwindsor.ca/" target="_blank">Tutoring</a>
-            </li>
-            <li>
-              <%= link_to "Resources", :resources %>
-            </li>
-            <li>
-              <a href="https://github.com/EricPickup/uwindsor-css-events-site" target="_blank">Contribute</a>
-            </li>
-            <li>
-              <% if current_user %>
-                <ul><li>
-                  Signed in as: <%= current_user.email %></li><li><%= link_to "Log out", :logout %>
-                </li></ul>
-              <% else %>
-                <%= link_to "Log in", :google_auth %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <!--MOBILE MENU START-->
-      <ul class="sidenav" id="mobile-demo">
-        <li><p class="center"><b>Computer Science Society</b></p></li>
+    <nav>
+      <ul>
+        <a href="/events"><%= image_tag("uwindsor_logo.png", size: "270x75") %></a>
         <li>
           <%= link_to "Events", events_path %>
         </li>
@@ -86,7 +20,7 @@
           <%= link_to "Discord", :discord_path %>
         </li>
         <li>
-          <a href="http://tutor.cs.uwindsor.ca/" target="_blank"">Tutoring</a>
+          <a href="http://tutor.cs.uwindsor.ca/" target="_blank">Tutoring</a>
         </li>
         <li>
           <%= link_to "Resources", :resources %>
@@ -96,7 +30,7 @@
         </li>
         <li>
           <% if current_user %>
-            <ul><li class="center">
+            <ul><li>
               Signed in as: <%= current_user.email %></li><li><%= link_to "Log out", :logout %>
             </li></ul>
           <% else %>
@@ -104,27 +38,15 @@
           <% end %>
         </li>
       </ul>
-      <!--MOBILE MENU END-->
+    </nav>
 
+    <% if flash[:error] %>
+      <p><%= flash[:error] %></p>
+    <% end %>
+    <% if flash[:success] %>
+      <p><%= flash[:success] %></p>
+    <% end %>
 
-      <% if flash[:error] %>
-        <div id="error_explanation" class="container error-newhtml">
-          <p><%= flash[:error] %></p>
-        </div>
-      <% end %>
-      <% if flash[:success] %>
-        <div id="success_explanation" class="container success-newhtml">
-          <p><%= flash[:success] %></p>
-        </div>
-      <% end %>
     <%= yield %>
-    <script>
-    $(document).ready(function()
-    {
-      $('.sidenav').sidenav();
-      $('.tooltipped').tooltip();
-      $('#morethanonce').live
-    });
-    </script>
   </body>
 </html>
