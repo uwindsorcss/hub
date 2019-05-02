@@ -1,7 +1,8 @@
-<ol>
+<ol class="list-group">
   <% @event.all_guests.each do |guest| %>
-    <li><%= guest.name %> - <%= guest.email %></li>
+    <li class="list-group-item"><%= guest.name %> - <%= guest.email %></li>
   <% end %>
 </ol>
 
-<%= link_to 'Back', event_path(@event) %>
+<br>
+<%= link_to 'Back', event_path(@event), class: "btn btn-primary" %>

@@ -1,29 +1,46 @@
-<h4 class="center"><%= @event.title %></h4>
-<p><b>Description: </b><%= @event.description %><p>
-<p><b>Capacity: </b><%= "#{@event.current_capacity}/#{@event.capacity}" %><p>
-<p><b>Date: </b><%= @event.date.strftime('%B %d, %Y at %l:%M %p') %><p>
-<p>
-  <b>Location: </b>
-  <%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %>
-</p>
-<p>
-  <% if current_user && @event.date.future? %>
-      <% if @registration %>
-        <%= link_to 'Unregister', registration_path(event_id: @event.id, registration_id: @registration), method: :delete  %>
-      <% elsif @event.current_capacity < @event.capacity %>
-        <%= link_to 'Register', new_registration_path(event_id: @event.id, user_id: current_user.id) %>
-      <% else %>
-        <a class="btn disabled">Event Full</a>
-      <% end %>
-  <% elsif current_user.nil? %>
-     <a class="btn disabled">Sign in to Register</a>
-  <% end %>
-  <% if current_user&.is_admin? %>
-    <%= link_to 'Edit', edit_event_path(@event) %> | 
-    <%= link_to 'Guest List', guests_event_path(@event) %> | 
-    <%= link_to 'Delete', event_path(@event),
-      method: :delete,
-      data: { confirm: 'Are you sure?' } %> | 
-  <% end %>
-  <%= link_to 'Back', events_path %>
-</p>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= @event.title %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      <%= @event.date.strftime('%B %d, %Y') %>
+      (in <%= distance_of_time_in_words(Time.now, @event.date) %>)
+    </h6>
+    <br>
+    <h6 class="card-subtitle mb-2 text-muted">
+      There are <%= "#{@event.current_capacity}/#{@event.capacity}" %> spots open.
+    </h6>
+    <br>
+    <div class="card-text">
+      <p><b>Location: </b><%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %></p>
+      <p><b>Description: </b><%= @event.description %></p>
+    </div>
+
+    <br>
+    <% if current_user && @event.date.future? %>
+        <% if @registration %>
+          <%= link_to 'Unregister from Event',
+            registration_path(event_id: @event.id, registration_id: @registration),
+            method: :delete,
+            class: "btn btn-danger" %>
+        <% elsif @event.current_capacity < @event.capacity %>
+          <%= link_to 'Register for Event',
+            new_registration_path(event_id: @event.id, user_id: current_user.id),
+            class: "btn btn-success" %>
+        <% else %>
+          <a class="btn btn-danger disabled">Event Full</a>
+        <% end %>
+    <% elsif current_user.nil? %>
+       <a class="btn btn-success disabled">Sign in to Register</a>
+    <% end %>
+    <% if current_user&.is_admin? %>
+      <%= link_to 'Guest List', guests_event_path(@event), class: "btn btn-primary" %>
+      <%= link_to 'Edit', edit_event_path(@event), class: "btn btn-warning" %>
+      <%= link_to 'Delete', event_path(@event),
+        method: :delete,
+        data: { confirm: 'Are you sure?' },
+        class: "btn btn-danger" %>
+    <% end %>
+  </div>
+</div>
+<br>
+<%= link_to 'Back', events_path, class: "btn btn-primary" %>

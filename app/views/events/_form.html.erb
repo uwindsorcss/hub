@@ -1,39 +1,52 @@
-<%= form_with model: @event, local: true do |form| %>
-  <% if @event.errors.any? %>
-    <p><b>
-      <%= pluralize(@event.errors.count, "error") %> prohibited
-      this event from being saved:
-    </b></p>
-    <ul>
-      <% @event.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+<div class="card">
+  <div class="card-body">
+    <%= form_with model: @event, local: true do |form| %>
+      <% if @event.errors.any? %>
+        <p><b>
+          <%= pluralize(@event.errors.count, "error") %> prohibited
+          this event from being saved:
+        </b></p>
+        <ul>
+          <% @event.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
       <% end %>
-    </ul>
-  <% end %>
 
-  <!--EVENT TITLE-->
-    <i>title</i>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <!--EVENT TITLE-->
+      <div class="form-group">
+        <%= form.label :title %><br>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
 
-    <!--DESCRIPTION-->
-    <i>description</i>
-    <%= form.label :description %><br>
-    
-      <%= form.text_area :description, :class => 'right'%>
+        <!--DESCRIPTION-->
+      <div class="form-group">
+        <%= form.label :description %><br>
+        <%= form.text_area :description, class: "form-control" %>
+      </div>
 
-<!--CAPACITY-->
-    <i>people</i>
-    <%= form.label :capacity %><br>
-    <%= form.text_field :capacity %>
-<!--LOCATION-->
-    <i>location_on</i>
-    <% form.label :location %><br>
-    <%= form.text_field :location %>
-<!--DATE-->
-    <i>access_time</i>
-    <% form.label :date %><br>
-    <%= form.datetime_field :date, {ampm: true} %>
-  <%= form.submit 'Submit' %>
-  <%= link_to 'Back', events_path %>
-<% end %>
+      <!--CAPACITY-->
+      <div class="form-group">
+        <%= form.label :capacity %><br>
+        <%= form.text_field :capacity, class: "form-control" %>
+      </div>
+
+      <!--LOCATION-->
+      <div class="form-group">
+        <% form.label :location %><br>
+        <%= form.text_field :location, class: "form-control" %>
+      </div>
+
+      <!--DATE-->
+      <div class="form-group">
+        <% form.label :date %><br>
+        <%= form.datetime_select :date, {ampm: true}, html_options = { class: "form-control" } %>
+      </div>
+
+      <%= form.submit 'Submit', class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
+
+<br>
+ <%= link_to 'Back', events_path, class: "btn btn-primary" %>
