@@ -2,6 +2,6 @@ class PagesController < ApplicationController
   def discord
   end
 
-  def resources
+  def guide
   end
 end

@@ -33,14 +33,14 @@
               <%= link_to "Discord", :discord_path, class: "nav-link" %>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle <%= "active" if current_page?(:resources) %>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle <%= "active" if current_page?(:guide) %>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Resources
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="http://tutor.cs.uwindsor.ca/" target="_blank">Tutoring Schedule</a>
                 <a class="dropdown-item" href="https://www.facebook.com/groups/210441872352826/" target="_blank">Facebook Group</a>
                 <div class="dropdown-divider"></div>
-                <%= link_to "Student Guide", :resources, class: "dropdown-item #{current_page?(:resources) ? 'active' : ''}" %>
+                <%= link_to "Student Guide", :guide, class: "dropdown-item #{current_page?(:guide) ? 'active' : ''}" %>
               </div>
             </li>
             <li class="nav-item">

@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   resources :registration
 
   get '/discord', to: 'pages#discord', :as => 'discord_path'
-  get '/resources', to: 'pages#resources', :as => 'resources'
+  get '/guide', to: 'pages#guide', :as => 'guide'
   get '/discord/verifications/:id', to: 'verifications#show'
 end
