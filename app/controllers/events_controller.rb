@@ -1,11 +1,13 @@
 class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
+    event_title = @event.title
     if current_user&.is_admin?
       @event.destroy
+      redirect_to events_path, flash: { error: "Successfully deleted \"#{event_title}\"" }
+    else
+      redirect_to events_path, flash: { error: "Error deleting \"#{event_title}\""}
     end
-
-    redirect_to events_path
   end
 
   def index
@@ -46,7 +48,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     if current_user&.is_admin?
       if @event.save
-        redirect_to @event
+        redirect_to @event, flash: { success: "Successfully created \"#{@event.title}\"" }
       else
         render 'new'
       end

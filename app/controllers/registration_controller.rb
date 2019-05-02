@@ -22,8 +22,10 @@ class RegistrationController < ApplicationController
     @registration = Registration.find(params[:registration_id])
     if current_user == @registration.user && @registration.event.date.future?
       @registration.destroy
+      redirect_to event_path(params[:event_id]), flash: { warning: "Successfully unregistered from this event!"  }
+    else
+      redirect_to event_path(params[:event_id])
     end
-    redirect_to event_path(params[:event_id])
   end
 
   private
