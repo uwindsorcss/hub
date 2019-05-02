@@ -1,67 +1,43 @@
-<div id="page">
-</div>
 <% if current_user&.is_admin? %>
-    <div class="center" style="padding: 30px"><%= button_to 'Add a new event'.html_safe, new_event_path, :method => :get, :class => 'waves-effect waves-light btn blueblue'%></div>
-  <% end %>
-<div class="container z-depth-3" style="background-color: #f7f7f7; margin-top: 15px">
-<div style="padding: 20px">
-  <h4>Upcoming events</h4>
-  <table>
-    <% @future_events.each do |event| %>
-      <tr>
-        <td>
-          <div class="col s12 m7">
-            <div class="card horizontal">
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5><%= event.title %></h5>
-                  <p><%= event.date.strftime('%B %d, %Y') %></p>
-                  <p><%= pluralize(event.spots_remaining, "spot") %> remaining</p>
-                </div>
-                <div class="card-action">
-                  <%= link_to 'Show', event_path(event) %>
-                  <% if current_user&.is_admin? %>
-                    <%= link_to 'Edit', edit_event_path(event) %>
-                    <%= link_to 'Delete', event_path(event),
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' } %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    <% end %>
-  </table>
+    <%= button_to 'Add a new event'.html_safe, new_event_path, :method => :get %></div>
+<% end %>
 
-  <h4>Past events</h4>
-  <table>
-    <% @past_events.each do |event| %>
-      <tr>
-        <td>
-          <div class="col s12 m7">
-            <div class="card horizontal">
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5><%= event.title %></h5>
-                  <p><%= event.date.strftime('%B %d, %Y') %></p>
-                </div>
-                <div class="card-action">
-                  <%= link_to 'Show', event_path(event) %>
-                  <% if current_user&.is_admin? %>
-                    <%= link_to 'Edit', edit_event_path(event) %>
-                    <%= link_to 'Delete', event_path(event),
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' } %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    <% end %>
-  </table>
-</div>
-</div>
+<h4>Upcoming events</h4>
+<table>
+  <% @future_events.each do |event| %>
+    <tr>
+      <td>
+        <h5><%= event.title %></h5>
+        <p><%= event.date.strftime('%B %d, %Y') %></p>
+        <p><%= pluralize(event.spots_remaining, "spot") %> remaining</p>
+        <%= link_to 'Show', event_path(event) %>
+        <% if current_user&.is_admin? %>
+          <%= link_to 'Edit', edit_event_path(event) %>
+          <%= link_to 'Delete', event_path(event),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<h4>Past events</h4>
+<table>
+  <% @past_events.each do |event| %>
+    <tr>
+      <td>
+        <h5><%= event.title %></h5>
+        <p><%= event.date.strftime('%B %d, %Y') %></p>
+
+        <%= link_to 'Show', event_path(event) %>
+        <% if current_user&.is_admin? %>
+          <%= link_to 'Edit', edit_event_path(event) %>
+          <%= link_to 'Delete', event_path(event),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
