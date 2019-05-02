@@ -14,7 +14,7 @@
         <%= event.date.strftime('%B %d, %Y') %>
         (in <%= distance_of_time_in_words(Time.now, event.date) %>)
       </h6>
-      <p class="card-text"><%= event.description %></p>
+      <p class="card-text"><%= markdown(event.description) %></p>
       <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
       <% if current_user&.is_admin? %>
         <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
@@ -38,7 +38,7 @@
         <%= event.date.strftime('%B %d, %Y') %>
         (<%= distance_of_time_in_words(Time.now, event.date) %> ago)
       </h6>
-      <p class="card-text"><%= event.description %></p>
+      <p class="card-text"><%= markdown(event.description) %></p>
       <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
       <% if current_user&.is_admin? %>
         <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>

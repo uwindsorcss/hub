@@ -12,7 +12,7 @@
     <br>
     <div class="card-text">
       <p><b>Location: </b><%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %></p>
-      <p><b>Description: </b><%= @event.description %></p>
+      <p><b>Description: </b><%= markdown(@event.description) %></p>
     </div>
 
     <br>
