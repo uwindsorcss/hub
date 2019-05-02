@@ -107,7 +107,21 @@ Eric recommends studying/practicing technical interview questions for any mid-to
 
 ##### Resources
 - [LeetCode](http://leetcode.com) - Eric highly recommends LeetCode and used it for all of his interview prep. It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
-- **Cracking the Coding Interview** - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.  
+- **Cracking the Coding Interview** - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.
+
+### Working in the U.S.A.
+
+Almost every major tech company in the USA hires Canadians and will sponsor you for a visa. US companies tend to pay significantly more and provides great opportunities. Eric highly suggests trying to land an internship in the Bay Area or New York.
+
+You'll need to obtain a J-1 intern visa if you're interning in the United States.
+
+A common misconception is that you can simply obtain a visa on your own - this is not true. You need a company who is willing to sponsor your visa to work in the United States. Once you find this company they will do most of the work for you, you'll just have to submit some documents/forms. Don't stress about this step.
+
+#### Getting paid
+
+You'll need an American bank account to get paid if you're working in the USA. This is very easy to obtain - just go to your preferred bank once you're in the USA and bring your passport and visa documents just in case. Eric suggests Bank of America if you're working in the Bay Area - it took him 1 hour to get an account.
+
+It's also a very good idea to obtain a Social Security Number in the USA so that you can apply for a credit card and build up a credit score in the US (can be helpful in many ways in the future). This is also straight-forward and you need to wait until you're in the USA for at least 10 days before you can apply.
 
 
 # Miscellaneous
