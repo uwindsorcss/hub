@@ -16,6 +16,8 @@ Anyone can contribute to this document through GitHub's editor without any codin
 
 We *highly* encourage people to contribute so that we can make this a very useful resource for students. Add any information you might find useful and feel free to add/change sections.
 
+If you're posting any opinionated information, use your name in the sentence (i.e. David recommends...).
+
 ### Contributors
 
 Please add yourself to this list (link is optional) if you've contributed to this guide.
