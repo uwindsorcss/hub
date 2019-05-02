@@ -60,14 +60,31 @@
         </div>
       </nav>
 
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <br>
+          <% if flash[:error] %>
+            <div class="alert alert-danger" role="alert" align="center">
+               <%= flash[:error] %>
+            </div>
+          <% end %>
+          <% if flash[:success] %>
+            <div class="alert alert-success" role="alert" align="center">
+               <%= flash[:success] %>
+            </div>
+          <% end %>
+          <% if flash[:info] %>
+            <div class="alert alert-info" role="alert" align="center">
+               <%= flash[:info] %>
+            </div>
+          <% end %>
 
-    <% if flash[:error] %>
-      <p><%= flash[:error] %></p>
-    <% end %>
-    <% if flash[:success] %>
-      <p><%= flash[:success] %></p>
-    <% end %>
-
-    <%= yield %>
+          <%= yield %>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
   </body>
 </html>
