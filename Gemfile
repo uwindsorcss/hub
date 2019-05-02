@@ -64,6 +64,7 @@ gem "json"
 gem "fuzzy-string-match"
 gem 'rubysl-securerandom'
 gem 'bootstrap'
+gem 'jquery-rails'
 gem 'pry-byebug'
 
 # Markdown rendering
