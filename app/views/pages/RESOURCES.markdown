@@ -12,7 +12,7 @@ Table of Contents
 
 This is an open-source resources file for students at the University of Windsor.
 
-Anyone can contribute to this document (submissions require approval) through GitHub.
+Anyone can contribute to this document through GitHub (bottom at the top-right of page). We highly encourage people to contribute so that we can make this a very useful resource for students.
 
 ### Contributors
 
@@ -79,13 +79,20 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | 60-480 | Not Offered | Offered | Not Offered |
 | 60-496 | Offered | Offered | Not Offered |
 | 60-499 | Offered | Offered | Not Offered |
-|  |  |  |  |
+
 
 
 # Co-op and Internships
 ------------
 
 Internship postings, specific company reviews/processes, etc.
+
+Please see Eric's [presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDiknOmjwA5-5SJLUUDQn1n10NsS9Bi8/edit?usp=sharing) on behalf of CSS for landing an internship. This covers a bit of everything (resumes, applying, interviews).
+
+### Job Boards
+
+- [intern.supply](http://intern.supply) - Eric highly recommends this. Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
+- [LinkedIn](https://www.linkedin.com/jobs/) - Eric also recommends this - it's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
 
 # Miscellaneous
 ------------
