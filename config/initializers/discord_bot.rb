@@ -34,7 +34,7 @@ class Main
       )
       break
     end
-    if Verification.where(discord_user: event.user.id, verified: true).any?
+    if DiscordVerification.where(discord_user: event.user.id, verified: true).any?
       DiscordMessageSender.send_embedded(
         event.user.pm,
         title: "Invalid Usage",
@@ -43,14 +43,14 @@ class Main
       break
     end
 
-    Verification.where(discord_user: event.user.id, verified: false).destroy_all
-    @verification = Verification.new(id: SecureRandom.uuid, discord_user: event.user.id, server: event.server.id)
-    @verification.save
+    DiscordVerification.where(discord_user: event.user.id, verified: false).destroy_all
+    @discord_verification = DiscordVerification.new(id: SecureRandom.uuid, discord_user: event.user.id, server: event.server.id)
+    @discord_verification.save
 
     DiscordMessageSender.send_embedded(
       event.user.pm,
       title: "Verification Started",
-      description: "Created verification link.\n\nGo to http://discord.cs.uwindsor.ca/discord/verifications/#{@verification.id} and sign in with your **@uwindsor.ca** email address to verify your account.",
+      description: "Created verification link.\n\nGo to http://discord.cs.uwindsor.ca/discord/verifications/#{@discord_verification.id} and sign in with your **@uwindsor.ca** email address to verify your account.",
     )
   end
 

@@ -1,2 +1,0 @@
-class Verification < ApplicationRecord
-end

@@ -10,7 +10,7 @@
 <center>
   <p>
     <strong>Discord User:</strong>
-    <%= @verification.discord_user if @verification %>
+    <%= @discord_verification.discord_user if @discord_verification %>
   </p>
   <% if @status.include? "has already been used" %>
     <div id="error_explanation" class="container error-newhtml">
