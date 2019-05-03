@@ -24,7 +24,7 @@
         <%= form.label :description do
           "Description (supports #{link_to('markdown', 'https://www.markdownguide.org/basic-syntax/', target: "_blank")})".html_safe
           end %>
-        <%= form.text_area :description, class: "form-control" %>
+        <%= form.text_area :description, class: "form-control", rows: 8 %>
       </div>
 
       <!--REGISTRATION TOGGLE-->
