@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def guide
   end
+
+  def index
+  end
 end
