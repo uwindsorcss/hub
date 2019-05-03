@@ -20,8 +20,14 @@ After installing rails, you need to install the dependencies (gems). Navigate to
 
 `$ bundle install`
 
-Bundler will install all of the project dependencies (located in `Gemfile`) of the project. After that you're ready to launch the site using:
+Bundler will install all of the project dependencies (located in `Gemfile`) of the project.
 
-`$ rails s`
+Next you'll need to create the local database using
+
+`$ rails db:setup`
+
+After that you're ready to launch the site using:
+
+`$ rails server`
 
 By default, rails will launch the server at [http://localhost:3000](http://localhost:3000).
