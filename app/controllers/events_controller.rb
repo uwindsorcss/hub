@@ -11,8 +11,8 @@ class EventsController < ApplicationController
   end
 
   def index
-    @future_events = Event.select { |event| event.date.future? }.sort_by &:date
-    @past_events = Event.select { |event| event.date.past? }.last(5)
+    @future_events = Event.select { |event| event.start_date.future? }.sort_by &:start_date
+    @past_events = Event.select { |event| event.start_date.past? }.last(5)
   end
 
   def new
@@ -68,6 +68,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :capacity, :date, :location, :registration_enabled)
+    params.require(:event).permit(:title, :description, :capacity, :start_date, :end_time, :location, :registration_enabled)
   end
 end

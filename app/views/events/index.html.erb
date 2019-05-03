@@ -11,8 +11,8 @@
     <div class="card-body">
       <h5 class="card-title"><%= event.title %></h5>
       <h6 class="card-subtitle mb-2 text-muted">
-        <%= event.date.strftime('%B %d, %Y') %>
-        (in <%= distance_of_time_in_words(Time.now, event.date) %>)
+        <%= event.start_date.strftime('%A, %B %d, %Y %l:%M%P') %> - <%= event.end_time.strftime('%l:%M%P') %>
+        (in <%= distance_of_time_in_words(Time.now, event.start_date) %>)
       </h6>
       <p class="card-text"><%= markdown(event.description) %></p>
       <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
@@ -35,8 +35,8 @@
     <div class="card-body">
       <h5 class="card-title"><%= event.title %></h5>
       <h6 class="card-subtitle mb-2 text-muted">
-        <%= event.date.strftime('%B %d, %Y') %>
-        (<%= distance_of_time_in_words(Time.now, event.date) %> ago)
+        <%= event.start_date.strftime('%A, %B %d, %Y %l:%M%P') %> - <%= event.end_time.strftime('%l:%M%P') %>
+        (<%= distance_of_time_in_words(Time.now, event.start_date) %> ago)
       </h6>
       <p class="card-text"><%= markdown(event.description) %></p>
       <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>

@@ -60,12 +60,15 @@
         <%= form.text_field :location, class: "form-control" %>
       </div>
 
-      <!--DATE-->
-      <div class="form-group">
-        <%= form.label :date %><br>
-        <%= form.datetime_select :date, {ampm: true}, html_options = { class: "form-control" } %>
+      <!--DATE/TIMES-->
+      <%= form.label :start_date, "Date/time" %>
+      <div class="form-inline">
+        <%= form.datetime_select :start_date, {ampm: true}, html_options = { class: "form-control" } %>
+        <div style="padding-left:10px;padding-right:10px;"> to </div>
+        <%= form.time_select :end_time, {ampm: true}, html_options = { class: "form-control" } %>
       </div>
 
+      <br>
       <%= form.submit 'Submit', class: "btn btn-success" %>
     <% end %>
   </div>

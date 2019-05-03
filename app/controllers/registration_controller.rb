@@ -2,7 +2,7 @@ class RegistrationController < ApplicationController
   def new
     user_id = params[:user_id].to_i
     event = Event.find(params[:event_id])
-    if current_user.id == user_id && !(user_already_registered? user_id, event.id) && event.date.future?
+    if current_user.id == user_id && !(user_already_registered? user_id, event.id) && event.start_date.future?
       @registration = Registration.new(
         user_id: user_id,
         event_id: event.id
@@ -20,7 +20,7 @@ class RegistrationController < ApplicationController
 
   def destroy
     @registration = Registration.find(params[:registration_id])
-    if current_user == @registration.user && @registration.event.date.future?
+    if current_user == @registration.user && @registration.event.start_date.future?
       @registration.destroy
       redirect_to event_path(params[:event_id]), flash: { warning: "Successfully unregistered from this event!"  }
     else
