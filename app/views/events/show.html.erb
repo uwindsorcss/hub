@@ -32,9 +32,6 @@
           <% else %>
             <a class="btn btn-danger disabled">Event Full</a>
           <% end %>
-          <% if current_user&.is_admin? %>
-            <%= link_to 'Guest List', guests_event_path(@event), class: "btn btn-primary" %>
-          <% end %>
       <% elsif current_user.nil? %>
          <a class="btn btn-success disabled">Sign in to Register</a>
       <% end %>
@@ -48,5 +45,18 @@
     <% end %>
   </div>
 </div>
+<br>
+<% if current_user&.is_admin? %>
+  <h5>Guest List</h5>
+  <ol class="list-group">
+    <% if @event.all_guests.empty? %>
+      <li class="list-group-item">There are no users registered for this event.</li>
+    <% else %>
+      <% @event.all_guests.each do |guest| %>
+        <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
+      <% end %>
+    <% end %>
+  </ol>
+<% end %>
 <br>
 <%= link_to 'Back', events_path, class: "btn btn-primary" %>
