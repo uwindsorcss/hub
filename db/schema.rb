@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190503182417) do
+ActiveRecord::Schema.define(version: 20190503202249) do
+
+  create_table "discord_verifications", id: :string, limit: 8, force: :cascade do |t|
+    t.integer "discord_user", limit: 8
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "verified", default: false
+    t.string "email"
+    t.bigint "server"
+    t.integer "user_id"
+    t.index ["id"], name: "sqlite_autoindex_discord_verifications_1", unique: true
+    t.index ["user_id"], name: "index_discord_verifications_on_user_id"
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "title"
@@ -49,15 +61,6 @@ ActiveRecord::Schema.define(version: 20190503182417) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "hd"
-  end
-
-  create_table "verifications", id: :string, limit: 8, force: :cascade do |t|
-    t.integer "discord_user", limit: 8
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean "verified", default: false
-    t.string "email"
-    t.bigint "server"
   end
 
 end

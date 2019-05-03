@@ -1,3 +1,4 @@
 class Guest < ApplicationRecord
-  has_one :user, through: :registrations
+  has_one :registration
+  has_one :user, through: :registration
 end

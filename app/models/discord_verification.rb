@@ -1,0 +1,2 @@
+class DiscordVerification < ApplicationRecord
+end

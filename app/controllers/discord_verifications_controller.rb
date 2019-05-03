@@ -1,19 +1,20 @@
-class VerificationsController < ApplicationController
+class DiscordVerificationsController < ApplicationController
   def new
   end
 
   def show
-    # Need to catch error where verification is not found. Same with other "finds" (old codes are deleted when new one is created for same user, for example)
-    @verification = Verification.find(params[:id])
+    # Need to catch error where discord_verification is not found. Same with other "finds" (old codes are deleted when new one is created for same user, for example)
+    @discord_verification = DiscordVerification.find(params[:id])
     @status = "Unverified"
     if current_user
-      if uwindsor_email(current_user) and email_not_used(current_user.email, @verification.discord_user)
-        @verification.update(verified: true, email: current_user.email)
-        @verification.save
+      if uwindsor_email(current_user) and email_not_used(current_user.email, @discord_verification.discord_user)
+        @discord_verification.update(verified: true, email: current_user.email)
+        @discord_verification.save
         @status = "Verified"
+        current_user.update(discord_verification: @discord_verification)
 
-        server = ::Bot.servers[@verification.server]
-        member = server.members.find { |member| member.id == @verification.discord_user }
+        server = ::Bot.servers[@discord_verification.server]
+        member = server.members.find { |member| member.id == @discord_verification.discord_user }
 
         DiscordMessageSender.send_embedded(
           member.pm,
@@ -25,7 +26,7 @@ class VerificationsController < ApplicationController
         eric_member.pm("#{current_user.name} has been verified!") if eric_member
 
         begin
-          server = ::Bot.servers[@verification.server]
+          server = ::Bot.servers[@discord_verification.server]
           member.add_role(server.roles.find { |role| role.name.upcase == "VERIFIED"} )
           member.nickname = current_user.name
         rescue Discordrb::Errors::NoPermission
@@ -37,7 +38,7 @@ class VerificationsController < ApplicationController
         end
       end
     else
-      @status = "Verified" if discord_user_verified(@verification.discord_user)
+      @status = "Verified" if discord_user_verified(@discord_verification.discord_user)
     end
   rescue ActiveRecord::RecordNotFound
     @status = "Invalid"
@@ -52,12 +53,12 @@ class VerificationsController < ApplicationController
   end
 
   def discord_user_verified(discord_user_id)
-    return true if Verification.where(discord_user: discord_user_id, verified: true).any?
+    return true if DiscordVerification.where(discord_user: discord_user_id, verified: true).any?
     false
   end
 
   def email_not_used(email, discord_user_id)
-    existing_verification = Verification.where(email: email, verified: true).first
+    existing_verification = DiscordVerification.where(email: email, verified: true).first
     return true if existing_verification.nil?
 
     if existing_verification.discord_user == discord_user_id

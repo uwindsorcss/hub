@@ -15,5 +15,5 @@ Rails.application.routes.draw do
 
   get '/discord', to: 'pages#discord', :as => 'discord_path'
   get '/guide', to: 'pages#guide', :as => 'guide'
-  get '/discord/verifications/:id', to: 'verifications#show'
+  get '/discord/verifications/:id', to: 'discord_verifications#show'
 end
