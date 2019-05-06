@@ -46,13 +46,13 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-2067 || Not Offered | Offered | Offered |
 | COMP-2077 || Offered | Offered | Not Offered |
 | COMP-2097 || Offered | Offered | Offered |
-| COMP-2120 || Offered | Offered | Offered |
+| COMP-2120 |Object oriented programming Using Java| Offered | Offered | Offered |
 | COMP-2140 || Not Offered | Offered | Not Offered |
 | COMP-2310 || Offered | Not Offered | Not Offered |
-| COMP-2540 |Data Structures and Algorithms | Offered | Offered | Offered |
+| COMP-2540 |Data Structures and Algorithms| Offered | Offered | Offered |
 | COMP-2560 |System Programming| Offered | Offered | Offered |
-| COMP-2650 || Offered | Offered | Offered |
-| COMP-2660 || Offered | Offered | Not Offered |
+| COMP-2650 |Computer Architecture I| Offered | Offered | Offered |
+| COMP-2660 |Computer Architecture II| Offered | Offered | Not Offered |
 | COMP-2707 || Offered | Offered | Not Offered |
 | COMP-2800 || Not Offered | Offered | Not Offered |
 | COMP-3057 || Not Offered | Offered | Offered |
@@ -60,13 +60,13 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-3110 || Offered | Not Offered | Not Offered |
 | COMP-3150 || Offered | Offered | Not Offered |
 | COMP-3220 |Obj Oriented Software Analysis and Design| Offered | Offered | Offered |
-| COMP-3300 || Not Offered | Offered | Offered |
-| COMP-3340 || Not Offered | Offered | Offered |
+| COMP-3300 |Operating System Fundamentals| Not Offered | Offered | Offered |
+| COMP-3340 |WWW Information System Development| Not Offered | Offered | Offered |
 | COMP-3400 || Not Offered | Offered | Not Offered |
 | COMP-3500 || Offered | Not Offered | Not Offered |
 | COMP-3520 || Not Offered | Offered | Not Offered |
 | COMP-3540 || Offered | Not Offered | Not Offered |
-| COMP-3670 || Offered | Not Offered | Offered |
+| COMP-3670 |Computer networks| Offered | Not Offered | Offered |
 | COMP-3710 || Not Offered | Offered | Not Offered |
 | COMP-3770 || Offered | Not Offered | Not Offered |
 | COMP-4110 || Not Offered | Offered | Not Offered |
@@ -74,7 +74,7 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-4200 || Offered | Not Offered | Not Offered |
 | COMP-4220 || Offered | Not Offered | Not Offered |
 | COMP-4250 || Not Offered | Offered | Not Offered |
-| COMP-4400 || Offered | Not Offered | Offered |
+| COMP-4400 |Principles of Programming languages| Offered | Not Offered | Offered |
 | COMP-4500 || Not Offered | Offered | Not Offered |
 | COMP-4540 || Not Offered | Offered | Not Offered |
 | COMP-4670 || Not Offered | Offered | Not Offered |
