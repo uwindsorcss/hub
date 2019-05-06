@@ -23,6 +23,7 @@ If you're posting any opinionated information, use your name in the sentence (i.
 Please add yourself to this list (link is optional) if you've contributed to this guide.
 
 - [Eric Pickup](http://pickuperic.com)  
+- [Harshdip Singh Deogan](http://hsdeogan.com)  
 
 # Courses
 ------------
@@ -34,60 +35,66 @@ Add typical course offerings, advice on specific courses.
 
 Schedules are rarely changed, so this might not be *100%* accurate.
 
-| Course Code | Fall | Winter | Summer/Intersession |
-|-------------|-------------|-------------|---------------------|
-| COMP-1000 | Offered | Offered | Offered |
-| COMP-1047 | Offered | Offered | Offered |
-| COMP-1060 | Offered | Not Offered | Not Offered |
-| COMP-1400 | Offered | Offered | Offered |
-| COMP-1410 | Not Offered | Offered | Offered |
-| COMP-2057 | Offered | Offered | Offered |
-| COMP-2067 | Not Offered | Offered | Offered |
-| COMP-2077 | Offered | Offered | Not Offered |
-| COMP-2097 | Offered | Offered | Offered |
-| COMP-2120 | Offered | Offered | Offered |
-| COMP-2140 | Not Offered | Offered | Not Offered |
-| COMP-2310 | Offered | Not Offered | Not Offered |
-| COMP-2540 | Offered | Offered | Offered |
-| COMP-2560 | Offered | Offered | Offered |
-| COMP-2650 | Offered | Offered | Offered |
-| COMP-2660 | Offered | Offered | Not Offered |
-| COMP-2707 | Offered | Offered | Not Offered |
-| COMP-2800 | Not Offered | Offered | Not Offered |
-| COMP-3057 | Not Offered | Offered | Offered |
-| COMP-3077 | Not Offered | Offered | Not Offered |
-| COMP-3110 | Offered | Not Offered | Not Offered |
-| COMP-3150 | Offered | Offered | Not Offered |
-| COMP-3220 | Offered | Offered | Offered |
-| COMP-3300 | Not Offered | Offered | Offered |
-| COMP-3340 | Not Offered | Offered | Offered |
-| COMP-3400 | Not Offered | Offered | Not Offered |
-| COMP-3500 | Offered | Not Offered | Not Offered |
-| COMP-3520 | Not Offered | Offered | Not Offered |
-| COMP-3540 | Offered | Not Offered | Not Offered |
-| COMP-3670 | Offered | Not Offered | Offered |
-| COMP-3710 | Not Offered | Offered | Not Offered |
-| COMP-3770 | Offered | Not Offered | Not Offered |
-| COMP-4110 | Not Offered | Offered | Not Offered |
-| COMP-4150 | Offered | Not Offered | Not Offered |
-| COMP-4200 | Offered | Not Offered | Not Offered |
-| COMP-4220 | Offered | Not Offered | Not Offered |
-| COMP-4250 | Not Offered | Offered | Not Offered |
-| COMP-4400 | Offered | Not Offered | Offered |
-| COMP-4500 | Not Offered | Offered | Not Offered |
-| COMP-4540 | Not Offered | Offered | Not Offered |
-| COMP-4670 | Not Offered | Offered | Not Offered |
-| COMP-4700 | Offered | Not Offered | Not Offered |
-| COMP-4730 | Offered | Not Offered | Not Offered |
-| COMP-4740 | Not Offered | Offered | Not Offered |
-| COMP-4750 | Not Offered | Offered | Not Offered |
-| COMP-4770 | Not Offered | Offered | Not Offered |
-| COMP-4800 | Not Offered | Offered | Not Offered |
-| COMP-4960 | Offered | Offered | Not Offered |
-| COMP-4990 | Offered | Offered | Not Offered |
+| Course Code |Course Name| Fall | Winter | Summer/Intersession |
+|-------------|------------|-------------|-------------|---------------------|
+| COMP-1000 |Key Concepts in Computer Science| Offered | Offered | Offered |
+| COMP-1047 || Offered | Offered | Offered |
+| COMP-1060 || Offered | Not Offered | Not Offered |
+| COMP-1400 |Intro to Programming and Algorithms I| Offered | Offered | Offered |
+| COMP-1410 |Intro to Programming and Algorithms II| Not Offered | Offered | Offered |
+| COMP-2057 || Offered | Offered | Offered |
+| COMP-2067 || Not Offered | Offered | Offered |
+| COMP-2077 || Offered | Offered | Not Offered |
+| COMP-2097 || Offered | Offered | Offered |
+| COMP-2120 || Offered | Offered | Offered |
+| COMP-2140 || Not Offered | Offered | Not Offered |
+| COMP-2310 || Offered | Not Offered | Not Offered |
+| COMP-2540 |Data Structures and Algorithms | Offered | Offered | Offered |
+| COMP-2560 |System Programming| Offered | Offered | Offered |
+| COMP-2650 || Offered | Offered | Offered |
+| COMP-2660 || Offered | Offered | Not Offered |
+| COMP-2707 || Offered | Offered | Not Offered |
+| COMP-2800 || Not Offered | Offered | Not Offered |
+| COMP-3057 || Not Offered | Offered | Offered |
+| COMP-3077 || Not Offered | Offered | Not Offered |
+| COMP-3110 || Offered | Not Offered | Not Offered |
+| COMP-3150 || Offered | Offered | Not Offered |
+| COMP-3220 |Obj Oriented Software Analysis and Design| Offered | Offered | Offered |
+| COMP-3300 || Not Offered | Offered | Offered |
+| COMP-3340 || Not Offered | Offered | Offered |
+| COMP-3400 || Not Offered | Offered | Not Offered |
+| COMP-3500 || Offered | Not Offered | Not Offered |
+| COMP-3520 || Not Offered | Offered | Not Offered |
+| COMP-3540 || Offered | Not Offered | Not Offered |
+| COMP-3670 || Offered | Not Offered | Offered |
+| COMP-3710 || Not Offered | Offered | Not Offered |
+| COMP-3770 || Offered | Not Offered | Not Offered |
+| COMP-4110 || Not Offered | Offered | Not Offered |
+| COMP-4150 || Offered | Not Offered | Not Offered |
+| COMP-4200 || Offered | Not Offered | Not Offered |
+| COMP-4220 || Offered | Not Offered | Not Offered |
+| COMP-4250 || Not Offered | Offered | Not Offered |
+| COMP-4400 || Offered | Not Offered | Offered |
+| COMP-4500 || Not Offered | Offered | Not Offered |
+| COMP-4540 || Not Offered | Offered | Not Offered |
+| COMP-4670 || Not Offered | Offered | Not Offered |
+| COMP-4700 || Offered | Not Offered | Not Offered |
+| COMP-4730 || Offered | Not Offered | Not Offered |
+| COMP-4740 || Not Offered | Offered | Not Offered |
+| COMP-4750 || Not Offered | Offered | Not Offered |
+| COMP-4770 || Not Offered | Offered | Not Offered |
+| COMP-4800 || Not Offered | Offered | Not Offered |
+| COMP-4960 || Offered | Offered | Not Offered |
+| COMP-4990 || Offered | Offered | Not Offered |
 
 *Updated Summer 2019*
 
+#### Deciding the courses
+It is always better to have a good plan about the course you'll be taking each semester. Harshdip has completed 4 semesters, taking all the major courses. This way saving up all the electives is one approach. If you find 5 courses overwhelming, taking only 4 courses or an easy elective as a 5th course is another approach. 
+Some easy to score electives:
+ - 0341 110 Introduction to Economics I
+ - 0241 111 Introduction to Economics II
+ - COMP 2067 Programming for Beginners
 
 # Co-op and Internships
 ------------
@@ -100,6 +107,7 @@ See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDi
 
 - [intern.supply](http://intern.supply) - Eric highly recommends this. Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
 - [LinkedIn](https://www.linkedin.com/jobs/) - Eric also recommends this - it's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
+- [Summer 2019 Internships](https://github.com/christine-hu/summer-2019-internships) - A document on Github that keeps track of summer internship opportunities.
 
 ### Interview Preparation
 
