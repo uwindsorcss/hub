@@ -48,7 +48,7 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-2097 || Offered | Offered | Offered |
 | COMP-2120 |Object oriented programming Using Java| Offered | Offered | Offered |
 | COMP-2140 || Not Offered | Offered | Not Offered |
-| COMP-2310 || Offered | Not Offered | Not Offered |
+| COMP-2310 |Theoretical Founations in Computer Sci| Offered | Not Offered | Not Offered |
 | COMP-2540 |Data Structures and Algorithms| Offered | Offered | Offered |
 | COMP-2560 |System Programming| Offered | Offered | Offered |
 | COMP-2650 |Computer Architecture I| Offered | Offered | Offered |
@@ -58,7 +58,7 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-3057 || Not Offered | Offered | Offered |
 | COMP-3077 || Not Offered | Offered | Not Offered |
 | COMP-3110 || Offered | Not Offered | Not Offered |
-| COMP-3150 || Offered | Offered | Not Offered |
+| COMP-3150 |	Database Management Systems| Offered | Offered | Not Offered |
 | COMP-3220 |Obj Oriented Software Analysis and Design| Offered | Offered | Offered |
 | COMP-3300 |Operating System Fundamentals| Not Offered | Offered | Offered |
 | COMP-3340 |WWW Information System Development| Not Offered | Offered | Offered |
@@ -67,7 +67,7 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-3520 || Not Offered | Offered | Not Offered |
 | COMP-3540 || Offered | Not Offered | Not Offered |
 | COMP-3670 |Computer networks| Offered | Not Offered | Offered |
-| COMP-3710 || Not Offered | Offered | Not Offered |
+| COMP-3710 |Artificial Intell Concepts| Not Offered | Offered | Not Offered |
 | COMP-3770 || Offered | Not Offered | Not Offered |
 | COMP-4110 || Not Offered | Offered | Not Offered |
 | COMP-4150 || Offered | Not Offered | Not Offered |
@@ -109,6 +109,7 @@ See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDi
 - [LinkedIn](https://www.linkedin.com/jobs/) - Eric also recommends this - it's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
 - [Summer 2019 Internships](https://github.com/christine-hu/summer-2019-internships) - A document on Github that keeps track of summer internship opportunities.
 
+
 ### Interview Preparation
 
 Eric recommends studying/practicing technical interview questions for any mid-to-large-sized company. Most of them will ask you highly technical coding questions.
@@ -134,6 +135,6 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 
 # Miscellaneous
 ------------
-
+- [University Guide by Jose Alba](https://docs.google.com/document/d/1OaK6moqKLeFBVVfZ1gJAYCV_DsuvNxHvRAykeAMUhYU/edit?fbclid=IwAR2vBoM9rOHdwhU5ueukdeYdEeXe-slz2BiF5kZBZ0NF14SjbtuLDhl4jpU) - Jose Alba is a recent graduate from University of Windsor and he has written a good document where he shares his experiences and tips for making the most out of your university life.
 
 All other info
