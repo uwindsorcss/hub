@@ -5,8 +5,8 @@ require 'fuzzystringmatch'
 
 class Main
   ::Bot = Discordrb::Commands::CommandBot.new(
-    token: ENV['DISCORD_API_TOKEN'],
-    client_id: ENV['DISCORD_API_CLIENT_ID'],
+    token: ENV['DISCORD_BOT_TOKEN'],
+    client_id: ENV['DISCORD_CLIENT_ID'],
     prefix: '~',
     help_command: false,
   )

@@ -25,6 +25,7 @@ module UWindsorCssHub
     # -- all .rb files in that directory are automatically loaded.
     config.middleware.use OmniAuth::Builder do
       provider :google_oauth2, ENV['GOOGLE_CLIENT'], ENV['GOOGLE_SECRET'], { hd: 'uwindsor.ca', prompt: 'select_account' }
+      provider :discord, ENV['DISCORD_CLIENT_ID'], ENV['DISCORD_CLIENT_SECRET'], scope: 'guilds.join', permissions: 0x00000001 + 0x08000000
     end
   end
 end
