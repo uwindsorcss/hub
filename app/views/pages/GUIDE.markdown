@@ -108,7 +108,7 @@ See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDi
 - [intern.supply](http://intern.supply) - Eric highly recommends this. Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
 - [LinkedIn](https://www.linkedin.com/jobs/) - Eric also recommends this - it's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
 - [Summer 2019 Internships](https://github.com/christine-hu/summer-2019-internships) - A document on Github that keeps track of summer internship opportunities.
-- [University Guide by Jose Alba](https://docs.google.com/document/d/1OaK6moqKLeFBVVfZ1gJAYCV_DsuvNxHvRAykeAMUhYU/edit?fbclid=IwAR2vBoM9rOHdwhU5ueukdeYdEeXe-slz2BiF5kZBZ0NF14SjbtuLDhl4jpU) - Jose Alba is a recent graduate from University of Windsor and he has written a good document where he shares his experiences and tips for making the most out of your university life.
+
 
 ### Interview Preparation
 
@@ -135,6 +135,6 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 
 # Miscellaneous
 ------------
-
+- [University Guide by Jose Alba](https://docs.google.com/document/d/1OaK6moqKLeFBVVfZ1gJAYCV_DsuvNxHvRAykeAMUhYU/edit?fbclid=IwAR2vBoM9rOHdwhU5ueukdeYdEeXe-slz2BiF5kZBZ0NF14SjbtuLDhl4jpU) - Jose Alba is a recent graduate from University of Windsor and he has written a good document where he shares his experiences and tips for making the most out of your university life.
 
 All other info
