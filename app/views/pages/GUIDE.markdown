@@ -97,28 +97,29 @@ Some easy to score electives:
  - 0241 111 Introduction to Economics II
  - COMP 2067 Programming for Beginners
  
-Jose's recommended course sequence for the first two years of University. First two years of University most CS students take the same courses as CS doesn't have many electives. I also recommend you take mandatory courses as third and fourth year you are going to want to have electives to take fun CS courses. 
+##### Jose's recommended course sequence for the first two years of University
+First two years of University most CS students take the same courses as CS doesn't have many electives. I also recommend you take mandatory courses as third and fourth year you are going to want to have electives to take fun CS courses. 
 
 #### First Semester
-COMP100 Key Concepts in comp sci
-COMP140 Intro to algorithms
-MATH139 Functions and deferential calculus
-MATH125 Linera Algebra
+COMP1000 Key Concepts in comp sci
+COMP1400 Intro to algorithms
+MATH1390 Functions and deferential calculus
+MATH1250 Linera Algebra
 Elective (See if you can take another mandatory course you will have to do in the future)
 
 #### Second Semester
-ECON110 Intro to Economics 1 or Physcology (I took econ because I find it more fun and applicable)
-COMP141 Intro to algorithms II
-COMP265 Comp Architecture 1
-MATH141 Integral Calculus
-MATH190 Mathematical Foundations
+ECON1100 Intro to Economics 1 or Physcology (I took econ because I find it more fun and applicable)
+COMP1410 Intro to algorithms II
+COMP2650 Comp Architecture 1
+MATH1410 Integral Calculus
+MATH1900 Mathematical Foundations
 
 #### Third Semester
-COMP231 Theoretical Foundations of Comp Sci
-COMP212 Obj Oriented Programming using Java
-COMP256 System Programming
-COMP254 Data Structures
-STATIS 205 Statistics for the Sciences
+COMP2310 Theoretical Foundations of Comp Sci
+COMP2120 Obj Oriented Programming using Java
+COMP2560 System Programming
+COMP2540 Data Structures
+STATIS 2050 Statistics for the Sciences
 
 #### Fourth Semester
 COMP3150 Database Management Systems
@@ -184,8 +185,6 @@ All other info
 
 # Exchange 
 
-- It is fun and 100% worth it
+- Jose thinks Exchanges are fun and 100% worth it
 - [University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
 - [Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)  
-
-
