@@ -70,3 +70,5 @@ gem 'pry-byebug'
 # Markdown rendering
 gem 'redcarpet'
 gem 'rails-erd'
+gem 'omniauth-discord'
+gem 'rest-client'

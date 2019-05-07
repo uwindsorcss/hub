@@ -9,9 +9,37 @@
 
 <center>
   <br>
-  Create a Discord account at <a href="https://discordapp.com/register">https://discordapp.com/register</a>
+  <p><a href="https://discordapp.com" target="_blank">Discord</a> is a free VoIP application that specializes in text, image, video, and audio communication between users in chat channels.</p>
+
+  <p>The Computer Science Society created a private Discord server in 2018 to connect Computer Science students and enable discussions for courses, co-op/internships, general chat and more. There are <i>hundreds</i> of students registered in the server.</p>
+
+  <p>All users in the Discord server are linked to their UWindsor email addresses to verify identity and to restrict the server to UWindsor students only.</p>
+
+  <p>Follow the steps below to join.</p>
+  <br>
+  <% if current_user&.discord_user&.verified? %>
+    <b>A Discord user has already been linked to this UWindsor account.<br>You may proceed with the steps below if you've left the server and wish to re-join.</b>
+    <br><br>
+  <% end %>
+
+  <% if current_user %>
+    <%= link_to "✓ Step 1: Authorized with UWindsor", :google_auth, class: "btn btn-primary" %>
+  <% else %>
+    <%= link_to "Step 1: Authorize with UWindsor", :google_auth, class: "btn btn-outline-primary" %>
+  <% end %>
   <br><br>
-  If you already have a Discord account, simply join with the button below!
-  <br><br>
-  <%= link_to "Join Discord", "https://discord.gg/MzYMkcj", class: "btn btn-primary", target: "_blank" %>
+  <% if current_discord_user %>
+    <%= link_to "✓ Step 2: Authorized with Discord", :discord_auth, class: "btn btn-primary" %>
+  <% else %>
+    <% if current_user %>
+      <%= link_to "Step 2: Authorize with Discord", :discord_auth, class: "btn btn-outline-primary" %>
+    <% else %>
+      <%= link_to "Step 2: Authorize with Discord", :discord_auth, class: "btn btn-outline-primary disabled" %>
+    <% end %>
+  <% end %>
+  <% if current_discord_user %>
+    <br><br><br>
+    <%= link_to "Sign out of Discord", :discord_logout, class: "btn btn-outline-danger" %>
+  <% end %>
+
 </center>

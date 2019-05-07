@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  discord_uid: 1
+  verified: false
+  user: one
+
+two:
+  discord_uid: 1
+  verified: false
+  user: two

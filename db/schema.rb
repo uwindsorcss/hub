@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190507173609) do
+ActiveRecord::Schema.define(version: 20190507211107) do
+
+  create_table "discord_users", force: :cascade do |t|
+    t.integer "discord_uid", limit: 8
+    t.boolean "verified"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_discord_users_on_user_id"
+  end
 
   create_table "discord_verifications", id: :string, limit: 8, force: :cascade do |t|
     t.integer "discord_user", limit: 8
