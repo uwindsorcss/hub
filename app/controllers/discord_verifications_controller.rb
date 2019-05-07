@@ -8,7 +8,7 @@ class DiscordVerificationsController < ApplicationController
     @status = "Unverified"
     if current_user
       if uwindsor_email(current_user) and email_not_used(current_user.email, @discord_verification.discord_user)
-        @discord_verification.update(verified: true, email: current_user.email)
+        @discord_verification.update(verified: true)
         @discord_verification.save
         @status = "Verified"
         current_user.update(discord_verification: @discord_verification)
@@ -58,7 +58,7 @@ class DiscordVerificationsController < ApplicationController
   end
 
   def email_not_used(email, discord_user_id)
-    existing_verification = DiscordVerification.where(email: email, verified: true).first
+    existing_verification = DiscordVerification.joins(:user).where(users: { email: current_user.email }, verified: true).first
     return true if existing_verification.nil?
 
     if existing_verification.discord_user == discord_user_id
