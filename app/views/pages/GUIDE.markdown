@@ -24,6 +24,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 
 - [Eric Pickup](http://pickuperic.com)  
 - [Harshdip Singh Deogan](http://hsdeogan.com)  
+- [Jose Nicolas Alba Aguado](http://josealba.org)  
 
 # Courses
 ------------
@@ -95,6 +96,36 @@ Some easy to score electives:
  - 0341 110 Introduction to Economics I
  - 0241 111 Introduction to Economics II
  - COMP 2067 Programming for Beginners
+ 
+Jose's recommended course sequence for the first two years of University. First two years of University most CS students take the same courses as CS doesn't have many electives. I also recommend you take mandatory courses as third and fourth year you are going to want to have electives to take fun CS courses. 
+
+#### First Semester
+COMP100 Key Concepts in comp sci
+COMP140 Intro to algorithms
+MATH139 Functions and deferential calculus
+MATH125 Linera Algebra
+Elective (See if you can take another mandatory course you will have to do in the future)
+
+#### Second Semester
+ECON110 Intro to Economics 1 or Physcology (I took econ because I find it more fun and applicable)
+COMP141 Intro to algorithms II
+COMP265 Comp Architecture 1
+MATH141 Integral Calculus
+MATH190 Mathematical Foundations
+
+#### Third Semester
+COMP231 Theoretical Foundations of Comp Sci
+COMP212 Obj Oriented Programming using Java
+COMP256 System Programming
+COMP254 Data Structures
+STATIS 205 Statistics for the Sciences
+
+#### Fourth Semester
+COMP3150 Database Management Systems
+COMP2140 Languages, Grammars and Translators
+COMP2660 Comp Archi II
+COMP3220 Obj Oriented Software Anal/Des
+COMP3710 Artificial Intelligence Concepts
 
 # Co-op and Internships
 ------------
@@ -102,6 +133,10 @@ Some easy to score electives:
 Internship postings, specific company reviews/processes, etc.
 
 See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDiknOmjwA5-5SJLUUDQn1n10NsS9Bi8/edit?usp=sharing) on behalf of CSS for landing an internship. This covers a bit of everything (resumes, applying, interviews).
+
+### Resume Examples
+- [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
+
 
 ### Job Boards
 
@@ -138,3 +173,19 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 - [University Guide by Jose Alba](https://docs.google.com/document/d/1OaK6moqKLeFBVVfZ1gJAYCV_DsuvNxHvRAykeAMUhYU/edit?fbclid=IwAR2vBoM9rOHdwhU5ueukdeYdEeXe-slz2BiF5kZBZ0NF14SjbtuLDhl4jpU) - Jose Alba is a recent graduate from University of Windsor and he has written a good document where he shares his experiences and tips for making the most out of your university life.
 
 All other info
+
+# Take Chances
+
+- Most University stuents are in the their early twenties. This is a great time to take chances in life. For example Eric and Jose had a long weekend in California so we decided to rent a car with a friend knowing full well we would have to drive ten hours to Death Valley, sleep in the car, and drive another ten hours back. To me, this was worth it as we had the chance to go on some amazing hikes with people we have met throughout our coop/internship experiences.
+
+# University Hard Times
+
+- University is going to be hard sometimes. Jose and Eric had a full course load while doing internships in California. They knew it was going to be hard. But they knew that it was going to be worth it afterwards. This is why I recommend you enjoy your free-time since you will not always have it.
+
+# Exchange 
+
+- It is fun and 100% worth it
+- [University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
+- [Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)  
+
+
