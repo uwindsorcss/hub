@@ -69,3 +69,4 @@ gem 'pry-byebug'
 
 # Markdown rendering
 gem 'redcarpet'
+gem 'rails-erd'
