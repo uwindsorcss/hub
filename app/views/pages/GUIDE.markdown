@@ -137,6 +137,7 @@ See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDi
 
 ### Resume Examples
 - [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
+- [Eric Pickup](https://drive.google.com/file/d/1QUNbEYP0TBf33-JeCfXFwp_eoqI5YDql/view)
 
 
 ### Job Boards
@@ -175,16 +176,16 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 
 ### Jose's General Advice
 
-#### Take Chances
+##### Take Chances
 
 - Most University stuents are in the their early twenties. This is a great time to take chances in life. For example Eric and Jose had one long weekend in California so we decided to rent a car with a friend knowing full well we would have to drive ten hours to Death Valley, sleep in the car, and drive another ten hours back. To me, this was worth it as we had the chance to go on some amazing hikes with people we have met throughout our coop/internship experiences.
 
-#### Hard Times
+##### Hard Times
 
 - University is going to be hard sometimes. Jose and Eric had a full course load while doing internships in California. They knew it was going to be hard, but they knew that it was going to be worth it afterwards. This is why I recommend you enjoy your free-time since you will not always have it.
 
 ### Exchanges 
 
-- Jose thinks Exchanges are fun and 100% worth it.
+Jose thinks Exchanges are fun and 100% worth it.
 - [University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
 - [Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)  
