@@ -97,36 +97,36 @@ Some easy to score electives:
  - 0241 111 Introduction to Economics II
  - COMP 2067 Programming for Beginners
  
-##### Jose's recommended course sequence for the first two years of University
+#### Jose's recommended course sequence for the first two years of University
 First two years of University most CS students take the same courses as CS doesn't have many electives. I also recommend you take mandatory courses as third and fourth year you are going to want to have electives to take fun CS courses. 
 
-#### First Semester
-COMP1000 Key Concepts in comp sci
-COMP1400 Intro to algorithms
-MATH1390 Functions and deferential calculus
-MATH1250 Linera Algebra
-Elective (See if you can take another mandatory course you will have to do in the future)
+##### First Semester
+- COMP-1000 Key Concepts in Computer Science
+- COMP-1400 Intro to Programming & Algorithms I
+- MATH-1760 Functions and Differential Calculus
+- MATH-1250 Linera Algebra
+- Elective (See if you can take another mandatory course you will have to do in the future)
 
-#### Second Semester
-ECON1100 Intro to Economics 1 or Physcology (I took econ because I find it more fun and applicable)
-COMP1410 Intro to algorithms II
-COMP2650 Comp Architecture 1
-MATH1410 Integral Calculus
-MATH1900 Mathematical Foundations
+##### Second Semester
+- ECON-1100 Intro to Economics 1 or Physcology (I took econ because I find it more fun and applicable)
+- COMP-1410 Intro to Programming & Algorithms II
+- COMP-2650 Computer Architecture 1
+- MATH-1730 Integral Calculus
+- MATH-1020 Mathematical Foundations
 
-#### Third Semester
-COMP2310 Theoretical Foundations of Comp Sci
-COMP2120 Obj Oriented Programming using Java
-COMP2560 System Programming
-COMP2540 Data Structures
-STATIS 2050 Statistics for the Sciences
+##### Third Semester
+- COMP-2310 Theoretical Foundations of Comp Sci
+- COMP-2120 Obj Oriented Programming using Java
+- COMP-2560 Systems Programming
+- COMP-2540 Data Structures & Algorithms
+- STAT-2910 Statistics for the Sciences
 
-#### Fourth Semester
-COMP3150 Database Management Systems
-COMP2140 Languages, Grammars and Translators
-COMP2660 Comp Archi II
-COMP3220 Obj Oriented Software Anal/Des
-COMP3710 Artificial Intelligence Concepts
+##### Fourth Semester
+- COMP-3150 Database Management Systems
+- COMP-2140 Languages, Grammars and Translators
+- COMP-2660 Comp Archi II
+- COMP-3220 Obj Oriented Software Anal/Des
+- COMP-3710 Artificial Intelligence Concepts
 
 # Co-op and Internships
 ------------
@@ -173,18 +173,18 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 ------------
 - [University Guide by Jose Alba](https://docs.google.com/document/d/1OaK6moqKLeFBVVfZ1gJAYCV_DsuvNxHvRAykeAMUhYU/edit?fbclid=IwAR2vBoM9rOHdwhU5ueukdeYdEeXe-slz2BiF5kZBZ0NF14SjbtuLDhl4jpU) - Jose Alba is a recent graduate from University of Windsor and he has written a good document where he shares his experiences and tips for making the most out of your university life.
 
-All other info
+### Jose's General Advice
 
-# Take Chances
+#### Take Chances
 
-- Most University stuents are in the their early twenties. This is a great time to take chances in life. For example Eric and Jose had a long weekend in California so we decided to rent a car with a friend knowing full well we would have to drive ten hours to Death Valley, sleep in the car, and drive another ten hours back. To me, this was worth it as we had the chance to go on some amazing hikes with people we have met throughout our coop/internship experiences.
+- Most University stuents are in the their early twenties. This is a great time to take chances in life. For example Eric and Jose had one long weekend in California so we decided to rent a car with a friend knowing full well we would have to drive ten hours to Death Valley, sleep in the car, and drive another ten hours back. To me, this was worth it as we had the chance to go on some amazing hikes with people we have met throughout our coop/internship experiences.
 
-# University Hard Times
+#### Hard Times
 
-- University is going to be hard sometimes. Jose and Eric had a full course load while doing internships in California. They knew it was going to be hard. But they knew that it was going to be worth it afterwards. This is why I recommend you enjoy your free-time since you will not always have it.
+- University is going to be hard sometimes. Jose and Eric had a full course load while doing internships in California. They knew it was going to be hard, but they knew that it was going to be worth it afterwards. This is why I recommend you enjoy your free-time since you will not always have it.
 
-# Exchange 
+### Exchanges 
 
-- Jose thinks Exchanges are fun and 100% worth it
+- Jose thinks Exchanges are fun and 100% worth it.
 - [University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
 - [Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)  
