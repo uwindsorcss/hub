@@ -44,10 +44,10 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-1060 || Offered | Not Offered | Not Offered |
 | COMP-1400 | Intro to Programming and Algorithms I | Offered | Offered | Offered |
 | COMP-1410 | Intro to Programming and Algorithms II | Not Offered | Offered | Offered |
-| COMP-2057 || Offered | Offered | Offered |
-| COMP-2067 || Not Offered | Offered | Offered |
+| COMP-2057 |Intro to the nternet| Offered | Offered | Offered |
+| COMP-2067 |Programming for Beginners| Not Offered | Offered | Offered |
 | COMP-2077 || Offered | Offered | Not Offered |
-| COMP-2097 || Offered | Offered | Offered |
+| COMP-2097 |Social Media and Mobile Technology for End Users| Offered | Offered | Offered |
 | COMP-2120 | Object Oriented Programming Using Java | Offered | Offered | Offered |
 | COMP-2140 | Computer Languages, Grammars and Translators | Not Offered | Offered | Not Offered |
 | COMP-2310 | Theoretical Foundations of Computer Science | Offered | Not Offered | Not Offered |
@@ -55,7 +55,7 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-2560 | System Programming | Offered | Offered | Offered |
 | COMP-2650 | Computer Architecture I | Offered | Offered | Offered |
 | COMP-2660 | Computer Architecture II | Offered | Offered | Not Offered |
-| COMP-2707 || Offered | Offered | Not Offered |
+| COMP-2707 |Advanced Website Design| Offered | Offered | Not Offered |
 | COMP-2800 || Not Offered | Offered | Not Offered |
 | COMP-3057 || Not Offered | Offered | Offered |
 | COMP-3077 || Not Offered | Offered | Not Offered |
@@ -95,15 +95,16 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 It is always better to have a good plan about the course you'll be taking each semester. Harshdip has completed 4 semesters, taking all the major courses. This way saving up all the electives is one approach. If you find 5 courses overwhelming, taking only 4 courses or an easy elective as a 5th course is another approach. Check out the list of bird courses.
 
 #### Bird (very easy) courses
-- **ECON-1100 Introduction to Economics I**
+- **ECON-1100 Introduction to Economics I** - Harshdip found this course easy. The midterms and finals were all multiple choice.
 - **ECON-1110 Introduction to Economics II**
 - **COMP-2067 Programming for Beginners**
-- **COMP-2057 Intro to the Internet** - Eric found this course *very* easy, just simple HTML/CSS assignments
-- **COMP-2097 Social Media and Mobile Technology for End Users** - Eric found this course easy but busy with assignments/projects
-- **COMP-2707 Advanced Website Design** - Eric found this course easy (HTML, CSS, a bit of Javascript) but a lot of work with assignments/projects
+- **COMP-2057 Intro to the Internet** - Eric found this course *very* easy, just simple HTML/CSS assignments.
+- **COMP-2097 Social Media and Mobile Technology for End Users** - Eric found this course easy but busy with assignments/projects.
+- **COMP-2707 Advanced Website Design** - Eric found this course easy (HTML, CSS, a bit of Javascript) but a lot of work with assignments/projects.
 
 #### Jose's recommended course sequence for the first two years of University
 First two years of University most CS students take the same courses as CS doesn't have many electives. I also recommend you take mandatory courses as third and fourth year you are going to want to have electives to take fun CS courses. 
+Harshdip has followed this exact sequence.
 
 ##### First Semester
 - COMP-1000 Key Concepts in Computer Science
@@ -144,6 +145,7 @@ See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDi
 - [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
 - [Eric Pickup](https://drive.google.com/file/d/1QUNbEYP0TBf33-JeCfXFwp_eoqI5YDql/view)
 - [Brandon Lucier](https://blucier.com/Resume.pdf)
+- [Harshdip Singh Deogan](https://hsdeogan.com/Resume%20-%20Harshdip%20Singh%20Deogan.pdf)
 
 
 ### Job Boards
@@ -160,7 +162,8 @@ Eric recommends studying/practicing technical interview questions for any mid-to
 ##### Resources
 - [LeetCode](http://leetcode.com) - Eric highly recommends LeetCode and used it for all of his interview prep. It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
 - **Cracking the Coding Interview** - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.
-- [HackerRank] - Brandon highly recommends getting familiar with the  HackerRank editor and available languages. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships. It can also be used like LeetCode to solve hundreds of technical programming problems.
+- [Cracking the Coding Interview Solutions](https://github.com/careercup/CtCI-6th-Edition) - Online solutions for the problems in Cracking the Coding Interview. Harshdip recommends to try all the problems on your own and only looking for solutions once you have tried everything you know.
+- [HackerRank](https://www.hackerrank.com/) - Brandon highly recommends getting familiar with the  HackerRank editor and available languages. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships. It can also be used like LeetCode to solve hundreds of technical programming problems.
 
 ### Working in the U.S.A.
 
@@ -185,14 +188,14 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 
 ##### Take Chances
 
-- Most University stuents are in the their early twenties. This is a great time to take chances in life. For example Eric and Jose had one long weekend in California so we decided to rent a car with a friend knowing full well we would have to drive ten hours to Death Valley, sleep in the car, and drive another ten hours back. To me, this was worth it as we had the chance to go on some amazing hikes with people we have met throughout our coop/internship experiences.
+- Most University stuents are in the their early twenties. This is a great time to take chances in life. For example Eric and Jose had one long weekend in California so we decided to rent a car with a friend knowing full well we would have to drive ten hours to Death Valley, sleep in the car, and drive another ten hours back. To me, this was worth it as we had the chance to go on some amazing hikes with people we have met throughout our co-op/internship experiences.
 
 ##### Hard Times
 
 - University is going to be hard sometimes. Jose and Eric had a full course load while doing internships in California. They knew it was going to be hard, but they knew that it was going to be worth it afterwards. This is why I recommend you enjoy your free-time since you will not always have it.
 
-### Exchanges 
+### Student Exchanges 
 
 Jose thinks Exchanges are fun and 100% worth it.
-- [University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
-- [Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)  
+- [Jose's University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
+- [Jose's Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)  
