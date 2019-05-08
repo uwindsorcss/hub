@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190508040752) do
+ActiveRecord::Schema.define(version: 20190508042300) do
 
   create_table "discord_users", force: :cascade do |t|
     t.integer "discord_uid", limit: 8
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 20190508040752) do
   create_table "registrations", force: :cascade do |t|
     t.integer "user_id"
     t.integer "event_id"
-    t.integer "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_registrations_on_event_id"
