@@ -58,8 +58,6 @@ gem 'omniauth-google-oauth2'
 
 gem 'pry-rails'
 
-# Discord app
-gem "discordrb"
 gem "json"
 gem "fuzzy-string-match"
 gem 'rubysl-securerandom'
