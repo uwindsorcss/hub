@@ -24,7 +24,8 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 
 - [Eric Pickup](http://pickuperic.com)  
 - [Harshdip Singh Deogan](http://hsdeogan.com)  
-- [Jose Nicolas Alba Aguado](http://josealba.org)  
+- [Jose Nicolas Alba Aguado](http://josealba.org)
+- [Brandon Lucier](https://blucier.com/)  
 
 # Courses
 ------------
@@ -38,55 +39,55 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 
 | Course Code |Course Name| Fall | Winter | Summer/Intersession |
 |-------------|------------|-------------|-------------|---------------------|
-| COMP-1000 |Key Concepts in Computer Science| Offered | Offered | Offered |
+| COMP-1000 | Key Concepts in Computer Science | Offered | Offered | Offered |
 | COMP-1047 || Offered | Offered | Offered |
 | COMP-1060 || Offered | Not Offered | Not Offered |
-| COMP-1400 |Intro to Programming and Algorithms I| Offered | Offered | Offered |
-| COMP-1410 |Intro to Programming and Algorithms II| Not Offered | Offered | Offered |
+| COMP-1400 | Intro to Programming and Algorithms I | Offered | Offered | Offered |
+| COMP-1410 | Intro to Programming and Algorithms II | Not Offered | Offered | Offered |
 | COMP-2057 || Offered | Offered | Offered |
 | COMP-2067 || Not Offered | Offered | Offered |
 | COMP-2077 || Offered | Offered | Not Offered |
 | COMP-2097 || Offered | Offered | Offered |
-| COMP-2120 |Object oriented programming Using Java| Offered | Offered | Offered |
-| COMP-2140 || Not Offered | Offered | Not Offered |
-| COMP-2310 |Theoretical Founations in Computer Sci| Offered | Not Offered | Not Offered |
-| COMP-2540 |Data Structures and Algorithms| Offered | Offered | Offered |
-| COMP-2560 |System Programming| Offered | Offered | Offered |
-| COMP-2650 |Computer Architecture I| Offered | Offered | Offered |
-| COMP-2660 |Computer Architecture II| Offered | Offered | Not Offered |
+| COMP-2120 | Object Oriented Programming Using Java | Offered | Offered | Offered |
+| COMP-2140 | Computer Languages, Grammars and Translators | Not Offered | Offered | Not Offered |
+| COMP-2310 | Theoretical Foundations of Computer Science | Offered | Not Offered | Not Offered |
+| COMP-2540 | Data Structures and Algorithms | Offered | Offered | Offered |
+| COMP-2560 | System Programming | Offered | Offered | Offered |
+| COMP-2650 | Computer Architecture I | Offered | Offered | Offered |
+| COMP-2660 | Computer Architecture II | Offered | Offered | Not Offered |
 | COMP-2707 || Offered | Offered | Not Offered |
 | COMP-2800 || Not Offered | Offered | Not Offered |
 | COMP-3057 || Not Offered | Offered | Offered |
 | COMP-3077 || Not Offered | Offered | Not Offered |
-| COMP-3110 || Offered | Not Offered | Not Offered |
+| COMP-3110 | Introduction to Software Engineering | Offered | Not Offered | Not Offered |
 | COMP-3150 |	Database Management Systems| Offered | Offered | Not Offered |
-| COMP-3220 |Obj Oriented Software Analysis and Design| Offered | Offered | Offered |
-| COMP-3300 |Operating System Fundamentals| Not Offered | Offered | Offered |
-| COMP-3340 |WWW Information System Development| Not Offered | Offered | Offered |
+| COMP-3220 | Obj Oriented Software Analysis and Design | Offered | Offered | Offered |
+| COMP-3300 | Operating System Fundamentals | Not Offered | Offered | Offered |
+| COMP-3340 | WWW Information System Development | Not Offered | Offered | Offered |
 | COMP-3400 || Not Offered | Offered | Not Offered |
 | COMP-3500 || Offered | Not Offered | Not Offered |
-| COMP-3520 || Not Offered | Offered | Not Offered |
-| COMP-3540 || Offered | Not Offered | Not Offered |
-| COMP-3670 |Computer networks| Offered | Not Offered | Offered |
-| COMP-3710 |Artificial Intell Concepts| Not Offered | Offered | Not Offered |
+| COMP-3520 | Introduction to Computer Graphics | Not Offered | Offered | Not Offered |
+| COMP-3540 | Theory of Computation | Offered | Not Offered | Not Offered |
+| COMP-3670 | Computer Networks | Offered | Not Offered | Offered |
+| COMP-3710 | Artificial Intelligence Concepts | Not Offered | Offered | Not Offered |
 | COMP-3770 || Offered | Not Offered | Not Offered |
-| COMP-4110 || Not Offered | Offered | Not Offered |
+| COMP-4110 | Software Verification and Testing | Not Offered | Offered | Not Offered |
 | COMP-4150 || Offered | Not Offered | Not Offered |
 | COMP-4200 || Offered | Not Offered | Not Offered |
 | COMP-4220 || Offered | Not Offered | Not Offered |
 | COMP-4250 || Not Offered | Offered | Not Offered |
-| COMP-4400 |Principles of Programming languages| Offered | Not Offered | Offered |
+| COMP-4400 | Principles of Programming Languages | Offered | Not Offered | Offered |
 | COMP-4500 || Not Offered | Offered | Not Offered |
-| COMP-4540 || Not Offered | Offered | Not Offered |
+| COMP-4540 | Design and Analysis of Algorithms | Not Offered | Offered | Not Offered |
 | COMP-4670 || Not Offered | Offered | Not Offered |
 | COMP-4700 || Offered | Not Offered | Not Offered |
 | COMP-4730 || Offered | Not Offered | Not Offered |
 | COMP-4740 || Not Offered | Offered | Not Offered |
 | COMP-4750 || Not Offered | Offered | Not Offered |
 | COMP-4770 || Not Offered | Offered | Not Offered |
-| COMP-4800 || Not Offered | Offered | Not Offered |
+| COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered |
 | COMP-4960 || Offered | Offered | Not Offered |
-| COMP-4990 || Offered | Offered | Not Offered |
+| COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered |
 
 *Updated Summer 2019*
 
@@ -142,6 +143,7 @@ See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDi
 ### Resume Examples
 - [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
 - [Eric Pickup](https://drive.google.com/file/d/1QUNbEYP0TBf33-JeCfXFwp_eoqI5YDql/view)
+- [Brandon Lucier](https://blucier.com/Resume.pdf)
 
 
 ### Job Boards
@@ -158,6 +160,7 @@ Eric recommends studying/practicing technical interview questions for any mid-to
 ##### Resources
 - [LeetCode](http://leetcode.com) - Eric highly recommends LeetCode and used it for all of his interview prep. It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
 - **Cracking the Coding Interview** - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.
+- [HackerRank] - Brandon highly recommends getting familiar with the  HackerRank editor and available languages. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships. It can also be used like LeetCode to solve hundreds of technical programming problems.
 
 ### Working in the U.S.A.
 
