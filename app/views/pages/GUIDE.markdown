@@ -26,13 +26,11 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Harshdip Singh Deogan](http://hsdeogan.com)  
 - [Jose Nicolas Alba Aguado](http://josealba.org)
 - [Brandon Lucier](https://blucier.com/)  
+- Steven Shlimoon
 
 # Courses
 ------------
-
-
-Add typical course offerings, advice on specific courses.  
-
+ 
 ### Typical course offerings by semester
 
 Schedules are rarely changed, so this might not be *100%* accurate.
@@ -40,14 +38,13 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | Course Code |Course Name| Fall | Winter | Summer/Intersession |
 |-------------|------------|-------------|-------------|---------------------|
 | COMP-1000 | Key Concepts in Computer Science | Offered | Offered | Offered |
-| COMP-1047 || Offered | Offered | Offered |
-| COMP-1060 || Offered | Not Offered | Not Offered |
+| COMP-1047 | Computer Concepts for End-Users| Offered | Offered | Offered |
 | COMP-1400 | Intro to Programming and Algorithms I | Offered | Offered | Offered |
 | COMP-1410 | Intro to Programming and Algorithms II | Not Offered | Offered | Offered |
-| COMP-2057 |Intro to the nternet| Offered | Offered | Offered |
-| COMP-2067 |Programming for Beginners| Not Offered | Offered | Offered |
-| COMP-2077 || Offered | Offered | Not Offered |
-| COMP-2097 |Social Media and Mobile Technology for End Users| Offered | Offered | Offered |
+| COMP-2057 | Intro to the Internet| Offered | Offered | Offered |
+| COMP-2067 | Programming for Beginners| Not Offered | Offered | Offered |
+| COMP-2077 | Problem Solving and Information on the Internet| Offered | Offered | Not Offered |
+| COMP-2097 | Social Media and Mobile Technology for End Users| Offered | Offered | Offered |
 | COMP-2120 | Object Oriented Programming Using Java | Offered | Offered | Offered |
 | COMP-2140 | Computer Languages, Grammars and Translators | Not Offered | Offered | Not Offered |
 | COMP-2310 | Theoretical Foundations of Computer Science | Offered | Not Offered | Not Offered |
@@ -55,38 +52,38 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-2560 | System Programming | Offered | Offered | Offered |
 | COMP-2650 | Computer Architecture I | Offered | Offered | Offered |
 | COMP-2660 | Computer Architecture II | Offered | Offered | Not Offered |
-| COMP-2707 |Advanced Website Design| Offered | Offered | Not Offered |
-| COMP-2800 || Not Offered | Offered | Not Offered |
-| COMP-3057 || Not Offered | Offered | Offered |
-| COMP-3077 || Not Offered | Offered | Not Offered |
+| COMP-2707 | Advanced Website Design| Offered | Offered | Not Offered |
+| COMP-2800 | Software Development| Not Offered | Offered | Not Offered |
+| COMP-3057 | Cyber-Ethics| Not Offered | Offered | Offered |
+| COMP-3077 | Web-Based Data Management| Not Offered | Offered | Not Offered |
 | COMP-3110 | Introduction to Software Engineering | Offered | Not Offered | Not Offered |
 | COMP-3150 |	Database Management Systems| Offered | Offered | Not Offered |
 | COMP-3220 | Obj Oriented Software Analysis and Design | Offered | Offered | Offered |
 | COMP-3300 | Operating System Fundamentals | Not Offered | Offered | Offered |
 | COMP-3340 | WWW Information System Development | Not Offered | Offered | Offered |
-| COMP-3400 || Not Offered | Offered | Not Offered |
-| COMP-3500 || Offered | Not Offered | Not Offered |
+| COMP-3400 | Advanced Object Oriented System Design Using C++| Not Offered | Offered | Not Offered |
+| COMP-3500 | Introduction to Multimedia Systems| Offered | Not Offered | Not Offered |
 | COMP-3520 | Introduction to Computer Graphics | Not Offered | Offered | Not Offered |
 | COMP-3540 | Theory of Computation | Offered | Not Offered | Not Offered |
 | COMP-3670 | Computer Networks | Offered | Not Offered | Offered |
 | COMP-3710 | Artificial Intelligence Concepts | Not Offered | Offered | Not Offered |
-| COMP-3770 || Offered | Not Offered | Not Offered |
+| COMP-3770 | Game Design, Development, and Tools| Offered | Not Offered | Not Offered |
 | COMP-4110 | Software Verification and Testing | Not Offered | Offered | Not Offered |
-| COMP-4150 || Offered | Not Offered | Not Offered |
-| COMP-4200 || Offered | Not Offered | Not Offered |
-| COMP-4220 || Offered | Not Offered | Not Offered |
-| COMP-4250 || Not Offered | Offered | Not Offered |
+| COMP-4150 | Advanced and Practical Database Systems| Offered | Not Offered | Not Offered |
+| COMP-4200 | Mobile Application Development| Offered | Not Offered | Not Offered |
+| COMP-4220 | Agile Software Development| Offered | Not Offered | Not Offered |
+| COMP-4250 | Big Data Analytics and Database Design| Not Offered | Offered | Not Offered |
 | COMP-4400 | Principles of Programming Languages | Offered | Not Offered | Offered |
-| COMP-4500 || Not Offered | Offered | Not Offered |
+| COMP-4500 | Multimedia System Development| Not Offered | Offered | Not Offered |
 | COMP-4540 | Design and Analysis of Algorithms | Not Offered | Offered | Not Offered |
-| COMP-4670 || Not Offered | Offered | Not Offered |
-| COMP-4700 || Offered | Not Offered | Not Offered |
-| COMP-4730 || Offered | Not Offered | Not Offered |
-| COMP-4740 || Not Offered | Offered | Not Offered |
-| COMP-4750 || Not Offered | Offered | Not Offered |
-| COMP-4770 || Not Offered | Offered | Not Offered |
+| COMP-4670 | Network Security| Not Offered | Offered | Not Offered |
+| COMP-4700 | Project using Selected Tools| Offered | Not Offered | Not Offered |
+| COMP-4730 | Advanced Topics in AI I| Offered | Not Offered | Not Offered |
+| COMP-4740 | Advanced Topics in AI II| Not Offered | Offered | Not Offered |
+| COMP-4750 | Selected Topics| Not Offered | Offered | Not Offered |
+| COMP-4770 | Artifical Intelligence for Games| Not Offered | Offered | Not Offered |
 | COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered |
-| COMP-4960 || Offered | Offered | Not Offered |
+| COMP-4960 | Research| Offered | Offered | Not Offered |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered |
 
 *Updated Summer 2019*
