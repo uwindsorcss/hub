@@ -26,7 +26,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Harshdip Singh Deogan](http://hsdeogan.com)  
 - [Jose Nicolas Alba Aguado](http://josealba.org)
 - [Brandon Lucier](https://blucier.com/)  
-- Steven Shlimoon
+- [Steven Shlimoon](https://github.com/shli3)
 
 # Courses
 ------------
