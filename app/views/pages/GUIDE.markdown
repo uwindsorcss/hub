@@ -94,12 +94,12 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 It is always better to have a good plan about the course you'll be taking each semester. Harshdip has completed 4 semesters, taking all the major courses. This way saving up all the electives is one approach. If you find 5 courses overwhelming, taking only 4 courses or an easy elective as a 5th course is another approach. Check out the list of bird courses.
 
 #### Bird (very easy) courses
-- ECON-1100 Introduction to Economics I
-- ECON-1110 Introduction to Economics II
-- COMP-2067 Programming for Beginners
-- COMP-2057 Intro to the Internet - Eric found this course *very* easy, just simple HTML/CSS assignments
-- COMP-2097 Social Media and Mobile Technology for End Users - Eric found this course easy but busy with assignments/projects
-- COMP-2707 Advanced Website Design - Eric found this course easy (HTML, CSS, a bit of Javascript) but a lot of work with assignments/projects
+- **ECON-1100 Introduction to Economics I**
+- **ECON-1110 Introduction to Economics II**
+- **COMP-2067 Programming for Beginners**
+- **COMP-2057 Intro to the Internet** - Eric found this course *very* easy, just simple HTML/CSS assignments
+- **COMP-2097 Social Media and Mobile Technology for End Users** - Eric found this course easy but busy with assignments/projects
+- **COMP-2707 Advanced Website Design** - Eric found this course easy (HTML, CSS, a bit of Javascript) but a lot of work with assignments/projects
 
 #### Jose's recommended course sequence for the first two years of University
 First two years of University most CS students take the same courses as CS doesn't have many electives. I also recommend you take mandatory courses as third and fourth year you are going to want to have electives to take fun CS courses. 
