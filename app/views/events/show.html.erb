@@ -3,7 +3,11 @@
     <h5 class="card-title"><%= @event.title %></h5>
     <h6 class="card-subtitle mb-2 text-muted">
       <%= @event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= @event.end_time.strftime('%l:%M%P') %>
-      (in <%= distance_of_time_in_words(Time.now, @event.start_date) %>)
+      <% if @event.start_date.future? %>
+        (in <%= distance_of_time_in_words(Time.now, @event.start_date) %>)
+      <% else %>
+        (<%= distance_of_time_in_words(Time.now, @event.start_date) %> ago)
+      <% end %>
     </h6>
     <% if @event.registration_enabled %>
       <br>
