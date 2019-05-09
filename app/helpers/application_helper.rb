@@ -41,5 +41,9 @@ module ApplicationHelper
         "<td>" + content + "</td>"
       end
     end
+
+    def image(link, title, alt_text)
+      "<img src=\"#{link}\" class=\"img-responsive\" alt=\"#{alt_text}\" width=\"80%\">"
+    end
   end
 end
