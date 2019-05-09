@@ -16,6 +16,9 @@
       </h6>
       <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
       <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
+      <% if event.registration_enabled %>
+        <%= link_to 'Register', event_path(event), class: "card-link btn btn-success" %>
+      <% end %>
       <% if current_user&.is_admin? %>
         <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
         <%= link_to 'Delete', event_path(event),
