@@ -43,7 +43,7 @@ module ApplicationHelper
     end
 
     def image(link, title, alt_text)
-      "<img src=\"#{link}\" class=\"img-responsive\" alt=\"#{alt_text}\" width=\"80%\">"
+      "<a href=\"#{link}\"><img src=\"#{link}\" class=\"img-responsive\" alt=\"#{alt_text}\" width=\"80%\"></a>"
     end
   end
 end
