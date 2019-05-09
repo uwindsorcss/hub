@@ -91,6 +91,9 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 It is always better to have a good plan about the course you'll be taking each semester. Harshdip has completed 4 semesters, taking all the major courses. This way saving up all the electives is one approach. If you find 5 courses overwhelming, taking only 4 courses or an easy elective as a 5th course is another approach. Check out the list of bird courses.
 
 #### Bird (very easy) courses
+
+Your degree audit will have a section called *"Any Area of Study"* that allows you to take any course from any department (including the easy Computer Science courses that don't normally count for your major). The regular Computer Science Honour degree allows **seven** of these courses, and the Software Engineering specialization degree allows **four**. 
+
 - **ECON-1100 Introduction to Economics I** - Harshdip found this course easy. The midterms and finals were all multiple choice.
 - **ECON-1110 Introduction to Economics II**
 - **COMP-2067 Programming for Beginners**
@@ -164,11 +167,13 @@ Eric recommends studying/practicing technical interview questions for any mid-to
 
 ### Working in the U.S.A.
 
-Almost every major tech company in the USA hires Canadians and will sponsor you for a visa. US companies tend to pay significantly more and provides great opportunities. Eric highly suggests trying to land an internship in the Bay Area or New York.
+Almost every major tech company in the USA hires Canadians and will sponsor you for a visa. US companies tend to pay *significantly* more and provides great opportunities. Eric highly suggests trying to land an internship in the Bay Area or New York.
 
-You'll need to obtain a J-1 intern visa if you're interning in the United States.
+#### Visa
 
-A common misconception is that you can simply obtain a visa on your own - this is not true. You need a company who is willing to sponsor your visa to work in the United States. Once you find this company they will do most of the work for you, you'll just have to submit some documents/forms. Don't stress about this step.
+You'll need to obtain a J-1 visa to intern in the United States.
+
+A common misconception is that you can get a visa yourself - this is not true. You need a company who is willing to sponsor your visa to work in the United States. Once you find this company they will do most of the work for you, you'll just have to submit some documents/forms. Don't stress about this step.
 
 #### Getting paid
 
