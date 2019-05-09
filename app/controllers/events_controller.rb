@@ -12,7 +12,7 @@ class EventsController < ApplicationController
 
   def index
     @future_events = Event.select { |event| event.start_date.future? }.sort_by &:start_date
-    @past_events = Event.select { |event| event.start_date.past? }.last(5)
+    @past_events = (Event.select { |event| event.start_date.past? }.sort_by &:start_date).reverse.first(5)
   end
 
   def new
