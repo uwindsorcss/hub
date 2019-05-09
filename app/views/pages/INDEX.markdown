@@ -36,4 +36,4 @@ Here's your 2019 Computer Science Society:
 
 ![UWindsor CS Games 2019 Teams](https://i.imgur.com/GTzQ2t9.jpg)
 
-CSS sent two teams of ten selected students to compete in over dozen challenges related to programming and computer science at CS Games in Montreal, QC.
+CSS sent two teams of ten selected students to compete in over a dozen challenges related to programming and computer science at CS Games in Montreal, QC.
