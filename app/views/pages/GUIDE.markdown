@@ -33,7 +33,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
  
 ### Typical course offerings by semester
 
-Schedules are rarely changed, so this might not be *100%* accurate.
+*Updated Summer 2019*
 
 | Course Code |Course Name| Fall | Winter | Summer/Intersession |
 |-------------|------------|-------------|-------------|---------------------|
@@ -86,7 +86,6 @@ Schedules are rarely changed, so this might not be *100%* accurate.
 | COMP-4960 | Research| Offered | Offered | Not Offered |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered |
 
-*Updated Summer 2019*
 
 #### Deciding the courses
 It is always better to have a good plan about the course you'll be taking each semester. Harshdip has completed 4 semesters, taking all the major courses. This way saving up all the electives is one approach. If you find 5 courses overwhelming, taking only 4 courses or an easy elective as a 5th course is another approach. Check out the list of bird courses.
@@ -161,6 +160,7 @@ Eric recommends studying/practicing technical interview questions for any mid-to
 - **Cracking the Coding Interview** - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.
 - [Cracking the Coding Interview Solutions](https://github.com/careercup/CtCI-6th-Edition) - Online solutions for the problems in Cracking the Coding Interview. Harshdip recommends to try all the problems on your own and only looking for solutions once you have tried everything you know.
 - [HackerRank](https://www.hackerrank.com/) - Brandon highly recommends getting familiar with the  HackerRank editor and available languages. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships. It can also be used like LeetCode to solve hundreds of technical programming problems.
+- [Glassdoor](https://www.glassdoor.com/index.htm) - Eric highly recommends looking at a company's profile on Glassdoor if you're interviewing with them. Glassdoor allows people to post reviews, salaries and most importantly interview questions they've received from specific companies.
 
 ### Working in the U.S.A.
 
