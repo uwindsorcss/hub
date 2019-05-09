@@ -94,6 +94,8 @@ It is always better to have a good plan about the course you'll be taking each s
 
 Your degree audit will have a section called *"Any Area of Study"* that allows you to take any course from any department (including the easy Computer Science courses that don't normally count for your major). The regular Computer Science Honour degree allows **seven** of these courses, and the Software Engineering specialization degree allows **four**. 
 
+List of bird courses:
+
 - **ECON-1100 Introduction to Economics I** - Harshdip found this course easy. The midterms and finals were all multiple choice.
 - **ECON-1110 Introduction to Economics II**
 - **COMP-2067 Programming for Beginners**
