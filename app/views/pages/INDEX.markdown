@@ -23,7 +23,7 @@ Here's your 2019 Computer Science Society:
 **VP Communications** - Prakort Lean
 **VP External** - Andrea Bonato
 **VP Societal Development** - Matthew Belanger
-**Event Coordinator** - Filip Knezevic
+**Event Coordinator** - Filip Knezevic & Jose Guillen Santos
 **Senior Representative** - Nuha Aljammas
 **Second Year Representative** - Nandini Patel
 **First Year Representative** - TBD Fall 2019
