@@ -146,7 +146,7 @@ See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDi
 - [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
 - [Eric Pickup](https://drive.google.com/file/d/1QUNbEYP0TBf33-JeCfXFwp_eoqI5YDql/view)
 - [Brandon Lucier](https://blucier.com/Resume.pdf)
-- [Harshdip Singh Deogan](https://hsdeogan.com/Resume%20-%20Harshdip%20Singh%20Deogan.pdf)
+- [Harshdip Singh Deogan](https://hsdeogan.com/Resume-HarshdipSinghDeogan.pdf)
 
 
 ### Job Boards
