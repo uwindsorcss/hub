@@ -101,6 +101,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (2.2.0)
     jwt (2.1.0)
+    libv8 (7.3.492.27.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -116,6 +117,8 @@ GEM
     mime-types-data (3.2018.0812)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
+    mini_racer (0.2.5)
+      libv8 (>= 6.9.411)
     minitest (5.11.3)
     multi_json (1.13.1)
     multi_xml (0.6.0)
@@ -286,6 +289,7 @@ DEPENDENCIES
   jquery-rails
   json
   listen (>= 3.0.5, < 3.2)
+  mini_racer
   omniauth-discord
   omniauth-google-oauth2
   pry-byebug
@@ -307,4 +311,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.17.1
+   2.0.1
