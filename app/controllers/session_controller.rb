@@ -1,4 +1,46 @@
 class SessionController < ApplicationController
+  BLACKLISTED_EMAILS = Set[
+    "imran@uwindsor.ca",
+    "boufama@uwindsor.ca",
+    "xjchen@uwindsor.ca",
+    "cezeife@uwindsor.ca",
+    "sgoodwin@uwindsor.ca",
+    "rgras@uwindsor.ca",
+    "arunita@uwindsor.ca",
+    "rkent@uwindsor.ca",
+    "kobti@uwindsor.ca",
+    "jlu@uwindsor.ca",
+    "pooya@uwindsor.ca",
+    "asishm@uwindsor.ca",
+    "angom@uwindsor.ca",
+    "lrueda@uwindsor.ca",
+    "shsaad@uwindsor.ca",
+    "ssamet@uwindsor.ca",
+    "peter@uwindsor.ca",
+    "danwu@uwindsor.ca",
+    "xyuan@uwindsor.ca",
+    "stephano@uwindsor.ca",
+    "ouda@uwindsor.ca",
+    "nabil@uwindsor.ca",
+    "alkhate@uwindsor.ca",
+    "almamo@uwindsor.ca",
+    "sanjay@uwindsor.ca",
+    "rferrara@uwindsor.ca",
+    "dmayo@uwindsor.ca",
+    "maleki@uwindsor.ca",
+    "mavrinac@uwindsor.ca",
+    "philip.olla@uwindsor.ca",
+    "scotto@uwindsor.ca",
+    "kverner@uwindsor.ca",
+    "maunzer@uwindsor.ca",
+    "csgradinfo@uwindsor.ca",
+    "garabon@uwindsor.ca",
+    "gloria@uwindsor.ca",
+    "walid@uwindsor.ca",
+    "tpalmer@uwindsor.ca",
+    "macprogram@uwindsor.ca"
+  ]
+
   def create
     provider = auth_hash[:provider]
     if provider == "google_oauth2"
@@ -12,7 +54,9 @@ class SessionController < ApplicationController
     elsif provider == "discord"
       discord_user = DiscordUser.find_or_create_by(discord_uid: auth_hash[:uid])
       if current_user
-        if user_has_not_verified_other_discord_users?(current_user, discord_user)
+        if BLACKLISTED_EMAILS.include? current_user.email
+          redirect_to :discord_path, flash: { error: "Staff/faculty are not permitted to join the Discord server" }
+        elsif user_has_not_verified_other_discord_users?(current_user, discord_user)
           discord_user.update(verified: true)
           current_user.update(discord_user: discord_user)
           session[:discord_user_id] = discord_user.id
