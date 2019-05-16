@@ -12,7 +12,7 @@ class SessionController < ApplicationController
     elsif provider == "discord"
       discord_user = DiscordUser.find_or_create_by(discord_uid: auth_hash[:uid])
       if current_user
-        if current_user.discord_user.nil? || !current_user.discord_user.verified? || current_user.discord_user == discord_user
+        if user_has_not_verified_other_discord_users?(current_user, discord_user)
           discord_user.update(verified: true)
           current_user.update(discord_user: discord_user)
           session[:discord_user_id] = discord_user.id
@@ -51,5 +51,14 @@ class SessionController < ApplicationController
       { access_token: access_token, nick: user.name }.to_json,
       { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" }
     )
+  end
+
+  # Returns true in three cases:
+  # 1) User has no linked DiscordUser
+  # 2) User has a linked DiscordUser but it is not verified
+  # 3) User has a linked DiscordUser that is verified and equivalent to the one being signed-in (verifying the same
+  # account again, makes sense if the user left the server and needs to be added back in)
+  def user_has_not_verified_other_discord_users?(user, discord_user)
+    user.discord_user.nil? || !user.discord_user.verified? || user.discord_user == discord_user
   end
 end
