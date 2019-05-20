@@ -138,8 +138,6 @@ Harshdip has followed this exact sequence.
 # Co-op and Internships
 ------------
 
-Internship postings, specific company reviews/processes, etc.
-
 See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDiknOmjwA5-5SJLUUDQn1n10NsS9Bi8/edit?usp=sharing) on behalf of CSS for landing an internship. This covers a bit of everything (resumes, applying, interviews).
 
 ### Resume Examples
