@@ -23,6 +23,8 @@ module ApplicationHelper
   end
 
   class CustomRender < Redcarpet::Render::HTML
+    COURSE_TABLE_HEADERS = ["Course Code", "Course Name", "Fall", "Winter", "Summer/Intersession"]
+
     def table(header, body)
       "<table class=\"table table-bordered\">" \
         "#{header}#{body}" \
@@ -35,7 +37,7 @@ module ApplicationHelper
       elsif content == "Not Offered"
         "<td style=\"color:red\">" + content + "</td>"
       # Had to do this hacky check because of an issue with Redcarpet that has been reported
-      elsif content == "Course Code" || content == "Fall" || content == "Winter" || content == "Summer/Intersession"
+      elsif COURSE_TABLE_HEADERS.include? content
         "<th>" + content + "</th>"
       else
         "<td>" + content + "</td>"
