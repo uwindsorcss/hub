@@ -35,7 +35,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 
 *Updated Summer 2019*
 
-| Course Code | Course Name | Fall | Winter | Summer/Intersession |
+| Course Code |Course Name| Fall | Winter | Summer/Intersession |
 |-------------|------------|-------------|-------------|---------------------|
 | COMP-1000 | Key Concepts in Computer Science | Offered | Offered | Offered |
 | COMP-1047 | Computer Concepts for End-Users| Offered | Offered | Offered |
