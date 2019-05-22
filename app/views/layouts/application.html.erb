@@ -62,31 +62,37 @@
         <div class="col-3"></div>
         <div class="col-6">
           <br>
+          <!-- text-align instead of align because align is depracted and no longer works-->
           <% if flash[:error] %>
-            <div class="alert alert-danger" role="alert" align="center">
+            <div class="alert alert-danger" role="alert" text-align="center">
                <%= flash[:error] %>
             </div>
           <% end %>
           <% if flash[:success] %>
-            <div class="alert alert-success" role="alert" align="center">
+            <div class="alert alert-success" role="alert" text-align="center">
                <%= flash[:success] %>
             </div>
           <% end %>
           <% if flash[:info] %>
-            <div class="alert alert-info" role="alert" align="center">
+            <div class="alert alert-info" role="alert" text-align="center">
                <%= flash[:info] %>
             </div>
           <% end %>
           <% if flash[:warning] %>
-            <div class="alert alert-warning" role="alert" align="center">
+            <div class="alert alert-warning" role="alert" text-align="center">
                <%= flash[:warning] %>
             </div>
           <% end %>
-
           <%= yield %>
         </div>
         <div class="col-3"></div>
       </div>
     </div>
   </body>
+  <!-- footer -->
+  <footer class="footer" style="background-color: #343a40;padding: 30px 0px">
+    <div class="container" style="text-align: center;">
+      <span style="color: white;">UWindsor Computer Science Society</span>
+    </div>
+ </footer>
 </html>
