@@ -57,12 +57,11 @@
         </div>
       </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="90vh">
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
           <br>
-          <!-- text-align instead of align because align is depracted and no longer works-->
           <% if flash[:error] %>
             <div class="alert alert-danger" role="alert" text-align="center">
                <%= flash[:error] %>
@@ -90,9 +89,9 @@
     </div>
   </body>
   <!-- footer -->
-  <footer class="footer" style="background-color: #343a40;padding: 30px 0px">
+  <footer class="footer" style="background-color: #343a40;padding: 20px 0px">
     <div class="container" style="text-align: center;">
-      <span style="color: white;">UWindsor Computer Science Society</span>
+      <span style="color: white;">University of Windsor - Computer Science Society</span>
     </div>
  </footer>
 </html>
