@@ -23,7 +23,7 @@ module ApplicationHelper
   end
 
   class CustomRender < Redcarpet::Render::HTML
-    COURSE_TABLE_HEADERS = ["Course Code", "Course Name", "Fall", "Winter", "Summer/Intersession"]
+    COURSE_TABLE_HEADERS = ["Course Code", "Course Name", "Fall", "Winter", "Summer", "Required"]
 
     def table(header, body)
       "<table class=\"table table-bordered\">" \
