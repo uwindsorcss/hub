@@ -87,9 +87,6 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered |
 
 
-#### Deciding the courses
-It is always better to have a good plan about the course you'll be taking each semester. Harshdip has completed 4 semesters, taking all the major courses. This way saving up all the electives is one approach. If you find 5 courses overwhelming, taking only 4 courses or an easy elective as a 5th course is another approach. Check out the list of bird courses.
-
 #### Bird (very easy) courses
 
 Your degree audit will have a section called *"Any Area of Study"* that allows you to take any course from any department (including the easy Computer Science courses that don't normally count for your major). The regular Computer Science Honour degree allows **seven** of these courses, and the Software Engineering specialization degree allows **four**. 
@@ -103,32 +100,35 @@ List of bird courses:
 - **COMP-2097 Social Media and Mobile Technology for End Users** - Eric found this course easy but busy with assignments/projects.
 - **COMP-2707 Advanced Website Design** - Eric found this course easy (HTML, CSS, a bit of Javascript) but a lot of work with assignments/projects.
 
-#### Jose's recommended course sequence for the first two years of University
+#### Planning your courses
+It is always better to have a good plan about the course you'll be taking each semester. Harshdip has completed 4 semesters, taking all the major courses. This way saving up all the electives is one approach. If you find 5 courses overwhelming, taking only 4 courses or an easy elective as a 5th course is another approach. Check out the list of bird courses.
+
+##### Jose's recommended course sequence for the first two years of University
 First two years of University most CS students take the same courses as CS doesn't have many electives. I also recommend you take mandatory courses as third and fourth year you are going to want to have electives to take fun CS courses. 
 Harshdip has followed this exact sequence.
 
-##### First Semester
+###### First Semester
 - COMP-1000 Key Concepts in Computer Science
 - COMP-1400 Intro to Programming & Algorithms I
 - MATH-1760 Functions and Differential Calculus
 - MATH-1250 Linera Algebra
 - Elective (See if you can take another mandatory course you will have to do in the future)
 
-##### Second Semester
+###### Second Semester
 - ECON-1100 Intro to Economics 1 or Physcology (I took econ because I find it more fun and applicable)
 - COMP-1410 Intro to Programming & Algorithms II
 - COMP-2650 Computer Architecture 1
 - MATH-1730 Integral Calculus
 - MATH-1020 Mathematical Foundations
 
-##### Third Semester
+###### Third Semester
 - COMP-2310 Theoretical Foundations of Comp Sci
 - COMP-2120 Obj Oriented Programming using Java
 - COMP-2560 Systems Programming
 - COMP-2540 Data Structures & Algorithms
 - STAT-2910 Statistics for the Sciences
 
-##### Fourth Semester
+###### Fourth Semester
 - COMP-3150 Database Management Systems
 - COMP-2140 Languages, Grammars and Translators
 - COMP-2660 Comp Archi II
