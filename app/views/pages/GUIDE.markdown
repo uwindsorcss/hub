@@ -2,6 +2,7 @@ Table of Contents
 -----------------
 
 - [Introduction](#introduction)
+- [Contributing](#contributing)
 - [Courses](#courses)
 - [Co-op/Internships](#co-op-and-internships)
 - [Miscellaneous](#miscellaneous)
@@ -12,13 +13,18 @@ Table of Contents
 
 This is an open-source guide for students at the University of Windsor.
 
-Anyone can contribute to this document through GitHub's editor without any coding/git skills. Click the "**Contribute to guide**" button at the top of this page and it will bring you to GitHub's code editor. You can make/preview changes on there and create a pull request when you're done. An admin will then approve your changes and add it to production. The document is written in [markdown](https://www.markdownguide.org/basic-syntax/).
+This document is meant for students to provide assistance/resources to other students. Any UWindsor student is welcome to add to and modify it.
+
+# Contributing
+------------
+
+Anyone can contribute to this document through GitHub's editor - no coding/git skills necessary. Click the "**Contribute to guide**" button at the top of this page and it will bring you to GitHub's text editor. You can make/preview changes on there and create a pull request when you're done. An admin will then approve your changes and add it to production. The document is written in [markdown](https://www.markdownguide.org/basic-syntax/) syntax.
 
 We *highly* encourage people to contribute so that we can make this a very useful resource for students. Add any information you might find useful and feel free to add/change sections.
 
 If you're posting any opinionated information, use your name in the sentence (i.e. David recommends...).
 
-### Contributors
+#### Contributors
 
 Please add yourself to this list (link is optional) if you've contributed to this guide.
 
