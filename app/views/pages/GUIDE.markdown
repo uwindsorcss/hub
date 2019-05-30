@@ -202,15 +202,15 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 ------------
 - [University Guide by Jose Alba](https://docs.google.com/document/d/1OaK6moqKLeFBVVfZ1gJAYCV_DsuvNxHvRAykeAMUhYU/edit?fbclid=IwAR2vBoM9rOHdwhU5ueukdeYdEeXe-slz2BiF5kZBZ0NF14SjbtuLDhl4jpU) - Jose Alba is a recent graduate from University of Windsor and he has written a good document where he shares his experiences and tips for making the most out of your university life.
 
-### Jose's General Advice
+### General Advice
 
-##### Take Chances
+#### Jose's Advice
 
-- Most University stuents are in the their early twenties. This is a great time to take chances in life. For example Eric and Jose had one long weekend in California so we decided to rent a car with a friend knowing full well we would have to drive ten hours to Death Valley, sleep in the car, and drive another ten hours back. To me, this was worth it as we had the chance to go on some amazing hikes with people we have met throughout our co-op/internship experiences.
+###### Take Chances
+Most University stuents are in the their early twenties. This is a great time to take chances in life. For example Eric and Jose had one long weekend in California so we decided to rent a car with a friend knowing full well we would have to drive ten hours to Death Valley, sleep in the car, and drive another ten hours back. To me, this was worth it as we had the chance to go on some amazing hikes with people we have met throughout our co-op/internship experiences.
 
-##### Hard Times
-
-- University is going to be hard sometimes. Jose and Eric had a full course load while doing internships in California. They knew it was going to be hard, but they knew that it was going to be worth it afterwards. This is why I recommend you enjoy your free-time since you will not always have it.
+###### Hard Times
+University is going to be hard sometimes. Jose and Eric had a full course load while doing internships in California. They knew it was going to be hard, but they knew that it was going to be worth it afterwards. This is why I recommend you enjoy your free-time since you will not always have it.
 
 ### Student Exchanges 
 
