@@ -97,10 +97,8 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-4750 | Selected Topics | Not Offered | Offered | Not Offered |  |
 | COMP-4770 | Artifical Intelligence for Games | Not Offered | Offered | Not Offered |  |
 | COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered | 💚 |
-| ❗COMP-4960 | Research | Offered | Offered | Not Offered | 💙💚 |
-| ❗COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 |
-
-❗: Usually one or the other, 6 credit course
+| COMP-4960 | Research | Offered | Offered | Not Offered | 💙💚 |
+| COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 |
 
 #### Bird (very easy) courses
 
