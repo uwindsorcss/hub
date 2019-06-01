@@ -32,6 +32,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Harshdip Singh Deogan](http://hsdeogan.com)  
 - [Jose Nicolas Alba Aguado](http://josealba.org)
 - [Brandon Lucier](https://blucier.com/)  
+- [Ferruccio Sisti](https://github.com/FerruccioSisti)
 - [Steven Shlimoon](https://github.com/shli3)
 
 # Courses
@@ -80,7 +81,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-3520 | Introduction to Computer Graphics | Not Offered | Offered | Not Offered |  |
 | COMP-3540 | Theory of Computation | Offered | Not Offered | Not Offered | 💙💚 |
 | COMP-3670 | Computer Networks | Offered | Not Offered | Offered | 💙💛💚💜 |
-| COMP-3710 | Artificial Intelligence Concepts | Not Offered | Offered | Not Offered | |
+| COMP-3710 | Artificial Intelligence Concepts | Offered | Offered | Not Offered | |
 | COMP-3770 | Game Design, Development, and Tools | Offered | Not Offered | Not Offered |  |
 | COMP-4110 | Software Verification and Testing | Not Offered | Offered | Not Offered | 💚 |
 | COMP-4150 | Advanced and Practical Database Systems | Offered | Not Offered | Not Offered | 💛 |
