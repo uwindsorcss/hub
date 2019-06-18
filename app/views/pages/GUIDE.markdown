@@ -128,7 +128,7 @@ Harshdip has followed this exact sequence.
 - COMP-1000 Key Concepts in Computer Science
 - COMP-1400 Intro to Programming & Algorithms I
 - MATH-1760 Functions and Differential Calculus
-- MATH-1250 Linera Algebra
+- MATH-1250 Linear Algebra
 - Elective (See if you can take another mandatory course you will have to do in the future)
 
 ###### Second Semester
