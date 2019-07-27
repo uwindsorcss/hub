@@ -42,7 +42,7 @@ class SessionController < ApplicationController
   ]
 
   def create
-    provider = auth_hash[:provider]
+    provider = params[:provider]
     if provider == "google_oauth2"
       user = User.find_or_create_by(:email => auth_hash[:info][:email]) do |user|
         user.email = auth_hash[:info][:email]
@@ -52,7 +52,10 @@ class SessionController < ApplicationController
       session[:user_id] = user.id
       redirect_to request.env["omniauth.origin"]
     elsif provider == "discord"
-      discord_user = DiscordUser.find_or_create_by(discord_uid: auth_hash[:uid])
+      access_token = exchange_code_for_token!
+      discord_authentication_service = DiscordAuthenticationService.new(current_user, access_token)
+      user_info = discord_authentication_service.get_user_info
+      discord_user = DiscordUser.find_or_create_by(discord_uid: user_info["id"])
       if current_user
         if BLACKLISTED_EMAILS.include? current_user.email
           redirect_to :discord_path, flash: { error: "Staff/faculty are not permitted to join the Discord server" }
@@ -60,7 +63,7 @@ class SessionController < ApplicationController
           discord_user.update(verified: true)
           current_user.update(discord_user: discord_user)
           session[:discord_user_id] = discord_user.id
-          add_user_to_discord_guild(current_user, current_user.discord_user, auth_hash[:credentials][:token])
+          discord_authentication_service.add_user_to_discord_guild!
           redirect_to :discord_path, flash: { success: "You've successfully linked your Discord account and have been added to the UWindsor CSS Discord server!" }
         else
           redirect_to :discord_path, flash: { error: "You've already linked another Discord account to this email!" }
@@ -83,18 +86,45 @@ class SessionController < ApplicationController
     redirect_to request.referrer
   end
 
+  def discord_auth
+    authorization_url = generate_url(
+      "https://discordapp.com/api/oauth2/authorize",
+      {
+        client_id: ENV['DISCORD_CLIENT_ID'],
+        scope: "guilds.join",
+        redirect_uri: "http://localhost:3000/auth/discord/callback",
+        response_type: "code"
+      }
+    )
+    redirect_to(authorization_url)
+  end
+
   private
 
   def auth_hash
     request.env["omniauth.auth"]
   end
 
-  def add_user_to_discord_guild(user, discord_user, access_token)
-    RestClient.put(
-      "https://discordapp.com/api/guilds/#{ENV['DISCORD_GUILD_ID']}/members/#{discord_user.discord_uid}",
-      { access_token: access_token, nick: user.name }.to_json,
-      { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" }
+  def generate_url(url, params = {})
+    uri = URI(url)
+    uri.query = params.to_query
+    uri.to_s
+  end
+
+  def exchange_code_for_token!
+    response = RestClient.post(
+      "https://discordapp.com/api/oauth2/token",
+      {
+        client_id: ENV['DISCORD_CLIENT_ID'],
+        client_secret: ENV['DISCORD_CLIENT_SECRET'],
+        scope: "guilds.join",
+        code: params[:code],
+        redirect_uri: "http://localhost:3000/auth/discord/callback",
+        grant_type: "authorization_code"
+      }
     )
+    formatted_response = JSON.parse(response.body)
+    return formatted_response["access_token"]
   end
 
   # Returns true in three cases:
