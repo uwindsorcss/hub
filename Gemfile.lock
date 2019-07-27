@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/adaoraul/omniauth-discord.git
-  revision: c59584046598e3c326652c02683cf3ebfb8ead95
-  specs:
-    omniauth-discord (1.0.0)
-      omniauth
-      omniauth-oauth2
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -277,7 +269,6 @@ DEPENDENCIES
   json
   listen (>= 3.0.5, < 3.2)
   mini_racer
-  omniauth-discord!
   omniauth-google-oauth2
   pry-byebug
   pry-rails
@@ -298,4 +289,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.17.3
+   2.0.2
