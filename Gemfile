@@ -68,6 +68,6 @@ gem 'pry-byebug'
 # Markdown rendering
 gem 'redcarpet'
 gem 'rails-erd'
-gem 'omniauth-discord'
+gem 'omniauth-discord', git: 'git://github.com/adaoraul/omniauth-discord.git'
 gem 'rest-client'
 gem 'mini_racer'
