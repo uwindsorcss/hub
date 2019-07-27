@@ -92,7 +92,7 @@ class SessionController < ApplicationController
       {
         client_id: ENV['DISCORD_CLIENT_ID'],
         scope: "guilds.join",
-        redirect_uri: "http://localhost:3000/auth/discord/callback",
+        redirect_uri: "#{ENV['HOST']}/auth/discord/callback",
         response_type: "code"
       }
     )
@@ -119,7 +119,7 @@ class SessionController < ApplicationController
         client_secret: ENV['DISCORD_CLIENT_SECRET'],
         scope: "guilds.join",
         code: params[:code],
-        redirect_uri: "http://localhost:3000/auth/discord/callback",
+        redirect_uri: "#{ENV['HOST']}/auth/discord/callback",
         grant_type: "authorization_code"
       }
     )
