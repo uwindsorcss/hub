@@ -91,7 +91,7 @@ class SessionController < ApplicationController
       "https://discordapp.com/api/oauth2/authorize",
       {
         client_id: ENV['DISCORD_CLIENT_ID'],
-        scope: "guilds.join",
+        scope: "guilds.join identify",
         redirect_uri: "#{ENV['HOST']}/auth/discord/callback",
         response_type: "code"
       }
@@ -117,7 +117,7 @@ class SessionController < ApplicationController
       {
         client_id: ENV['DISCORD_CLIENT_ID'],
         client_secret: ENV['DISCORD_CLIENT_SECRET'],
-        scope: "guilds.join",
+        scope: "guilds.join identify",
         code: params[:code],
         redirect_uri: "#{ENV['HOST']}/auth/discord/callback",
         grant_type: "authorization_code"
