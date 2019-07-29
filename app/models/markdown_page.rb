@@ -1,0 +1,2 @@
+class MarkdownPage < ApplicationRecord
+end

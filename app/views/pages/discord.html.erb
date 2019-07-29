@@ -7,15 +7,9 @@
   </div>
 </div>
 
+  <%= render 'markdown_pages/markdown_page', page: @page, page_title: @page_title %>
+
 <center>
-  <br>
-  <p><a href="https://discordapp.com" target="_blank">Discord</a> is a free VoIP application that specializes in text, image, video, and audio communication between users in chat channels.</p>
-
-  <p>The Computer Science Society created a private Discord server in 2018 to connect Computer Science students and enable discussions for courses, co-op/internships, general chat and more. There are <i>hundreds</i> of students registered in the server.</p>
-
-  <p>All users in the Discord server are linked to their UWindsor email addresses to verify identity and to restrict the server to UWindsor students only.</p>
-
-  <p>Follow the steps below to join.</p>
   <br>
   <% if current_user&.discord_user&.verified? %>
     <b>A Discord user has already been linked to this UWindsor account.<br>You may proceed with the steps below if you've left the server and wish to re-join.</b>

@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-body">
+    <%= form_with model: @page, local: true do |form| %>
+      <% if @page.errors.any? %>
+        <p><b>
+          <%= pluralize(@page.errors.count, "error") %> prohibited
+          this page from being saved:
+        </b></p>
+        <ul>
+          <% @page.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      <% end %>
+
+    <!--PAGE TITLE-->
+      <div class="form-group">
+        <%= form.label :title %><br>
+        <%= form.text_field :title, value: (@page.title.present? ? @page.title : params[:title]), class: "form-control" %>
+      </div>
+
+        <!--CONTENT-->
+      <div class="form-group">
+        <%= form.label :text do
+          "Content (supports #{link_to('markdown', 'https://www.markdownguide.org/basic-syntax/', target: "_blank")})".html_safe
+          end %>
+        <%= form.text_area :text, class: "form-control", rows: 20 %>
+      </div>
+
+      <%= form.submit 'Submit', class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
+
+<br>
+ <%= link_to 'Back', root_url, class: "btn btn-primary" %>
