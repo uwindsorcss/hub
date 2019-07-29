@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :events
 
+  resources :markdown_pages, only: [:edit, :update, :new, :create]
+
   resources :registration
 
   get '/discord', to: 'pages#discord', :as => 'discord_path'
