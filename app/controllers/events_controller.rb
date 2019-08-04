@@ -29,7 +29,7 @@ class EventsController < ApplicationController
       if @event.update(event_params)
         redirect_to @event
         if @event.discord_message_id
-          DiscordMessageService.edit_message!("607374824888729611", @event.discord_message_id, build_event_message(@event))
+          DiscordMessageService.edit_message!(DiscordMessageService::DISCORD_EVENTS_CHANNEL_ID, @event.discord_message_id, build_event_message(@event))
         end
       else
         render 'edit'
@@ -51,7 +51,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     if current_user&.is_admin?
       if @event.save
-        message_result = DiscordMessageService.send_message!("607374824888729611", build_event_message(@event))
+        message_result = DiscordMessageService.send_message!(DiscordMessageService::DISCORD_EVENTS_CHANNEL_ID, build_event_message(@event))
         message_result = JSON.parse(message_result)
         @event.update(discord_message_id: message_result["id"])
         redirect_to @event, flash: { success: "Successfully created \"#{@event.title}\"" }
