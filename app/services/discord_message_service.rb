@@ -1,6 +1,6 @@
 class DiscordMessageService 
   DISCORD_API_ENDPOINT = "https://discordapp.com/api"
-  DISCORD_EVENTS_CHANNEL_ID = "607374824888729611"
+  DISCORD_EVENTS_CHANNEL_ID = "489122007506616321"
 
   def self.send_message!(channel_id, options)
     RestClient.post(  
