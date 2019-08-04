@@ -98,7 +98,7 @@ class EventsController < ApplicationController
           {
             name: "Date",
             value: @event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') +
-             "\n\n**This event has registrations enabled**. Please register through the CSS website if you'd like to attend the event." +
+             "#{event.registration_enabled ? "\n\n**This event has registrations enabled**. Please register through the CSS website if you'd like to attend the event." : ""}" +
              "\n\nView this event at #{ENV['HOST']}/events/#{@event.id}",
           }
         ],
