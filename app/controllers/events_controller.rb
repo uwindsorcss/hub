@@ -4,6 +4,7 @@ class EventsController < ApplicationController
     event_title = @event.title
     if current_user&.is_admin?
       @event.destroy
+      DiscordMessageService.delete_message!(DiscordMessageService::DISCORD_EVENTS_CHANNEL_ID, @event.discord_message_id)
       redirect_to events_path, flash: { error: "Successfully deleted \"#{event_title}\"" }
     else
       redirect_to events_path, flash: { error: "Error deleting \"#{event_title}\""}

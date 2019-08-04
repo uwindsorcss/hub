@@ -3,11 +3,11 @@ class DiscordMessageService
   DISCORD_EVENTS_CHANNEL_ID = "489122007506616321"
 
   def self.send_message!(channel_id, options)
-    RestClient.post(  
-      "#{DISCORD_API_ENDPOINT}/channels/#{channel_id}/messages", 
-      options.to_json, 
-      { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" } 
-    ) 
+    RestClient.post(
+      "#{DISCORD_API_ENDPOINT}/channels/#{channel_id}/messages",
+      options.to_json,
+      { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" }
+    )
   end
 
   def self.edit_message!(channel_id, message_id, options)
@@ -16,5 +16,13 @@ class DiscordMessageService
       options.to_json, 
       { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" } 
     ) 
+  end
+
+  def self.delete_message!(channel_id, message_id)
+    RestClient.delete(
+      "#{DISCORD_API_ENDPOINT}/channels/#{channel_id}/messages/#{message_id}",
+      { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" }
+    )
+  rescue RestClient::ExceptionWithResponse
   end
 end
