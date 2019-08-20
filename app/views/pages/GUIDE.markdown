@@ -6,6 +6,7 @@ Table of Contents
 - [Courses](#courses)
 - [Co-op/Internships](#co-op-and-internships)
 - [Miscellaneous](#miscellaneous)
+- [Resources](#resources)
 
 # Introduction
 ------------
@@ -114,7 +115,7 @@ List of bird courses:
 - **COMP-2097 Social Media and Mobile Technology for End Users** - Eric found this course easy but busy with assignments/projects.
 - **COMP-2707 Advanced Website Design** - Eric found this course easy (HTML, CSS, a bit of Javascript) but a lot of work with assignments/projects.
 
-#### Resources
+#### School Resources
 - [List of different degrees/specializations in Computer Science with their course requirements](https://web4.uwindsor.ca/units/registrar/calendars/undergraduate/cur.nsf/982f0e5f06b5c9a285256d6e006cff78/40a4d00a28a9d3e685257362006c8367!OpenDocument)
 
 - [Put your schedule in a timetable!](https://www.freecollegeschedulemaker.com/)
@@ -176,7 +177,7 @@ See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDi
 
 Eric recommends studying/practicing technical interview questions for any mid-to-large-sized company. Most of them will ask you highly technical coding questions.
 
-##### Resources
+##### CS Resources
 - [LeetCode](http://leetcode.com) - Eric highly recommends LeetCode and used it for all of his interview prep. It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
 - [Leetfree](https://leetfree.com/) - This website contains all LeetCode Premium problems for free.
 - **Cracking the Coding Interview** - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.
@@ -220,3 +221,24 @@ University is going to be hard sometimes. Jose and Eric had a full course load w
 Jose thinks Exchanges are fun and 100% worth it.
 - [Jose's University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
 - [Jose's Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)  
+
+# Resources
+
+#### Cheat Sheets and Docs
+- [https://devhints.io/](https://devhints.io/) - Has some very nice cheat sheets for various things such as [regex](https://devhints.io/regexp), [bash](https://devhints.io/bash), [vim](https://devhints.io/vim), and more.
+- [https://regexr.com/](https://regexr.com/) Extremely helpful website when taking classes that deal with regular expressions.
+- [http://docs.gl/](http://docs.gl/) - Nicely laid out OpenGL API documentation.
+- [https://crontab.guru/](https://crontab.guru/) - Simple but helpful website for configuring crontabs
+- [The Rust Programming Language](https://doc.rust-lang.org/book/) - Detailed book on the Rust programming language.
+
+#### Tutorials
+- [The Modern JavaScript Tutorial](https://javascript.info/) - Super in-depth tutorial for modern JavaScript.
+- [OpenGL Tutorial](http://www.opengl-tutorial.org/) - Decent tutorial series on OpenGL including source code in the provided GitHub.
+
+#### Online Judges and Challenges
+- [LeetCode](http://leetcode.com) - It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
+- [Leetfree](https://leetfree.com/) - This website contains all LeetCode Premium problems for free.
+- [HackerRank](https://www.hackerrank.com/) - Similar to LeetCode with hundreds of technical programming problems. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships.
+
+#### Books
+- [Cracking the Coding Interview](https://www.amazon.ca/Cracking-Coding-Interview-Programming-Questions/dp/0984782850) - A very helpful book that goes over common programming problems and how to solve them as well as information on interviewing with Big N companies.
