@@ -235,7 +235,7 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 ### Student Exchanges 
 
 Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Michelle, is a fantastic and knowledgable person and can help you with any concerns/questions.
-- [Jose's University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
+- [Jose's University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)
 - [Jose's Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)
 - [Student Exchanges at UWindsor](http://www.uwindsor.ca/studentexchange/)
 
