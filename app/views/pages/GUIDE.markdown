@@ -160,6 +160,25 @@ Harshdip has followed this exact sequence.
 
 See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDiknOmjwA5-5SJLUUDQn1n10NsS9Bi8/edit?usp=sharing) on behalf of CSS for landing an internship. This covers a bit of everything (resumes, applying, interviews).
 
+### Frequently Asked Questions (FAQ)
+
+**Q: Can I do an internship/co-op during 1st-year?**
+
+A: The co-op program does not start until the summer of your 2nd year, however, you can apply to internships on your own in 1st year. You should try to apply to places in 1st year, you have nothing to lose!
+
+**Q: What is the difference between a co-op and internship?**
+
+A:
+
+|                       | Co-op                                                                                                     | Internship                                                       |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| Assistance            | Workshops for resumes, applications, basic interviewing skills provided by co-op department               | None                                                             |
+| Pay                   | Usually around $18-22/hour in Canada                                                                      | Varies significantly but tend to pay more than co-op             |
+| Cost                  | ~$500/semester once co-op starts                                                                          | None                                                             |
+| Companies             | Limited to co-op listings (mostly local Canadian companies, some big names such as IBM, Nokia, big banks) | Most companies offer internship programs                         |
+| Locations             | Canada (mostly Windsor, Toronto (GTA), Ottawa)                                                            | Anywhere! Most international companies provide work visas.       |
+| Listings/Applications | Co-op portal lists all companies, applications usually done within the portal                             | On your own to find/apply to companies (more info in this guide) |
+
 ### Resume Examples
 - [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
 - [Eric Pickup](https://drive.google.com/file/d/1QUNbEYP0TBf33-JeCfXFwp_eoqI5YDql/view)
@@ -209,9 +228,10 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 
 ### Student Exchanges 
 
-Jose thinks Exchanges are fun and 100% worth it.
+Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Michelle, is a fantastic and knowledgable person and can help you with any concerns/questions.
 - [Jose's University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
-- [Jose's Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)  
+- [Jose's Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)
+- [Student Exchanges at UWindsor](http://www.uwindsor.ca/studentexchange/)
 
 # Resources
 
