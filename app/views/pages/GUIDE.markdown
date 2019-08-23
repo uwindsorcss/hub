@@ -194,9 +194,9 @@ A: Co-op advisors advise against applying without their permission, but in the e
 
 ### Job Boards
 
-- [intern.supply](http://intern.supply) - Eric highly recommends this. Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
-- [LinkedIn](https://www.linkedin.com/jobs/) - Eric also recommends this - it's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
-- [Summer 2019 Internships](https://github.com/christine-hu/summer-2019-internships) - A document on Github that keeps track of summer internship opportunities.
+- [intern.supply](http://intern.supply) - Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
+- [LinkedIn](https://www.linkedin.com/jobs/) - It's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
+- [Summer 2019 Internships](https://github.com/christine-hu/summer-2019-internships) - A document on GitHub that keeps track of summer internship opportunities.
 
 
 ### Interview Preparation
@@ -209,7 +209,7 @@ Eric recommends studying/practicing technical interview questions for any mid-to
 - **Cracking the Coding Interview** - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.
 - [Cracking the Coding Interview Solutions](https://github.com/careercup/CtCI-6th-Edition) - Online solutions for the problems in Cracking the Coding Interview. Harshdip recommends to try all the problems on your own and only looking for solutions once you have tried everything you know.
 - [HackerRank](https://www.hackerrank.com/) - Brandon highly recommends getting familiar with the  HackerRank editor and available languages. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships. It can also be used like LeetCode to solve hundreds of technical programming problems.
-- [Glassdoor](https://www.glassdoor.com/index.htm) - Eric highly recommends looking at a company's profile on Glassdoor if you're interviewing with them. Glassdoor allows people to post reviews, salaries and most importantly interview questions they've received from specific companies.
+- [Glassdoor](https://www.glassdoor.com/index.htm) - Glassdoor allows people to post reviews, salaries and most importantly interview questions they've received from specific companies.
 
 ### Working in the U.S.A.
 
@@ -223,7 +223,7 @@ A common misconception is that you can get a visa yourself - this is not true. Y
 
 #### Getting paid
 
-You'll need an American bank account to get paid if you're working in the USA. This is very easy to obtain - just go to your preferred bank once you're in the USA and bring your passport and visa documents just in case. Eric suggests Bank of America if you're working in the Bay Area - it took him 1 hour to get an account.
+You'll need an American bank account to get paid if you're working in the USA. This is very easy to obtain - just go to your preferred bank once you're in the USA and bring your passport and visa documents just in case.
 
 It's also a very good idea to obtain a Social Security Number in the USA so that you can apply for a credit card and build up a credit score in the US (can be helpful in many ways in the future). This is also straight-forward and you need to wait until you're in the USA for at least 10 days before you can apply.
 
