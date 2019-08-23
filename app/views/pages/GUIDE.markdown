@@ -179,6 +179,12 @@ A:
 | Locations             | Canada (mostly Windsor, Toronto (GTA), Ottawa)                                                            | Anywhere! Most international companies provide work visas.       |
 | Listings/Applications | Co-op portal lists all companies, applications usually done within the portal                             | On your own to find/apply to companies (more info in this guide) |
 
+**Q: Should I pay for co-op or just go for internships?**
+A: Eric's opinion: Do both! Apply for internships and use co-op as a fallback. Once you've gotten your first co-op/internship it's significantly easier to get the next one on your own, and many people outgrow the co-op program.
+
+**Q: Can I apply for internships while in the co-op program?**
+A: Co-op advisors advise against applying without their permission, but in the end there's nothing stopping you from applying for internships on your own. If you find one by yourself and want to stay in the co-op program, co-op will gladly accept that company as a co-op placement after a little screening.
+
 ### Resume Examples
 - [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
 - [Eric Pickup](https://drive.google.com/file/d/1QUNbEYP0TBf33-JeCfXFwp_eoqI5YDql/view)
