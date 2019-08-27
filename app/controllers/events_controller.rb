@@ -102,7 +102,6 @@ class EventsController < ApplicationController
              "\n\nView this event at #{ENV['HOST']}/events/#{@event.id}",
           }
         ],
-        thumbnail: { url: "https://css.uwindsor.ca/uwindsor_logo.png" }
       }
     }
   end
