@@ -64,6 +64,7 @@ class SessionController < ApplicationController
           current_user.update(discord_user: discord_user)
           session[:discord_user_id] = discord_user.id
           discord_authentication_service.add_user_to_discord_guild!
+          send_verified_message_to_discord_user(discord_user)
           redirect_to :discord_path, flash: { success: "You've successfully linked your Discord account and have been added to the UWindsor CSS Discord server!" }
         else
           redirect_to :discord_path, flash: { error: "You've already linked another Discord account to this email!" }
@@ -134,5 +135,19 @@ class SessionController < ApplicationController
   # account again, makes sense if the user left the server and needs to be added back in)
   def user_has_not_verified_other_discord_users?(user, discord_user)
     user.discord_user.nil? || !user.discord_user.verified? || user.discord_user == discord_user
+  end
+
+  def send_verified_message_to_discord_user(discord_user)
+    message = {
+      embed: {
+        title: "You're in! :white_check_mark:",
+        description: "Welcome to the **University of Windsor CS Discord**! You've come to a great place.\n\n"\
+          "Make sure you add your year to your profile by sending `~year <1-4, masters, alumni>` (e.g. `~year 1`).\n\n"\
+          "We've set your nickname to **#{discord_user.user.name}**. Please contact a CSS member if you'd like to shorten your name (e.g. Johnathon Middlename Doe -> John Doe).\n\n"\
+          "You can mute individual channels to prevent yourself from being spammed. We recommend you mute any course channels that you are not taking and leave the rest unmuted to make sure you're not missing out on important content. You can find the mute button by right-clicking on a channel.\n\n"\
+          "We also have a few more useful commands built into the bot. You can see the commands by typing `~help`."
+      }
+    }
+    DiscordMessageService.send_message_to_dm!(discord_user.discord_uid, message)
   end
 end
