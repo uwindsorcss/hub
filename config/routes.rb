@@ -19,4 +19,5 @@ Rails.application.routes.draw do
 
   get '/discord', to: 'pages#discord', :as => 'discord_path'
   get '/guide', to: 'pages#guide', :as => 'guide'
+  get '/about', to: 'pages#about', :as => 'about'
 end
