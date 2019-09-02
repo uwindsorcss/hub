@@ -176,7 +176,7 @@ A:
 | Pay                   | Usually around $18-22/hour in Canada                                                                      | Varies significantly but tend to pay more than co-op             |
 | Cost                  | ~$500/semester once co-op starts                                                                          | None                                                             |
 | Companies             | Limited to co-op listings (mostly local Canadian companies, some big names such as IBM, Nokia, big banks). There are a few companies that *only* hire through co-op. | Most companies offer internship programs                         |
-| Locations             | Mostly Canada (usually Toronto (GTA) or Ottawa, there are a few companies in Windsor)                                                            | Anywhere! Most international companies provide work visas.       |
+| Locations             | Mostly Canada (usually Toronto (GTA) or Ottawa, there are a few companies in Windsor)                                                            | Anywhere! For Canada, Toronto, Waterloo, and Vancouver are the biggest tech hubs. For the USA, the San Francisco Bay Area, Seattle, and New York are the biggest.       |
 | Listings/Applications | Co-op portal lists all companies, applications usually done within the portal                             | On your own to find/apply to companies (more info in this guide) |
 
 **Q: Should I pay for co-op or just go for internships?**
