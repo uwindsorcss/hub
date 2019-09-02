@@ -172,11 +172,11 @@ A:
 
 |                       | Co-op                                                                                                     | Internship                                                       |
 |-----------------------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| Assistance            | Workshops for resumes, applications, basic interviewing skills provided by co-op department               | None                                                             |
+| Assistance            | Workshops for resumes, applications, basic interviewing skills provided by co-op department               | You have to seek assistance/research yourself. https://reddit.com/r/cscareerquestions is a good resource.                                                             |
 | Pay                   | Usually around $18-22/hour in Canada                                                                      | Varies significantly but tend to pay more than co-op             |
 | Cost                  | ~$500/semester once co-op starts                                                                          | None                                                             |
-| Companies             | Limited to co-op listings (mostly local Canadian companies, some big names such as IBM, Nokia, big banks) | Most companies offer internship programs                         |
-| Locations             | Canada (mostly Windsor, Toronto (GTA), Ottawa)                                                            | Anywhere! Most international companies provide work visas.       |
+| Companies             | Limited to co-op listings (mostly local Canadian companies, some big names such as IBM, Nokia, big banks). There are a few companies that *only* hire through co-op. | Most companies offer internship programs                         |
+| Locations             | Canada (Toronto (GTA), Ottawa)                                                            | Anywhere! Most international companies provide work visas.       |
 | Listings/Applications | Co-op portal lists all companies, applications usually done within the portal                             | On your own to find/apply to companies (more info in this guide) |
 
 **Q: Should I pay for co-op or just go for internships?**
