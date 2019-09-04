@@ -91,7 +91,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-4250 | Big Data Analytics and Database Design | Not Offered | Offered | Not Offered | 💛 |
 | COMP-4400 | Principles of Programming Languages | Offered | Not Offered | Offered | 💙💚 |
 | COMP-4500 | Multimedia System Development | Not Offered | Offered | Not Offered |  |
-| COMP-4540 | Design and Analysis of Algorithms | Not Offered | Offered | Not Offered | 💙💚 |
+| COMP-4540 | Design and Analysis of Algorithms | Offered | Offered | Not Offered | 💙💚 |
 | COMP-4670 | Network Security | Not Offered | Offered | Not Offered |  |
 | COMP-4700 | Project using Selected Tools | Offered | Not Offered | Not Offered |  |
 | COMP-4730 | Advanced Topics in AI I | Offered | Not Offered | Not Offered |  |
