@@ -1,6 +1,7 @@
 class DiscordMessageService 
   DISCORD_API_ENDPOINT = "https://discordapp.com/api"
   DISCORD_EVENTS_CHANNEL_ID = ENV['DISCORD_EVENTS_CHANNEL_ID']
+  SIDE_COLOR = "005696"
 
   def self.send_message!(channel_id, options)
     options.deep_merge!(default_options)
@@ -49,7 +50,8 @@ class DiscordMessageService
   def self.default_options
     {
       embed: {
-        thumbnail: { url: "https://css.uwindsor.ca/uwindsor_logo.png" }
+        thumbnail: { url: "https://css.uwindsor.ca/uwindsor_logo.png" },
+        color: SIDE_COLOR
       }
     }
   end
