@@ -35,6 +35,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Brandon Lucier](https://blucier.com/)  
 - [Ferruccio Sisti](https://github.com/FerruccioSisti)
 - [Steven Shlimoon](https://github.com/shli3)
+- [Bailey Chittle](https://github.com/bachittle)
 
 # Courses
 ------------
@@ -109,6 +110,7 @@ Your degree audit will have a section called *"Any Area of Study"* that allows y
 List of bird courses:
 
 - **ECON-1100 Introduction to Economics I** - Harshdip found this course easy. The midterms and finals were all multiple choice.
+  - Note: Bailey recommends taking this course online instead of in-class (if available). There are no assignments (only the midterm and final) and the midterms were all online, therefore open book. Read the textbook thoroughly and you will do well. 
 - **ECON-1110 Introduction to Economics II**
 - **COMP-2067 Programming for Beginners**
 - **COMP-2057 Intro to the Internet** - Eric found this course *very* easy, just simple HTML/CSS assignments.
