@@ -94,7 +94,6 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-4500 | Multimedia System Development | Not Offered | Offered | Not Offered |  |
 | COMP-4540 | Design and Analysis of Algorithms | Offered | Offered | Not Offered | 💙💚 |
 | COMP-4670 | Network Security | Not Offered | Offered | Not Offered |  |
-| COMP-4700 | Project using Selected Tools | Offered | Not Offered | Not Offered |  |
 | COMP-4730 | Advanced Topics in AI I | Offered | Not Offered | Not Offered |  |
 | COMP-4740 | Advanced Topics in AI II | Not Offered | Offered | Not Offered |  |
 | COMP-4750 | Selected Topics | Not Offered | Offered | Not Offered |  |
