@@ -37,7 +37,7 @@
             <a class="btn btn-danger disabled">Event Full</a>
           <% end %>
       <% elsif current_user.nil? %>
-         <a class="btn btn-success disabled">Sign in to Register</a>
+         <%= link_to "Sign in to Register", :google_auth, class: "btn btn-success" %>
       <% end %>
     <% end %>
     <% if current_user&.is_admin? %>
