@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190804022200) do
+ActiveRecord::Schema.define(version: 20190916191603) do
 
   create_table "discord_users", force: :cascade do |t|
     t.integer "discord_uid", limit: 8
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20190804022200) do
     t.boolean "registration_enabled"
     t.time "end_time"
     t.bigint "discord_message_id"
+    t.boolean "discord_enabled"
   end
 
   create_table "guests", force: :cascade do |t|

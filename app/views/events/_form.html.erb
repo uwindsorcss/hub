@@ -67,6 +67,12 @@
         <div style="padding-left:10px;padding-right:10px;"> to </div>
         <%= form.time_select :end_time, {ampm: true}, html_options = { class: "form-control" } %>
       </div>
+      <br>
+      <!--DISCORD MESSAGE TOGGLE-->
+      <div class="form-check" style="margin-bottom:8px;">
+        <%= form.check_box :discord_enabled, class: "form-check-input" %>
+        <%= form.label :discord_enabled, "Send or update event message on Discord", class: "form-check-label" %><br>
+      </div>
 
       <br>
       <%= form.submit 'Submit', class: "btn btn-success" %>
