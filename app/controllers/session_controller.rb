@@ -39,7 +39,9 @@ class SessionController < ApplicationController
     "walid@uwindsor.ca",
     "tpalmer@uwindsor.ca",
     "macprogram@uwindsor.ca",
-    "selva111@uwindsor.ca"
+    "selva111@uwindsor.ca",
+    "Ahmad.Biniaz@uwindsor.ca",
+    "Dima.Alhadidi@uwindsor.ca"
   ]
 
   def create
