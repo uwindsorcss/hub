@@ -7,6 +7,7 @@ Table of Contents
 - [Co-op/Internships](#co-op-and-internships)
 - [Miscellaneous](#miscellaneous)
 - [Resources](#resources)
+- [Goodies](#goodies)
 
 # Introduction
 ------------
@@ -260,3 +261,12 @@ Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Miche
 
 #### Books
 - [Cracking the Coding Interview](https://www.amazon.ca/Cracking-Coding-Interview-Programming-Questions/dp/0984782850) - A very helpful book that goes over common programming problems and how to solve them as well as information on interviewing with Big N companies.
+
+# Goodies
+
+As a student in Computer Science there are many free trials, offers, and products that are available to you.
+
+- [GitHub Student Developer Pack](https://education.github.com/pack) - GitHub partners with a wide variety of companies and products offering credits, trials, and free software.
+- [1Password 6 Month Student Trial](https://www.studentappcentre.com/discounts/1password)
+- [Office 365](https://www.microsoft.com/en-ca/education/products/office)
+- [Amazon Prime Student](https://www.amazon.com/amazonprime?_encoding=UTF8&%2AVersion%2A=1&%2Aentries%2A=0&planOptimizationId=WLPStudentMonthlyEligiblePlans&primeCampaignId=studentWlpPrimeRedir&ref_=st_wlp_pr_redir)
