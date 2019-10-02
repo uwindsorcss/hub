@@ -23,3 +23,5 @@
 .byebug_history
 
 /config/local_env.yml
+
+/config/blacklist.json
