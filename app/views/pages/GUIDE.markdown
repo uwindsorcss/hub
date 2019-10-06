@@ -236,7 +236,16 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 
 ### Hackathons
 
-<!--- Maybe people can write about their experiences here --->
+Hackathons are a great way to use your knowledge from school and create cool a project to put on your resume. Usually attending one of these looks nice your resume, and may even land you a job as recruiters attend these events as well.
+
+-Workshops available throughout event
+-Complete and build projects in 24-48 hours
+-Great networking opportunity and team up with other students
+-Recruiters actively looking for you
+-Larger hackathons will cover travelling expenses
+-Companies giving away SWAG
+-Lots of great prizes
+-All experience levels welcome, with preference typically given to first-timers
 
 [Link to MLH competition list](https://mlh.io/seasons/na-2020/events)
 
