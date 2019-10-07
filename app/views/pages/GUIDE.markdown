@@ -248,7 +248,7 @@ Hackathons are **free** competitions where you team up with people to build cool
 - All experience levels welcome, with preference typically given to first-timers
 - Most hackathons provide free food and travel reimbursement
 
-[Link to MLH competition list](https://mlh.io/seasons/na-2020/events)
+Click [here](https://mlh.io/seasons/na-2020/events) to view the official MLH competition list
 
 ### Student Exchanges 
 
