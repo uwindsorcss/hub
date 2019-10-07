@@ -234,6 +234,22 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 ------------
 - [University Guide by Jose Alba](https://docs.google.com/document/d/1OaK6moqKLeFBVVfZ1gJAYCV_DsuvNxHvRAykeAMUhYU/edit?fbclid=IwAR2vBoM9rOHdwhU5ueukdeYdEeXe-slz2BiF5kZBZ0NF14SjbtuLDhl4jpU) - Jose Alba is a recent graduate from University of Windsor and he has written a good document where he shares his experiences and tips for making the most out of your university life.
 
+### Hackathons
+
+Hackathons are **free** competitions where you team up with people to build cool projects. They're a great way to use your knowledge from school and create cool a project to put on your resume. Usually attending one of these looks nice your resume, and may even land you a job as recruiters attend these events as well.
+
+- Workshops available throughout event
+- Complete and build projects in 24-48 hours
+- Great networking opportunity and team up with other students
+- Recruiters actively looking for you
+- Larger hackathons will cover travelling expenses
+- Companies giving away SWAG
+- Lots of great prizes
+- All experience levels welcome, with preference typically given to first-timers
+- Most hackathons provide free food and travel reimbursement
+
+[Link to MLH competition list](https://mlh.io/seasons/na-2020/events)
+
 ### Student Exchanges 
 
 Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Michelle, is a fantastic and knowledgable person and can help you with any concerns/questions.
