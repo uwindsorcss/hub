@@ -236,7 +236,7 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 
 ### Hackathons
 
-Hackathons are a great way to use your knowledge from school and create cool a project to put on your resume. Usually attending one of these looks nice your resume, and may even land you a job as recruiters attend these events as well.
+Hackathons are **free** competitions where you team up with people to build cool projects. They're a great way to use your knowledge from school and create cool a project to put on your resume. Usually attending one of these looks nice your resume, and may even land you a job as recruiters attend these events as well.
 
 - Workshops available throughout event
 -Complete and build projects in 24-48 hours
