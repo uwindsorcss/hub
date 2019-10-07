@@ -246,6 +246,7 @@ Hackathons are **free** competitions where you team up with people to build cool
 -Companies giving away SWAG
 -Lots of great prizes
 -All experience levels welcome, with preference typically given to first-timers
+- Most hackathons provide free food and travel reimbursement
 
 [Link to MLH competition list](https://mlh.io/seasons/na-2020/events)
 
