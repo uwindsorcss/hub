@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="University of Windsor" />
     <meta property="og:title" content="Computer Science Society" />
     <meta property="og:description" content="The Computer Science Society represents all undergraduate students enrolled in Computer Science at the University of Windsor." />
-    <meta property="og:image" content="/uwindsor_logo.png" />
+    <meta property="og:image" content="/css-logo.png" />
     <meta property="og:type" content="website" />
 
     <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png">
@@ -19,9 +19,8 @@
 
   <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <%= image_tag("uwindsor_logo.png", size: "38x45", style:"margin-right:10px;") %>
         <%= link_to root_url, class: "navbar-brand" do %>
-          Computer Science Society
+          <%= image_tag("css-logo.png", width: 175, style:"margin-right:10px;") %>
         <% end %>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
