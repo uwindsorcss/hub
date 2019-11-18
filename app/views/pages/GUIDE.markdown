@@ -43,7 +43,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
  
 ### Typical course offerings by semester
 
-*Updated Summer 2019*
+*Updated Winter 2020*
 
 ###### Requirements Legend
 
@@ -84,7 +84,8 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-3520 | Introduction to Computer Graphics | Not Offered | Offered | Not Offered |  |
 | COMP-3540 | Theory of Computation | Offered | Not Offered | Not Offered | 💙💚 |
 | COMP-3670 | Computer Networks | Offered | Not Offered | Offered | 💙💛💚💜 |
-| COMP-3710 | Artificial Intelligence Concepts | Offered | Offered | Not Offered | |
+| COMP-3680 | Network Practicum | Not Offered | Offered | Not Offered | 💙💛💚💜 |
+| COMP-3710 | Artificial Intelligence Concepts | Offered | Not Offered | Not Offered | |
 | COMP-3770 | Game Design, Development, and Tools | Offered | Not Offered | Not Offered |  |
 | COMP-4110 | Software Verification and Testing | Not Offered | Offered | Not Offered | 💚 |
 | COMP-4150 | Advanced and Practical Database Systems | Offered | Not Offered | Not Offered | 💛 |
@@ -92,15 +93,13 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-4220 | Agile Software Development | Offered | Not Offered | Not Offered | 💛 |
 | COMP-4250 | Big Data Analytics and Database Design | Not Offered | Offered | Not Offered | 💛 |
 | COMP-4400 | Principles of Programming Languages | Offered | Not Offered | Offered | 💙💚 |
-| COMP-4500 | Multimedia System Development | Not Offered | Offered | Not Offered |  |
 | COMP-4540 | Design and Analysis of Algorithms | Offered | Offered | Not Offered | 💙💚 |
 | COMP-4670 | Network Security | Not Offered | Offered | Not Offered |  |
-| COMP-4730 | Advanced Topics in AI I | Offered | Not Offered | Not Offered |  |
+| COMP-4730 | Maching Learning | Offered | Offered | Not Offered |  |
 | COMP-4740 | Advanced Topics in AI II | Not Offered | Offered | Not Offered |  |
-| COMP-4750 | Selected Topics | Not Offered | Offered | Not Offered |  |
 | COMP-4770 | Artifical Intelligence for Games | Not Offered | Offered | Not Offered |  |
 | COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered | 💚 |
-| COMP-4960 | Research | Offered | Offered | Not Offered | 💙💚 |
+| COMP-4960 | Research Project | Offered | Offered | Not Offered | 💙💚 |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 |
 
 #### Bird (very easy) courses
