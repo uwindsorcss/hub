@@ -50,7 +50,7 @@ class DiscordMessageService
   def self.default_options
     {
       embed: {
-        thumbnail: { url: "https://css.uwindsor.ca/uwindsor_logo.png" },
+        thumbnail: { url: "https://css.uwindsor.ca/css-logo-square.png" },
         color: SIDE_COLOR
       }
     }
