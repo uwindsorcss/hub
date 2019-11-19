@@ -112,9 +112,9 @@ List of bird courses:
   - Note: Bailey recommends taking this course online instead of in-class (if available). There are no assignments (only the midterm and final) and the midterms were all online, therefore open book. Read the textbook thoroughly and you will do well. 
 - **ECON-1110 Introduction to Economics II**
 - **COMP-2067 Programming for Beginners**
-- **COMP-2057 Intro to the Internet** - Eric found this course *very* easy, just simple HTML/CSS assignments.
-- **COMP-2097 Social Media and Mobile Technology for End Users** - Eric found this course easy but busy with assignments/projects.
-- **COMP-2707 Advanced Website Design** - Eric found this course easy (HTML, CSS, a bit of Javascript) but a lot of work with assignments/projects.
+- **COMP-2057 Intro to the Internet** - Simple HTML/CSS assignments.
+- **COMP-2097 Social Media and Mobile Technology for End Users** - A bit busy with assignments/projects but still overall very easy
+- **COMP-2707 Advanced Website Design** - Easy exams, covers HTML, CSS, a bit of Javascript but a lot of work with assignments/projects
 
 #### School Resources
 - [List of different degrees/specializations in Computer Science with their course requirements](https://web4.uwindsor.ca/units/registrar/calendars/undergraduate/cur.nsf/982f0e5f06b5c9a285256d6e006cff78/40a4d00a28a9d3e685257362006c8367!OpenDocument)
@@ -181,7 +181,7 @@ A:
 | Listings/Applications | Co-op portal lists all companies, applications usually done within the portal                             | On your own to find/apply to companies (more info in this guide) |
 
 **Q: Should I pay for co-op or just go for internships?**
-A: Eric's opinion: Do both! Apply for internships and use co-op as a fallback. Once you've gotten your first co-op/internship it's significantly easier to get the next one on your own, and many people outgrow the co-op program.
+Do both! Apply for internships and use co-op as a fallback. Once you've gotten your first co-op/internship it's significantly easier to get the next one on your own, and many people outgrow the co-op program.
 
 **Q: Can I apply for internships while in the co-op program?**
 A: Co-op advisors advise against applying without their permission, but in the end there's nothing stopping you from applying for internships on your own. If you find one by yourself and want to stay in the co-op program, co-op will gladly accept that company as a co-op placement after a little screening.
