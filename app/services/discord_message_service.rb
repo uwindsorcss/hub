@@ -30,6 +30,7 @@ class DiscordMessageService
   end
 
   def self.send_message_to_dm!(discord_uid, options)
+    options.deep_merge!(default_options)
     dm_channel = JSON.parse(
         RestClient.post(
         "#{DISCORD_API_ENDPOINT}/users/@me/channels",
