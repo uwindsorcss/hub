@@ -31,3 +31,9 @@ After that you're ready to launch the site using:
 `$ rails server`
 
 By default, rails will launch the server at [http://localhost:3000](http://localhost:3000).
+
+### Common issues
+
+A few people reported issues with a dependency, `libv8`. This can be fixed by installing the `libv8-dev` package using:
+`sudo apt-get install libv8-dev` or `brew install libv8-dev`.
+
