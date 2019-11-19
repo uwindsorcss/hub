@@ -50,6 +50,9 @@ Now that you have a Google client ID and client secret, you just need to add tho
 
 In the rails project, copy the `local_env.example.yml` to a new file called `local_env.yml`. This will be your private file that contains your API credentials - git will ignore this file. Fill in the `GOOGLE_CLIENT` and `GOOGLE_SECRET` fields in `local_env.yml` with your respective credentials.
 
+After restarting the rails server, you should be able to sign in using UWindsor accounts. You can now add yourself as an admin through the rails console. After signing into the app at least once (so that your user record is created), run `rails console` or `rails c` to open the console, then change your role to admin using:
+`User.where(email: "youruwindsoremail").first.update(role: "admin")`
+
 ### Common issues
 
 A few people reported issues with a dependency, `libv8`. This can be fixed by installing the `libv8-dev` package using:
