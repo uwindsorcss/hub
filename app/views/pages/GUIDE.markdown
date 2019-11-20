@@ -226,7 +226,7 @@ A: Co-op advisors advise against applying without their permission, but in the e
 Eric recommends studying/practicing technical interview questions for any mid-to-large-sized company. Most of them will ask you highly technical coding questions.
 
 ##### CS Resources
-- [LeetCode](http://leetcode.com) - Eric highly recommends LeetCode and used it for all of his interview prep. It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
+- [LeetCode](http://leetcode.com) - The most popular platform to prep for coding challenges. It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
 - [Leetfree](https://leetfree.com/) - This website contains all LeetCode Premium problems for free.
 - **Cracking the Coding Interview** - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.
 - [Cracking the Coding Interview Solutions](https://github.com/careercup/CtCI-6th-Edition) - Online solutions for the problems in Cracking the Coding Interview. Harshdip recommends to try all the problems on your own and only looking for solutions once you have tried everything you know.
@@ -235,7 +235,7 @@ Eric recommends studying/practicing technical interview questions for any mid-to
 
 ### Working in the U.S.A.
 
-Almost every major tech company in the USA hires Canadians and will sponsor you for a visa. US companies tend to pay *significantly* more and provides great opportunities. Eric highly suggests trying to land an internship in the Bay Area or New York.
+Almost every major tech company in the USA hires Canadians and will sponsor you for a visa. US companies tend to pay *significantly* more and provides great opportunities.
 
 #### Visa
 
