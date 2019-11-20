@@ -3,6 +3,7 @@ Table of Contents
 
 - [Introduction](#introduction)
 - [Contributing](#contributing)
+- [Important Dates](#important-dates)
 - [Courses](#courses)
 - [Co-op/Internships](#co-op-and-internships)
 - [Miscellaneous](#miscellaneous)
@@ -37,6 +38,26 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Ferruccio Sisti](https://github.com/FerruccioSisti)
 - [Steven Shlimoon](https://github.com/shli3)
 - [Bailey Chittle](https://github.com/bachittle)
+
+
+# Important Dates
+------------
+
+### Fall 2019
+- December 4th - Last day of classes
+- December 7 to December 18 - Final exams
+- December 19 - Alternate exam date
+
+### Winter 2020
+- January 6 - Classes begin
+- January 17 - Last day for late registration and change of courses
+- February 15 to February 23rd - Reading week
+- March 13 - Last day to voluntarily withdraw from courses
+- April 3rd - Last day of classes
+- April 7 - April 20 - Final exams
+- April 21 - Alternate exam date
+
+
 
 # Courses
 ------------
