@@ -25,7 +25,7 @@ class SessionController < ApplicationController
           session[:discord_user_id] = discord_user.id
           discord_authentication_service.add_user_to_discord_guild!
           send_verified_message_to_discord_user(discord_user)
-          redirect_to :discord_path, flash: { success: "You've successfully linked your Discord account and have been added to the UWindsor CSS Discord server!" }
+          redirect_to :discord_path, flash: { success: "You've successfully been added to the UWindsor CSS Discord server! Open Discord to access it." }
         else
           redirect_to :discord_path, flash: { error: "You've already linked another Discord account to this email!" }
         end
