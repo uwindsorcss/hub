@@ -81,7 +81,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-1000 | Key Concepts in Computer Science | Offered | Offered | Offered | ❤️💙💛💚💜🖤| | 
 | COMP-1047 | Computer Concepts for End-Users | Offered | Offered | Offered |   |  |
 | COMP-1400 | Intro to Programming and Algorithms I | Offered | Offered | Offered | ❤️💙💛💚💜🖤|  |
-| COMP-1410 | Intro to Programming and Algorithms II | Not Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1000 or MATH-1720, COMP-1410 |   
+| COMP-1410 | Intro to Programming and Algorithms II | Not Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1000 or MATH-1720, COMP-1400 |   
 | COMP-2057 | Intro to the Internet | Offered | Offered | Offered | | COMP-1047 or COMP-2067 or COMP-1400|
 | COMP-2067 | Programming for Beginners | Not Offered | Offered | Offered | | |
 | COMP-2077 | Problem Solving and Information on the Internet | Offered | Offered | Not Offered | | COMP-1047, COMP-2057|
