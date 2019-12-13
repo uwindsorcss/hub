@@ -134,7 +134,7 @@ List of bird courses:
 - **ECON-1100 Introduction to Economics I** - Harshdip found this course easy. The midterms and finals were all multiple choice.
   - Note: Bailey recommends taking this course online instead of in-class (if available). There are no assignments (only the midterm and final) and the midterms were all online, therefore open book. Read the textbook thoroughly and you will do well. 
 - **ECON-1110 Introduction to Economics II**
-- **COMP-2067 Programming for Beginners**
+- **COMP-2067 Programming for Beginners** - Steven says this is a super easy course. Teaches you bare basics of Python (think COMP-1400 but easier and Python).
 - **COMP-2057 Intro to the Internet** - Simple HTML/CSS assignments.
 - **COMP-2097 Social Media and Mobile Technology for End Users** - A bit busy with assignments/projects but still overall very easy
 - **COMP-2707 Advanced Website Design** - Easy exams, covers HTML, CSS, a bit of Javascript but a lot of work with assignments/projects
