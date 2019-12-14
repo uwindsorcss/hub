@@ -6,7 +6,7 @@ Table of Contents
 - [Courses](#courses)
 - [Co-op/Internships](#co-op-and-internships)
 - [Miscellaneous](#miscellaneous)
-- [Support](#support)
+- [Useful Links](#useful-links)
 
 # Introduction
 ------------
@@ -222,7 +222,7 @@ Jose thinks Exchanges are fun and 100% worth it.
 - [Jose's University of Essex Experience](https://www.youtube.com/watch?v=CshpbmLpHzw)  
 - [Jose's Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)  
 
-# Support
+# Useful Links
 
 #### Cheat Sheets and Docs
 - [https://devhints.io/](https://devhints.io/) - Has some very nice cheat sheets for various things such as [regex](https://devhints.io/regexp), [bash](https://devhints.io/bash), [vim](https://devhints.io/vim), and more.
