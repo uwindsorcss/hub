@@ -12,7 +12,7 @@ Please feel free to contribute if you see an issue, want to complete something f
 
 If this sounds like gibberish to you, you'll probably want to learn the basics of `git`. Afterwards, you can follow [this tutorial](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/) on contributing to open-source projects on GitHub.
 
-### Setup
+### Rails Setup
 
 You can follow [these instructions](https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm) to install `ruby` and the `rails` framework.
 
@@ -31,3 +31,30 @@ After that you're ready to launch the site using:
 `$ rails server`
 
 By default, rails will launch the server at [http://localhost:3000](http://localhost:3000).
+
+### Google OAuth Setup
+
+This is not necessary, however to sign in to your UWindsor email on your local instance and use admin features you will need to set up Google OAuth.
+
+Signing in will allow you to
+- Create/modify events
+- Modify page content in-site
+
+Follow these steps from Google to create a project and obtain the client ID and secret: https://developers.google.com/adwords/api/docs/guides/authentication#create_a_client_id_and_client_secret
+- Your project can be named whatever you like
+- This is completely free, don't worry about the billing account options
+- Application type is a Web Application
+- Under Authorized Redirect URI's, enter `http://localhost:3000/auth/google_oauth2/callback`
+
+Now that you have a Google client ID and client secret, you just need to add those to your environment file where the app reads the keys.
+
+In the rails project, copy the `local_env.example.yml` to a new file called `local_env.yml`. This will be your private file that contains your API credentials - git will ignore this file. Fill in the `GOOGLE_CLIENT` and `GOOGLE_SECRET` fields in `local_env.yml` with your respective credentials.
+
+After restarting the rails server, you should be able to sign in using UWindsor accounts. You can now add yourself as an admin through the rails console. After signing into the app at least once (so that your user record is created), run `rails console` or `rails c` to open the console, then change your role to admin using:
+`User.where(email: "youruwindsoremail").first.update(role: "admin")`
+
+### Common issues
+
+A few people reported issues with a dependency, `libv8`. This can be fixed by installing the `libv8-dev` package using:
+`sudo apt-get install libv8-dev` or `brew install libv8-dev`.
+
