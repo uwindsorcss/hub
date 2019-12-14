@@ -1,8 +1,10 @@
 class DiscordMessageService 
   DISCORD_API_ENDPOINT = "https://discordapp.com/api"
-  DISCORD_EVENTS_CHANNEL_ID = "489122007506616321"
+  DISCORD_EVENTS_CHANNEL_ID = ENV['DISCORD_EVENTS_CHANNEL_ID']
+  SIDE_COLOR = "005696"
 
   def self.send_message!(channel_id, options)
+    options.deep_merge!(default_options)
     RestClient.post(
       "#{DISCORD_API_ENDPOINT}/channels/#{channel_id}/messages",
       options.to_json,
@@ -11,6 +13,7 @@ class DiscordMessageService
   end
 
   def self.edit_message!(channel_id, message_id, options)
+    options.deep_merge!(default_options)
     RestClient.patch(  
       "#{DISCORD_API_ENDPOINT}/channels/#{channel_id}/messages/#{message_id}", 
       options.to_json, 
@@ -24,5 +27,33 @@ class DiscordMessageService
       { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" }
     )
   rescue RestClient::ExceptionWithResponse
+  end
+
+  def self.send_message_to_dm!(discord_uid, options)
+    options.deep_merge!(default_options)
+    dm_channel = JSON.parse(
+        RestClient.post(
+        "#{DISCORD_API_ENDPOINT}/users/@me/channels",
+        { recipient_id: discord_uid }.to_json,
+        { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" }
+      )
+    )
+    dm_channel_id = dm_channel["id"]
+    RestClient.post(
+      "#{DISCORD_API_ENDPOINT}/channels/#{dm_channel_id}/messages",
+      options.to_json,
+      { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" }
+    )
+  end
+
+  private
+
+  def self.default_options
+    {
+      embed: {
+        thumbnail: { url: "https://css.uwindsor.ca/css-logo-square.png" },
+        color: SIDE_COLOR
+      }
+    }
   end
 end

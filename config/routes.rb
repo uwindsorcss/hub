@@ -19,4 +19,7 @@ Rails.application.routes.draw do
 
   get '/discord', to: 'pages#discord', :as => 'discord_path'
   get '/guide', to: 'pages#guide', :as => 'guide'
+  get '/about', to: 'pages#about', :as => 'about'
+  get '/spikeball', to: redirect('/events/17')
+  get '/store', to: redirect('https://store.uwindsorcss.ca/')
 end

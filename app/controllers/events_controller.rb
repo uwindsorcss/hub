@@ -13,7 +13,7 @@ class EventsController < ApplicationController
 
   def index
     @future_events = Event.select { |event| event.start_date.future? }.sort_by &:start_date
-    @past_events = (Event.select { |event| event.start_date.past? }.sort_by &:start_date).reverse.first(5)
+    @past_events = (Event.select { |event| event.start_date.past? }.sort_by &:start_date).reverse.first(2)
   end
 
   def new
@@ -29,7 +29,7 @@ class EventsController < ApplicationController
     if current_user&.is_admin?
       if @event.update(event_params)
         redirect_to @event
-        if @event.discord_message_id
+        if @event.discord_message_id && @event.discord_enabled
           DiscordMessageService.edit_message!(DiscordMessageService::DISCORD_EVENTS_CHANNEL_ID, @event.discord_message_id, build_event_message(@event))
         end
       else
@@ -52,9 +52,11 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     if current_user&.is_admin?
       if @event.save
-        message_result = DiscordMessageService.send_message!(DiscordMessageService::DISCORD_EVENTS_CHANNEL_ID, build_event_message(@event))
-        message_result = JSON.parse(message_result)
-        @event.update(discord_message_id: message_result["id"])
+        if @event.discord_enabled
+          message_result = DiscordMessageService.send_message!(DiscordMessageService::DISCORD_EVENTS_CHANNEL_ID, build_event_message(@event))
+          message_result = JSON.parse(message_result)
+          @event.update(discord_message_id: message_result["id"])
+        end
         redirect_to @event, flash: { success: "Successfully created \"#{@event.title}\"" }
       else
         render 'new'
@@ -75,7 +77,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :capacity, :start_date, :end_time, :location, :registration_enabled)
+    params.require(:event).permit(:title, :description, :capacity, :start_date, :end_time, :location, :registration_enabled, :discord_enabled)
   end
 
   def build_event_message(event)
@@ -102,7 +104,6 @@ class EventsController < ApplicationController
              "\n\nView this event at #{ENV['HOST']}/events/#{@event.id}",
           }
         ],
-        thumbnail: { url: "https://css.uwindsor.ca/uwindsor_logo.png" }
       }
     }
   end

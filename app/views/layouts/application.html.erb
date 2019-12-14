@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="University of Windsor" />
     <meta property="og:title" content="Computer Science Society" />
     <meta property="og:description" content="The Computer Science Society represents all undergraduate students enrolled in Computer Science at the University of Windsor." />
-    <meta property="og:image" content="/uwindsor_logo.png" />
+    <meta property="og:image" content="/css-logo-square.png" />
     <meta property="og:type" content="website" />
 
     <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png">
@@ -19,9 +19,8 @@
 
   <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <%= image_tag("uwindsor_logo.png", size: "38x45", style:"margin-right:10px;") %>
         <%= link_to root_url, class: "navbar-brand" do %>
-          Computer Science Society
+          <%= image_tag("css-logo.png", width: 175, style:"margin-right:10px;") %>
         <% end %>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +31,9 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item <%= "active" if current_page?(root_path) %>">
               <%= link_to "Home", root_url, class: "nav-link" %>
+            </li>
+            <li class="nav-item <%= "active" if current_page?(:about) %>">
+              <%= link_to "About", :about, class: "nav-link" %>
             </li>
             <li class="nav-item <%= "active" if current_page?(events_path) %>">
               <%= link_to "Events", events_path, class: "nav-link" %>
@@ -52,6 +54,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://github.com/EricPickup/uwindsor-css-hub" target="_blank">Contribute</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://store.uwindsorcss.ca/" target="_blank">Store</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
