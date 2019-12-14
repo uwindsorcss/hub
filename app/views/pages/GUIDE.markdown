@@ -7,7 +7,7 @@ Table of Contents
 - [Courses](#courses)
 - [Co-op/Internships](#co-op-and-internships)
 - [Miscellaneous](#miscellaneous)
-- [Resources](#resources)
+- [Useful Links](#useful-links)
 - [Goodies](#goodies)
 
 # Introduction
@@ -279,7 +279,7 @@ Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Miche
 - [Jose's Ewha Womans University Experience](https://www.youtube.com/watch?v=ex7TscSHzSM)
 - [Student Exchanges at UWindsor](http://www.uwindsor.ca/studentexchange/)
 
-# Resources
+# Useful Links
 
 #### Cheat Sheets and Docs
 - [https://devhints.io/](https://devhints.io/) - Has some very nice cheat sheets for various things such as [regex](https://devhints.io/regexp), [bash](https://devhints.io/bash), [vim](https://devhints.io/vim), and more.
@@ -300,6 +300,7 @@ Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Miche
 #### Books
 - [Cracking the Coding Interview](https://www.amazon.ca/Cracking-Coding-Interview-Programming-Questions/dp/0984782850) - A very helpful book that goes over common programming problems and how to solve them as well as information on interviewing with Big N companies.
 
+
 # Goodies
 
 As a student in Computer Science there are many free trials, offers, and products that are available to you.
@@ -309,3 +310,4 @@ As a student in Computer Science there are many free trials, offers, and product
 - [1Password 6 Month Student Trial](https://www.studentappcentre.com/discounts/1password)
 - [Office 365](https://www.microsoft.com/en-ca/education/products/office)
 - [Amazon Prime Student](https://www.amazon.com/amazonprime?_encoding=UTF8&%2AVersion%2A=1&%2Aentries%2A=0&planOptimizationId=WLPStudentMonthlyEligiblePlans&primeCampaignId=studentWlpPrimeRedir&ref_=st_wlp_pr_redir)
+
