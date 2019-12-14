@@ -227,10 +227,11 @@ A: Co-op advisors advise against applying without their permission, but in the e
 
 Eric recommends studying/practicing technical interview questions for any mid-to-large-sized company. Most of them will ask you highly technical coding questions.
 
-##### CS Resources
-- [LeetCode](http://leetcode.com) - The most popular platform to prep for coding challenges. It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
+
+##### Interview Prep Resources
+- [LeetCode](http://leetcode.com) - Eric highly recommends LeetCode and used it for all of his interview prep. It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
 - [Leetfree](https://leetfree.com/) - This website contains all LeetCode Premium problems for free.
-- **Cracking the Coding Interview** - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.
+- [Cracking the Coding Interview](https://www.amazon.ca/Cracking-Coding-Interview-Programming-Questions/dp/0984782850) - Eric highly recommends reading this book before getting into LeetCode for interview prep. You can find it on Amazon or probably a PDF online.
 - [Cracking the Coding Interview Solutions](https://github.com/careercup/CtCI-6th-Edition) - Online solutions for the problems in Cracking the Coding Interview. Harshdip recommends to try all the problems on your own and only looking for solutions once you have tried everything you know.
 - [HackerRank](https://www.hackerrank.com/) - Brandon highly recommends getting familiar with the  HackerRank editor and available languages. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships. It can also be used like LeetCode to solve hundreds of technical programming problems.
 - [Glassdoor](https://www.glassdoor.com/index.htm) - Glassdoor allows people to post reviews, salaries and most importantly interview questions they've received from specific companies.
@@ -291,15 +292,6 @@ Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Miche
 #### Tutorials
 - [The Modern JavaScript Tutorial](https://javascript.info/) - Super in-depth tutorial for modern JavaScript.
 - [OpenGL Tutorial](http://www.opengl-tutorial.org/) - Decent tutorial series on OpenGL including source code in the provided GitHub.
-
-#### Online Judges and Challenges
-- [LeetCode](http://leetcode.com) - It has hundreds of questions with difficulty ratings and company-specific questions submitted by interviewees. Most internships will ask LeetCode easy/mediums.
-- [Leetfree](https://leetfree.com/) - This website contains all LeetCode Premium problems for free.
-- [HackerRank](https://www.hackerrank.com/) - Similar to LeetCode with hundreds of technical programming problems. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships.
-
-#### Books
-- [Cracking the Coding Interview](https://www.amazon.ca/Cracking-Coding-Interview-Programming-Questions/dp/0984782850) - A very helpful book that goes over common programming problems and how to solve them as well as information on interviewing with Big N companies.
-
 
 # Goodies
 
