@@ -44,11 +44,6 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 # Important Dates
 ------------
 
-### Fall 2019
-- December 4th - Last day of classes
-- December 7 to December 18 - Final exams
-- December 19 - Alternate exam date
-
 ### Winter 2020
 - January 6 - Classes begin
 - January 17 - Last day for late registration and change of courses
