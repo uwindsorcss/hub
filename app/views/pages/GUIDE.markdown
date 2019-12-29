@@ -177,7 +177,7 @@ Harshdip has followed this exact sequence.
 # Co-op and Internships
 ------------
 
-See [Eric's presentation](https://docs.google.com/presentation/d/190dl_nHBM-1qDiknOmjwA5-5SJLUUDQn1n10NsS9Bi8/edit?usp=sharing) on behalf of CSS for landing an internship. This covers a bit of everything (resumes, applying, interviews).
+See [Eric's presentation](https://docs.google.com/presentation/d/1SmtxP4vNIoEEulzTKZvc8nDBA1utS7O0fIA_d3h0gOU/edit?usp=sharing) on behalf of CSS for landing an internship. This covers a bit of everything (resumes, applying, interviews).
 
 ### Frequently Asked Questions (FAQ)
 
