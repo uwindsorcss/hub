@@ -113,6 +113,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-4400 | Principles of Programming Languages | Offered | Not Offered | Offered | 💙💚 | COMP-2140, COMP-2310, COMP-2540 |
 | COMP-4540 | Design and Analysis of Algorithms | Offered | Offered | Not Offered | 💙💚 | COMP-2310, COMP-2540, COMP-3540 |
 | COMP-4670 | Network Security | Offered | Not Offered | Not Offered |  | COMP-3670 |
+| COMP-4680 | Advanced Networking | Not Offered | Offered | Not Offered |  | COMP-3670, COMP-3680 |
 | COMP-4730 | Maching Learning | Offered | Offered | Not Offered |  | COMP-3710 |
 | COMP-4740 | Advanced Topics in AI II | Not Offered | Offered | Not Offered |  | COMP-3710 |
 | COMP-4770 | Artifical Intelligence for Games | Not Offered | Offered | Not Offered |  | COMP-3770 |
