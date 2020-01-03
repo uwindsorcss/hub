@@ -61,11 +61,15 @@
       </div>
 
       <!--DATE/TIMES-->
-      <%= form.label :start_date, "Date/time" %>
+      <%= form.label :start_date, "Start date/time" %>
       <div class="form-inline">
         <%= form.datetime_select :start_date, {ampm: true}, html_options = { class: "form-control" } %>
-        <div style="padding-left:10px;padding-right:10px;"> to </div>
-        <%= form.time_select :end_time, {ampm: true}, html_options = { class: "form-control" } %>
+      </div>
+      <br>
+       <!--DATE/TIMES-->
+      <%= form.label :end_date, "End date/time" %>
+      <div class="form-inline">
+        <%= form.datetime_select :end_date, {ampm: true}, html_options = { class: "form-control" } %>
       </div>
       <br>
       <!--DISCORD MESSAGE TOGGLE-->

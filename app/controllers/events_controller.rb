@@ -70,7 +70,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :capacity, :start_date, :end_time, :location, :registration_enabled, :discord_enabled)
+    params.require(:event).permit(:title, :description, :capacity, :start_date, :end_time, :end_date, :location, :registration_enabled, :discord_enabled)
   end
 
   def build_event_message(event)

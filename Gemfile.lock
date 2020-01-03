@@ -74,6 +74,9 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
+    date_validator (0.9.0)
+      activemodel
+      activesupport
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.8.0)
@@ -264,6 +267,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   certified
   coffee-rails (~> 4.2)
+  date_validator
   fuzzy-string-match
   jbuilder (~> 2.5)
   jquery-rails
