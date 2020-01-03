@@ -17,4 +17,23 @@ class Event < ApplicationRecord
   def all_guests
     self.users + self.guests
   end
+
+  def google_calendar_url
+    start_date = self.start_date.rfc3339
+    d = start_date.to_date
+    t = self.end_time
+    end_date = DateTime.new(d.year, d.month, d.day, t.hour, t.min, t.sec, t.zone).rfc3339
+    start_date = start_date[0..-7].delete(":-")
+    end_date = end_date[0..-7].delete(":-")
+
+    params = {
+      action: "TEMPLATE",
+      text: self.title,
+      dates: "#{start_date}/#{end_date}",
+      ctz: "America/Toronto",
+      details: self.description,
+      location: self.location
+    }
+    URI::HTTPS.build(host: "calendar.google.com", path: "/calendar/r/eventedit", query: params.to_query).to_s
+  end
 end
