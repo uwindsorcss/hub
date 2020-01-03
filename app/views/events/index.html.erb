@@ -14,11 +14,13 @@
         <%= event.start_date.strftime('%A, %B %d, %Y %l:%M%P') %> - <%= event.end_time.strftime('%l:%M%P') %>
         (in <%= distance_of_time_in_words(Time.now, event.start_date) %>)
       </h6>
+      <% if event.registration_enabled %>
+        <h6 class="card-subtitle mb-2 text-muted">
+          Registration required
+        </h6>
+      <% end %>
       <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
       <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
-      <% if event.registration_enabled %>
-        <%= link_to 'Register', event_path(event), class: "card-link btn btn-success" %>
-      <% end %>
       <% if current_user&.is_admin? %>
         <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
         <%= link_to 'Delete', event_path(event),
