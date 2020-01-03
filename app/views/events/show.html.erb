@@ -17,7 +17,9 @@
     <% end %>
     <br>
     <div class="card-text">
-      <p><b>Location: </b><%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %></p>
+      <% if @event.location&.present? %>
+        <p><b>Location: </b><%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %></p>
+      <% end %>
       <p><b>Description: </b><%= markdown(@event.description) %></p>
     </div>
 
