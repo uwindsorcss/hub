@@ -10,7 +10,11 @@ class SessionController < ApplicationController
       end
 
       session[:user_id] = user.id
-      redirect_to request.env["omniauth.origin"]
+      if request.env["omniauth.origin"]
+        redirect_to request.env["omniauth.origin"]
+      else
+        redirect_to root_url
+      end
     elsif provider == "discord"
       access_token = exchange_code_for_token!
       discord_authentication_service = DiscordAuthenticationService.new(current_user, access_token)
