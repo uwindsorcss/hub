@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Computer Science Society | University of Windsor</title>
+    <title>
+      <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+      Computer Science Society
+    </title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, shrink-to-fit=no">
 
     <!-- Metadata -->
-    <meta property="og:site_name" content="University of Windsor" />
-    <meta property="og:title" content="Computer Science Society" />
-    <meta property="og:description" content="The Computer Science Society represents all undergraduate students enrolled in Computer Science at the University of Windsor." />
-    <meta property="og:image" content="/css-logo-square.png" />
+    <meta property="og:site_name" content="<%= yield_meta_tag(:og_site_name, 'University of Windsor') %>" />
+    <meta property="og:title" content="<%= yield_meta_tag(:og_title, 'Computer Science Society') %>" />
+    <meta property="og:description" content="<%= yield_meta_tag(:og_description, 'The Computer Science Society represents all undergraduate students enrolled in Computer Science at the University of Windsor.') %>" />
+    <meta property="og:image" content="<%= yield_meta_tag(:og_image, '/css-logo-square.png') %>" />
     <meta property="og:type" content="website" />
+    <meta name='description' content='<%= yield_meta_tag(:description, 'Default description') %>' />
+    <meta name='keywords' content='<%= yield_meta_tag(:keywords, 'computer,science,society,css,uwindsor,university,of,windsor') %>' />
 
     <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png">
   </head>

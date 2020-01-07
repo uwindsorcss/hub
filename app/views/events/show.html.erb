@@ -1,3 +1,9 @@
+<% title @event.title %>
+<% meta_tag :description, @event.description %>
+<% meta_tag :og_description, @event.description %>
+<% meta_tag :og_title, @event.title + "| Computer Science Society" %>
+<% meta_tag :keywords, (@event.title.downcase.gsub(/\W+/, ' ').tr(' ', ',') + "computer,science,society,css,uwindsor,university,of,windsor") %>
+
 <div class="card">
   <div class="card-body">
     <h5 class="card-title"><%= @event.title %></h5>
