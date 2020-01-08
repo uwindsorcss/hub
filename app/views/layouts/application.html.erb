@@ -64,6 +64,10 @@
               <a class="nav-link" href="https://store.uwindsorcss.ca/" target="_blank">Store</a>
             </li>
           </ul>
+          <span class="navbar-text">
+            <%= link_to "", "https://instagram.com/uwindsorcss", class: "fa fa-instagram", target: "_blank" %>
+            <%= link_to "", "https://facebook.com/uwindsorcss", class: "nav-link fa fa-facebook-square", target: "_blank" %>
+          </span>
           <form class="form-inline my-2 my-lg-0">
             <% if current_user %>
               <div style="color: white;margin-right:10px;">Welcome, <%= current_user.name %>!</div>
