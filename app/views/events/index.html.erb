@@ -1,3 +1,9 @@
+<% title "Events" %>
+<% meta_tag :description, "Events related to Computer Science hosted by the Computer Science Society or others." %>
+<% meta_tag :og_description, "Events related to Computer Science hosted by the Computer Science Society or others." %>
+<% meta_tag :og_title, "Events | Computer Science Society" %>
+<% meta_tag :keywords, ("events,outings,workshops,computer,science,society,css,uwindsor,university,of,windsor") %>
+
 <% if current_user&.is_admin? %>
   <center>
     <%= link_to 'New Event', new_event_path, class: "btn btn-success" %>
