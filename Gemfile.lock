@@ -84,6 +84,8 @@ GEM
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     ffi (1.11.1)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     fuzzy-string-match (1.0.1)
       RubyInline (>= 3.8.6)
     globalid (0.4.2)
@@ -268,6 +270,7 @@ DEPENDENCIES
   certified
   coffee-rails (~> 4.2)
   date_validator
+  font-awesome-rails
   fuzzy-string-match
   jbuilder (~> 2.5)
   jquery-rails

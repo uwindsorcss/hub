@@ -71,3 +71,4 @@ gem 'rails-erd'
 gem 'rest-client'
 gem 'mini_racer'
 gem 'date_validator'
+gem "font-awesome-rails"
