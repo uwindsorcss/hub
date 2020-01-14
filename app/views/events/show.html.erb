@@ -53,16 +53,31 @@
       <% end %>
     <% end %>
 
-    <% if current_user&.is_admin? %>
+    <% if current_user&.is_admin %>
       <%= link_to 'Edit', edit_event_path(@event), class: "btn btn-warning" %>
       <%= link_to 'Delete', event_path(@event),
         method: :delete,
         data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
         class: "btn btn-danger" %>
     <% end %>
-    <%= link_to @event.google_calendar_url, class: "btn btn-primary", target: "_blank" do %>
-      <i class="fa fa-calendar"></i> Add to Google Calendar
+   
+    <% if @event.start_date.future? %>
+      <%= link_to @event.google_calendar_url, class: "btn btn-primary", target: "_blank", :id => "my_link" do %>
+        <i class="fa fa-calendar"></i> Add to Google Calendar
+      <% end %>
+    <% else %>
+      <%= link_to @event.google_calendar_url, class: "btn btn-primary", target: "_blank", :id => "mylink" do %>
+        <i class="fa fa-calendar"></i> Add to Google Calendar
+      <% end %>
     <% end %>
+    <script>
+      $('#mylink').click(function(e){
+            e.preventDefault();
+            $('#mylink').html("This event already occured");
+            return true
+      });
+    </script>
+        
   </div>
 </div>
 <br>
