@@ -55,6 +55,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Steven Shlimoon](https://github.com/shli3)
 - [Bailey Chittle](https://github.com/bachittle)
 - [Zain Raza](https://github.com/zainaraza43)
+- [Aman Patel](https://github.com/amanpatel123)
 
 
 # Important Dates
