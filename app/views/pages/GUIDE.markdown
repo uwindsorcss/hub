@@ -8,16 +8,16 @@ Table of Contents
     * [Winter 2020](#winter-2020)
 - [Courses](#courses)
     * [Typical course offerings by semester](#typical-course-offerings-by-semester)
-    * [Bird (very easy) courses](#bird-(very-easy)-courses)
+    * [Easy courses](#easy-courses)
     * [School Resources](#school-resources)
     * [Planning your courses](#planning-your-courses)
 - [Co-op/Internships](#co-op-and-internships)
-    * [Frequently Asked Questions (FAQ)](#frequently-asked-questions-(FAQ))
+    * [Frequently Asked Questions](#frequently-asked-questions)
     * [Resume Examples](#resume-examples)
     * [Job Boards](#job-boards)
     * [Interview Preparation](#interview-preparation)
     * [Interview Prep Resources](#interview-prep-resources)
-    * [Working in the U.S.A.](#Working-in-the-U.S.A.)
+    * [Working in the USA](#working-in-the-usa)
 - [Miscellaneous](#miscellaneous)
     * [Hackathons](#hackathons)
     * [Student Exchanges](#student-exchanges)
@@ -137,7 +137,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-4960 | Research Project | Offered | Offered | Not Offered | 💙💚 | |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 | |
 
-#### Bird (very easy) courses
+#### Easy courses
 
 Your degree audit will have a section called *"Any Area of Study"* that allows you to take any course from any department (including the easy Computer Science courses that don't normally count for your major). The regular Computer Science Honour degree allows **seven** of these courses, and the Software Engineering specialization degree allows **four**. 
 
@@ -196,7 +196,7 @@ Harshdip has followed this exact sequence.
 
 See [Eric's presentation](https://docs.google.com/presentation/d/1SmtxP4vNIoEEulzTKZvc8nDBA1utS7O0fIA_d3h0gOU/edit?usp=sharing) on behalf of CSS for landing an internship. This covers a bit of everything (resumes, applying, interviews).
 
-### Frequently Asked Questions (FAQ)
+### Frequently Asked Questions
 
 **Q: Can I do an internship/co-op during 1st-year?**
 
@@ -248,7 +248,7 @@ Eric recommends studying/practicing technical interview questions for any mid-to
 - [HackerRank](https://www.hackerrank.com/) - Brandon highly recommends getting familiar with the  HackerRank editor and available languages. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships. It can also be used like LeetCode to solve hundreds of technical programming problems.
 - [Glassdoor](https://www.glassdoor.com/index.htm) - Glassdoor allows people to post reviews, salaries and most importantly interview questions they've received from specific companies.
 
-### Working in the U.S.A.
+### Working in the USA
 
 Almost every major tech company in the USA hires Canadians and will sponsor you for a visa. US companies tend to pay *significantly* more and provides great opportunities.
 
