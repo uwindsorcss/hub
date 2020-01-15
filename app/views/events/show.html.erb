@@ -6,6 +6,7 @@
 
 <div class="card">
   <div class="card-body">
+
     <h5 class="card-title"><%= @event.title %></h5>
     <h6 class="card-subtitle mb-2 text-muted">
       <% if @event.multi_day? %>
@@ -66,9 +67,26 @@
         <i class="fa fa-calendar"></i> Add to Google Calendar
       <% end %>
     <% end %>
-        
+
   </div>
+  
+  <div class="share-container">
+    <% unless @event.end_date.past? %>  
+      <%= rrssb_tag(url:"https://css.uwindsor.ca/" + request.original_fullpath , buttons: %w{facebook twitter google_plus email linkedin}) %>
+    <% end %>
+  </div>
+
+  <script type="text/javascript">
+
+    jQuery(document).ready(function () {
+      $(".rrssb-email").find("span").addClass("rrssb-icon").append("<svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewbox="0 0 24 24">
+      <path d="M21.386 2.614H2.614A2.345 2.345 0 0 0 .279 4.961l-.01 14.078a2.353 2.353 0 0 0 2.346 2.347h18.771a2.354 2.354 0 0 0 2.347-2.347V4.961a2.356 2.356 0 0 0-2.347-2.347zm0 4.694L12 13.174 2.614 7.308V4.961L12 10.827l9.386-5.866v2.347z"></path>
+    </svg>")
+    });
+  </script>
+
 </div>
+
 <br>
 <% if current_user&.is_admin? %>
   <h5>Guest List</h5>
