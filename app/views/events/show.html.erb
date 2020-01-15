@@ -72,7 +72,7 @@
   
   <div class="share-container">
     <% unless @event.end_date.past? %>  
-      <%= rrssb_tag(url:"https://css.uwindsor.ca/" + request.original_fullpath , buttons: %w{facebook twitter google_plus email linkedin}) %>
+      <%= rrssb_tag(url:request.base_url + request.original_fullpath , buttons: %w{facebook twitter google_plus email linkedin}) %>
     <% end %>
   </div>
 
