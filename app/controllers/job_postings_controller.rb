@@ -10,7 +10,7 @@ class JobPostingsController < ApplicationController
   end
 
   def index
-    @job_postings = JobPosting.all
+    @job_postings = JobPosting.where(approved: true)
   end
 
   def new
@@ -36,15 +36,23 @@ class JobPostingsController < ApplicationController
   end
 
   def create
-    @job_posting = JobPosting.new(job_posting_params.merge(user: current_user))
+    @job_posting = JobPosting.new(job_posting_params)
     if current_user&.is_admin?
+      @job_posting.assign_attributes(user: current_user, approved: true)
       if @job_posting.save
         redirect_to @job_posting, flash: { success: "Successfully created \"#{@job_posting.job_title}\"" }
       else
         render 'new'
       end
+    elsif current_user
+      @job_posting.assign_attributes(user: current_user, approved: false)
+      if @job_posting.save
+        redirect_to @job_posting, flash: { success: "Successfully submitted job posting for approval. Thank you for your contribution!" }
+      else
+        render 'new'
+      end
     else
-      @job_posting.errors.add(:job_title, :no_permission, message: "You do not have permission to modify job postings!")
+      @job_posting.errors.add(:base, :no_permission, message: "You need to be signed in to submit a job posting!")
       render 'new'
     end
   end
