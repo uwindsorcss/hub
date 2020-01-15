@@ -31,6 +31,12 @@
         <%= form.text_field :url, class: "form-control" %>
       </div>
 
+    <!--LOCATION-->
+      <div class="form-group">
+        <%= form.label :location %><br>
+        <%= form.text_field :location, class: "form-control" %>
+      </div>      
+
       <br>
       <%= form.submit 'Submit', class: "btn btn-success" %>
     <% end %>

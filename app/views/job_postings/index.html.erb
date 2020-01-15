@@ -21,6 +21,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= link_to job_posting.company, job_posting_path(job_posting) %></h5>
             <h6 class="card-subtitle mb-2 text-muted"><%= job_posting.job_title %></h6>
+            <div class="card-text"><%= job_posting.location %></div>
             <% if current_user&.is_admin? %>
               <%= link_to 'Edit', edit_job_posting_path(job_posting), class: "btn btn-warning" %>
               <%= link_to 'Delete', job_posting_path(job_posting),
