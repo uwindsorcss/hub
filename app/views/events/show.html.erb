@@ -60,9 +60,13 @@
         data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
         class: "btn btn-danger" %>
     <% end %>
-    <%= link_to @event.google_calendar_url, class: "btn btn-primary", target: "_blank" do %>
-      <i class="fa fa-calendar"></i> Add to Google Calendar
+   
+    <% unless @event.end_date.past? %>
+      <%= link_to @event.google_calendar_url, class: "btn btn-primary", target: "_blank", :id => "my_link" do %>
+        <i class="fa fa-calendar"></i> Add to Google Calendar
+      <% end %>
     <% end %>
+        
   </div>
 </div>
 <br>
