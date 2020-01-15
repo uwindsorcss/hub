@@ -73,3 +73,4 @@ gem 'mini_racer'
 gem 'date_validator'
 gem 'font-awesome-rails'
 gem "validate_url"
+gem 'rack-attack'
