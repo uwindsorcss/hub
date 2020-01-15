@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-body">
+    <%= form_with model: @job_posting, local: true do |form| %>
+      <% if @job_posting.errors.any? %>
+        <p><b>
+          <%= pluralize(@job_posting.errors.count, "error") %> prohibited
+          this job_posting from being saved:
+        </b></p>
+        <ul>
+          <% @job_posting.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      <% end %>
+
+    <!--COMPANY-->
+      <div class="form-group">
+        <%= form.label :company %><br>
+        <%= form.text_field :company, class: "form-control" %>
+      </div>
+
+    <!--JOB TITLE-->
+      <div class="form-group">
+        <%= form.label :job_title %><br>
+        <%= form.text_field :job_title, class: "form-control" %>
+      </div>
+
+    <!--JOB POSTING URL-->
+      <div class="form-group">
+        <%= form.label :url, "Job posting URL" %><br>
+        <%= form.text_field :url, class: "form-control" %>
+      </div>
+
+      <br>
+      <%= form.submit 'Submit', class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
+
+<br>
+ <%= link_to 'Back', job_postings_path, class: "btn btn-primary" %>

@@ -43,6 +43,9 @@
             <li class="nav-item <%= "active" if current_page?(events_path) %>">
               <%= link_to "Events", events_path, class: "nav-link" %>
             </li>
+            <li class="nav-item <%= "active" if current_page?(job_postings_path) %>">
+              <%= link_to "Job Board", job_postings_path, class: "nav-link" %>
+            </li>
             <li class="nav-item <%= "active" if current_page?(:discord_path) %>">
               <%= link_to "Discord", :discord_path, class: "nav-link" %>
             </li>

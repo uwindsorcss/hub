@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   root to: "pages#index"
 
   resources :events
-  resources :jobs
+  resources :job_postings
 
   resources :markdown_pages, only: [:edit, :update, :new, :create]
 

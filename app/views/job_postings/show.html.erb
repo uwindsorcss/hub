@@ -1,0 +1,28 @@
+<% title @job_posting.job_title %>
+<% meta_tag :description, @job_posting.job_title %>
+<% meta_tag :og_description, @job_posting.job_title %>
+<% meta_tag :og_title, @job_posting.job_title + " | Computer Science Society" %>
+<% meta_tag :keywords, (@job_posting.job_title.downcase.gsub(/\W+/, ' ').tr(' ', ',') + "computer,science,society,css,uwindsor,university,of,windsor") %>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= @job_posting.company %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      <%= @job_posting.job_title %>
+    </h6>
+    <br>
+    <div class="card-text">
+    </div>
+
+    <%= link_to 'Apply', @job_posting.url, class: "btn btn-primary", target: "_blank" %>
+    <% if current_user&.is_admin? %>
+      <%= link_to 'Edit', edit_job_posting_path(@job_posting), class: "btn btn-warning" %>
+      <%= link_to 'Delete', job_posting_path(@job_posting),
+        method: :delete,
+        data: { confirm: 'Are you sure?' },
+        class: "btn btn-danger" %>
+    <% end %>
+  </div>
+</div>
+<br>
+<%= link_to 'Back', job_postings_path, class: "btn btn-primary" %>
