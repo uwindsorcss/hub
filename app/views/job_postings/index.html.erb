@@ -6,6 +6,10 @@
 
 <center>
   <%= link_to 'Submit a Job Posting', (current_user ? new_job_posting_path : :google_auth), class: "btn btn-success" %>
+  <% if current_user&.is_admin? %>
+    <% reviewable_count = (JobPosting.where(approved: false).or(JobPosting.where(reported: true))).count %>
+    <%= link_to "Review Postings (#{reviewable_count})", review_job_postings_path, class: "btn btn-primary" %>
+  <% end %>
 </center>
 
 <h4>Job Postings</h4>
@@ -16,7 +20,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title"><%= link_to job_posting.company, job_posting_path(job_posting) %></h5>
-            <p class="card-text"><%= job_posting.job_title %></p>
+            <h6 class="card-subtitle mb-2 text-muted"><%= job_posting.job_title %></h6>
             <% if current_user&.is_admin? %>
               <%= link_to 'Edit', edit_job_posting_path(job_posting), class: "btn btn-warning" %>
               <%= link_to 'Delete', job_posting_path(job_posting),

@@ -10,7 +10,7 @@ class JobPostingsController < ApplicationController
   end
 
   def index
-    @job_postings = JobPosting.where(approved: true)
+    @job_postings = JobPosting.where(approved: true).order(created_at: :desc)
   end
 
   def new
@@ -59,6 +59,27 @@ class JobPostingsController < ApplicationController
 
   def show
     @job_posting = JobPosting.find(params[:id])
+  end
+
+  def review
+    @unapproved_postings = JobPosting.where(approved: false)
+    @reported_postings = JobPosting.where(reported: true)
+  end
+
+  def approve
+    @job_posting = JobPosting.find(params[:id])
+    if current_user&.is_admin?
+      @job_posting.update(approved: true, reported: false)
+      redirect_to review_job_postings_path
+    end
+  end
+
+  def report
+    @job_posting = JobPosting.find(params[:id])
+    if current_user
+      @job_posting.update(reported: true)
+      redirect_to @job_posting, flash: { success: "Successfully reported job posting." }
+    end
   end
 
   private

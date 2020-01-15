@@ -15,6 +15,7 @@
       </div>
       <br>
       <%= link_to 'Apply', @job_posting.url, class: "btn btn-primary", target: "_blank" %>
+      <%= link_to 'Report Outdated', (current_user ? report_job_posting_path : :google_auth), class: "btn btn-danger", method: (current_user ? :patch : :get) %>
       <% if current_user&.is_admin? %>
         <%= link_to 'Edit', edit_job_posting_path(@job_posting), class: "btn btn-warning" %>
         <%= link_to 'Delete', job_posting_path(@job_posting),
