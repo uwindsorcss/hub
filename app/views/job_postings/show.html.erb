@@ -10,10 +10,10 @@
     <h6 class="card-subtitle mb-2 text-muted">
       <%= @job_posting.job_title %>
     </h6>
-    <br>
     <div class="card-text">
+      Submitted by <%= @job_posting.user.name %>
     </div>
-
+    <br>
     <%= link_to 'Apply', @job_posting.url, class: "btn btn-primary", target: "_blank" %>
     <% if current_user&.is_admin? %>
       <%= link_to 'Edit', edit_job_posting_path(@job_posting), class: "btn btn-warning" %>

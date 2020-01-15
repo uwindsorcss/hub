@@ -36,7 +36,7 @@ class JobPostingsController < ApplicationController
   end
 
   def create
-    @job_posting = JobPosting.new(job_posting_params)
+    @job_posting = JobPosting.new(job_posting_params.merge(user: current_user))
     if current_user&.is_admin?
       if @job_posting.save
         redirect_to @job_posting, flash: { success: "Successfully created \"#{@job_posting.job_title}\"" }
