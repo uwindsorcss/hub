@@ -39,3 +39,45 @@
     display: none;
   }
 }
+
+/* footer */
+
+  /* footer */
+
+  footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  footer a {
+    color: #555;
+  }
+  
+  footer a:hover {
+    color: #222;
+  }
+  
+  footer small {
+    float: left;
+  }
+  
+  footer ul {
+    float: right;
+    list-style: none;
+  }
+  
+  footer ul li {
+    float: left;
+    margin-left: 15px;
+  }
+
+  @mixin box_sizing {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+  }
+  
