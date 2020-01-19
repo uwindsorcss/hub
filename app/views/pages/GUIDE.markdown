@@ -315,4 +315,5 @@ As a student in Computer Science there are many free trials, offers, and product
 - [1Password 6 Month Student Trial](https://www.studentappcentre.com/discounts/1password)
 - [Office 365](https://www.microsoft.com/en-ca/education/products/office)
 - [Amazon Prime Student](https://www.amazon.com/amazonprime?_encoding=UTF8&%2AVersion%2A=1&%2Aentries%2A=0&planOptimizationId=WLPStudentMonthlyEligiblePlans&primeCampaignId=studentWlpPrimeRedir&ref_=st_wlp_pr_redir)
-
+- [Figma] (https://www.figma.com/education/) - allows you to create quick prototypes for your project
+- [Spotify] (https://www.spotify.com/ca-en/student/) - 3 months free
