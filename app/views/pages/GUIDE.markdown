@@ -56,6 +56,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Bailey Chittle](https://github.com/bachittle)
 - [Zain Raza](https://github.com/zainaraza43)
 - [Aman Patel](https://github.com/amanpatel123)
+- [Abdullah Arif](https://github.com/aarif123456)
 
 
 # Important Dates
