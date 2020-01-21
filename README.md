@@ -53,6 +53,25 @@ In the rails project, copy the `local_env.example.yml` to a new file called `loc
 After restarting the rails server, you should be able to sign in using UWindsor accounts. You can now add yourself as an admin through the rails console. After signing into the app at least once (so that your user record is created), run `rails console` or `rails c` to open the console, then change your role to admin using:
 `User.where(email: "youruwindsoremail").first.update(role: "admin")`
 
+### Discord OAuth Setup
+
+Discord auth setup will add the Discord functionality to your application. This is very similar to how we set up Google OAuth. This application uses Discord to:
+- Allow users to sign in/be added to the CSS Discord Server
+- Post messages in the Discord server (e.g. new events)
+
+1. Go to the Discord Developer Portal
+2. Create a new application (name it whatever you want)
+3. Under your new application -> OAuth2, add `http://localhost:3000/auth/discord/callback` to your list of redirects
+4. Under "Bot", create a new bot (name it whatever you want)
+5. Copy the bot's client secret to `DISCORD_BOT_TOKEN` in `local_env.yml`
+6. Under "General information", copy the client ID and secret (different from bot secret) to your `local_env.yml` file's `DISCORD_CLIENT_ID` and `DISCORD_CLIENT_SECRET` respectively
+7. Now we need to add the bot your Discord server. Under "OAuth2", navigate to scopes and ensure that `bot` is checked. Under "Bot permissions", check `Administrator`
+8. Under scopes you should see a generated invitation URL based on the permissions/scopes you've selected. Paste that link into your browser and you'll be able to add the bot to whichever server you choose
+9. Finally, the application needs to know which server and channel it's sending messages and adding users to. You'll need to [find your server and channel IDs](https://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) and fill in `DISCORD_GUILD_ID` and `DISCORD_EVENTS_CHANNEL_ID`.
+
+Now you're all set!
+
+
 ### Common issues
 
 A few people reported issues with a dependency, `libv8`. This can be fixed by installing the `libv8-dev` package using:
