@@ -4,11 +4,11 @@ http://css.uwindsor.ca
 
 ## Overview
 
-The University of Windsor Computer Science Society (CSS) Hub website was built to provide students with a hub for event listings and registration for Computer Science students, and eventually was merged with the Discord authorization bot to create one hub for CSS related things. Developing a system in-house allows us to tailor the experience for our specific needs (such as guest limits and guest list for events, and authorization with University of Windsor accounts).
+The University of Windsor Computer Science Society (CSS) website was built to provide students with the many resources that students and CSS has to offer. It provides a location for news, events, a job board, an open-source student guide, and even our exclusive authentication into our Discord server!
 
 ## Contributing
 
-Please feel free to contribute if you see an issue, want to complete something from our [project boards](https://github.com/EricPickup/uwindsor-css-hub/projects), or think of a sweet feature! Simply fork this repo and make a pull request.
+Please feel free to contribute if you see an issue or think of a sweet feature! Simply fork this repo and make a pull request.
 
 If this sounds like gibberish to you, you'll probably want to learn the basics of `git`. Afterwards, you can follow [this tutorial](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/) on contributing to open-source projects on GitHub.
 
