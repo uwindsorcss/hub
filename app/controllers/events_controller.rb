@@ -95,7 +95,7 @@ class EventsController < ApplicationController
             name: "Date",
             value: @event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') +
              "#{event.registration_enabled ? "\n\n**This event has registrations enabled**. Please register through the CSS website if you'd like to attend the event." : ""}" +
-             "\n\nView this event at #{ENV['HOST']}/events/#{@event.id}",
+             "\n\n[Click here to add to your Google Calendar](#{@event.google_calendar_url})\n\nView this event at #{ENV['HOST']}/events/#{@event.id}",
           }
         ],
       }
