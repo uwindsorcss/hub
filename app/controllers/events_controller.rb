@@ -75,6 +75,7 @@ class EventsController < ApplicationController
 
   def build_event_message(event)
     {
+      content: "@everyone",
       embed: {
         title: "NEW EVENT!",
         fields: [
