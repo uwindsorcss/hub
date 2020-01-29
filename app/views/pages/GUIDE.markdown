@@ -57,6 +57,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Zain Raza](https://github.com/zainaraza43)
 - [Aman Patel](https://github.com/amanpatel123)
 - [Abdullah Arif](https://github.com/aarif123456)
+- [Jeremie Bornais](https://github.com/jere-mie)
 
 
 # Important Dates
@@ -231,10 +232,9 @@ A: Co-op advisors advise against applying without their permission, but in the e
 
 
 ### Job Boards
-
+- [CSS Job Board](https://css.uwindsor.ca/job_postings) - Various job postings contributed by CSS members and other CS students. You can either look for jobs to apply to, or submit one you found so other students can apply.
 - [intern.supply](http://intern.supply) - Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
 - [LinkedIn](https://www.linkedin.com/jobs/) - It's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
-- [Summer 2019 Internships](https://github.com/christine-hu/summer-2019-internships) - A document on GitHub that keeps track of summer internship opportunities.
 
 
 ### Interview Preparation
