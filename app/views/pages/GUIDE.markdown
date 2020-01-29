@@ -57,6 +57,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Zain Raza](https://github.com/zainaraza43)
 - [Aman Patel](https://github.com/amanpatel123)
 - [Abdullah Arif](https://github.com/aarif123456)
+- [Jeremie Bornais](https://github.com/jere-mie)
 
 
 # Important Dates
