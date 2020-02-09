@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>You've made it!</h1>
+    <p>
+      You've been moved off the waitlist for the <b><%= @event.title %></b> event and are officially registered!
+    </p>
+    <p>
+      <b>Date:</b>
+      <% if @event.multi_day? %>
+        <%= @event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= @event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
+      <% else %>
+        <%= @event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= @event.end_date.strftime('%l:%M%P') %>
+      <% end %>
+      <% if @event.start_date.future? %>
+        (in <%= distance_of_time_in_words(Time.now, @event.start_date) %>)
+      <% else %>
+        (<%= distance_of_time_in_words(Time.now, @event.start_date) %> ago)
+      <% end %>
+    </p>
+    <p>
+      <% if @event.location&.present? %>
+        <p><b>Location: </b><%= link_to @event.location, "https://maps.google.com/?q=#{@event.location}", target: :_blank %></p>
+      <% end %>
+      <p><b>Description:</b><%= markdown(@event.description) %></p>
+    </p>
+    <br>
+    <%= link_to "Add to Google Calendar", @event.google_calendar_url, target: "_blank" %>
+    <br>
+    View or unregister for this event at <%= "#{ENV['HOST']}/events/#{@event.id}" %>
+  </body>
+</html>
