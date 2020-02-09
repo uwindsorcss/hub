@@ -46,7 +46,9 @@
               new_registration_path(event_id: @event.id, user_id: current_user.id),
               class: "btn btn-success" %>
           <% else %>
-            <a class="btn btn-danger disabled">Event Full</a>
+            <%= link_to 'Join Waitlist',
+              new_registration_path(event_id: @event.id, user_id: current_user.id),
+              class: "btn btn-warning" %>
           <% end %>
       <% elsif current_user.nil? %>
          <%= link_to "Sign in to Register", :google_auth, class: "btn btn-success" %>
