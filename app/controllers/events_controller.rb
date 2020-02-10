@@ -50,6 +50,7 @@ class EventsController < ApplicationController
           message_result = JSON.parse(message_result)
           @event.update(discord_message_id: message_result["id"])
         end
+        EventReminderEmailJob.set(wait_until: @event.start_date - 8.hours).perform_later(@event)
         redirect_to @event, flash: { success: "Successfully created \"#{@event.title}\"" }
       else
         render 'new'

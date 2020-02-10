@@ -12,6 +12,7 @@ module UWindsorCssHub
     config.load_defaults 5.1
     config.time_zone = 'Eastern Time (US & Canada)'
     config.active_record.default_timezone = :local
+    config.active_job.queue_adapter = Rails.env.production? ? :sidekiq : :async
 
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'local_env.yml')
