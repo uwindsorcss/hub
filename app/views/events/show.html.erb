@@ -23,6 +23,9 @@
       <br>
       <h6 class="card-subtitle mb-2 text-muted">
         There are <%= "#{@event.spots_remaining}/#{@event.capacity}" %> spots open.
+        <% if @user_registration&.waitlisted %>
+          <br><p>Position in waitlist: <%= @user_registration.position_in_waitlist %></p>
+        <% end %>
       </h6>
     <% end %>
     <br>
@@ -36,7 +39,12 @@
     <br>
     <% if @event.registration_enabled %>
       <% if current_user && @event.start_date.future? %>
-          <% if @user_registration %>
+          <% if @user_registration&.waitlisted %>
+            <%= link_to 'Leave Waitlist',
+              registration_path(event_id: @event.id, registration_id: @user_registration),
+              method: :delete,
+              class: "btn btn-danger" %>
+          <% elsif @user_registration %>
             <%= link_to 'Unregister from Event',
               registration_path(event_id: @event.id, registration_id: @user_registration),
               method: :delete,
@@ -46,7 +54,9 @@
               new_registration_path(event_id: @event.id, user_id: current_user.id),
               class: "btn btn-success" %>
           <% else %>
-            <a class="btn btn-danger disabled">Event Full</a>
+            <%= link_to 'Join Waitlist',
+              new_registration_path(event_id: @event.id, user_id: current_user.id),
+              class: "btn btn-warning" %>
           <% end %>
       <% elsif current_user.nil? %>
          <%= link_to "Sign in to Register", :google_auth, class: "btn btn-success" %>
@@ -73,10 +83,21 @@
 <% if current_user&.is_admin? %>
   <h5>Guest List</h5>
   <ol class="list-group">
-    <% if @event.all_guests.empty? %>
+    <% if @event.registered_users.empty? %>
       <li class="list-group-item">There are no users registered for this event.</li>
     <% else %>
-      <% @event.all_guests.each do |guest| %>
+      <% @event.registered_users.each do |guest| %>
+        <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
+      <% end %>
+    <% end %>
+  </ol>
+  <br>
+  <h5>Wait List</h5>
+  <ol class="list-group">
+    <% if @event.waitlisted_users.empty? %>
+      <li class="list-group-item">There are no users on the waitlist for this event.</li>
+    <% else %>
+      <% @event.waitlisted_users.each do |guest| %>
         <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
       <% end %>
     <% end %>

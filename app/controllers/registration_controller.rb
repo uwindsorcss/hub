@@ -5,10 +5,13 @@ class RegistrationController < ApplicationController
     if current_user.id == user_id && !(user_already_registered? user_id, event.id) && event.start_date.future?
       @registration = Registration.new(
         user_id: user_id,
-        event_id: event.id
+        event_id: event.id,
+        waitlisted: false
       )
       if (1 + @registration.guests.size) > event.spots_remaining
-        redirect_to event_path(event), :flash => { :error => "There are #{event.spots_remaining} spot(s) available!" }
+        @registration.assign_attributes(waitlisted: true)
+        @registration.save
+        redirect_to event_path(event), :flash => { :success => "You've been added to the waitlist for this event! Position in the waitlist: #{@registration.position_in_waitlist}" }
       else
         @registration.save
         redirect_to event_path(event), :flash => { :success => "Successfully registered for event!" }
@@ -21,7 +24,10 @@ class RegistrationController < ApplicationController
   def destroy
     @registration = Registration.find(params[:registration_id])
     if current_user == @registration.user && @registration.event.start_date.future?
+      user_waitlisted = @registration.waitlisted
+      event = @registration.event
       @registration.destroy
+      event.update_waitlist unless user_waitlisted
       redirect_to event_path(params[:event_id]), flash: { warning: "Successfully unregistered from this event!"  }
     else
       redirect_to event_path(params[:event_id])
