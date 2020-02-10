@@ -11,7 +11,7 @@ class RegistrationController < ApplicationController
       if (1 + @registration.guests.size) > event.spots_remaining
         @registration.assign_attributes(waitlisted: true)
         @registration.save
-        redirect_to event_path(event), :flash => { :success => "You've been added to the waitlist for this event! Position in the waitlist: #{@registration.position_in_waitlist}" }
+        redirect_to event_path(event), :flash => { :success => "You've been added to the waitlist for this event! You will receive an email if you make it off the list. Position in the waitlist: #{@registration.position_in_waitlist}" }
       else
         @registration.save
         redirect_to event_path(event), :flash => { :success => "Successfully registered for event!" }
