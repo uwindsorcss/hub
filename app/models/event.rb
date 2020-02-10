@@ -47,7 +47,7 @@ class Event < ApplicationRecord
       registration_to_update = waitlisted_registrations.first
       user_to_register = registration_to_update.user
       registration_to_update.update(waitlisted: false)
-      #UserMailer.with(user: user_to_register, event: self).waitlist_email.deliver_later
+      UserMailer.with(user: user_to_register, event: self).waitlist_email.deliver_later
     end
   end
 
