@@ -224,6 +224,9 @@ Do both! Apply for internships and use co-op as a fallback. Once you've gotten y
 **Q: Can I apply for internships while in the co-op program?**
 A: Co-op advisors advise against applying without their permission, but in the end there's nothing stopping you from applying for internships on your own. If you find one by yourself and want to stay in the co-op program, co-op will gladly accept that company as a co-op placement after a little screening.
 
+**Q: Do grades matter?**
+A: For most co-op applications you must submit your transcript. Smaller/local companies may look at grades. However, for internships, you will not need to submit your transcript for 99% of applications.
+
 ### Resume Examples
 - [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
 - [Eric Pickup](https://drive.google.com/file/d/1QUNbEYP0TBf33-JeCfXFwp_eoqI5YDql/view)
