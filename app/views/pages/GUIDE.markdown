@@ -207,7 +207,7 @@ A: The co-op program does not start until the summer of your 2nd year, however, 
 
 **Q: What is the difference between a co-op and internship?**
 
-Co-op and internship jobs are usually very similar. Co-ops are usually landed through the co-op program, whereas for internships you are applying to them like a normal job (i.e. find postings online and apply). Here's a more specific breakdown:
+Co-op and internship jobs are usually very similar. They're both short-term jobs. Co-ops are usually landed through the co-op program, whereas for internships you are applying to them like a normal job (i.e. find postings online and apply). Here's a more specific breakdown:
 
 A:
 
