@@ -83,10 +83,10 @@
 <% if current_user&.is_admin? %>
   <h5>Guest List</h5>
   <ol class="list-group">
-    <% if @event.registered_users.empty? %>
+    <% if @registered_users.empty? %>
       <li class="list-group-item">There are no users registered for this event.</li>
     <% else %>
-      <% @event.registered_users.each do |guest| %>
+      <% @registered_users.each do |guest| %>
         <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
       <% end %>
     <% end %>
@@ -94,14 +94,26 @@
   <br>
   <h5>Wait List</h5>
   <ol class="list-group">
-    <% if @event.waitlisted_users.empty? %>
+    <% if @waitlisted_users.empty? %>
       <li class="list-group-item">There are no users on the waitlist for this event.</li>
     <% else %>
-      <% @event.waitlisted_users.each do |guest| %>
+      <% @waitlisted_users.each do |guest| %>
         <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
       <% end %>
     <% end %>
   </ol>
+  <br>
+
+  <h5>List of Emails For Registered Users</h5>
+  Copy and paste this list into your email <b>Bcc</b> section. It should automatically parse the list of emails.
+  <div class="card bg-light">
+    <div class="card-body">
+      <div class="card-text">
+        <%= @registered_users_email_string %>
+      </div>
+    </div>
+  </div>
+
 <% end %>
 <br>
 <%= link_to 'Back', events_path, class: "btn btn-primary" %>

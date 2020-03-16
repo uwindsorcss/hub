@@ -63,6 +63,9 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @registered_users = @event.registered_users
+    @registered_users_email_string = @registered_users.each_with_object("") { |u, s| s << "#{u.email}, " }
+    @waitlisted_users = @event.waitlisted_users
     if current_user
       @user_registration = @event.registrations.find_by(user_id: current_user.id)
     end
