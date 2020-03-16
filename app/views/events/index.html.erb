@@ -14,8 +14,8 @@
 
 <% @future_events.each do |event| %>
   <div class="card">
+    <h5 class="card-header"><%= event.title %></h5>
     <div class="card-body">
-      <h5 class="card-title"><%= event.title %></h5>
       <h6 class="card-subtitle mb-2 text-muted">
         <% if event.multi_day? %>
           <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
@@ -48,8 +48,8 @@
 
 <% @past_events.each do |event| %>
   <div class="card">
+    <h5 class="card-header"><%= event.title %></h5>
     <div class="card-body">
-      <h5 class="card-title"><%= event.title %></h5>
       <h6 class="card-subtitle mb-2 text-muted">
         <% if event.multi_day? %>
           <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>

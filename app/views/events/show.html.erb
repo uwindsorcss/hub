@@ -5,8 +5,8 @@
 <% meta_tag :keywords, (@event.title.downcase.gsub(/\W+/, ' ').tr(' ', ',') + "computer,science,society,css,uwindsor,university,of,windsor") %>
 
 <div class="card">
+  <h5 class="card-header"><%= @event.title %></h5>
   <div class="card-body">
-    <h5 class="card-title"><%= @event.title %></h5>
     <h6 class="card-subtitle mb-2 text-muted">
       <% if @event.multi_day? %>
         <%= @event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= @event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
@@ -104,15 +104,17 @@
   </ol>
   <br>
 
-  <h5>List of Emails For Registered Users</h5>
-  Copy and paste this list into your email <b>Bcc</b> section. It should automatically parse the list of emails.
-  <div class="card bg-light">
-    <div class="card-body">
-      <div class="card-text">
-        <%= @registered_users_email_string %>
+  <% unless @registered_users.empty? %>
+    <h5>List of Emails For Registered Users</h5>
+    Copy and paste this list into your email <b>Bcc</b> section. It should automatically parse the list of emails.
+    <div class="card bg-light">
+      <div class="card-body">
+        <div class="card-text">
+          <%= @registered_users_email_string %>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 
 <% end %>
 <br>
