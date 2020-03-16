@@ -301,7 +301,7 @@ Hackathons are **free** competitions where you team up with people to build cool
 
 Click [here](https://mlh.io/seasons/na-2020/events) to view the official MLH competition list
 
-If you're looking to participate in a hackathon but don't want to go far, then you're in luck! Click [here](https://winhacks.ca/) to apply to WinHacks, Windsor's first major hackathon!
+If you're looking to participate in a hackathon but don't want to go far, then you're in luck! Click [here](https://winhacks.ca/) to apply to WinHacks, Windsor's first major hackathon, gone digital!
 
 ### Student Exchanges 
 
