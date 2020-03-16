@@ -6,6 +6,7 @@ Table of Contents
     * [Contributors](#contributors)
 - [Important Dates](#important-dates)
     * [Winter 2020](#winter-2020)
+    * [Summer 2020](#summer-2020)
 - [Courses](#courses)
     * [Typical course offerings by semester](#typical-course-offerings-by-semester)
     * [Easy courses](#easy-courses)
@@ -71,6 +72,14 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - April 3rd - Last day of classes
 - April 7 - April 20 - Final exams
 - April 21 - Alternate exam date
+
+### Summer 2020
+Summer courses are the normal, 12-week courses. This list does not include Intersession.
+
+- May 4 - Classes begin
+- June 13 - June 21 - Reading week
+- August 5 - Last day of classes
+- August 8 - August 17 - Final exams
 
 
 
