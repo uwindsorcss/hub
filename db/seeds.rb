@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# 10.times do |n|
-#     Event.create!(title:  "test#{n}",
-#                  description: "This is description #{n}", 
-#                  location: "location: #{n}",
-#                  capacity: "12",
-#                  registration_enabled: true,
-#                  start_date: Time.zone.now, 
-#                  end_date: 2.days.from_now)
-#   end
+10.times do |n|
+    Event.create!(title:  "test#{n}",
+                 description: "This is description #{n}", 
+                 location: "location: #{n}",
+                 capacity: "12",
+                 registration_enabled: true,
+                 start_date: Time.zone.now, 
+                 end_date: 2.days.from_now)
+  end
 
   13.times do |n|
     Event.create!(title:  "Test#{n}",
