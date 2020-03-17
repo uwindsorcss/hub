@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158088062-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-158088062-2');
+    </script>
+
     <title>
       <%= if content_for?(:title) then yield(:title) + ' | ' end %>
       Computer Science Society
@@ -54,6 +64,7 @@
                 <a class="dropdown-item" href="http://tutor.cs.uwindsor.ca/" target="_blank">Tutoring Schedule</a>
                 <a class="dropdown-item" href="https://www.facebook.com/groups/210441872352826/" target="_blank">Facebook Group</a>
                 <div class="dropdown-divider"></div>
+                <%= link_to "Job Board", job_postings_path, class: "dropdown-item #{current_page?(job_postings_path) ? 'active' : ''}" %>
                 <%= link_to "Student Guide", :guide, class: "dropdown-item #{current_page?(:guide) ? 'active' : ''}" %>
               </div>
             </li>

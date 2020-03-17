@@ -3,11 +3,28 @@ Table of Contents
 
 - [Introduction](#introduction)
 - [Contributing](#contributing)
+    * [Contributors](#contributors)
 - [Important Dates](#important-dates)
+    * [Winter 2020](#winter-2020)
+    * [Summer 2020](#summer-2020)
 - [Courses](#courses)
+    * [Typical course offerings by semester](#typical-course-offerings-by-semester)
+    * [Easy courses](#easy-courses)
+    * [School Resources](#school-resources)
+    * [Planning your courses](#planning-your-courses)
 - [Co-op/Internships](#co-op-and-internships)
+    * [Frequently Asked Questions](#frequently-asked-questions)
+    * [Resume Examples](#resume-examples)
+    * [Job Boards](#job-boards)
+    * [Interview Preparation](#interview-preparation)
+    * [Interview Prep Resources](#interview-prep-resources)
+    * [Working in the USA](#working-in-the-usa)
 - [Miscellaneous](#miscellaneous)
+    * [Hackathons](#hackathons)
+    * [Student Exchanges](#student-exchanges)
 - [Useful Links](#useful-links)
+    * [Cheat Sheets and Docs](#cheat-sheets-and-docs)
+    * [Tutorials](#tutorials)
 - [Goodies](#goodies)
 
 # Introduction
@@ -39,6 +56,9 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Steven Shlimoon](https://github.com/shli3)
 - [Bailey Chittle](https://github.com/bachittle)
 - [Zain Raza](https://github.com/zainaraza43)
+- [Aman Patel](https://github.com/amanpatel123)
+- [Abdullah Arif](https://github.com/aarif123456)
+- [Jeremie Bornais](https://github.com/jere-mie)
 
 
 # Important Dates
@@ -52,6 +72,14 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - April 3rd - Last day of classes
 - April 7 - April 20 - Final exams
 - April 21 - Alternate exam date
+
+### Summer 2020
+Summer courses are the normal, 12-week courses. This list does not include Intersession.
+
+- May 4 - Classes begin
+- June 13 - June 21 - Reading week
+- August 5 - Last day of classes
+- August 8 - August 17 - Final exams
 
 
 
@@ -76,7 +104,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-1000 | Key Concepts in Computer Science | Offered | Offered | Offered | ❤️💙💛💚💜🖤| | 
 | COMP-1047 | Computer Concepts for End-Users | Offered | Offered | Offered |   |  |
 | COMP-1400 | Intro to Programming and Algorithms I | Offered | Offered | Offered | ❤️💙💛💚💜🖤|  |
-| COMP-1410 | Intro to Programming and Algorithms II | Not Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1000 or MATH-1720, COMP-1410 |   
+| COMP-1410 | Intro to Programming and Algorithms II | Not Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1000 or MATH-1720, COMP-1400 |   
 | COMP-2057 | Intro to the Internet | Offered | Offered | Offered | | COMP-1047 or COMP-2067 or COMP-1400|
 | COMP-2067 | Programming for Beginners | Not Offered | Offered | Offered | | |
 | COMP-2077 | Problem Solving and Information on the Internet | Offered | Offered | Not Offered | | COMP-1047, COMP-2057|
@@ -121,7 +149,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 | COMP-4960 | Research Project | Offered | Offered | Not Offered | 💙💚 | |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 | |
 
-#### Bird (very easy) courses
+#### Easy courses
 
 Your degree audit will have a section called *"Any Area of Study"* that allows you to take any course from any department (including the easy Computer Science courses that don't normally count for your major). The regular Computer Science Honour degree allows **seven** of these courses, and the Software Engineering specialization degree allows **four**. 
 
@@ -180,13 +208,15 @@ Harshdip has followed this exact sequence.
 
 See [Eric's presentation](https://docs.google.com/presentation/d/1SmtxP4vNIoEEulzTKZvc8nDBA1utS7O0fIA_d3h0gOU/edit?usp=sharing) on behalf of CSS for landing an internship. This covers a bit of everything (resumes, applying, interviews).
 
-### Frequently Asked Questions (FAQ)
+### Frequently Asked Questions
 
 **Q: Can I do an internship/co-op during 1st-year?**
 
 A: The co-op program does not start until the summer of your 2nd year, however, you can apply to internships on your own in 1st year. You should try to apply to places in 1st year, you have nothing to lose!
 
 **Q: What is the difference between a co-op and internship?**
+
+Co-op and internship jobs are usually very similar. They're both short-term jobs. Co-ops are usually landed through the co-op program, whereas for internships you are applying to them like a normal job (i.e. find postings online and apply). Here's a more specific breakdown:
 
 A:
 
@@ -205,6 +235,9 @@ Do both! Apply for internships and use co-op as a fallback. Once you've gotten y
 **Q: Can I apply for internships while in the co-op program?**
 A: Co-op advisors advise against applying without their permission, but in the end there's nothing stopping you from applying for internships on your own. If you find one by yourself and want to stay in the co-op program, co-op will gladly accept that company as a co-op placement after a little screening.
 
+**Q: Do grades matter?**
+A: For most co-op applications you must submit your transcript. Smaller/local companies may look at grades. However, for internships, you will not need to submit your transcript for 99% of applications.
+
 ### Resume Examples
 - [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
 - [Eric Pickup](https://drive.google.com/file/d/1QUNbEYP0TBf33-JeCfXFwp_eoqI5YDql/view)
@@ -213,10 +246,9 @@ A: Co-op advisors advise against applying without their permission, but in the e
 
 
 ### Job Boards
-
+- [CSS Job Board](https://css.uwindsor.ca/job_postings) - Various job postings contributed by CSS members and other CS students. You can either look for jobs to apply to, or submit one you found so other students can apply.
 - [intern.supply](http://intern.supply) - Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
 - [LinkedIn](https://www.linkedin.com/jobs/) - It's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
-- [Summer 2019 Internships](https://github.com/christine-hu/summer-2019-internships) - A document on GitHub that keeps track of summer internship opportunities.
 
 
 ### Interview Preparation
@@ -232,7 +264,7 @@ Eric recommends studying/practicing technical interview questions for any mid-to
 - [HackerRank](https://www.hackerrank.com/) - Brandon highly recommends getting familiar with the  HackerRank editor and available languages. Many companies will supply a timed HackerRank coding challenge to be completed when applying to internships. It can also be used like LeetCode to solve hundreds of technical programming problems.
 - [Glassdoor](https://www.glassdoor.com/index.htm) - Glassdoor allows people to post reviews, salaries and most importantly interview questions they've received from specific companies.
 
-### Working in the U.S.A.
+### Working in the USA
 
 Almost every major tech company in the USA hires Canadians and will sponsor you for a visa. US companies tend to pay *significantly* more and provides great opportunities.
 
@@ -269,6 +301,8 @@ Hackathons are **free** competitions where you team up with people to build cool
 
 Click [here](https://mlh.io/seasons/na-2020/events) to view the official MLH competition list
 
+If you're looking to participate in a hackathon but don't want to go far, then you're in luck! Click [here](https://winhacks.ca/) to apply to WinHacks, Windsor's first major hackathon, gone digital!
+
 ### Student Exchanges 
 
 Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Michelle, is a fantastic and knowledgable person and can help you with any concerns/questions.
@@ -298,4 +332,5 @@ As a student in Computer Science there are many free trials, offers, and product
 - [1Password 6 Month Student Trial](https://www.studentappcentre.com/discounts/1password)
 - [Office 365](https://www.microsoft.com/en-ca/education/products/office)
 - [Amazon Prime Student](https://www.amazon.com/amazonprime?_encoding=UTF8&%2AVersion%2A=1&%2Aentries%2A=0&planOptimizationId=WLPStudentMonthlyEligiblePlans&primeCampaignId=studentWlpPrimeRedir&ref_=st_wlp_pr_redir)
-
+- [Figma] (https://www.figma.com/education/) - allows you to create quick prototypes for your project
+- [Spotify] (https://www.spotify.com/ca-en/student/) - 3 months free

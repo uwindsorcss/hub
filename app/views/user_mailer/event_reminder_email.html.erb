@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Reminder!</h3>
+    <p>
+      You're receiving this email because you're signed up for the <b><%= @event.title %></b> event which takes place on <%= @event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= @event.end_date.strftime('%l:%M%P') %> (8 hours from now).
+    </p>
+    <p>
+      If you are still attending this event, read no further! Looking forward to seeing you then.
+    </p>
+    <p>If you can no longer attend the event, please <b>unregister as soon as possible</b> on the <%= link_to "event page", "#{ENV['HOST']}/events/#{@event.id}" %> so that other students can have a chance to sign up. If you miss the event and fail to unregister, you may be prevented from registering for future events.</p>
+
+    <p>Thank you,</p>
+    <p>Computer Science Society</p>
+
+  </body>
+</html>

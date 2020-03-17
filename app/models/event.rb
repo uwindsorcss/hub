@@ -7,8 +7,10 @@ class Event < ApplicationRecord
   validates :capacity, presence: true, numericality: { only_integer: true, greater_than: 0 }, if: :registration_enabled
   validates :end_date, presence: true, date: { after_or_equal_to: :start_date }
 
+  validate :waitlist_up_to_date, if: :will_save_change_to_capacity?
+
   def current_capacity
-    self.users.size + self.guests.size
+    self.registered_users.size
   end
 
   def spots_remaining
@@ -16,7 +18,37 @@ class Event < ApplicationRecord
   end
 
   def all_guests
-    self.users + self.guests
+    self.registered_users
+  end
+
+  def registered_users
+    self.registrations.each_with_object([]) do |r, registered_users|
+      registered_users << r.user if r.reload.waitlisted == false
+    end
+  end
+
+  def waitlisted_users
+    waitlist = self.registrations.where(waitlisted: true).sort_by &:created_at
+    waitlist.each_with_object([]) do |r, waitlisted_users|
+      waitlisted_users << r.user
+    end
+  end
+
+  def waitlisted_registrations
+    self.registrations.where(waitlisted: true).sort_by &:created_at
+  end
+
+  def waitlist_size
+    self.registrations.where(waitlisted: true).count
+  end
+
+  def update_waitlist
+    while spots_remaining > 0 && waitlist_size > 0
+      registration_to_update = waitlisted_registrations.first
+      user_to_register = registration_to_update.user
+      registration_to_update.update(waitlisted: false)
+      UserMailer.with(user: user_to_register, event: self).waitlist_email.deliver_later
+    end
   end
 
   def multi_day?
@@ -38,5 +70,12 @@ class Event < ApplicationRecord
       location: self.location
     }
     URI::HTTPS.build(host: "calendar.google.com", path: "/calendar/r/eventedit", query: params.to_query).to_s
+  end
+
+  private
+
+  def waitlist_up_to_date
+    self.update_waitlist
+    return true
   end
 end

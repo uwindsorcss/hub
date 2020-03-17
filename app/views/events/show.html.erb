@@ -5,8 +5,8 @@
 <% meta_tag :keywords, (@event.title.downcase.gsub(/\W+/, ' ').tr(' ', ',') + "computer,science,society,css,uwindsor,university,of,windsor") %>
 
 <div class="card">
+  <h5 class="card-header"><%= @event.title %></h5>
   <div class="card-body">
-    <h5 class="card-title"><%= @event.title %></h5>
     <h6 class="card-subtitle mb-2 text-muted">
       <% if @event.multi_day? %>
         <%= @event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= @event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
@@ -23,6 +23,9 @@
       <br>
       <h6 class="card-subtitle mb-2 text-muted">
         There are <%= "#{@event.spots_remaining}/#{@event.capacity}" %> spots open.
+        <% if @user_registration&.waitlisted %>
+          <br><p>Position in waitlist: <%= @user_registration.position_in_waitlist %></p>
+        <% end %>
       </h6>
     <% end %>
     <br>
@@ -36,7 +39,12 @@
     <br>
     <% if @event.registration_enabled %>
       <% if current_user && @event.start_date.future? %>
-          <% if @user_registration %>
+          <% if @user_registration&.waitlisted %>
+            <%= link_to 'Leave Waitlist',
+              registration_path(event_id: @event.id, registration_id: @user_registration),
+              method: :delete,
+              class: "btn btn-danger" %>
+          <% elsif @user_registration %>
             <%= link_to 'Unregister from Event',
               registration_path(event_id: @event.id, registration_id: @user_registration),
               method: :delete,
@@ -46,7 +54,9 @@
               new_registration_path(event_id: @event.id, user_id: current_user.id),
               class: "btn btn-success" %>
           <% else %>
-            <a class="btn btn-danger disabled">Event Full</a>
+            <%= link_to 'Join Waitlist',
+              new_registration_path(event_id: @event.id, user_id: current_user.id),
+              class: "btn btn-warning" %>
           <% end %>
       <% elsif current_user.nil? %>
          <%= link_to "Sign in to Register", :google_auth, class: "btn btn-success" %>
@@ -60,23 +70,52 @@
         data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
         class: "btn btn-danger" %>
     <% end %>
-    <%= link_to @event.google_calendar_url, class: "btn btn-primary", target: "_blank" do %>
-      <i class="fa fa-calendar"></i> Add to Google Calendar
+   
+    <% unless @event.end_date.past? %>
+      <%= link_to @event.google_calendar_url, class: "btn btn-primary", target: "_blank", :id => "my_link" do %>
+        <i class="fa fa-calendar"></i> Add to Google Calendar
+      <% end %>
     <% end %>
+        
   </div>
 </div>
 <br>
 <% if current_user&.is_admin? %>
   <h5>Guest List</h5>
   <ol class="list-group">
-    <% if @event.all_guests.empty? %>
+    <% if @registered_users.empty? %>
       <li class="list-group-item">There are no users registered for this event.</li>
     <% else %>
-      <% @event.all_guests.each do |guest| %>
+      <% @registered_users.each do |guest| %>
         <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
       <% end %>
     <% end %>
   </ol>
+  <br>
+  <h5>Wait List</h5>
+  <ol class="list-group">
+    <% if @waitlisted_users.empty? %>
+      <li class="list-group-item">There are no users on the waitlist for this event.</li>
+    <% else %>
+      <% @waitlisted_users.each do |guest| %>
+        <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
+      <% end %>
+    <% end %>
+  </ol>
+  <br>
+
+  <% unless @registered_users.empty? %>
+    <h5>List of Emails For Registered Users</h5>
+    Copy and paste this list into your email <b>Bcc</b> section. It should automatically parse the list of emails.
+    <div class="card bg-light">
+      <div class="card-body">
+        <div class="card-text">
+          <%= @registered_users_email_string %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
 <% end %>
 <br>
 <%= link_to 'Back', events_path, class: "btn btn-primary" %>

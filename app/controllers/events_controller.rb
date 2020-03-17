@@ -50,6 +50,7 @@ class EventsController < ApplicationController
           message_result = JSON.parse(message_result)
           @event.update(discord_message_id: message_result["id"])
         end
+        EventReminderEmailJob.set(wait_until: @event.start_date - 8.hours).perform_later(@event)
         redirect_to @event, flash: { success: "Successfully created \"#{@event.title}\"" }
       else
         render 'new'
@@ -62,6 +63,9 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @registered_users = @event.registered_users
+    @registered_users_email_string = @registered_users.each_with_object("") { |u, s| s << "#{u.email}, " }
+    @waitlisted_users = @event.waitlisted_users
     if current_user
       @user_registration = @event.registrations.find_by(user_id: current_user.id)
     end
@@ -75,6 +79,7 @@ class EventsController < ApplicationController
 
   def build_event_message(event)
     {
+      content: "@everyone",
       embed: {
         title: "NEW EVENT!",
         fields: [
@@ -94,7 +99,7 @@ class EventsController < ApplicationController
             name: "Date",
             value: @event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') +
              "#{event.registration_enabled ? "\n\n**This event has registrations enabled**. Please register through the CSS website if you'd like to attend the event." : ""}" +
-             "\n\nView this event at #{ENV['HOST']}/events/#{@event.id}",
+             "\n\n[Click here to add to your Google Calendar](#{@event.google_calendar_url})\n\nView this event at #{ENV['HOST']}/events/#{@event.id}",
           }
         ],
       }
