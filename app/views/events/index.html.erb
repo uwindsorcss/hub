@@ -12,8 +12,12 @@
 <% end %>
 
 <ul class="nav nav-tabs nav-justified">
-  <%= fancy_tag("Upcoming Events", events_path(tag: "UE") )%>
-  <%= fancy_tag("Past Events", events_path(tag: "PE") )%>
+  <li class="nav-item">
+    <%= link_to("Upcoming Events", events_path(tag: "UE"), class: params[:tag] != "PE" ? 'nav-link active' : 'nav-link') %>
+  </li>
+  <li class="nav-item">
+    <%= link_to("Past Events", events_path(tag: "PE"), class: params[:tag] == "PE" ? 'nav-link active' : 'nav-link') %>
+  </li>
 </ul>
 
 <% if params[:tag] == "PE" %>
@@ -80,4 +84,3 @@
     <br>
   <% end %>
 <% end %>
-
