@@ -8,66 +8,79 @@
   <center>
     <%= link_to 'New Event', new_event_path, class: "btn btn-success" %>
   </center>
+  <br>
 <% end %>
 
-<h4>Upcoming events</h4>
+<ul class="nav nav-tabs nav-justified">
+  <li class="nav-item">
+    <%= link_to("Upcoming Events", events_path(tag: "UE"), class: params[:tag] != "PE" ? 'nav-link active' : 'nav-link') %>
+  </li>
+  <li class="nav-item">
+    <%= link_to("Past Events", events_path(tag: "PE"), class: params[:tag] == "PE" ? 'nav-link active' : 'nav-link') %>
+  </li>
+</ul>
 
-<% @future_events.each do |event| %>
-  <div class="card">
-    <h5 class="card-header"><%= event.title %></h5>
-    <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted">
-        <% if event.multi_day? %>
-          <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
-        <% else %>
-          <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
-        <% end %>
-        (in <%= distance_of_time_in_words(Time.now, event.start_date) %>)
-      </h6>
-      <% if event.registration_enabled %>
+<% if params[:tag] == "PE" %>
+  <br>
+  <h4>Past events</h4>
+
+  <% @past_events.each do |event| %>
+    <div class="card">
+      <h5 class="card-header"><%= event.title %></h5>
+      <div class="card-body">
         <h6 class="card-subtitle mb-2 text-muted">
-          Registration required
+          <% if event.multi_day? %>
+            <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
+          <% else %>
+            <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
+          <% end %>
+          (<%= distance_of_time_in_words(Time.now, event.start_date) %> ago)
         </h6>
-      <% end %>
-      <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
-      <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
-      <% if current_user&.is_admin? %>
-        <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
-        <%= link_to 'Delete', event_path(event),
-          method: :delete,
-          data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
-          class: "card-link btn btn-danger" %>
-      <% end %>
-    </div>
-  </div>
-  <br>
-<% end %>
-<br>
-
-<h4>Past events</h4>
-
-<% @past_events.each do |event| %>
-  <div class="card">
-    <h5 class="card-header"><%= event.title %></h5>
-    <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted">
-        <% if event.multi_day? %>
-          <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
-        <% else %>
-          <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
+        <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
+        <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
+        <% if current_user&.is_admin? %>
+          <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
+          <%= link_to 'Delete', event_path(event),
+            method: :delete,
+            data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
+            class: "card-link btn btn-danger" %>
         <% end %>
-        (<%= distance_of_time_in_words(Time.now, event.start_date) %> ago)
-      </h6>
-      <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
-      <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
-      <% if current_user&.is_admin? %>
-        <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
-        <%= link_to 'Delete', event_path(event),
-          method: :delete,
-          data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
-          class: "card-link btn btn-danger" %>
-      <% end %>
+      </div>
     </div>
-  </div>
+    <br>
+  <% end %>
+<% else %>
   <br>
+  <h4>Upcoming events</h4>
+
+  <% @future_events.each do |event| %>
+    <div class="card">
+      <h5 class="card-header"><%= event.title %></h5>
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">
+          <% if event.multi_day? %>
+            <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
+          <% else %>
+            <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
+          <% end %>
+          (in <%= distance_of_time_in_words(Time.now, event.start_date) %>)
+        </h6>
+        <% if event.registration_enabled %>
+          <h6 class="card-subtitle mb-2 text-muted">
+            Registration required
+          </h6>
+        <% end %>
+        <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
+        <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
+        <% if current_user&.is_admin? %>
+          <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
+          <%= link_to 'Delete', event_path(event),
+            method: :delete,
+            data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
+            class: "card-link btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+    <br>
+  <% end %>
 <% end %>
