@@ -60,12 +60,4 @@ module ApplicationHelper
   def yield_meta_tag(tag, default_text='')
     content_for?(:"meta_#{tag}") ? content_for(:"meta_#{tag}") : default_text
   end
-
-  
-  def fancy_tag(label, url_link, active=nil)
-    flag = active.nil? ? current_page?(url_link) : active
-    content_tag :li, class: "nav-item" do
-      link_to(label, url_link, class: "#{flag ? 'nav-link active' : 'nav-link'}")
-    end
-  end
 end
