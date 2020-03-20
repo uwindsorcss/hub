@@ -106,16 +106,27 @@
 
   <% unless @registered_users.empty? %>
     <h5>List of Emails For Registered Users</h5>
-    Copy and paste this list into your email <b>Bcc</b> section. It should automatically parse the list of emails.
-    <div class="card bg-light">
+    <div class="card">
       <div class="card-body">
-        <div class="card-text">
-          <%= @registered_users_email_string %>
-        </div>
+        <p class="card-text" id="email_ids"><%= @registered_users_email_string %></p>
+        <button type="button" class="btn btn-primary" onclick="CopyToClipboard()">Copy to Clipboard</button>
       </div>
     </div>
   <% end %>
-
 <% end %>
 <br>
+
+<!-- copy emails to clipboard -->
+<script>
+  function CopyToClipboard() {
+    var text = document.getElementById("email_ids").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+  }
+</script>
+
 <%= link_to 'Back', events_path, class: "btn btn-primary" %>
