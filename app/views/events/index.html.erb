@@ -24,63 +24,65 @@
   <br>
   <h4>Past events</h4>
   <%= paginate @past_events, theme: 'twitter-bootstrap-4' %>
-  <% @past_events.each do |event| %>
-    <div class="card">
-      <h5 class="card-header"><%= event.title %></h5>
-      <div class="card-body">
-        <h6 class="card-subtitle mb-2 text-muted">
-          <% if event.multi_day? %>
-            <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
-          <% else %>
-            <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
+    <% @past_events.each do |event| %>
+      <div class="card">
+        <h5 class="card-header"><%= event.title %></h5>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">
+            <% if event.multi_day? %>
+              <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
+            <% else %>
+              <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
+            <% end %>
+            (<%= distance_of_time_in_words(Time.now, event.start_date) %> ago)
+          </h6>
+          <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
+          <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
+          <% if current_user&.is_admin? %>
+            <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
+            <%= link_to 'Delete', event_path(event),
+              method: :delete,
+              data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
+              class: "card-link btn btn-danger" %>
           <% end %>
-          (<%= distance_of_time_in_words(Time.now, event.start_date) %> ago)
-        </h6>
-        <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
-        <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
-        <% if current_user&.is_admin? %>
-          <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
-          <%= link_to 'Delete', event_path(event),
-            method: :delete,
-            data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
-            class: "card-link btn btn-danger" %>
-        <% end %>
+        </div>
       </div>
-    </div>
-    <br>
-  <% end %>
+      <br>
+    <% end %>
+  <%= paginate @past_events, theme: 'twitter-bootstrap-4' %>
 <% else %>
   <br>
   <h4>Upcoming events</h4>
   <%= paginate @future_events, theme: 'twitter-bootstrap-4' %>
-  <% @future_events.each do |event| %>
-    <div class="card">
-      <h5 class="card-header"><%= event.title %></h5>
-      <div class="card-body">
-        <h6 class="card-subtitle mb-2 text-muted">
-          <% if event.multi_day? %>
-            <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
-          <% else %>
-            <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
-          <% end %>
-          (in <%= distance_of_time_in_words(Time.now, event.start_date) %>)
-        </h6>
-        <% if event.registration_enabled %>
+    <% @future_events.each do |event| %>
+      <div class="card">
+        <h5 class="card-header"><%= event.title %></h5>
+        <div class="card-body">
           <h6 class="card-subtitle mb-2 text-muted">
-            Registration required
+            <% if event.multi_day? %>
+              <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
+            <% else %>
+              <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
+            <% end %>
+            (in <%= distance_of_time_in_words(Time.now, event.start_date) %>)
           </h6>
-        <% end %>
-        <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
-        <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
-        <% if current_user&.is_admin? %>
-          <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
-          <%= link_to 'Delete', event_path(event),
-            method: :delete,
-            data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
-            class: "card-link btn btn-danger" %>
-        <% end %>
+          <% if event.registration_enabled %>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Registration required
+            </h6>
+          <% end %>
+          <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
+          <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
+          <% if current_user&.is_admin? %>
+            <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
+            <%= link_to 'Delete', event_path(event),
+              method: :delete,
+              data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
+              class: "card-link btn btn-danger" %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <br>
-  <% end %>
+      <br>
+    <% end %>
+    <%= paginate @future_events, theme: 'twitter-bootstrap-4' %>
 <% end %>
