@@ -6,39 +6,53 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Upcoming events
+# Generate upcoming events
 10.times do |n|
-    Event.create!(title:  "test#{n}",
-                 description: "This is description #{n}", 
-                 location: "location: #{n}",
-                 capacity: "12",
-                 registration_enabled: true,
-                 start_date: Time.zone.now, 
-                 end_date: 2.days.from_now)
-  end
+  start_date = Faker::Time.between(from: 3.days.from_now, to: 2.months.from_now)
+  Event.create!(
+    title: "#{Faker::Verb.ing_form.capitalize} at #{Faker::Company.name}",
+    description: Faker::Lorem.sentence(word_count: rand(10..100)),
+    location: Faker::Address.full_address,
+    capacity: rand(10..50),
+    registration_enabled: [true, false].sample,
+    start_date: start_date,
+    end_date: start_date + rand(1..24).hours
+  )
+end
 
-# Past event
+# Generate past events
 13.times do |n|
-  Event.create!(title:  "Test#{n}",
-                description: "This is description #{n}", 
-                location: "location: #{n}",
-                capacity: "12",
-                registration_enabled: true,
-                start_date: Time.zone.now - 5.days, 
-                end_date: Time.zone.now - 2.days)
+  start_date = Faker::Time.between(from: 1.days.ago, to: 2.months.ago)
+  Event.create!(
+    title: "#{Faker::Verb.ing_form.capitalize} at #{Faker::Company.name}",
+    description: Faker::Lorem.sentence(word_count: rand(10..100)),
+    location: Faker::Address.full_address,
+    capacity: rand(10..50),
+    registration_enabled: true ,
+    start_date: start_date,
+    end_date: start_date + rand(1..24).hours
+  )
 end
 
 
-# User Create
-10.times do |n|
-  User.create!(email: "#{n+2}@uwindsor.ca",
-                name: "User #{n+1}",
-                role: "guest")
+# Generate users
+50.times do |n|
+  name = Faker::Name.name
+  User.create!(
+    email: Faker::Internet.email(name: name, domain: "uwindsor.ca"),
+    name: name,
+    role: "guest"
+  )
 end
 
-# Let random user register existing event
-1.times do |n|
-  Registration.create!(user_id: n+2,
-                      event_id: 1,
-                      waitlisted: false)
+# Random number of registrations for events with enabled registration
+Event.where(registration_enabled: true).each do |event|
+  User.pluck.sample(rand(1..30)).each do |user|
+    user = User.find(user.first)
+    Registration.create!(
+      user_id: user.id,
+      event_id: event.id,
+      waitlisted: (event.reload.spots_remaining == 0) ? true : false
+    )
+  end
 end
