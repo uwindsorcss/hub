@@ -51,7 +51,7 @@
 <% else %>
   <br>
  
-  <%= "Unfortunately we don't have any upcomming CSS EVENT currently, we will keep you posted when there's any event" if @future_events.empty? %>
+  <%= "There are no future events scheduled at the moment. Please check back later." if @future_events.empty? %>
 
   <% @future_events.each do |event| %>
     <div class="card">
