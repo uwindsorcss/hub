@@ -31,8 +31,7 @@ end
 
 # User Create
 10.times do |n|
-  User.create!(id: n+2,
-                email: "#{n+2}@uwindsor.ca",
+  User.create!(email: "#{n+2}@uwindsor.ca",
                 name: "User #{n+1}",
                 role: "guest")
 end

@@ -92,6 +92,19 @@
     <% end %>
   </ol>
   <br>
+
+  <% unless @registered_users.empty? %>
+    <h5>List of Emails For Registered Users</h5>
+    When sending an email, paste this list in the <b>Bcc</b> section of your recipients. This will make the email list hidden from everyone you send the email to.
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text" id="email_ids"><%= @registered_users_email_string %></p>
+        <button type="button" class="btn btn-primary" onclick="CopyToClipboard()">Copy to Clipboard</button>
+      </div>
+    </div>
+  <% end %>
+
+  <br>
   <h5>Wait List</h5>
   <ol class="list-group">
     <% if @waitlisted_users.empty? %>
@@ -103,16 +116,6 @@
     <% end %>
   </ol>
   <br>
-
-  <% unless @registered_users.empty? %>
-    <h5>List of Emails For Registered Users</h5>
-    <div class="card">
-      <div class="card-body">
-        <p class="card-text" id="email_ids"><%= @registered_users_email_string %></p>
-        <button type="button" class="btn btn-primary" onclick="CopyToClipboard()">Copy to Clipboard</button>
-      </div>
-    </div>
-  <% end %>
 <% end %>
 <br>
 
