@@ -23,7 +23,7 @@
 <% if params[:tag] == "PE" %>
   <br>
   <h4>Past events</h4>
-
+  <%= paginate @past_events, theme: 'twitter-bootstrap-4' %>
   <% @past_events.each do |event| %>
     <div class="card">
       <h5 class="card-header"><%= event.title %></h5>
@@ -52,7 +52,7 @@
 <% else %>
   <br>
   <h4>Upcoming events</h4>
-
+  <%= paginate @future_events, theme: 'twitter-bootstrap-4' %>
   <% @future_events.each do |event| %>
     <div class="card">
       <h5 class="card-header"><%= event.title %></h5>
