@@ -22,7 +22,6 @@
 
 <% if params[:tag] == "PE" %>
   <br>
-  <h4>Past events</h4>
 
   <% @past_events.each do |event| %>
     <div class="card">
@@ -51,7 +50,8 @@
   <% end %>
 <% else %>
   <br>
-  <h4>Upcoming events</h4>
+ 
+  <%= "There are no future events scheduled at the moment. Please check back later." if @future_events.empty? %>
 
   <% @future_events.each do |event| %>
     <div class="card">
