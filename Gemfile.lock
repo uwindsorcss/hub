@@ -51,6 +51,9 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
+    bootstrap4-kaminari-views (1.0.1)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     builder (3.2.4)
     byebug (11.1.1)
     capybara (2.18.0)
@@ -106,6 +109,18 @@ GEM
       thor (>= 0.14, < 2.0)
     json (2.3.0)
     jwt (2.2.1)
+    kaminari (1.2.0)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.0)
+      kaminari-activerecord (= 1.2.0)
+      kaminari-core (= 1.2.0)
+    kaminari-actionview (1.2.0)
+      actionview
+      kaminari-core (= 1.2.0)
+    kaminari-activerecord (1.2.0)
+      activerecord
+      kaminari-core (= 1.2.0)
+    kaminari-core (1.2.0)
     libv8 (7.3.492.27.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -282,6 +297,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap
+  bootstrap4-kaminari-views
   byebug
   capybara (~> 2.13)
   certified
@@ -293,6 +309,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   json
+  kaminari
   listen (>= 3.0.5, < 3.2)
   mini_racer
   omniauth-google-oauth2

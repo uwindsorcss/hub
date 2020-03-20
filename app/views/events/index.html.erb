@@ -22,37 +22,38 @@
 
 <% if params[:tag] == "PE" %>
   <br>
-
-  <% @past_events.each do |event| %>
-    <div class="card">
-      <h5 class="card-header"><%= event.title %></h5>
-      <div class="card-body">
-        <h6 class="card-subtitle mb-2 text-muted">
-          <% if event.multi_day? %>
-            <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
-          <% else %>
-            <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
+  
+    <% @past_events.each do |event| %>
+      <div class="card">
+        <h5 class="card-header"><%= event.title %></h5>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">
+            <% if event.multi_day? %>
+              <%= event.start_date.strftime('%A, %B %d, %Y at %l:%M%P') %> - <%= event.end_date.strftime('%A, %B %d, %Y at %l:%M%P') %>
+            <% else %>
+              <%= event.start_date.strftime('%A, %B %d, %Y from %l:%M%P') %> - <%= event.end_date.strftime('%l:%M%P') %>
+            <% end %>
+            (<%= distance_of_time_in_words(Time.now, event.start_date) %> ago)
+          </h6>
+          <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
+          <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
+          <% if current_user&.is_admin? %>
+            <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
+            <%= link_to 'Delete', event_path(event),
+              method: :delete,
+              data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
+              class: "card-link btn btn-danger" %>
           <% end %>
-          (<%= distance_of_time_in_words(Time.now, event.start_date) %> ago)
-        </h6>
-        <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
-        <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
-        <% if current_user&.is_admin? %>
-          <%= link_to 'Edit', edit_event_path(event), class: "card-link btn btn-warning" %>
-          <%= link_to 'Delete', event_path(event),
-            method: :delete,
-            data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
-            class: "card-link btn btn-danger" %>
-        <% end %>
+        </div>
       </div>
-    </div>
-    <br>
-  <% end %>
+      <br>
+    <% end %>
+  <%= paginate @past_events, theme: 'twitter-bootstrap-4' %>
 <% else %>
   <br>
  
   <%= "There are no future events scheduled at the moment. Please check back later." if @future_events.empty? %>
-
+  
   <% @future_events.each do |event| %>
     <div class="card">
       <h5 class="card-header"><%= event.title %></h5>
@@ -78,9 +79,10 @@
             method: :delete,
             data: { confirm: 'Are you sure? This will also attempt to delete the Discord message related to this event.' },
             class: "card-link btn btn-danger" %>
-        <% end %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <br>
-  <% end %>
+      <br>
+    <% end %>
+    <%= paginate @future_events, theme: 'twitter-bootstrap-4' %>
 <% end %>
