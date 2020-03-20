@@ -75,3 +75,4 @@ gem 'font-awesome-rails'
 gem "validate_url"
 gem 'rack-attack'
 gem 'sidekiq'
+gem 'faker'
