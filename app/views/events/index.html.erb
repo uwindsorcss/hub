@@ -53,6 +53,7 @@
   <br>
  
   <%= "There are no future events scheduled at the moment. Please check back later." if @future_events.empty? %>
+  
   <% @future_events.each do |event| %>
     <div class="card">
       <h5 class="card-header"><%= event.title %></h5>
@@ -66,9 +67,9 @@
           (in <%= distance_of_time_in_words(Time.now, event.start_date) %>)
         </h6>
         <% if event.registration_enabled %>
-            <h6 class="card-subtitle mb-2 text-muted">
-              Registration required
-            </h6>
+          <h6 class="card-subtitle mb-2 text-muted">
+            Registration required
+          </h6>
         <% end %>
         <p class="card-text"><%= truncate(strip_tags(markdown(event.description)), length: 200) %></p>
         <%= link_to 'View', event_path(event), class: "card-link btn btn-primary" %>
