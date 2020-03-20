@@ -49,6 +49,7 @@
       <br>
     <% end %>
   <%= paginate @past_events, theme: 'twitter-bootstrap-4' %>
+  <br>
 <% else %>
   <br>
  
@@ -83,6 +84,7 @@
         </div>
       </div>
       <br>
-    <% end %>
-    <%= paginate @future_events, theme: 'twitter-bootstrap-4' %>
+  <% end %>
+  <%= paginate @future_events, theme: 'twitter-bootstrap-4' %>
+  <br>
 <% end %>
