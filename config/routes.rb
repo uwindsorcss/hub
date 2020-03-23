@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'session/destroy', :as => 'logout'
   get 'session/destroy_discord', :as => 'discord_logout'
 
-  get 'auth/google_oauth2', :as => 'google_auth'
+  get 'auth/microsoft_graph', :as => 'office365_auth'
   get 'auth/discord', :to => 'session#discord_auth', :as => "discord_auth"
   match 'auth/:provider/callback' => 'session#create', :via => [:post, :get]
 

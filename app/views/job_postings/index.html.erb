@@ -5,7 +5,7 @@
 <% meta_tag :keywords, ("job,internships,careers,postings,outings,workshops,computer,science,society,css,uwindsor,university,of,windsor") %>
 
 <center>
-  <%= link_to 'Submit a Job Posting', (current_user ? new_job_posting_path : :google_auth), class: "btn btn-success" %>
+  <%= link_to 'Submit a Job Posting', (current_user ? new_job_posting_path : :office365_auth), class: "btn btn-success" %>
   <% if current_user&.is_admin? %>
     <% reviewable_count = (JobPosting.where(approved: false).or(JobPosting.where(reported: true))).count %>
     <%= link_to "Review Postings (#{reviewable_count})", review_job_postings_path, class: "btn btn-primary" %>
