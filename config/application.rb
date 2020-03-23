@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module UWindsorCssHub
   class Application < Rails::Application
+    UWINDSOR_AZURE_TENANT_ID = '12f933b3-3d61-4b19-9a4d-689021de8cc9'
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     config.time_zone = 'Eastern Time (US & Canada)'
@@ -25,7 +27,14 @@ module UWindsorCssHub
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.middleware.use OmniAuth::Builder do
-      provider :microsoft_graph, ENV['AZURE_CLIENT_ID'], ENV['AZURE_CLIENT_SECRET'], scope: 'user.read'
+      provider :microsoft_graph,
+        ENV['AZURE_CLIENT_ID'],
+        ENV['AZURE_CLIENT_SECRET'],
+        scope: 'user.read',
+        client_options: {
+          token_url:     "#{UWINDSOR_AZURE_TENANT_ID}/oauth2/v2.0/token",
+          authorize_url: "#{UWINDSOR_AZURE_TENANT_ID}/oauth2/v2.0/authorize"
+        }
     end
   end
 end
