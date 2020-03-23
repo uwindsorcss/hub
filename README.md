@@ -40,6 +40,8 @@ Signing in will allow you to access admin features such as:
 - Create/modify events
 - Modify page content in-site
 
+Note: UWindsor currently doesn't allow us to create an application with our school's Microsoft account. You'll have to create the application on a different account such as your personal one.
+
 Follow these steps from Microsoft to create an application and obtain the client ID and secret: https://docs.microsoft.com/en-us/graph/auth-register-app-v2
 - Name: whatever you want
 - Supported account types: Accounts in any organizational directory (Any Azure AD directory - Multitenant)
