@@ -160,9 +160,6 @@ GEM
       jwt (>= 2.0)
       omniauth (>= 1.1.1)
       omniauth-oauth2 (>= 1.6)
-    omniauth-microsoft_graph (0.3.3)
-      omniauth (~> 1.1, >= 1.1.1)
-      omniauth-oauth2 (~> 1.6)
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
@@ -316,7 +313,6 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   mini_racer
   omniauth-google-oauth2
-  omniauth-microsoft_graph
   pry-byebug
   pry-rails
   puma (~> 3.12)
