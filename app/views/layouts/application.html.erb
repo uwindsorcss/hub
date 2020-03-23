@@ -84,7 +84,7 @@
               <div style="color: white;margin-right:10px;">Welcome, <%= current_user.name %>!</div>
               <%= link_to "Sign out", :logout, class: "btn btn-primary" %>
             <% else %>
-              <%= link_to "Sign in", :google_auth, class: "btn btn-primary" %>
+              <%= link_to "Sign in", :office365_auth, class: "btn btn-primary" %>
             <% end %>
           </form>
         </div>

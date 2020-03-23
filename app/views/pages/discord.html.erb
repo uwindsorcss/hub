@@ -26,9 +26,9 @@
   <% end %>
 
   <% if current_user %>
-    <%= link_to "✓ Step 1: Authorized with UWindsor", :google_auth, class: "btn btn-primary" %>
+    <%= link_to "✓ Step 1: Authorized with UWindsor", :office365_auth, class: "btn btn-primary" %>
   <% else %>
-    <%= link_to "Step 1: Authorize with UWindsor", :google_auth, class: "btn btn-outline-primary" %>
+    <%= link_to "Step 1: Authorize with UWindsor", :office365_auth, class: "btn btn-outline-primary" %>
   <% end %>
   <br><br>
   <% if current_discord_user %>
