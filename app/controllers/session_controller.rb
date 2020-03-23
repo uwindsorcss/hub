@@ -3,7 +3,7 @@ class SessionController < ApplicationController
 
   def create
     provider = params[:provider]
-    if provider == "google_oauth2"
+    if provider == "microsoft_graph"
       user = User.find_or_create_by(:email => auth_hash[:info][:email]) do |user|
         user.email = auth_hash[:info][:email]
         user.name = auth_hash[:info][:name]

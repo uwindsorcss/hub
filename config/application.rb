@@ -25,7 +25,7 @@ module UWindsorCssHub
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.middleware.use OmniAuth::Builder do
-      provider :google_oauth2, ENV['GOOGLE_CLIENT'], ENV['GOOGLE_SECRET'], { hd: 'uwindsor.ca', prompt: 'select_account', provider_ignores_state: true, skip_jwt: true }
+      provider :microsoft_graph, ENV['AZURE_CLIENT_ID'], ENV['AZURE_CLIENT_SECRET'], scope: 'user.read'
     end
   end
 end
