@@ -163,6 +163,8 @@ GEM
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
+    omniauth-office365 (0.0.1)
+      omniauth-oauth2
     popper_js (1.16.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -313,6 +315,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   mini_racer
   omniauth-google-oauth2
+  omniauth-office365
   pry-byebug
   pry-rails
   puma (~> 3.12)
