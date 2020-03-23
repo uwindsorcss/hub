@@ -25,7 +25,7 @@ module UWindsorCssHub
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.middleware.use OmniAuth::Builder do
-      provider :microsoft_graph, '340a1de6-4e4d-44c2-a747-4f0587958cdb', 'oim=::Fa4pEGh5m_rcF16lq7XIRb0FZ-', scope: 'user.read'
+      provider :microsoft_graph, ENV['AZURE_CLIENT_ID'], ENV['AZURE_CLIENT_SECRET'], scope: 'user.read'
     end
   end
 end
