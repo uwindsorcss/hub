@@ -78,4 +78,4 @@ gem "validate_url"
 gem 'rack-attack'
 gem 'sidekiq'
 gem 'faker'
-gem 'omniauth-office365'
+gem 'omniauth-microsoft_graph'
