@@ -9,11 +9,6 @@ class PagesController < ApplicationController
     @page = MarkdownPage.find_by(title: @page_title)
   end
 
-  def index
-    @page_title = "Home"
-    @page = MarkdownPage.find_by(title: @page_title)
-  end
-
   def about
     @page_title = "About"
     @page = MarkdownPage.find_by(title: @page_title)

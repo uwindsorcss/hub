@@ -1,0 +1,13 @@
+<% if @pages.present? %>
+   <% @pages.each do |page| %>
+      <%= render 'markdown_pages/markdown_page', page: page, page_title: @page_title %>
+   <% end %>
+   <%= paginate @pages, theme: 'twitter-bootstrap-4' %>
+<% else %>
+  Page with title "<%= @page_title %>" not found.
+  <br><br>
+<% end %>
+
+<% if current_user&.is_admin? %>
+   <%= link_to "New page", new_markdown_page_path(title: @page_title), class: "btn btn-success" %>
+<% end %>

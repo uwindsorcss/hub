@@ -1,4 +1,9 @@
 class MarkdownPagesController < ApplicationController
+  def index
+    @page_title = "Home"
+    @pages = MarkdownPage.all.page(params[:page])
+  end
+
   def new
     @page = MarkdownPage.new
   end

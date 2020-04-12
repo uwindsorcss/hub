@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   match 'auth/:provider/callback' => 'session#create', :via => [:post, :get]
 
    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "pages#index"
+  root to: "markdown_pages#index"
 
   resources :events
   resources :job_postings do
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :markdown_pages, only: [:edit, :update, :new, :create]
+  resources :markdown_pages, only: [:index, :edit, :update, :new, :create]
 
   resources :registration
 
