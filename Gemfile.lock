@@ -156,10 +156,6 @@ GEM
     omniauth (1.9.1)
       hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
-    omniauth-google-oauth2 (0.8.0)
-      jwt (>= 2.0)
-      omniauth (>= 1.1.1)
-      omniauth-oauth2 (>= 1.6)
     omniauth-microsoft_graph (0.3.3)
       omniauth (~> 1.1, >= 1.1.1)
       omniauth-oauth2 (~> 1.6)
@@ -315,7 +311,6 @@ DEPENDENCIES
   kaminari
   listen (>= 3.0.5, < 3.2)
   mini_racer
-  omniauth-google-oauth2
   omniauth-microsoft_graph
   pry-byebug
   pry-rails
