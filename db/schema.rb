@@ -67,8 +67,7 @@ ActiveRecord::Schema.define(version: 20200412195845) do
 
   create_table "news_posts", force: :cascade do |t|
     t.string "title"
-    t.date "occurred_at"
-    t.text "content"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
