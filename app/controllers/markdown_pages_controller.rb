@@ -1,7 +1,7 @@
 class MarkdownPagesController < ApplicationController
   def index
     @page_title = "Home"
-    @pages = MarkdownPage.all.page(params[:page])
+    @pages = MarkdownPage.all.order(created_at: :desc ).page(params[:page])
   end
 
   def new
