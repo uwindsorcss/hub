@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   get 'events/index'
 
-  get 'session/destroy', :as => 'logout'
-  get 'session/destroy_discord', :as => 'discord_logout'
+  get 'session/destroy', as: 'logout'
+  get 'session/destroy_discord', as: 'discord_logout'
 
-  get 'auth/microsoft_graph', :as => 'office365_auth'
-  get 'auth/discord', :to => 'session#discord_auth', :as => "discord_auth"
-  match 'auth/:provider/callback' => 'session#create', :via => [:post, :get]
+  get 'auth/microsoft_graph', as: 'office365_auth'
+  get 'auth/discord', to: 'session#discord_auth', as: 'discord_auth'
+  match 'auth/:provider/callback' => 'session#create', via: [:post, :get]
 
    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "markdown_pages#index"
+  root to: 'markdown_pages#index'
 
   resources :events
   resources :job_postings do
@@ -26,9 +26,9 @@ Rails.application.routes.draw do
 
   resources :registration
 
-  get '/discord', to: 'pages#discord', :as => 'discord_path'
-  get '/guide', to: 'pages#guide', :as => 'guide'
-  get '/about', to: 'pages#about', :as => 'about'
+  get '/discord', to: 'markdown_pages#discord', as: 'discord_path'
+  get '/guide', to: 'markdown_pages#guide', as: 'guide'
+  get '/about', to: 'markdown_pages#about', as: 'about'
   get '/spikeball', to: redirect('/events/17')
   get '/store', to: redirect('https://store.uwindsorcss.ca/')
 end
