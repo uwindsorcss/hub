@@ -4,7 +4,7 @@
 <% meta_tag :og_title, @event.title + " | Computer Science Society" %>
 <% meta_tag :keywords, (@event.title.downcase.gsub(/\W+/, ' ').tr(' ', ',') + "computer,science,society,css,uwindsor,university,of,windsor") %>
 
-<%= social_share_button_tag(@event.title, :url => event_path(@event), desc: @event.title) %>
+<%= social_share_button_tag(@event.title, :url => request.original_url, desc: @event.title) %>
 <div class="card">
   <h5 class="card-header"><%= @event.title %></h5>
   <div class="card-body">
