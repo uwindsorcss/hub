@@ -1,6 +1,15 @@
 class Event < ApplicationRecord
   has_many :registrations, dependent: :destroy
-  has_many :users, through: :registrations
+  has_many :registered_users, through: :registrations, source: :user do
+    def not_waitlisted
+      where('registrations.waitlisted = ?', false)
+    end
+
+    def waitlisted
+      where('registrations.waitlisted = ?', true)
+    end
+  end
+
   has_many :guests, through: :registrations
 
   validates :title, :description, :start_date, presence: true, length: { minimum: 3 }
@@ -17,11 +26,13 @@ class Event < ApplicationRecord
     self.capacity - self.current_capacity
   end
 
+  # where is this used? 
   def all_guests
     self.registered_users
   end
 
-  def registered_users
+  #changes the name from `registered_users` -> `registered_users_old` so that you can check my changes locally
+  def registered_users_old
     self.registrations.each_with_object([]) do |r, registered_users|
       registered_users << r.user if r.reload.waitlisted == false
     end
