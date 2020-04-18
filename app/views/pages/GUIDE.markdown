@@ -76,10 +76,10 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 ### Summer 2020
 Summer courses are the normal, 12-week courses. This list does not include Intersession.
 
-- May 4 - Classes begin
-- June 13 - June 21 - Reading week
-- August 5 - Last day of classes
-- August 8 - August 17 - Final exams
+- May 19 - Classes begin
+- June 27 - July 5 - Reading week
+- August 18 - Last day of classes
+- August 21 - August 29 - Final exams
 
 
 
