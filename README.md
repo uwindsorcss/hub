@@ -32,26 +32,27 @@ After that you're ready to launch the site using:
 
 By default, rails will launch the server at [http://localhost:3000](http://localhost:3000).
 
-### Google OAuth Setup
+### Office365 OAuth Setup
 
-This is not necessary, however to sign in to your UWindsor email on your local instance and use admin features you will need to set up Google OAuth.
+This is not necessary, however to sign in to your UWindsor email on your local instance and use admin features you will need to set up Office365 OAuth.
 
-Signing in will allow you to
+Signing in will allow you to access admin features such as:
 - Create/modify events
 - Modify page content in-site
 
-Follow these steps from Google to create a project and obtain the client ID and secret: https://developers.google.com/adwords/api/docs/guides/authentication#create_a_client_id_and_client_secret
-- Your project can be named whatever you like
-- This is completely free, don't worry about the billing account options
-- Application type is a Web Application
-- Under Authorized Redirect URI's, enter `http://localhost:3000/auth/google_oauth2/callback`
+Note: UWindsor currently doesn't allow us to create an application with our school's Microsoft account. You'll have to create the application on a different account such as your personal one.
 
-Now that you have a Google client ID and client secret, you just need to add those to your environment file where the app reads the keys.
+Follow these steps from Microsoft to create an application and obtain the client ID and secret: https://docs.microsoft.com/en-us/graph/auth-register-app-v2
+- Name: whatever you want
+- Supported account types: Accounts in any organizational directory (Any Azure AD directory - Multitenant)
+- Redirect URI: `http://localhost:3000/auth/microsoft_graph/callback`
 
-In the rails project, copy the `local_env.example.yml` to a new file called `local_env.yml`. This will be your private file that contains your API credentials - git will ignore this file. Fill in the `GOOGLE_CLIENT` and `GOOGLE_SECRET` fields in `local_env.yml` with your respective credentials.
+Now that you have an Azure client ID and client secret, you need to add those to your environment file where the app reads the keys. You can see your client (application) ID in your project overview. You can create your client secret under `Certificates & secrets -> New client secret`.
+
+In the rails project, copy the `local_env.example.yml` to a new file called `local_env.yml`. This will be your private file that contains your API credentials - git will ignore this file. Fill in the `AZURE_CLIENT_ID` and `AZURE_CLIENT_SECRET` fields in `local_env.yml` with your respective credentials.
 
 After restarting the rails server, you should be able to sign in using UWindsor accounts. You can now add yourself as an admin through the rails console. After signing into the app at least once (so that your user record is created), run `rails console` or `rails c` to open the console, then change your role to admin using:
-`User.where(email: "youruwindsoremail").first.update(role: "admin")`
+`User.find_by(email: "youruwindsoremail").update(role: "admin")`
 
 ### Discord OAuth Setup
 

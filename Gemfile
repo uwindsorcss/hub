@@ -58,10 +58,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'omniauth-google-oauth2'
-
 gem 'pry-rails'
-
 gem "json"
 gem "fuzzy-string-match"
 gem 'rubysl-securerandom'
@@ -80,3 +77,4 @@ gem "validate_url"
 gem 'rack-attack'
 gem 'sidekiq'
 gem 'faker'
+gem 'omniauth-microsoft_graph'

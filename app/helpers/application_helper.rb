@@ -5,7 +5,8 @@ module ApplicationHelper
       hard_wrap:       true,
       space_after_headers: true,
       fenced_code_blocks: true,
-      with_toc_data:   true
+      with_toc_data:   true,
+      autolink: true
     }
 
     extensions = {
@@ -46,6 +47,35 @@ module ApplicationHelper
 
     def image(link, title, alt_text)
       "<a href=\"#{link}\"><img src=\"#{link}\" class=\"img-responsive\" alt=\"#{alt_text}\" width=\"80%\"></a>"
+    end
+
+    def autolink(link, link_type)
+      case link_type
+        when :url then url_link(link)
+        when :email then email_link(link)
+      end
+    end
+
+    def url_link(link)
+      if URI.parse(link).host == "www.youtube.com"
+        youtube_link(link)
+      else
+        normal_link(link)
+      end
+    end
+
+    def youtube_link(link)
+      video_id_start = link.index('v=') + 2
+      video_id = link[video_id_start..video_id_start + 11]
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/#{video_id}\" frameborder=\"0\" allowfullscreen></iframe>"
+    end
+
+    def normal_link(link)
+      "<a href=\"#{link}\">#{link}</a>"
+    end
+
+    def email_link(email)
+      "<a href=\"mailto:#{email}\">#{email}</a>"
     end
   end
 
