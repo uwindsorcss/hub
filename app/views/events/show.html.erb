@@ -80,8 +80,6 @@
   </div>
 </div>
 <br>
-<%= social_share_button_tag(@event.title, :url => request.original_url, desc: @event.title) %>
-<br>
 <% if current_user&.is_admin? %>
   <h5>Guest List</h5>
   <ol class="list-group">
@@ -133,4 +131,5 @@
     document.body.removeChild(elem);
   }
 </script>
-<%= link_to 'Back', :back, class: "btn btn-primary" %>
+
+<%= link_to 'Back', events_path, class: "btn btn-primary" %>
