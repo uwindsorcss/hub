@@ -9,13 +9,13 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
+ *= require social-share-button
  *
  */
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 @import "font-awesome";
-@import "social-share-button";
 
 .discord_logo {
     display: inline-block;
