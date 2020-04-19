@@ -68,10 +68,37 @@ Discord auth setup will add the Discord functionality to your application. This 
 6. Under "General information", copy the client ID and secret (different from bot secret) to your `local_env.yml` file's `DISCORD_CLIENT_ID` and `DISCORD_CLIENT_SECRET` respectively
 7. Now we need to add the bot your Discord server. Under "OAuth2", navigate to scopes and ensure that `bot` is checked. Under "Bot permissions", check `Administrator`
 8. Under scopes you should see a generated invitation URL based on the permissions/scopes you've selected. Paste that link into your browser and you'll be able to add the bot to whichever server you choose
-9. Finally, the application needs to know which server and channel it's sending messages and adding users to. You'll need to [find your server and channel IDs](https://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) and fill in `DISCORD_GUILD_ID` and `DISCORD_EVENTS_CHANNEL_ID`.
+9. Finally, the application needs to know which server and channel it's sending messages and adding users to. You'll need to [find your server and channel IDs](https://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) and fill in `DISCORD_SERVER_ID` and `DISCORD_ANNOUNCEMENT_CHANNEL_ID`.
 
 Now you're all set!
 
+### Environment Variables
+
+The application uses many environment variables to store client information for third-party apps (like Office authentication, Discord bots, etc.). These environmnent variables should be stored in `config/local_env.yml` and a template exists in `config/local_env.example.yml`.
+
++---------------------------+----------------------------------------------------------------------------------+
+| ENV Variable Name         | Description                                                                      |
++---------------------------+----------------------------------------------------------------------------------+
+| DISCORD_BOT_TOKEN         | Discord application's bot token                                                  |
++---------------------------+----------------------------------------------------------------------------------+
+| DISCORD_CLIENT_ID         | Discord application's client ID                                                  |
++---------------------------+----------------------------------------------------------------------------------+
+| DISCORD_CLIENT_SECRET     | Discord application's client secret                                              |
++---------------------------+----------------------------------------------------------------------------------+
+| DISCORD_SERVER_ID          | Guild (server) ID for the Discord server that the application is adding users to |
++---------------------------+----------------------------------------------------------------------------------+
+| DISCORD_ANNOUNCEMENT_CHANNEL_ID | Channel ID for the channel that the bot will send event announcements to         |
++---------------------------+----------------------------------------------------------------------------------+
+| HOST                      | Website URL (https://localhost:3000 for local instances)                         |
++---------------------------+----------------------------------------------------------------------------------+
+| GMAIL_USERNAME            | Email address that the website sends emails from                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| GMAIL_PASSWORD            | Password to the email address                                                    |
++---------------------------+----------------------------------------------------------------------------------+
+| AZURE_CLIENT_ID           | Azure project's client ID (for signing into UWindsor accounts)                   |
++---------------------------+----------------------------------------------------------------------------------+
+| AZURE_CLIENT_SECRET       | Azure project's client secret                                                    |
++---------------------------+----------------------------------------------------------------------------------+
 
 ### Common issues
 
