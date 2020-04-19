@@ -76,29 +76,18 @@ Now you're all set!
 
 The application uses many environment variables to store client information for third-party apps (like Office authentication, Discord bots, etc.). These environmnent variables should be stored in `config/local_env.yml` and a template exists in `config/local_env.example.yml`.
 
-+---------------------------+----------------------------------------------------------------------------------+
 | ENV Variable Name         | Description                                                                      |
-+---------------------------+----------------------------------------------------------------------------------+
+|---------------------------|----------------------------------------------------------------------------------|
 | DISCORD_BOT_TOKEN         | Discord application's bot token                                                  |
-+---------------------------+----------------------------------------------------------------------------------+
 | DISCORD_CLIENT_ID         | Discord application's client ID                                                  |
-+---------------------------+----------------------------------------------------------------------------------+
 | DISCORD_CLIENT_SECRET     | Discord application's client secret                                              |
-+---------------------------+----------------------------------------------------------------------------------+
 | DISCORD_SERVER_ID          | Guild (server) ID for the Discord server that the application is adding users to |
-+---------------------------+----------------------------------------------------------------------------------+
 | DISCORD_ANNOUNCEMENT_CHANNEL_ID | Channel ID for the channel that the bot will send event announcements to         |
-+---------------------------+----------------------------------------------------------------------------------+
 | HOST                      | Website URL (https://localhost:3000 for local instances)                         |
-+---------------------------+----------------------------------------------------------------------------------+
 | GMAIL_USERNAME            | Email address that the website sends emails from                                 |
-+---------------------------+----------------------------------------------------------------------------------+
 | GMAIL_PASSWORD            | Password to the email address                                                    |
-+---------------------------+----------------------------------------------------------------------------------+
 | AZURE_CLIENT_ID           | Azure project's client ID (for signing into UWindsor accounts)                   |
-+---------------------------+----------------------------------------------------------------------------------+
 | AZURE_CLIENT_SECRET       | Azure project's client secret                                                    |
-+---------------------------+----------------------------------------------------------------------------------+
 
 ### Common issues
 
