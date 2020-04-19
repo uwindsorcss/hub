@@ -76,6 +76,8 @@ Now you're all set!
 
 The application uses many environment variables to store client information for third-party apps (like Office authentication, Discord bots, etc.). These environmnent variables should be stored in `config/local_env.yml` and a template exists in `config/local_env.example.yml`.
 
+Each of these variables serves its own purpose (some described above in other sections). You do not need any of these configured to get the website running but you need them for certain things.
+
 | ENV Variable Name         | Description                                                                      |
 |---------------------------|----------------------------------------------------------------------------------|
 | DISCORD_BOT_TOKEN         | Discord application's bot token                                                  |
