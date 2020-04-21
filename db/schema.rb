@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200421184256) do
+ActiveRecord::Schema.define(version: 20200421192108) do
 
   create_table "discord_users", force: :cascade do |t|
     t.integer "discord_uid", limit: 8
@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 20200421184256) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "reputation", default: 0
-    t.datetime "last_rep_given"
     t.index ["user_id"], name: "index_discord_users_on_user_id"
   end
 
