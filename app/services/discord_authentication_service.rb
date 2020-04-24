@@ -9,7 +9,7 @@ class DiscordAuthenticationService
 
   def add_user_to_discord_guild!
     RestClient.put(
-      "https://discordapp.com/api/guilds/#{ENV['DISCORD_GUILD_ID']}/members/#{@user.first.discord_user.discord_uid}",
+      "https://discordapp.com/api/guilds/#{ENV['DISCORD_SERVER_ID']}/members/#{@user.first.discord_user.discord_uid}",
       { access_token: @access_token, nick: @user.first.name }.to_json,
       { content_type: :json, Authorization: "Bot #{ENV['DISCORD_BOT_TOKEN']}" }
     )

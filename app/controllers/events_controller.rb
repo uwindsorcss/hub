@@ -4,7 +4,7 @@ class EventsController < ApplicationController
     event_title = @event.title
     if current_user&.is_admin?
       @event.destroy
-      DiscordMessageService.delete_message!(DiscordMessageService::DISCORD_EVENTS_CHANNEL_ID, @event.discord_message_id)
+      DiscordMessageService.delete_message!(DiscordMessageService::DISCORD_ANNOUNCEMENT_CHANNEL_ID, @event.discord_message_id)
       redirect_to events_path, flash: { error: "Successfully deleted \"#{event_title}\"" }
     else
       redirect_to events_path, flash: { error: "Error deleting \"#{event_title}\""}
@@ -30,7 +30,7 @@ class EventsController < ApplicationController
       if @event.update(event_params)
         redirect_to @event
         if @event.discord_message_id && @event.discord_enabled
-          DiscordMessageService.edit_message!(DiscordMessageService::DISCORD_EVENTS_CHANNEL_ID, @event.discord_message_id, build_event_message(@event))
+          DiscordMessageService.edit_message!(DiscordMessageService::DISCORD_ANNOUNCEMENT_CHANNEL_ID, @event.discord_message_id, build_event_message(@event))
         end
       else
         render 'edit'
@@ -46,7 +46,7 @@ class EventsController < ApplicationController
     if current_user&.is_admin?
       if @event.save
         if @event.discord_enabled
-          message_result = DiscordMessageService.send_message!(DiscordMessageService::DISCORD_EVENTS_CHANNEL_ID, build_event_message(@event))
+          message_result = DiscordMessageService.send_message!(DiscordMessageService::DISCORD_ANNOUNCEMENT_CHANNEL_ID, build_event_message(@event))
           message_result = JSON.parse(message_result)
           @event.update(discord_message_id: message_result["id"])
         end
