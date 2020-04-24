@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200309204634) do
+ActiveRecord::Schema.define(version: 20200421192108) do
 
   create_table "discord_users", force: :cascade do |t|
     t.integer "discord_uid", limit: 8
@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 20200309204634) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "reputation", default: 0
-    t.datetime "last_rep_given"
     t.index ["user_id"], name: "index_discord_users_on_user_id"
   end
 
@@ -73,6 +71,16 @@ ActiveRecord::Schema.define(version: 20200309204634) do
     t.boolean "waitlisted"
     t.index ["event_id"], name: "index_registrations_on_event_id"
     t.index ["user_id"], name: "index_registrations_on_user_id"
+  end
+
+  create_table "sparkles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "sender_user_id"
+    t.integer "receiver_user_id"
+    t.integer "sender_id"
+    t.integer "receiver_id"
+    t.string "reason"
   end
 
   create_table "users", force: :cascade do |t|

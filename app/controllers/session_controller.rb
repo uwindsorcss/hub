@@ -1,5 +1,6 @@
 class SessionController < ApplicationController
   BLACKLISTED_EMAILS = JSON.parse(File.read('config/blacklist.json'))["blacklisted_emails"].to_set
+  DISCORD_TUTORIAL_VIDEO = "https://www.youtube.com/watch?v=nkOhL3-53Kg&t=184"
 
   def create
     provider = params[:provider]
@@ -113,5 +114,6 @@ class SessionController < ApplicationController
       }
     }
     DiscordMessageService.send_message_to_dm!(discord_user.discord_uid, message)
+    DiscordMessageService.send_message_to_dm!(discord_user.discord_uid, { content: DISCORD_TUTORIAL_VIDEO })
   end
 end
