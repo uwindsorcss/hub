@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200421192108) do
+ActiveRecord::Schema.define(version: 20200501023142) do
 
   create_table "discord_users", force: :cascade do |t|
     t.integer "discord_uid", limit: 8
@@ -41,19 +41,6 @@ ActiveRecord::Schema.define(version: 20200421192108) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["registration_id"], name: "index_guests_on_registration_id"
-  end
-
-  create_table "job_postings", force: :cascade do |t|
-    t.string "company"
-    t.string "job_title"
-    t.string "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.boolean "approved"
-    t.boolean "reported"
-    t.string "location"
-    t.index ["user_id"], name: "index_job_postings_on_user_id"
   end
 
   create_table "markdown_pages", force: :cascade do |t|
