@@ -12,15 +12,6 @@ Rails.application.routes.draw do
   root to: "pages#index"
 
   resources :events
-  resources :job_postings do
-    collection do
-      get :review
-    end
-    member do
-      patch :approve
-      patch :report
-    end
-  end
 
   resources :markdown_pages, only: [:edit, :update, :new, :create]
 

@@ -247,7 +247,6 @@ A: For most co-op applications you must submit your transcript. Smaller/local co
 
 
 ### Job Boards
-- [CSS Job Board](https://css.uwindsor.ca/job_postings) - Various job postings contributed by CSS members and other CS students. You can either look for jobs to apply to, or submit one you found so other students can apply.
 - [intern.supply](http://intern.supply) - Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
 - [LinkedIn](https://www.linkedin.com/jobs/) - It's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
 
