@@ -4,7 +4,7 @@ http://css.uwindsor.ca
 
 ## Overview
 
-The University of Windsor Computer Science Society (CSS) website was built to provide students with the many resources that students and CSS has to offer. It provides a location for news, events, a job board, an open-source student guide, and even our exclusive authentication into our Discord server!
+The University of Windsor Computer Science Society (CSS) website was built to provide students with the many resources that students and CSS has to offer. It provides a location for news, events, an open-source student guide, and even our exclusive authentication into our Discord server!
 
 ## Contributing
 
