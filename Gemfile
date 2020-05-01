@@ -73,7 +73,6 @@ gem 'mini_racer'
 gem 'date_validator'
 gem 'font-awesome-rails'
 gem "validate_url"
-gem 'rack-attack'
 gem 'sidekiq'
 gem 'faker'
 gem 'omniauth-microsoft_graph'
