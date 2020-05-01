@@ -1,6 +1,15 @@
 class Event < ApplicationRecord
   has_many :registrations, dependent: :destroy
-  has_many :users, through: :registrations
+  has_many :registered_users, through: :registrations, source: :user do
+    def not_waitlisted
+      where('registrations.waitlisted = ?', false)
+    end
+
+    def waitlisted
+      where('registrations.waitlisted = ?', true)
+    end
+  end
+
   has_many :guests, through: :registrations
 
   validates :title, :description, :start_date, presence: true, length: { minimum: 3 }
@@ -10,40 +19,30 @@ class Event < ApplicationRecord
   validate :waitlist_up_to_date, if: :will_save_change_to_capacity?
 
   def current_capacity
-    self.registered_users.size
+    registered_users.not_waitlisted.count
   end
 
   def spots_remaining
-    self.capacity - self.current_capacity
-  end
-
-  def all_guests
-    self.registered_users
-  end
-
-  def registered_users
-    self.registrations.each_with_object([]) do |r, registered_users|
-      registered_users << r.user if r.reload.waitlisted == false
-    end
+    capacity - current_capacity
   end
 
   def waitlisted_users
-    waitlist = self.registrations.where(waitlisted: true).sort_by &:created_at
+    waitlist = registrations.where(waitlisted: true).sort_by(&:created_at)
     waitlist.each_with_object([]) do |r, waitlisted_users|
       waitlisted_users << r.user
     end
   end
 
   def waitlisted_registrations
-    self.registrations.where(waitlisted: true).sort_by &:created_at
+    registrations.where(waitlisted: true).sort_by(&:created_at)
   end
 
   def waitlist_size
-    self.registrations.where(waitlisted: true).count
+    registered_users.waitlisted.count
   end
 
   def update_waitlist
-    while spots_remaining > 0 && waitlist_size > 0
+    while spots_remaining.positive? && waitlist_size.positive?
       registration_to_update = waitlisted_registrations.first
       user_to_register = registration_to_update.user
       registration_to_update.update(waitlisted: false)
@@ -52,7 +51,7 @@ class Event < ApplicationRecord
   end
 
   def multi_day?
-    self.start_date.to_date != self.end_date.to_date
+    start_date.to_date != end_date.to_date
   end
 
   def google_calendar_url
@@ -75,7 +74,7 @@ class Event < ApplicationRecord
   private
 
   def waitlist_up_to_date
-    self.update_waitlist
-    return true
+    update_waitlist
+    true
   end
 end
