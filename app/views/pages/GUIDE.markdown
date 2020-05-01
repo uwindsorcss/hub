@@ -12,6 +12,7 @@ Table of Contents
     * [Easy courses](#easy-courses)
     * [School Resources](#school-resources)
     * [Planning your courses](#planning-your-courses)
+    * [Internship Courses](#internship-courses)
 - [Co-op/Internships](#co-op-and-internships)
     * [Frequently Asked Questions](#frequently-asked-questions)
     * [Resume Examples](#resume-examples)
@@ -19,6 +20,7 @@ Table of Contents
     * [Interview Preparation](#interview-preparation)
     * [Interview Prep Resources](#interview-prep-resources)
     * [Working in the USA](#working-in-the-usa)
+- [Research](#research)
 - [Miscellaneous](#miscellaneous)
     * [Hackathons](#hackathons)
     * [Student Exchanges](#student-exchanges)
@@ -60,6 +62,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Aman Patel](https://github.com/amanpatel123)
 - [Abdullah Arif](https://github.com/aarif123456)
 - [Jeremie Bornais](https://github.com/jere-mie)
+- [Prakort Lean](https://github.com/prakort)
 
 
 # Important Dates
@@ -204,6 +207,24 @@ Harshdip has followed this exact sequence.
 - COMP-3220 Obj Oriented Software Anal/Des
 - COMP-3710 Artificial Intelligence Concepts
 
+# Internship Courses
+###### Courses that help you gains practical skills:
+- SCIE-3990 Internship Course 
+- SCIE-3800 Service Learning
+
+They are 3 credits PASS/FAIL courses that will course toward your electives. The courses are the flexible version of co-op placement. 
+
+###### How to enrol?
+1st-4th year students are eligible to enrol but with the instructor permission [Michelle Bondy](mbondy@uwindsor.ca). First, you will need a placement such as lab work, research or an internship that related to your program. Do not worry, if you could not find any, there are placements listed for these courses that you could pick. However, it is better to find your own paid placement. Paid or volunteer placement is valid since the purpose of the courses is to help you gain experience in the professional work environment.
+
+###### Requirements:
+- Must complete 108 hours during the placement.
+- Report bi-weekly hour log and bi-weekly assignment about learning expereience.
+- Self evalution for midterm by the student and the final evalution done by the supervisor of the placement. 
+
+######Two Birds with One Stone:
+You could enrol in this course while you are an [OS program placement](#research). Since the OS contract requires you to complete 45-100 hours and the course requires 106 hours and frequent reports to the instructor. With these two requirements satisfied as the OS placement, you use SCIE-3990 or SCIE-3800 as the placement in the OS contract. In the end, you get to complete a placement and a 3 credits course by workig for only one.
+
 # Co-op and Internships
 ------------
 
@@ -281,6 +302,63 @@ You'll need an American bank account to get paid if you're working in the USA. T
 
 It's also a very good idea to obtain a Social Security Number in the USA so that you can apply for a credit card and build up a credit score in the US (can be helpful in many ways in the future). This is also straight-forward and you need to wait until you're in the USA for at least 10 days before you can apply.
 
+# Research
+------------
+### Outstanding Scholars
+
+Uwindsor offers Outstanding Scholars program for students to get involved in research projects. Student will get paid for the placement under the supervision of the instructors. The program requires student to complete 6 placements in order to complete the OS program. Most students will start their placement from 3rd semester until the last semester to complete all 6 placements. 
+
+### Is it right for you? 
+
+As you are reading this section that means you have interests in research, however whether it is the right path that aligns your career goal.
+
+If you plan to do graduate studies, research is the best way to get you started. It will give you the helpful insight of how the research study works. You will build a good relationship with different faculty members that will help you when you apply for grad school. 
+
+If you do not want to continue the study, I suggest focusing on [Co-op/Internships](#co-op-and-internships) instead. You will gain different practical skills and experience that will help you. 
+
+######Pros: 
+- Paid placement 2nd/3rd year 16.35$/hours and 4th year 17.30$/hours.
+- Flexible total hours for working 45-100 hours per placement.
+- Great opportunities to pursue grad school.
+- A lot of machine learning research projects and cyber security focusing on different kind areass such as social network analysis and document and network anaylsis.
+- Placements are not limited in the department. OS program is an golden key that could open any research doors for you.
+- You could put your resume.
+- Oustanding Scholars Modal & Golden Maple Leaf Medallion will be awarded.
+
+######Cons:
+- Time consuming.
+- Depends on research projects, there are a lot of reading materials.
+- Depends on research projects, do not expect to code a lot. Unless you are buidling a traning model for machine learning algorithm or simulating model.
+- Weekly or Bi-weekly meeting. Must keep close contact with professor with your progress.
+- If the supervisor is too busy, we know most of them are then you are mostly on your own. That's why finding a good supervisor is very important.
+
+
+### How to get in the OS program? 
+
+######Apply from high school. 
+- You will be considered as a candidate directly from high school if you are selected. In the second year, your placement will start.
+
+######Apply after the first year. 
+- You will be invited to apply for the OS program after completing two semesters. Then if you are selected, your research placement will start the next term.
+
+######Requirements:
+- Academic accomplishments: GPA 85% or higher.
+- Evident desire to do research or original creative work for the benefit of others.
+- Evidence of community service.
+- Leadership, through excellence in athletic, creative, or other fields, or through serving in a formal leadership role.
+- Specific research project that you are interests.
+- A reference letter from a faculty member or instructor. To get a greate reference letter, you could get to know more about the professor research project during the office hour. This will shows that you are curious and willing to learn. They will put a good word for you.
+
+######Bugs in the OS program system
+- If you complete only 9 courses for 2 semesters in the first year, then you will not receive an invitation to apply for the program. Do not worry,you could contact [Dr. Simon du Toit](scholars@uwindsor.ca) to inform him about your interests in the program.
+- If you complete more than 14 to 15 courses already, could you apply? Answer is ***YES***. What is the problem regarding the number of courses you have taken? As mentioned above, in order to graduate as an OS student. One must complete 6 placements. This is 6 semesters of 3 years of your study. If you have complete more than 10 courses then you have less than 6 semesters left. You will not meet the requirement. ***However***, if you plan to take an extra summer course and do research placement, then you are eligible to apply. Contact [Dr. Simon du Toit](scholars@uwindsor.ca) and explain your goal to complete the program.
+
+### CSS members in OS program
+- [Prakort Lean](leanp@uwindsor.ca)
+- [Andrea Bonato](bonato11@uwindsor.ca)
+- [Aman Patel](patel1wq@uwindsor.ca)
+
+If you have any questions, send us an email! We are happy to help.
 
 # Miscellaneous
 ------------
