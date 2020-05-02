@@ -319,7 +319,7 @@ If you do not want to continue the study, I suggest focusing on [Co-op/Internshi
 - Paid placement 2nd/3rd year 16.35$/hours and 4th year 17.30$/hours.
 - Flexible total hours for working 45-100 hours per placement.
 - Great opportunities to pursue grad school.
-- A lot of machine learning research projects and cyber security focusing on different kind areass such as social network analysis and document and network anaylsis.
+- A lot of machine learning research projects and cyber security focusing on different kind areas such as social network analysis and document and network analysis.
 - Placements are not limited in the department. OS program is an golden key that could open any research doors for you.
 - You could put your resume.
 - Oustanding Scholars Modal & Golden Maple Leaf Medallion will be awarded.
