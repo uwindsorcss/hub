@@ -215,7 +215,7 @@ Harshdip has followed this exact sequence.
 They are 3 credits PASS/FAIL courses that will count toward your electives. These courses are the flexible version of co-op placement. 
 
 ###### How to enrol?
-1st-4th year students are eligible to enrol but with the instructor permission [Michelle Bondy](mbondy@uwindsor.ca). First, you will need a placement such as lab work, research or an internship that related to your program. Do not worry, if you could not find any, there are placements listed for these courses that you could pick. However, it is better to find your own paid placement. Paid or volunteer placement is valid since the purpose of the courses is to help you gain experience in the professional work environment.
+1st-4th year students are eligible to enroll but with the instructor's permission [Michelle Bondy](mbondy@uwindsor.ca). First, you will need a placement such as a lab work, research, or an internship that is related to your program. Do not worry, if you could not find any, there are placements listed for these courses that you could pick from. However, it is better to find your own paid placement. Paid or volunteer placement is valid since the purpose of the courses is to help you gain experience in the professional work environment.
 
 ###### Requirements:
 - Must complete 108 hours during the placement.
