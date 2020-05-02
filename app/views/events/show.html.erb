@@ -109,7 +109,8 @@
     <div class="card">
       <div class="card-body">
         <p class="card-text" id="email_ids">
-          <%= @registered_users_email_string %></p>
+          <%= @registered_users_email_string %>
+        </p>
         <button type="button" class="btn btn-primary" onclick="CopyToClipboard()">Copy to Clipboard</button>
       </div>
     </div>
@@ -123,12 +124,12 @@
     <% else %>
       <% @waitlisted_users.each do |guest| %>
         <li class="list-group-item" style="display: list-item;">
-        <%= guest.name %> - <%= guest.email %>
-        <%= link_to 'Remove',
-          registration_path(user_id: guest.id, event_id: @event),
-          method: :delete,
-          data: { confirm: "Are you sure? You will remove #{guest.name} from this event."},
-          class: "btn btn-danger pull-right" %>
+          <%= guest.name %> - <%= guest.email %>
+          <%= link_to 'Remove',
+            registration_path(user_id: guest.id, event_id: @event),
+            method: :delete,
+            data: { confirm: "Are you sure? You will remove #{guest.name} from this event."},
+            class: "btn btn-danger pull-right" %>
         </li>
       <% end %>
     <% end %>
