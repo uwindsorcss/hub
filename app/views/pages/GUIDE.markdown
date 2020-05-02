@@ -349,7 +349,7 @@ If you do not want to continue the study, I suggest focusing on [Co-op/Internshi
 - A reference letter from a faculty member or instructor. To get a greate reference letter, you could get to know more about the professor research project during the office hour. This will shows that you are curious and willing to learn. They will put a good word for you.
 
 ######Bugs in the OS program system
-- If you complete only 9 courses for 2 semesters in the first year, then you will not receive an invitation to apply for the program. Do not worry,you could contact [Dr. Simon du Toit](scholars@uwindsor.ca) to inform him about your interests in the program.
+- If you complete only 9 courses for 2 semesters in the first year, then you will not receive an invitation to apply for the program. Do not worry, you could contact [Dr. Simon du Toit](scholars@uwindsor.ca) to inform him about your interests in the program.
 - If you complete more than 14 to 15 courses already, could you apply? Answer is ***YES***. What is the problem regarding the number of courses you have taken? As mentioned above, in order to graduate as an OS student. One must complete 6 placements. This is 6 semesters of 3 years of your study. If you have complete more than 10 courses then you have less than 6 semesters left. You will not meet the requirement. ***However***, if you plan to take an extra summer course and do research placement, then you are eligible to apply. Contact [Dr. Simon du Toit](scholars@uwindsor.ca) and explain your goal to complete the program.
 
 ### CSS members in OS program
