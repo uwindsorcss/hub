@@ -212,7 +212,7 @@ Harshdip has followed this exact sequence.
 - SCIE-3990 Internship Course 
 - SCIE-3800 Service Learning
 
-They are 3 credits PASS/FAIL courses that will course toward your electives. The courses are the flexible version of co-op placement. 
+They are 3 credits PASS/FAIL courses that will count toward your electives. These courses are the flexible version of co-op placement. 
 
 ###### How to enrol?
 1st-4th year students are eligible to enrol but with the instructor permission [Michelle Bondy](mbondy@uwindsor.ca). First, you will need a placement such as lab work, research or an internship that related to your program. Do not worry, if you could not find any, there are placements listed for these courses that you could pick. However, it is better to find your own paid placement. Paid or volunteer placement is valid since the purpose of the courses is to help you gain experience in the professional work environment.
