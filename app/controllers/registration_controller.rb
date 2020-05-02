@@ -22,17 +22,14 @@ class RegistrationController < ApplicationController
   end
 
   def destroy
-    is_registrationId_given = params[:registration_id].present?
-    if is_registrationId_given
+    if params[:registration_id].present?
       @registration = Registration.find(params[:registration_id])
-    elsif current_user.is_admin?
+    else
       event_id = params[:event_id]
       user_id = params[:user_id]
-      @registration = Registration.where(user_id,event_id).first
-    else 
-      redirect_to event_path(params[:event_id])
+      @registration = Registration.where(user_id: user_id, event_id: event_id).first
     end
-      
+    
     if ((current_user == @registration.user) || current_user.is_admin?) && @registration.event.start_date.future?
       user_waitlisted = @registration.waitlisted
       event = @registration.event
