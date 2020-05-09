@@ -80,6 +80,9 @@
   </div>
 </div>
 <br>
+<%= social_share_button_tag(@event.title, :url => request.original_url, desc: @event.title) %>
+<br>
+
 <% if current_user&.is_admin? %>
   <h5>Guest List</h5>
   <ol class="list-group">

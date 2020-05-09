@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class JobPostingsControllerTest < ActionDispatch::IntegrationTest
+class SparkleTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

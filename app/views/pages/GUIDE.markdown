@@ -12,6 +12,7 @@ Table of Contents
     * [Easy courses](#easy-courses)
     * [School Resources](#school-resources)
     * [Planning your courses](#planning-your-courses)
+    * [Internship Courses](#internship-courses)
 - [Co-op/Internships](#co-op-and-internships)
     * [Frequently Asked Questions](#frequently-asked-questions)
     * [Resume Examples](#resume-examples)
@@ -19,6 +20,7 @@ Table of Contents
     * [Interview Preparation](#interview-preparation)
     * [Interview Prep Resources](#interview-prep-resources)
     * [Working in the USA](#working-in-the-usa)
+- [Research](#research)
 - [Miscellaneous](#miscellaneous)
     * [Hackathons](#hackathons)
     * [Student Exchanges](#student-exchanges)
@@ -53,12 +55,14 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Jose Nicolas Alba Aguado](http://josealba.org)
 - [Brandon Lucier](https://blucier.com/)  
 - [Ferruccio Sisti](https://github.com/FerruccioSisti)
+- [Ryan Prairie](https://ryanprairie.com)
 - [Steven Shlimoon](https://github.com/shli3)
 - [Bailey Chittle](https://github.com/bachittle)
 - [Zain Raza](https://github.com/zainaraza43)
 - [Aman Patel](https://github.com/amanpatel123)
 - [Abdullah Arif](https://github.com/aarif123456)
 - [Jeremie Bornais](https://github.com/jere-mie)
+- [Prakort Lean](https://github.com/prakort)
 
 
 # Important Dates
@@ -76,10 +80,10 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 ### Summer 2020
 Summer courses are the normal, 12-week courses. This list does not include Intersession.
 
-- May 4 - Classes begin
-- June 13 - June 21 - Reading week
-- August 5 - Last day of classes
-- August 8 - August 17 - Final exams
+- May 19 - Classes begin
+- June 27 - July 5 - Reading week
+- August 18 - Last day of classes
+- August 21 - August 29 - Final exams
 
 
 
@@ -107,16 +111,16 @@ Summer courses are the normal, 12-week courses. This list does not include Inter
 | COMP-1410 | Intro to Programming and Algorithms II | Not Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1000 or MATH-1720, COMP-1400 |   
 | COMP-2057 | Intro to the Internet | Offered | Offered | Offered | | COMP-1047 or COMP-2067 or COMP-1400|
 | COMP-2067 | Programming for Beginners | Not Offered | Offered | Offered | | |
-| COMP-2077 | Problem Solving and Information on the Internet | Offered | Offered | Not Offered | | COMP-1047, COMP-2057|
+| COMP-2077 | Problem Solving and Information on the Internet | Offered | Offered | Offered | | COMP-1047, COMP-2057|
 | COMP-2097 | Social Media and Mobile Technology for End Users | Offered | Offered | Offered |  |  |
 | COMP-2120 | Object Oriented Programming Using Java | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1410|
 | COMP-2140 | Computer Languages, Grammars and Translators | Not Offered | Offered | Not Offered | 💙💚🖤 | COMP-1000, COMP-2120 |
-| COMP-2310 | Theoretical Foundations of Computer Science | Offered | Not Offered | Not Offered | 💙💚🖤 | COMP-1000, MATH-1020 |
+| COMP-2310 | Theoretical Foundations of Computer Science | Offered | Not Offered | Offered | 💙💚🖤 | COMP-1000, MATH-1020 |
 | COMP-2540 | Data Structures and Algorithms | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1000, COMP-1410 |
 | COMP-2560 | System Programming | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1410 |
 | COMP-2650 | Computer Architecture I | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1400 |
 | COMP-2660 | Computer Architecture II | Offered | Offered | Not Offered | ❤️💙💛💚 | COMP-2650 |
-| COMP-2707 | Advanced Website Design | Offered | Offered | Not Offered |  | COMP-2057 |
+| COMP-2707 | Advanced Website Design | Offered | Offered | Offered |  | COMP-2057 |
 | COMP-2800 | Software Development | Not Offered | Offered | Not Offered | 💚 | COMP-2120 |
 | COMP-3057 | Cyber-Ethics | Not Offered | Offered | Offered |  | COMP-1047, COMP-2057 |
 | COMP-3077 | Web-Based Data Management | Not Offered | Offered | Not Offered |  | COMP-2707 |
@@ -138,7 +142,7 @@ Summer courses are the normal, 12-week courses. This list does not include Inter
 | COMP-4200 | Mobile Application Development | Offered | Not Offered | Not Offered | 💛 | COMP-3150, COMP-3220 |
 | COMP-4220 | Agile Software Development | Offered | Not Offered | Not Offered | 💛 | COMP-3220 |
 | COMP-4250 | Big Data Analytics and Database Design | Not Offered | Offered | Not Offered | 💛 | COMP-3150 |
-| COMP-4400 | Principles of Programming Languages | Offered | Not Offered | Offered | 💙💚 | COMP-2140, COMP-2310, COMP-2540 |
+| COMP-4400 | Principles of Programming Languages | Offered | Not Offered | Not Offered | 💙💚 | COMP-2140, COMP-2310, COMP-2540 |
 | COMP-4540 | Design and Analysis of Algorithms | Offered | Offered | Not Offered | 💙💚 | COMP-2310, COMP-2540, COMP-3540 |
 | COMP-4670 | Network Security | Offered | Not Offered | Not Offered |  | COMP-3670 |
 | COMP-4680 | Advanced Networking | Not Offered | Offered | Not Offered |  | COMP-3670, COMP-3680 |
@@ -146,7 +150,7 @@ Summer courses are the normal, 12-week courses. This list does not include Inter
 | COMP-4740 | Advanced Topics in AI II | Not Offered | Offered | Not Offered |  | COMP-3710 |
 | COMP-4770 | Artifical Intelligence for Games | Not Offered | Offered | Not Offered |  | COMP-3770 |
 | COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered | 💚 | COMP-3110, COMP-3220, COMP-3300 |
-| COMP-4960 | Research Project | Offered | Offered | Not Offered | 💙💚 | |
+| COMP-4960 | Research Project | Offered | Offered | Offered | 💙💚 | |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 | |
 
 #### Easy courses
@@ -203,6 +207,24 @@ Harshdip has followed this exact sequence.
 - COMP-3220 Obj Oriented Software Anal/Des
 - COMP-3710 Artificial Intelligence Concepts
 
+# Internship Courses
+###### Courses that help you gains practical skills:
+- SCIE-3990 Internship Course 
+- SCIE-3800 Service Learning
+
+They are 3 credits PASS/FAIL courses that will count toward your electives. These courses are the flexible version of co-op placement. 
+
+###### How to enrol?
+1st-4th year students are eligible to enroll but with the instructor's permission [Michelle Bondy](mbondy@uwindsor.ca). First, you will need a placement such as a lab work, research, or an internship that is related to your program. Do not worry, if you could not find any, there are placements listed for these courses that you could pick from. However, it is better to find your own paid placement. Paid or volunteer placement is valid since the purpose of the courses is to help you gain experience in the professional work environment.
+
+###### Requirements:
+- Must complete 108 hours during the placement.
+- Report bi-weekly hour log and bi-weekly assignment about learning expereience.
+- Self evalution for midterm by the student and the final evalution done by the supervisor of the placement. 
+
+######Two Birds with One Stone:
+You could enrol in this course while you are an [OS program placement](#research). Since the OS contract requires you to complete 45-100 hours and the course requires 106 hours and frequent reports to the instructor. With these two requirements satisfied as the OS placement, you use SCIE-3990 or SCIE-3800 as the placement in the OS contract. In the end, you get to complete a placement and a 3 credits course by workig for only one.
+
 # Co-op and Internships
 ------------
 
@@ -246,7 +268,6 @@ A: For most co-op applications you must submit your transcript. Smaller/local co
 
 
 ### Job Boards
-- [CSS Job Board](https://css.uwindsor.ca/job_postings) - Various job postings contributed by CSS members and other CS students. You can either look for jobs to apply to, or submit one you found so other students can apply.
 - [intern.supply](http://intern.supply) - Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
 - [LinkedIn](https://www.linkedin.com/jobs/) - It's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
 
@@ -280,6 +301,63 @@ You'll need an American bank account to get paid if you're working in the USA. T
 
 It's also a very good idea to obtain a Social Security Number in the USA so that you can apply for a credit card and build up a credit score in the US (can be helpful in many ways in the future). This is also straight-forward and you need to wait until you're in the USA for at least 10 days before you can apply.
 
+# Research
+------------
+### Outstanding Scholars
+
+Uwindsor offers Outstanding Scholars program for students to get involved in research projects. Student will get paid for the placement under the supervision of the instructors. The program requires student to complete 6 placements in order to complete the OS program. Most students will start their placement from 3rd semester until the last semester to complete all 6 placements. 
+
+### Is it right for you? 
+
+As you are reading this section that means you have interests in research, however whether it is the right path that aligns your career goal.
+
+If you plan to do graduate studies, research is the best way to get you started. It will give you the helpful insight of how the research study works. You will build a good relationship with different faculty members that will help you when you apply for grad school. 
+
+If you do not want to continue the study, I suggest focusing on [Co-op/Internships](#co-op-and-internships) instead. You will gain different practical skills and experience that will help you. 
+
+######Pros: 
+- Paid placement 2nd/3rd year 16.35$/hours and 4th year 17.30$/hours.
+- Flexible total hours for working 45-100 hours per placement.
+- Great opportunities to pursue grad school.
+- A lot of machine learning research projects and cyber security focusing on different kind areas such as social network analysis and document and network analysis.
+- Placements are not limited in the department. OS program is an golden key that could open any research doors for you.
+- You could put your resume.
+- Oustanding Scholars Modal & Golden Maple Leaf Medallion will be awarded.
+
+######Cons:
+- Time consuming.
+- Depends on research projects, there are a lot of reading materials.
+- Depends on research projects, do not expect to code a lot. Unless you are buidling a traning model for machine learning algorithm or simulating model.
+- Weekly or Bi-weekly meeting. Must keep close contact with professor with your progress.
+- If the supervisor is too busy, we know most of them are then you are mostly on your own. That's why finding a good supervisor is very important.
+
+
+### How to get in the OS program? 
+
+######Apply from high school. 
+- You will be considered as a candidate directly from high school if you are selected. In the second year, your placement will start.
+
+######Apply after the first year. 
+- You will be invited to apply for the OS program after completing two semesters. Then if you are selected, your research placement will start the next term.
+
+######Requirements:
+- Academic accomplishments: GPA 85% or higher.
+- Evident desire to do research or original creative work for the benefit of others.
+- Evidence of community service.
+- Leadership, through excellence in athletic, creative, or other fields, or through serving in a formal leadership role.
+- Specific research project that you are interests.
+- A reference letter from a faculty member or instructor. To get a greate reference letter, you could get to know more about the professor research project during the office hour. This will shows that you are curious and willing to learn. They will put a good word for you.
+
+######Bugs in the OS program system
+- If you complete only 9 courses for 2 semesters in the first year, then you will not receive an invitation to apply for the program. Do not worry, you could contact [Dr. Simon du Toit](scholars@uwindsor.ca) to inform him about your interests in the program.
+- If you complete more than 14 to 15 courses already, could you apply? Answer is ***YES***. What is the problem regarding the number of courses you have taken? As mentioned above, in order to graduate as an OS student. One must complete 6 placements. This is 6 semesters of 3 years of your study. If you have complete more than 10 courses then you have less than 6 semesters left. You will not meet the requirement. ***However***, if you plan to take an extra summer course and do research placement, then you are eligible to apply. Contact [Dr. Simon du Toit](scholars@uwindsor.ca) and explain your goal to complete the program.
+
+### CSS members in OS program
+- [Prakort Lean](leanp@uwindsor.ca)
+- [Andrea Bonato](bonato11@uwindsor.ca)
+- [Aman Patel](patel1wq@uwindsor.ca)
+
+If you have any questions, send us an email! We are happy to help.
 
 # Miscellaneous
 ------------

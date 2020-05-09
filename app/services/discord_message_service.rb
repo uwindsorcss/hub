@@ -1,6 +1,5 @@
 class DiscordMessageService 
   DISCORD_API_ENDPOINT = "https://discordapp.com/api"
-  DISCORD_EVENTS_CHANNEL_ID = ENV['DISCORD_EVENTS_CHANNEL_ID']
   SIDE_COLOR = "005696"
 
   def self.send_message!(channel_id, options)
@@ -30,7 +29,7 @@ class DiscordMessageService
   end
 
   def self.send_message_to_dm!(discord_uid, options)
-    options.deep_merge!(default_options)
+    options.deep_merge!(default_embed_options) if options[:embed]
     dm_channel = JSON.parse(
         RestClient.post(
         "#{DISCORD_API_ENDPOINT}/users/@me/channels",
@@ -48,7 +47,7 @@ class DiscordMessageService
 
   private
 
-  def self.default_options
+  def self.default_embed_options
     {
       embed: {
         thumbnail: { url: "https://css.uwindsor.ca/css-logo-square.png" },
