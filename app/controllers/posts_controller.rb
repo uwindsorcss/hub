@@ -2,12 +2,12 @@ class PostsController < ApplicationController
   before_action :has_admin_role, only: [:new, :create, :edit, :update]
 
   def index
-		@posts = Post.order(created_at: :desc).page(params[:page])
-	end
+    @posts = Post.order(created_at: :desc).page(params[:page])
+  end
 
 	def new
-		@post = Post.new
-	end
+    @post = Post.new
+  end
 
   def create
     @post = Post.new(post_params)
