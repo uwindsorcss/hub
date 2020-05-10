@@ -1,9 +1,4 @@
 class MarkdownPagesController < ApplicationController
-  def index
-    @page_title = "Home"
-    @pages = MarkdownPage.where(title: @page_title).order(created_at: :desc).page(params[:page])
-  end
-
   def new
     @page = MarkdownPage.new
   end
@@ -37,7 +32,7 @@ class MarkdownPagesController < ApplicationController
     else
       @page.errors.add(:title, :no_permission, message: "You do not have permission to modify pages!")
       render 'edit'
-    end    
+    end
   end
 
   def discord
