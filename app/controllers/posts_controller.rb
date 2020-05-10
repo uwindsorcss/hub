@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc).page(params[:page])
   end
 
-	def new
+  def new
     @post = Post.new
   end
 
