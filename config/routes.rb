@@ -9,11 +9,12 @@ Rails.application.routes.draw do
   match 'auth/:provider/callback' => 'session#create', via: [:post, :get]
 
    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'markdown_pages#index'
+  root to: 'posts#index'
 
   resources :events
 
   resources :markdown_pages, only: [:index, :edit, :update, :new, :create]
+  resources :posts, only: [:index, :edit, :update, :new, :create]
 
   resources :registration
 

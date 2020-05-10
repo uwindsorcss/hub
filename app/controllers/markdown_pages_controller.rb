@@ -56,8 +56,7 @@ class MarkdownPagesController < ApplicationController
   end
 
   private
-
-  def page_params
-    params.require(:markdown_page).permit(:title, :text)
-  end  
+    def page_params
+      params.require(:markdown_page).permit(:title, :text)
+    end
 end
