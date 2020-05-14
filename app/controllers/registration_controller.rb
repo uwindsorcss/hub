@@ -25,7 +25,7 @@ class RegistrationController < ApplicationController
     if params[:registration_id].present?
       @registration = Registration.find(params[:registration_id])
     else
-      @registration = Registration.where(user_id: params[:guest_id], event_id: params[:id]).first
+      @registration = Registration.find_by(user_id: params[:guest_id], event_id: params[:id])
     end
     
     if ((current_user == @registration.user) || current_user.is_admin?) && @registration.event.start_date.future?
@@ -35,7 +35,7 @@ class RegistrationController < ApplicationController
       event.update_waitlist unless user_waitlisted
       redirect_to event_path(params[:id]), flash: { warning: current_user.is_admin? ? "Successfully removed #{@registration.user.name}" : "Successfully unregistered from this event!" }
     else
-      redirect_to event_path(params[:event_id])
+      redirect_to event_path(params[:id])
     end
   end
 
