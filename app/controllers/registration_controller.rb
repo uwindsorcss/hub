@@ -33,7 +33,7 @@ class RegistrationController < ApplicationController
       event = @registration.event
       @registration.destroy
       event.update_waitlist unless user_waitlisted
-      redirect_to event_path(params[:event_id]), flash: { warning: current_user.is_admin? ? "Successfully removed #{@registration.user.name}" : "Successfully unregistered from this event!" }
+      redirect_to event_path(params[:id]), flash: { warning: current_user.is_admin? ? "Successfully removed #{@registration.user.name}" : "Successfully unregistered from this event!" }
     else
       redirect_to event_path(params[:event_id])
     end
