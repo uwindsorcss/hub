@@ -19,7 +19,6 @@
 <% if @page.present? %>
   <%= render 'markdown_pages/markdown_page', page: @page, page_title: @page_title %>
 <% else %>
-  <p>There is no content to show currently</p>
   <% if current_user&.is_admin? %>
    <%= link_to "New page", new_markdown_page_path(title: @page_title), class: "btn btn-success" %>
   <% end %>
