@@ -41,12 +41,12 @@
       <% if current_user && @event.start_date.future? %>
           <% if @user_registration&.waitlisted %>
             <%= link_to 'Leave Waitlist',
-              registration_path(event_id: @event.id, registration_id: @user_registration),
+              registration_path(user_id: current_user.id),
               method: :delete,
               class: "btn btn-danger" %>
           <% elsif @user_registration %>
             <%= link_to 'Unregister from Event',
-              registration_path(event_id: @event.id, registration_id: @user_registration),
+              registration_path(user_id: current_user.id),
               method: :delete,
               class: "btn btn-danger" %>
           <% elsif @event.current_capacity < @event.capacity %>
@@ -93,7 +93,7 @@
         <li class="list-group-item" style="display: list-item;">
           <%= guest.name %> - <%= guest.email %>
           <%= link_to 'Remove',
-            registration_path(guest_id: guest.id),
+            registration_path(user_id: guest.id),
             method: :delete,
             data: { confirm: "Are you sure? You will remove #{guest.name} from this event."},
             class: "btn btn-danger pull-right" %>
@@ -126,7 +126,7 @@
         <li class="list-group-item" style="display: list-item;">
           <%= guest.name %> - <%= guest.email %>
           <%= link_to 'Remove',
-            registration_path(guest_id: guest.id),
+            registration_path(user_id: guest.id),
             method: :delete,
             data: { confirm: "Are you sure? You will remove #{guest.name} from this event."},
             class: "btn btn-danger pull-right" %>
