@@ -16,7 +16,7 @@
     <!--PAGE TITLE-->
       <div class="form-group">
         <%= form.label :title %><br>
-        <%= form.text_field :title, value: (@page.title.present? ? @page.title : params[:title]), class: "form-control" %>
+        <%= form.text_field :title, value: (@page.title.present? ? @page.title : params[:title]), readonly: true, class: "form-control" %>
       </div>
 
         <!--CONTENT-->

@@ -1,0 +1,24 @@
+<h1>News</h1>
+<hr>
+
+<% if @posts.present? %>
+	<% @posts.each do |post| %>
+		<% if current_user&.is_admin? %>
+ 	 		<%= link_to "Edit page", edit_post_path(post), class: "btn btn-warning text-right float-right" %>
+		<% end %>
+		<h4><%= post.title %></h4>
+		<br>
+		<%= markdown(post.content) %>
+		<%= markdown("---------") %>
+		<br>
+	<% end %>
+   <%= paginate @posts, theme: 'twitter-bootstrap-4' %>
+<% else %>
+  There is currently no CSS news! Stay tuned for some Hot and exciting news. 
+  <br><br>
+<% end %>
+
+<% if current_user&.is_admin? %>
+   <%= link_to "New Post", new_post_path, class: "btn btn-success" %>
+<% end %>
+<br><br> 
