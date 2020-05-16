@@ -22,15 +22,20 @@ class RegistrationController < ApplicationController
   end
 
   def destroy
-    @registration = Registration.find(params[:registration_id])
-    if current_user == @registration.user && @registration.event.start_date.future?
+    if params[:registration_id].present?
+      @registration = Registration.find(params[:registration_id])
+    else
+      @registration = Registration.find_by(user_id: params[:guest_id], event_id: params[:id])
+    end
+    
+    if ((current_user == @registration.user) || current_user.is_admin?) && @registration.event.start_date.future?
       user_waitlisted = @registration.waitlisted
       event = @registration.event
       @registration.destroy
       event.update_waitlist unless user_waitlisted
-      redirect_to event_path(params[:event_id]), flash: { warning: "Successfully unregistered from this event!"  }
+      redirect_to event_path(params[:id]), flash: { warning: current_user.is_admin? ? "Successfully removed #{@registration.user.name}" : "Successfully unregistered from this event!" }
     else
-      redirect_to event_path(params[:event_id])
+      redirect_to event_path(params[:id])
     end
   end
 
