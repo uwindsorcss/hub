@@ -76,3 +76,7 @@ gem "validate_url"
 gem 'sidekiq'
 gem 'faker'
 gem 'omniauth-microsoft_graph'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
