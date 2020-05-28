@@ -170,7 +170,8 @@ List of bird courses:
 #### School Resources
 - [List of different degrees/specializations in Computer Science with their course requirements](https://web4.uwindsor.ca/units/registrar/calendars/undergraduate/cur.nsf/982f0e5f06b5c9a285256d6e006cff78/40a4d00a28a9d3e685257362006c8367!OpenDocument)
 
-- [Put your schedule in a timetable!](https://www.freecollegeschedulemaker.com/)
+- **NEW:** [Timetable creator with Course Search made by Bailey Chittle, a fellow CS student](https://utable.net/) 
+
 
 #### Planning your courses
 It is always better to have a good plan about the course you'll be taking each semester. Harshdip has completed 4 semesters, taking all the major courses. This way saving up all the electives is one approach. If you find 5 courses overwhelming, taking only 4 courses or an easy elective as a 5th course is another approach. Check out the list of bird courses.
