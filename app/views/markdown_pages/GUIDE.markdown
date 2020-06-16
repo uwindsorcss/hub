@@ -63,6 +63,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Abdullah Arif](https://github.com/aarif123456)
 - [Jeremie Bornais](https://github.com/jere-mie)
 - [Prakort Lean](https://github.com/prakort)
+- [Yuxi Wang](https://github.com/yuxi-w)
 
 
 # Important Dates
@@ -146,12 +147,18 @@ Summer courses are the normal, 12-week courses. This list does not include Inter
 | COMP-4540 | Design and Analysis of Algorithms | Offered | Offered | Not Offered | 💙💚 | COMP-2310, COMP-2540, COMP-3540 |
 | COMP-4670 | Network Security | Offered | Not Offered | Not Offered |  | COMP-3670 |
 | COMP-4680 | Advanced Networking | Not Offered | Offered | Not Offered |  | COMP-3670, COMP-3680 |
-| COMP-4730 | Maching Learning | Offered | Offered | Not Offered |  | COMP-3710 |
+| COMP-4730 | Machine Learning | Offered | Offered | Not Offered |  | COMP-3710 |
 | COMP-4740 | Advanced Topics in AI II | Not Offered | Offered | Not Offered |  | COMP-3710 |
 | COMP-4770 | Artifical Intelligence for Games | Not Offered | Offered | Not Offered |  | COMP-3770 |
 | COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered | 💚 | COMP-3110, COMP-3220, COMP-3300 |
 | COMP-4960 | Research Project | Offered | Offered | Offered | 💙💚 | |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 | |
+| MATH-1020 | Mathematical Foundations | Not Offered | Offered | Offered | 💙 | One of COMP-1000, MATH-1250, MATH-1260 or MATH-1270 |
+| MATH-1250 | Linear Algebra I | Offered | Offered | Offered | 💙 | |
+| MATH-1720 | Differential Calculus | Offered | Offered | Not Offered | 💙 | |
+| MATH-1730 | Integral Calculus | Not Offered | Offered | Offered | 💙 | MATH-1760 or MATH-1720 |
+| MATH-3940 | Numerical Analysis for Computer Scientists | Offered | Not Offered | Not Offered | 💙 | COMP-1410, MATH-1730 and one of MATH-1250, MATH-1260 or MATH-1270 |
+| STAT-2910 | Statistics for the Sciences | Offered | Offered | Offered | 💙 | |
 
 #### Easy courses
 
