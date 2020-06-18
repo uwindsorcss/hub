@@ -376,9 +376,12 @@ Hackathons are **free** competitions where you team up with people to build cool
 - All experience levels welcome, with preference typically given to first-timers
 - Most hackathons provide free food and travel reimbursement
 
-Click [here](https://mlh.io/seasons/na-2020/events) to view the official MLH competition list
+Here is a list of websites where you can find plenty of hackathons
+ - [MLH](https://mlh.io/seasons/na-2020/events) - A really good place to start when looking for hackathons
+ - [DevPost](https://devpost.com/) - A resource often used during hackathons for project submissions but also advertises a lot of hackathons and coding competitions.
+ - [HackClub](https://hackathons.hackclub.com/) - Geared towards high school students but there are some competitions here that allow for post secondary students as well
 
-If you're looking to participate in a hackathon but don't want to go far, then you're in luck! Click [here](https://winhacks.ca/) to apply to WinHacks, Windsor's first major hackathon, gone digital!
+If you're looking to participate in a hackathon but don't want to go far, then you're in luck! Click [here](https://winhacks.ca/) to apply to WinHacks, Windsor's very own hackathon!
 
 ### Student Exchanges 
 
