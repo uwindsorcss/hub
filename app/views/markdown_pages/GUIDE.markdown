@@ -63,6 +63,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Abdullah Arif](https://github.com/aarif123456)
 - [Jeremie Bornais](https://github.com/jere-mie)
 - [Prakort Lean](https://github.com/prakort)
+- [Yuxi Wang](https://github.com/yuxi-w)
 
 
 # Important Dates
@@ -146,12 +147,18 @@ Summer courses are the normal, 12-week courses. This list does not include Inter
 | COMP-4540 | Design and Analysis of Algorithms | Offered | Offered | Not Offered | 💙💚 | COMP-2310, COMP-2540, COMP-3540 |
 | COMP-4670 | Network Security | Offered | Not Offered | Not Offered |  | COMP-3670 |
 | COMP-4680 | Advanced Networking | Not Offered | Offered | Not Offered |  | COMP-3670, COMP-3680 |
-| COMP-4730 | Maching Learning | Offered | Offered | Not Offered |  | COMP-3710 |
+| COMP-4730 | Machine Learning | Offered | Offered | Not Offered |  | COMP-3710 |
 | COMP-4740 | Advanced Topics in AI II | Not Offered | Offered | Not Offered |  | COMP-3710 |
 | COMP-4770 | Artifical Intelligence for Games | Not Offered | Offered | Not Offered |  | COMP-3770 |
 | COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered | 💚 | COMP-3110, COMP-3220, COMP-3300 |
 | COMP-4960 | Research Project | Offered | Offered | Offered | 💙💚 | |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 | |
+| MATH-1020 | Mathematical Foundations | Not Offered | Offered | Offered | 💙 | One of COMP-1000, MATH-1250, MATH-1260 or MATH-1270 |
+| MATH-1250 | Linear Algebra I | Offered | Offered | Offered | 💙 | |
+| MATH-1720 | Differential Calculus | Offered | Offered | Not Offered | 💙 | |
+| MATH-1730 | Integral Calculus | Not Offered | Offered | Offered | 💙 | MATH-1760 or MATH-1720 |
+| MATH-3940 | Numerical Analysis for Computer Scientists | Offered | Not Offered | Not Offered | 💙 | COMP-1410, MATH-1730 and one of MATH-1250, MATH-1260 or MATH-1270 |
+| STAT-2910 | Statistics for the Sciences | Offered | Offered | Offered | 💙 | |
 
 #### Easy courses
 
@@ -170,7 +177,6 @@ List of bird courses:
 #### School Resources
 - [List of different degrees/specializations in Computer Science with their course requirements](https://web4.uwindsor.ca/units/registrar/calendars/undergraduate/cur.nsf/982f0e5f06b5c9a285256d6e006cff78/40a4d00a28a9d3e685257362006c8367!OpenDocument)
 
-- [Put your schedule in a timetable!](https://www.freecollegeschedulemaker.com/)
 
 #### Planning your courses
 It is always better to have a good plan about the course you'll be taking each semester. Harshdip has completed 4 semesters, taking all the major courses. This way saving up all the electives is one approach. If you find 5 courses overwhelming, taking only 4 courses or an easy elective as a 5th course is another approach. Check out the list of bird courses.
@@ -377,9 +383,12 @@ Hackathons are **free** competitions where you team up with people to build cool
 - All experience levels welcome, with preference typically given to first-timers
 - Most hackathons provide free food and travel reimbursement
 
-Click [here](https://mlh.io/seasons/na-2020/events) to view the official MLH competition list
+Here is a list of websites where you can find plenty of hackathons
+ - [MLH](https://mlh.io/seasons/na-2020/events) - A really good place to start when looking for hackathons
+ - [DevPost](https://devpost.com/) - A resource often used during hackathons for project submissions but also advertises a lot of hackathons and coding competitions.
+ - [HackClub](https://hackathons.hackclub.com/) - Geared towards high school students but there are some competitions here that allow for post secondary students as well
 
-If you're looking to participate in a hackathon but don't want to go far, then you're in luck! Click [here](https://winhacks.ca/) to apply to WinHacks, Windsor's first major hackathon, gone digital!
+If you're looking to participate in a hackathon but don't want to go far, then you're in luck! Click [here](https://winhacks.ca/) to apply to WinHacks, Windsor's very own hackathon!
 
 ### Student Exchanges 
 
