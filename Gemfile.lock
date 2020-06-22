@@ -50,6 +50,10 @@ GEM
     arel (9.0.0)
     autoprefixer-rails (9.8.3)
       execjs
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     bindex (0.8.1)
     bootstrap (4.5.0)
       autoprefixer-rails (>= 9.1.0)
@@ -184,6 +188,8 @@ GEM
     rack (2.2.3)
     rack-protection (2.0.8.1)
       rack
+    rack-proxy (0.6.5)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.1)
@@ -219,6 +225,12 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    react-rails (2.6.1)
+      babel-transpiler (>= 0.7.0)
+      connection_pool
+      execjs
+      railties (>= 3.2)
+      tilt
     redcarpet (3.5.0)
     redis (4.2.1)
     rest-client (2.1.0)
@@ -271,6 +283,7 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    semantic_range (2.3.0)
     sidekiq (6.0.7)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
@@ -311,6 +324,11 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webpacker (5.1.1)
+      activesupport (>= 5.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     websocket-driver (0.7.2)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -343,6 +361,7 @@ DEPENDENCIES
   puma (~> 3.12)
   rails (~> 5.2.1)
   rails-erd
+  react-rails
   redcarpet
   rest-client
   rspec-rails
@@ -359,6 +378,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   validate_url
   web-console (>= 3.3.0)
+  webpacker
 
 RUBY VERSION
    ruby 2.6.0p0

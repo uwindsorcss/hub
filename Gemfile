@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap4-kaminari-views'
 gem 'kaminari'
 gem 'social-share-button', '~> 1.2', '>= 1.2.1'
+gem 'webpacker'
+gem 'react-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
