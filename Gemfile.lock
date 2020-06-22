@@ -352,5 +352,8 @@ DEPENDENCIES
   validate_url
   web-console (>= 3.3.0)
 
+RUBY VERSION
+   ruby 2.6.0p0
+
 BUNDLED WITH
-   2.1.2
+   2.1.4
