@@ -15,10 +15,10 @@
       Scavenger Hunt
     </title>
     <%= csrf_meta_tags %>
-    <!-- Will be changed to pack tag in next MR
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+
+    <%= javascript_packs_with_chunks_tag 'scavenger_hunt'%>
+    <%= stylesheet_packs_with_chunks_tag 'scavenger_hunt', media: "all" %>
+
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, shrink-to-fit=no">
 
