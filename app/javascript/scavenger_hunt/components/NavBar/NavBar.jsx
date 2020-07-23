@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap';
-
+import { MicrosoftLoginButton } from '../MicrosoftLoginButton';
 
 const NavBar = () => (
 <Navbar bg="light" expand="lg" sticky="top">
@@ -19,6 +19,7 @@ const NavBar = () => (
       <Nav.Link href="#how_it_works">How it Works</Nav.Link>
       <Nav.Link href="#scisoc">SciSco</Nav.Link>
       <Nav.Link href="#css">CSS</Nav.Link>
+      <MicrosoftLoginButton />
     </Nav>
   </Navbar.Collapse>
 </Navbar>

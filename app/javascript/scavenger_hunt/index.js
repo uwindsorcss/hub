@@ -1,1 +1,1 @@
-export { NavBar } from './components'
+export { NavBar, MicrosoftLoginButton } from './components'
