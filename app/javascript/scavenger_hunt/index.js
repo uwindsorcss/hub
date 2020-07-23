@@ -1,1 +1,1 @@
-export { HelloWorld } from './components'
+export { NavBar } from './components'
