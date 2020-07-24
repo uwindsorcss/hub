@@ -1,1 +1,1 @@
-export { NavBar } from './components'
+export { App } from './App.js'
