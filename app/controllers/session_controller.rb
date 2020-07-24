@@ -34,8 +34,6 @@ class SessionController < ApplicationController
         else
           redirect_to :discord_path, flash: { error: "You've already linked another Discord account to this email!" }
         end
-      elsif provider == 'microsoft_graph_2'
-        byebug
       else
         redirect_to :discord_path, flash: { error: "Authorize/sign-in with UWindsor before signing into Discord" }
       end
