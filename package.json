@@ -4,10 +4,18 @@
   "dependencies": {
     "@babel/preset-react": "^7.10.4",
     "@rails/webpacker": "5.1.1",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-error": "^1.1.13",
+    "apollo-link-http": "^1.5.17",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "bootstrap": "^4.5.0",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.10.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
     "react_ujs": "^2.6.1"
