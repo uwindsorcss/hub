@@ -70,6 +70,8 @@ ActiveRecord::Schema.define(version: 20200509173440) do
   create_table "sparkles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sender_user_id"
+    t.integer "receiver_user_id"
     t.integer "sender_id"
     t.integer "receiver_id"
     t.string "reason"
