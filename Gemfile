@@ -39,6 +39,7 @@ gem 'kaminari'
 gem 'social-share-button', '~> 1.2', '>= 1.2.1'
 gem 'webpacker'
 gem 'react-rails'
+gem 'graphql', '~> 1.11', '>= 1.11.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -84,3 +85,5 @@ gem 'omniauth-microsoft_graph'
 group :development, :test do
   gem 'rspec-rails'
 end
+
+gem 'graphiql-rails', '1.7.0', group: :development
