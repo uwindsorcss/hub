@@ -1,0 +1,1 @@
+export { MicrosoftLoginButton } from './MicrosoftLoginButton';
