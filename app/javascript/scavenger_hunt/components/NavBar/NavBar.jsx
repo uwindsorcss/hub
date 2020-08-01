@@ -19,8 +19,8 @@ const NavBar = () => (
       <Nav.Link href="#how_it_works">How it Works</Nav.Link>
       <Nav.Link href="#scisoc">SciSco</Nav.Link>
       <Nav.Link href="#css">CSS</Nav.Link>
-      <MicrosoftLoginButton />
     </Nav>
+    <MicrosoftLoginButton />
   </Navbar.Collapse>
 </Navbar>
 )
