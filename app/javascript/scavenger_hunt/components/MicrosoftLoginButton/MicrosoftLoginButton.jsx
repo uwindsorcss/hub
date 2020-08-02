@@ -34,7 +34,7 @@ const MicrosoftLoginButton = (props) => {
   };
  
   return (
-      <MicrosoftLogin clientId={process.env.SCAVENGER_HUNT_CLIENT_ID} debug={true} authCallback={authHandler} />
+      <MicrosoftLogin clientId={process.env.SCAVENGER_HUNT_CLIENT_ID} authCallback={authHandler} />
   );
 };
 
