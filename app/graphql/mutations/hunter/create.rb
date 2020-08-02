@@ -24,9 +24,7 @@ module Mutations::Hunter
     private
 
       def error_messages(hunter)
-        [].tap do |errors|
-          errors << hunter.errors.full_messages if hunter.invalid?
-        end 
+          hunter.errors.full_messages if hunter.invalid? 
       end
 
       def error_response(errors = [])
