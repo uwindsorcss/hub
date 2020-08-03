@@ -33,7 +33,7 @@ const MicrosoftLoginButton = (props) => {
   };
  
   return (
-      <MicrosoftLogin clientId={process.env.SCAVENGER_HUNT_CLIENT_ID} authCallback={authHandler} />
+      <MicrosoftLogin clientId={process.env.SCAVENGER_HUNT_CLIENT_ID} redirectUri="http://localhost:3000/hunt/auth/microsoft_graph" authCallback={authHandler} />
   );
 };
 

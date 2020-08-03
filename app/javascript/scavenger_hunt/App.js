@@ -12,8 +12,13 @@ const App = () => {
           <NavBar />
           <Switch>  
             <Route 
-              path="/hunt/homepage" 
+              path="/hunt/homepage"
               render={ (props) => <HomePage {...props}  /> } 
+              exact
+            />
+            <Route 
+              path="/hunt/auth/microsoft_graph"
+              render={ () => <Redirect to={'/hunt/homepage'} /> } 
               exact
             />
           </Switch>
