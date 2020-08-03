@@ -1,6 +1,6 @@
 module Types
   class MutationType < Types::BaseObject
  
-    field :create_hunter, mutation: Mutations::Hunter::Create, description: "Create a Hunter"
+    field :sign_in, mutation: Mutations::Hunter::SignIn, description: "Signs in a Hunter on Fly"
   end
 end

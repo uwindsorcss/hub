@@ -1,1 +1,0 @@
-export { useCreateHunterMutation, CREATE_HUNTER_MUTATION } from "./CreateHunterMutation";

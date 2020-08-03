@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 import MicrosoftLogin from "react-microsoft-login";
-import { useCreateHunterMutation } from "../../data/mutations"
+import { useSigInHunterMutation } from "../../data/mutations"
  
 const MicrosoftLoginButton = (props) => {
   const [ user, setUser ] = useState({ name: null, email: null });
-  const [ errors , setErrors ] = useState(null);
 
-  const [createHunter, { loading }] = useCreateHunterMutation();
+  const [signInHunter, { loading }] = useSigInHunterMutation();
 
   useEffect(() => {
     if (!loading && user.name != null && user.email != null) {
-      createHunter({
+      signInHunter({
         variables: {
           input: {
             "email": user.email,
@@ -18,16 +17,17 @@ const MicrosoftLoginButton = (props) => {
           }
         }
       }).then((res) => {
-        console.log(res.data.createHunter.errors);
-        setErrors(res.data.createHunter.errors);
+        console.log(res.data.signIn.hunter);
+        props.onSignIn(res.data.signIn.hunter)
+        // Redirect to /hunt/homepage
       });
     }
   }, [user])
 
   const authHandler = (err, data) => {
     if (err) {
-      console.log(err);
-      return;
+      // We don't have any other way to handle this error thus throwing it.
+      throw new Error('Error from Microsoft login');
     }
     const newUser  = { name: data.authResponseWithAccessToken.account.name, email: data.authResponseWithAccessToken.account.userName }
     setUser(newUser);
