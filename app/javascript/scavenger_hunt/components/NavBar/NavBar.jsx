@@ -53,20 +53,24 @@ const NavBar = () => {
           <Nav.Link href="#scisoc">SciSco</Nav.Link>
           <Nav.Link href="#css">CSS</Nav.Link>
         </Nav>
-        { console.log(currentUser) }
-         { !currentUser ? 
+         { !currentUser ?
             <Button 
               variant="outline-success"
               onClick={handleSignInClick}
             > 
               Sign In
             </Button>
-          : <Button 
+          : 
+            <>
+            Welcome, {currentUser.name}!
+            &nbsp;
+            <Button 
               variant="outline-success"
               onClick={handleSignOutClick}
             > 
               Sign Out
-            </Button>}
+            </Button>
+            </>}
       </Navbar.Collapse>
     </Navbar>
   );
