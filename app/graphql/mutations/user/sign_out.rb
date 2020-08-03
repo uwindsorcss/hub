@@ -1,21 +1,21 @@
-module Mutations::Hunter
+module Mutations::User
   class SignOut < Mutations::BaseMutation
-    graphql_name "HunterSignOut"
+    graphql_name "UserSignOut"
     description "signs out a user"
 
     argument :id, ID, required: true
 
-    field :hunter, Types::HunterType, null: true
+    field :user, Types::UserType, null: true
     field :error, String, null: true
 
 
     def resolve(id:)
       if context[:session][:user_id] == id.to_i
         reset_session
-        hunter = ::Hunter.find(id)
-        { hunter: hunter, error: ""}
+        user = User.find(id)
+        { user: user, error: ""}
       else
-        { hunter: nil, error: "There was an error signing out the user" } 
+        { user: nil, error: "There was an error signing out the user" } 
       end
     end
 
