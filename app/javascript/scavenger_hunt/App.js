@@ -10,10 +10,13 @@ const App = () => {
     	<ApolloProvider>
       	<Router>
           <NavBar />
+          <Switch>  
             <Route 
-							path="/" 
-							render={ (props) => <HomePage {...props}  /> } 
-						/>
+              path="/hunt/homepage" 
+              render={ (props) => <HomePage {...props}  /> } 
+              exact
+            />
+          </Switch>
         </Router>
       </ApolloProvider>
     );

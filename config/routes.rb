@@ -21,7 +21,9 @@ Rails.application.routes.draw do
   
   scope module: 'science_society' do
     resources :scavenger_hunt, path: '/hunt', only: %i[index]
+    get "/hunt/homepage", to: 'scavenger_hunt#index'
   end
+  
 
   get '/discord', to: 'markdown_pages#discord', as: 'discord_path'
   get '/guide', to: 'markdown_pages#guide', as: 'guide'

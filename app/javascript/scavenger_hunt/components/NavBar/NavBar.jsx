@@ -1,12 +1,35 @@
-import React, { useState } from 'react'
-import { Navbar, Nav } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react'
+import { Navbar, Nav, Button} from 'react-bootstrap';
 import { MicrosoftLoginButton } from '../MicrosoftLoginButton';
+import { useCurrentHunterQuery } from '../../data/queries';
+import { useSignOutHunterMutation } from "../../data/mutations"
 
 const NavBar = () => {
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentHunter, setCurrentHunter] = useState(null);
 
-  const updateCurrentUser = (user) => {
-    setCurrentUser(user);
+  const { data, loading: queryLoading } = useCurrentHunterQuery();
+  const [signOutHunter, { loading: mutationLoading }] = useSignOutHunterMutation();
+
+
+  useEffect(() => {
+    if(!queryLoading) {
+      setCurrentHunter(data.currentHunter)
+    }
+  });
+
+  const handleClick = () => {
+    if(!mutationLoading){
+      signOutHunter({
+        variables: {
+          input: {
+            "id": currentHunter.id
+          }
+        }
+      }).then((res) => {
+        console.log(res.data);
+        window.location.href = "/hunt";
+      });
+    }
   }
 
   return (
@@ -27,10 +50,15 @@ const NavBar = () => {
           <Nav.Link href="#scisoc">SciSco</Nav.Link>
           <Nav.Link href="#css">CSS</Nav.Link>
         </Nav>
-        { console.log(currentUser) }
-         { !currentUser ? 
-          <MicrosoftLoginButton onSignIn={updateCurrentUser}/>
-          : <button> Logout </button>}
+        { console.log(currentHunter) }
+         { !currentHunter ? 
+          <MicrosoftLoginButton />
+          : <Button 
+              variant="outline-success"
+              onClick={handleClick}
+            > 
+              Sign Out
+            </Button>}
       </Navbar.Collapse>
     </Navbar>
   );

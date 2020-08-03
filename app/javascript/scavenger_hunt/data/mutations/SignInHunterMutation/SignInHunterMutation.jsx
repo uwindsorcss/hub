@@ -4,7 +4,7 @@ import gql from "graphql-tag";
 const name = "SignInHunterMutation";
 
 const SIGN_IN_HUNTER_MUTATION = gql`
-  mutation name($input: HunterSignInInput!){
+  mutation ${name}($input: HunterSignInInput!){
     signIn(input: $input){
       hunter {
         id,
@@ -16,6 +16,6 @@ const SIGN_IN_HUNTER_MUTATION = gql`
   }
 `;
 
-const useSigInHunterMutation = () => useMutation(SIGN_IN_HUNTER_MUTATION);
+const useSignInHunterMutation = () => useMutation(SIGN_IN_HUNTER_MUTATION);
 
-export { useSigInHunterMutation, SIGN_IN_HUNTER_MUTATION };
+export { useSignInHunterMutation, SIGN_IN_HUNTER_MUTATION };

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import MicrosoftLogin from "react-microsoft-login";
-import { useSigInHunterMutation } from "../../data/mutations"
+import { useSignInHunterMutation } from "../../data/mutations"
  
 const MicrosoftLoginButton = (props) => {
   const [ user, setUser ] = useState({ name: null, email: null });
 
-  const [signInHunter, { loading }] = useSigInHunterMutation();
+  const [signInHunter, { loading }] = useSignInHunterMutation();
 
   useEffect(() => {
     if (!loading && user.name != null && user.email != null) {
@@ -18,8 +18,7 @@ const MicrosoftLoginButton = (props) => {
         }
       }).then((res) => {
         console.log(res.data.signIn.hunter);
-        props.onSignIn(res.data.signIn.hunter)
-        // Redirect to /hunt/homepage
+        window.location.href = "/hunt/homepage";
       });
     }
   }, [user])
