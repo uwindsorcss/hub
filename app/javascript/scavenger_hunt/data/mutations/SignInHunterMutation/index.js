@@ -1,1 +1,1 @@
-export { useSigInHunterMutation, SIGN_IN_HUNTER_MUTATION } from "./SignInHunterMutation";
+export { useSignInHunterMutation, SIGN_IN_HUNTER_MUTATION } from "./SignInHunterMutation";

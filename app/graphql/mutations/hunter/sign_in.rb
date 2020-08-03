@@ -7,7 +7,7 @@ module Mutations::Hunter
     argument :name, String, required: true
     argument :role, String, required: false
 
-    field :hunter, Types::HunterType, null: true
+    field :hunter, Types::HunterType, null: false
 
     def resolve(email:, name:, role: nil)
       new_or_existing_user  = ::Hunter.create_with(name: name, role: role).find_or_create_by(email: email) # always returns an Hunter instance
