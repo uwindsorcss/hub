@@ -20,4 +20,12 @@ class ApplicationController < ActionController::Base
   def logged_in?
     !!current_user
   end
+
+  # Only used by simple_discussion, avoid changing this method 
+  def authenticate_user!
+    unless current_user
+      flash[:error] = "You need to be logged in"
+      redirect_to simple_discussion_path
+    end
+  end
 end

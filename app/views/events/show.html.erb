@@ -73,7 +73,7 @@
    
     <% unless @event.end_date.past? %>
       <%= link_to @event.google_calendar_url, class: "btn btn-primary", target: "_blank", :id => "my_link" do %>
-        <i class="fa fa-calendar"></i> Add to Google Calendar
+        <i class="fas fa-calendar-alt"></i> Add to Google Calendar
       <% end %>
     <% end %>
         
