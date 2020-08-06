@@ -19,7 +19,6 @@ module Mutations::User
         end
       rescue ActiveRecord::RecordInvalid
       end
-      byebug
       {
         user: user.reload, 
         errors: user.errors.full_messages
