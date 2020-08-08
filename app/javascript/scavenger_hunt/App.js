@@ -21,6 +21,10 @@ const App = () => {
               render={ () => <Redirect to={'/hunt/homepage'} /> } 
               exact
             />
+            <Route
+              path="/hunt"
+              render={ () => <Redirect to={'/hunt/homepage'} />}
+            />
           </Switch>
         </Router>
       </ApolloProvider>
