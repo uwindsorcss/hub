@@ -1,28 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import { Navbar, Nav, Button} from 'react-bootstrap';
-import { MicrosoftLoginButton } from '../MicrosoftLoginButton';
-import { useCurrentHunterQuery } from '../../data/queries';
-import { useSignOutHunterMutation } from "../../data/mutations"
+import { useCurrentUserQuery } from '../../data/queries';
+import { useSignOutUserMutation } from "../../data/mutations"
 
 const NavBar = () => {
-  const [currentHunter, setCurrentHunter] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
 
-  const { data, loading: queryLoading } = useCurrentHunterQuery();
-  const [signOutHunter, { loading: mutationLoading }] = useSignOutHunterMutation();
+  const { data, loading: queryLoading } = useCurrentUserQuery();
+  const [signOutUser, { loading: mutationLoading }] = useSignOutUserMutation();
 
 
   useEffect(() => {
     if(!queryLoading) {
-      setCurrentHunter(data.currentHunter)
+      setCurrentUser(data.currentUser);
     }
   });
 
-  const handleClick = () => {
+  const handleSignInClick = () => {
+    window.location.href = "/auth/microsoft_graph";
+  }
+
+  const handleSignOutClick = () => {
     if(!mutationLoading){
-      signOutHunter({
+      signOutUser({
         variables: {
           input: {
-            "id": currentHunter.id
+            "id": currentUser.id
           }
         }
       }).then((res) => {
@@ -50,15 +53,24 @@ const NavBar = () => {
           <Nav.Link href="#scisoc">SciSco</Nav.Link>
           <Nav.Link href="#css">CSS</Nav.Link>
         </Nav>
-        { console.log(currentHunter) }
-         { !currentHunter ? 
-          <MicrosoftLoginButton />
-          : <Button 
+         { !currentUser ?
+            <Button 
               variant="outline-success"
-              onClick={handleClick}
+              onClick={handleSignInClick}
+            > 
+              Sign In
+            </Button>
+          : 
+            <>
+            Welcome, {currentUser.name}!
+            &nbsp;
+            <Button 
+              variant="outline-success"
+              onClick={handleSignOutClick}
             > 
               Sign Out
-            </Button>}
+            </Button>
+            </>}
       </Navbar.Collapse>
     </Navbar>
   );
