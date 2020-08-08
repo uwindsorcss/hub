@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include SimpleDiscussion::ForumUser
+
   has_many :registrations
   has_many :events, through: :registrations
   has_one :discord_user, dependent: :destroy

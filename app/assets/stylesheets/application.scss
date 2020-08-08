@@ -12,10 +12,12 @@
  *= require social-share-button
  *
  */
-
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "simple_discussion";
+@import "font-awesome-sprockets";
 @import "font-awesome";
+
 
 .discord_logo {
     display: inline-block;

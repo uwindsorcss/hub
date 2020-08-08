@@ -31,4 +31,6 @@ Rails.application.routes.draw do
   get '/about', to: 'markdown_pages#about', as: 'about'
   get '/spikeball', to: redirect('/events/17')
   get '/store', to: redirect('https://store.uwindsorcss.ca/')
+
+  mount SimpleDiscussion::Engine => "/forum"
 end

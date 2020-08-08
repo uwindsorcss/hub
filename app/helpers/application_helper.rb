@@ -90,4 +90,9 @@ module ApplicationHelper
   def yield_meta_tag(tag, default_text='')
     content_for?(:"meta_#{tag}") ? content_for(:"meta_#{tag}") : default_text
   end
+
+  # Simple_discussion need this method
+  def user_signed_in?
+    !!current_user
+  end
 end

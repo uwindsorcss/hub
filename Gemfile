@@ -40,6 +40,7 @@ gem 'social-share-button', '~> 1.2', '>= 1.2.1'
 gem 'webpacker'
 gem 'react-rails'
 gem 'graphql', '~> 1.11', '>= 1.11.1'
+gem 'simple_discussion', :git => "https://github.com/amanpatel123/simple_discussion.git"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -76,11 +77,12 @@ gem 'rails-erd'
 gem 'rest-client'
 gem 'mini_racer'
 gem 'date_validator'
-gem 'font-awesome-rails'
 gem "validate_url"
 gem 'sidekiq'
 gem 'faker'
 gem 'omniauth-microsoft_graph'
+gem 'gravatar_image_tag'
+
 
 group :development, :test do
   gem 'rspec-rails'
