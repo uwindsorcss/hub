@@ -6,10 +6,15 @@
   align-items: center;
 }
 
+.probProgress {
+  width: 100%;
+}
+
 .section {
   @extend .main;
   margin-top: 0px;
 }
+
 .title {
-  color: rgba(106, 173, 94, 1);
+  color: rgb(106, 173, 94);
 }
