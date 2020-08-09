@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :scavenger_hunt, path: '/hunt', only: %i[index]
     get "/hunt/homepage", to: 'scavenger_hunt#index'
     get "/hunt/auth/microsoft_graph", to: 'scavenger_hunt#index'
+    get "/hunt/play", to: 'scavenger_hunt#index'
   end
   
 
