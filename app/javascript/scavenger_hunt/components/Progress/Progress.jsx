@@ -1,4 +1,5 @@
 import React from 'react'
+import { useCurrentUserQuery } from '../../data/queries';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
@@ -47,17 +48,19 @@ const useStyles = makeStyles({
 })
 
 const Progress = () => {
+
+  const { data: userData, loading: queryLoading } = useCurrentUserQuery();
   
   //no need to have labels and waste space
   const problemNum = 10;
   const steps = Array(problemNum).fill();
-  const data = 0;
 
   const styles = useStyles();
+  let currentProgress = !queryLoading ? userData.currentUser.progress : 0;
 
   return (
     <div className="progressRoot">
-      <Stepper alternativeLabel activeStep={data} connector={<StyleConnector />}>
+      <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
         {steps.map((_, index) => (
           <Step key={index}>
             <StepButton>
