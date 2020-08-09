@@ -6,5 +6,6 @@ module Types
     field :email, String, null: true
     field :name, String, null: true
     field :role, String, null: true
+    field :progress, String, null: true
   end
 end
