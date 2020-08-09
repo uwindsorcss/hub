@@ -2,7 +2,7 @@
 .maincontent__container {
   position: absolute;
   width: 67%;
-  height: 85%;
+  height: 65%;
   display: flex;
   margin-top: 10px;
   flex-direction: column;
@@ -12,6 +12,6 @@
   text-align: center;
 }
 
-.maincontent__question {
-  height: 100%;
+.maincontent__textfield {
+  padding: 2em;
 }

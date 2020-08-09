@@ -14,7 +14,9 @@ const MainContent = (props) => {
           <div className="maincontent__items">
             <form className="maincontent__form">
               <h3 className="question">This is placeholder for Questions, and it is a very long question. Yes very very long</h3>
-              <TextField id="standard-basic" label="Answer" />
+              <div className="maincontent__textfield">
+                <TextField id="standard-basic" label="Answer" />
+              </div>
             </form>
           </div>
         </div>
