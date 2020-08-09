@@ -18,6 +18,6 @@ const UPDATE_USER_MUTATION = gql`
   }
 `;
 
-const useSignOutUserMutation = () => useMutation(SIGN_OUT_USER_MUTATION);
+const useUpdateUserMutation = () => useMutation(UPDATE_USER_MUTATION);
 
-export { useSignOutUserMutation, SIGN_OUT_USER_MUTATION };
+export { useUpdateUserMutation, UPDATE_USER_MUTATION };
