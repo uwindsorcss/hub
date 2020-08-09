@@ -10,6 +10,7 @@ const CURRENT_USER_QUERY = gql`
       name
       email
       role
+      progress
     }
   }
 `;
