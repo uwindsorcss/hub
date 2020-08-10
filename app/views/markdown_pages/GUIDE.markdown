@@ -314,57 +314,60 @@ It's also a very good idea to obtain a Social Security Number in the USA so that
 ------------
 ### Outstanding Scholars
 
-Uwindsor offers Outstanding Scholars program for students to get involved in research projects. Student will get paid for the placement under the supervision of the instructors. The program requires student to complete 6 placements in order to complete the OS program. Most students will start their placement from 3rd semester until the last semester to complete all 6 placements. 
+UWindsor offers the Outstanding Scholars program for students to get involved in research projects. Student will get paid for each placement under the supervision of  instructors. The program requires students to complete 6 placements in order to complete the OS program. Most students will start their placement from 3rd semester until the last semester to complete all 6 placements. 
 
 ### Is it right for you? 
 
-As you are reading this section that means you have interests in research, however whether it is the right path that aligns your career goal.
+Since you are reading this section, you must be interested in research, however you may not know whether it is the right path that aligns with your career goals.
 
-If you plan to do graduate studies, research is the best way to get you started. It will give you the helpful insight of how the research study works. You will build a good relationship with different faculty members that will help you when you apply for grad school. 
+If you plan to do graduate studies, research is the best way to get you started. It will give you helpful insight into how research study works. You will build a good relationship with different faculty members who will help you when you apply for grad school. 
 
 If you do not want to continue the study, I suggest focusing on [Co-op/Internships](#co-op-and-internships) instead. You will gain different practical skills and experience that will help you. 
 
 ######Pros: 
-- Paid placement 2nd/3rd year 16.35$/hours and 4th year 17.30$/hours.
-- Flexible total hours for working 45-100 hours per placement.
-- Great opportunities to pursue grad school.
-- A lot of machine learning research projects and cyber security focusing on different kind areas such as social network analysis and document and network analysis.
-- Placements are not limited in the department. OS program is an golden key that could open any research doors for you.
-- You could put your resume.
-- Oustanding Scholars Modal & Golden Maple Leaf Medallion will be awarded.
+- Paid placement 2nd/3rd years get $16.35/hour and 4th years get $17.30/hour.
+- Flexible total hours: 45-100 hours per placement.
+- Great opportunity to pursue grad school.
+- A lot of machine learning and cyber security research projects focusing on different kind areas such as social network analysis and document and network analysis.
+- Placements are not limited in your department. OS program is a golden key that can open any research doors for you.
+- You could put it on your resume.
+- Oustanding Scholars Medal & Golden Maple Leaf Medallion will be awarded.
 
 ######Cons:
 - Time consuming.
-- Depends on research projects, there are a lot of reading materials.
-- Depends on research projects, do not expect to code a lot. Unless you are buidling a traning model for machine learning algorithm or simulating model.
-- Weekly or Bi-weekly meeting. Must keep close contact with professor with your progress.
-- If the supervisor is too busy, we know most of them are then you are mostly on your own. That's why finding a good supervisor is very important.
+- Depending on the research project, there is a lot of reading material.
+- Depending on the research project, do not expect to code a lot. Unless you are buidling a training model for a machine learning algorithm or simulating model.
+- Weekly or Bi-weekly meetings. Must keep close contact with professor with your progress.
+- If your supervisor is too busy, and many of them are, then you are mostly on your own. That's why finding a good supervisor is very important.
 
 
 ### How to get in the OS program? 
 
 ######Apply from high school. 
 - You will be considered as a candidate directly from high school if you are selected. In the second year, your placement will start.
+- However, you still need to apply again after first year.
 
 ######Apply after the first year. 
 - You will be invited to apply for the OS program after completing two semesters. Then if you are selected, your research placement will start the next term.
 
 ######Requirements:
 - Academic accomplishments: GPA 85% or higher.
-- Evident desire to do research or original creative work for the benefit of others.
+- Evident desire to do research or original creative work.
 - Evidence of community service.
 - Leadership, through excellence in athletic, creative, or other fields, or through serving in a formal leadership role.
-- Specific research project that you are interests.
-- A reference letter from a faculty member or instructor. To get a greate reference letter, you could get to know more about the professor research project during the office hour. This will shows that you are curious and willing to learn. They will put a good word for you.
+- Specific research project that you are interested in.
+- A reference letter from a faculty member or instructor. To get a greate reference letter, you could get to know more about a professor's research project during their office hours. This will show that you are curious and willing to learn. They will put a good word in for you.
 
 ######Bugs in the OS program system
-- If you complete only 9 courses for 2 semesters in the first year, then you will not receive an invitation to apply for the program. Do not worry, you could contact [Dr. Simon du Toit](scholars@uwindsor.ca) to inform him about your interests in the program.
-- If you complete more than 14 to 15 courses already, could you apply? Answer is ***YES***. What is the problem regarding the number of courses you have taken? As mentioned above, in order to graduate as an OS student. One must complete 6 placements. This is 6 semesters of 3 years of your study. If you have complete more than 10 courses then you have less than 6 semesters left. You will not meet the requirement. ***However***, if you plan to take an extra summer course and do research placement, then you are eligible to apply. Contact [Dr. Simon du Toit](scholars@uwindsor.ca) and explain your goal to complete the program.
+- If you complete only 9 courses for 2 semesters in first year, then you will not receive an invitation to apply for the program. Do not worry, you can contact [Dr. Simon du Toit](scholars@uwindsor.ca) to inform him about your interests in the program.
+- If you have completed more than 14 or 15 courses already, can you apply? Answer is ***YES***. What is the problem regarding the number of courses you have taken? As mentioned above, in order to graduate as an OS student, One must complete 6 placements. This is 6 semesters or 3 years of your study. If you have completed more than 10 courses then you have less than 6 semesters left. Therefor, you will not meet the requirement. ***However***, if you plan to take an extra summer course and do a research placement, then you are eligible to apply. Contact [Dr. Simon du Toit](scholars@uwindsor.ca) and explain your goal to complete the program.
 
 ### CSS members in OS program
 - [Prakort Lean](leanp@uwindsor.ca)
 - [Andrea Bonato](bonato11@uwindsor.ca)
 - [Aman Patel](patel1wq@uwindsor.ca)
+- [Jeremie Bornais](borna113@uwindsor.ca)
+
 
 If you have any questions, send us an email! We are happy to help.
 
