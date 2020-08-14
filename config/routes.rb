@@ -18,16 +18,17 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :edit, :update, :new, :create]
 
   resources :registration
-  
-  scope module: 'science_society' do
-    resources :scavenger_hunt, path: '/hunt', only: %i[index]
-    get "*path", to: 'scavenger_hunt#index'
-  end
-  
+    
 
   get '/discord', to: 'markdown_pages#discord', as: 'discord_path'
   get '/guide', to: 'markdown_pages#guide', as: 'guide'
   get '/about', to: 'markdown_pages#about', as: 'about'
   get '/spikeball', to: redirect('/events/17')
   get '/store', to: redirect('https://store.uwindsorcss.ca/')
+
+  # This scope should be last in routes.rb
+  scope module: 'science_society' do
+    resources :scavenger_hunt, path: '/hunt', only: %i[index]
+    get "*path", to: 'scavenger_hunt#index'
+  end
 end
