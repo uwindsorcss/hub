@@ -4,6 +4,7 @@ import { ApolloProvider } from './components/Provider'
 import { NavBar } from './components/NavBar'
 
 import { HomePage } from './scenes/HomePage';
+import { PlayArena } from './scenes/PlayArena';
 
 const App = () => {
     return (
@@ -20,6 +21,10 @@ const App = () => {
               path="/hunt/auth/microsoft_graph"
               render={ () => <Redirect to={'/hunt/homepage'} /> } 
               exact
+            />
+             <Route
+              path="/hunt/play"
+              render={ (props) => <PlayArena {...props} />}
             />
             <Route
               path="/hunt"

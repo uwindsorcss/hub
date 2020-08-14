@@ -4,11 +4,7 @@ import './HomePage.scss'
 
 const HomePage = () => {
   return (
-    <div className="main">        
-      <div className={`probProgress section`}>
-        <h1 className="title">Progress</h1>
-        <Progress />
-      </div>
+    <div className="main">
       <div className="section" id="how-it-works">
         <h1 className="title">How it works</h1>
         <p> this is a test test test </p>
