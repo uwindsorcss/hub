@@ -23,7 +23,7 @@ const App = () => {
               exact
             />
              <Route
-              path="/hunt/play"
+              path="/hunt/play/:clueId"
               render={ (props) => <PlayArena {...props} />}
             />
             <Route

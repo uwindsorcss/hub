@@ -2,9 +2,25 @@ import React from 'react';
 import './MainContent.scss';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
+import { Clues } from '../../../data/staticData/clues';
 
 
-const MainContent = (props) => {
+const MainContent = ({ progress, clueId }) => {
+  const getClue = () => {
+    let index = clueId - 1
+    if ((clueId - 1)  > progress) {
+      window.location.href = `/hunt/play/${progress + 1}`
+      index = progress
+    }
+    
+    return Clues[index]
+  }
+
+  const renderQuestion = () => {
+    const clue = getClue();
+    return (<h3 key={clueId} className="question">{clue.question}</h3>);
+  }
+  
   return (
     <Grid container spacing={3}>
       <Grid item xs={2}>
@@ -13,7 +29,7 @@ const MainContent = (props) => {
         <div className="maincontent__container">
           <div className="maincontent__items">
             <form className="maincontent__form">
-              <h3 className="question">This is placeholder for Questions, and it is a very long question. Yes very very long</h3>
+              {renderQuestion()}
               <div className="maincontent__textfield">
                 <TextField id="standard-basic" label="Answer" />
               </div>
