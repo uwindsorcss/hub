@@ -1,6 +1,8 @@
 import React from 'react'
 import { Alert } from "../../components/Alert";
 import './HomePage.scss'
+import { Link } from 'react-router-dom';
+import { Button, Spinner } from 'react-bootstrap';
 
 const HomePage = (props) => {
   return ( 
@@ -9,6 +11,9 @@ const HomePage = (props) => {
       <div className="section" id="how-it-works">
         <h1 className="title">How it works</h1>
         <p> this is a test test test </p>
+        <Button href="/hunt/play/1" size="lg">
+          Play
+        </Button>
       </div>
       <div className="section" id="scisoc">
         <h1 className="title">Science Society</h1>
