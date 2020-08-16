@@ -1,10 +1,12 @@
 import React from 'react'
-import { Progress } from '../../components/Progress'
+import { Alert } from "../../components/Alert";
 import './HomePage.scss'
 
-const HomePage = () => {
-  return (
+const HomePage = (props) => {
+  console.log(props);
+  return ( 
     <div className="main">
+      {props.location.state && !props.location.state.loggedIn &&  <Alert message="You need to log in to access that page" variant="info" /> }
       <div className="section" id="how-it-works">
         <h1 className="title">How it works</h1>
         <p> this is a test test test </p>

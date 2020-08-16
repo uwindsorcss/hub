@@ -6,6 +6,7 @@ import StepButton from '@material-ui/core/StepButton';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepConnector from '@material-ui/core/StepConnector';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { Redirect } from "react-router-dom";
 import './Progress.scss'
 
 
@@ -48,16 +49,30 @@ const useStyles = makeStyles({
 })
 
 const Progress = () => {
+  const { data: userData, loading: queryLoading } = useCurrentUserQuery(); 
 
-  const { data: userData, loading: queryLoading } = useCurrentUserQuery();
-  
   //no need to have labels and waste space
   const problemNum = 10;
   const steps = Array(problemNum).fill();
 
   const styles = useStyles();
-  let currentProgress = !queryLoading ? userData.currentUser.progress : 0;
 
+  if (queryLoading) {
+    return(
+      <h3>Loading...</h3>
+    )
+  }
+
+  if (!queryLoading && !userData.currentUser) {
+      return (
+      <Redirect to={{
+       pathname: "/hunt/homepage",
+       state: { loggedIn: false}
+      }} />
+     )
+  }
+
+  let currentProgress = !queryLoading ? parseInt(userData.currentUser.progress) : 0;
   return (
     <div className="progressRoot">
       <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
