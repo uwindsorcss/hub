@@ -3,7 +3,6 @@ import { Alert } from "../../components/Alert";
 import './HomePage.scss'
 
 const HomePage = (props) => {
-  console.log(props);
   return ( 
     <div className="main">
       {props.location.state && !props.location.state.loggedIn &&  <Alert message="You need to log in to access that page" variant="info" /> }
