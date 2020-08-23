@@ -1,8 +1,7 @@
 import React from 'react'
 import { Alert } from "../../components/Alert";
 import './HomePage.scss'
-import { Link } from 'react-router-dom';
-import { Button, Spinner } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 const HomePage = (props) => {
   return ( 

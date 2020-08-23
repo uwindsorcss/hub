@@ -90,7 +90,6 @@ ActiveRecord::Schema.define(version: 2020_08_06_164837) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "hunter"
-    t.integer "progress"
+    t.integer "progress", default: 1
   end
-
 end
