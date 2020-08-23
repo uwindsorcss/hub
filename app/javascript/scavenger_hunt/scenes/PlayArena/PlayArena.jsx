@@ -1,11 +1,11 @@
 import React from 'react'
-import { useCurrentUserQuery } from '../../data/queries';
+import { Redirect } from 'react-router-dom';
 
+import { useCurrentUserQuery } from '../../data/queries';
 import { Progress } from '../../components/Progress'
 import { Navigation } from './Navigation';
 import { MainContent } from './MainContent';
 import './PlayArena.scss'
-import { Redirect } from 'react-router-dom';
 
 const PlayArena = (props) => {
   const { data: userData, loading: queryLoading } = useCurrentUserQuery();
