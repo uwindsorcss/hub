@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepConnector from '@material-ui/core/StepConnector';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import { Redirect } from "react-router-dom";
-import './Progress.scss'
+import './Progress.scss';
 
 
 const StyleConnector = withStyles({
@@ -76,5 +76,9 @@ const Progress = ({ currentUser }) => {
     </div>
   );
 }
+
+Progress.propTypes = {
+  currentUser: PropTypes.object.isRequired,
+};
 
 export {Progress};

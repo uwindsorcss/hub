@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './MainContent.scss';
 import { Clues } from '../../../data/staticData/clues';
 import {
@@ -75,6 +76,11 @@ const MainContent = ({ progress, clueId }) => {
       <Grid item xs={2} />
     </Grid>
   )
+};
+
+MainContent.propTypes = {
+  progress: PropTypes.number,
+  clueId: PropTypes.number,
 };
 
 export { MainContent };
