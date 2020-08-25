@@ -53,6 +53,7 @@ const Progress = ({ currentUser }) => {
   const styles = useStyles();
 
   let currentProgress = parseInt(currentUser.progress) || 0;
+  
   return (
     <div className="progressRoot">
       <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
