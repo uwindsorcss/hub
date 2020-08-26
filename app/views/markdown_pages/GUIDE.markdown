@@ -71,22 +71,34 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 # Important Dates
 ------------
 
-### Winter 2020
-- January 6 - Classes begin
-- January 17 - Last day for late registration and change of courses
-- February 15 to February 23rd - Reading week
-- March 13 - Last day to voluntarily withdraw from courses
-- April 3rd - Last day of classes
-- April 7 - April 20 - Final exams
-- April 21 - Alternate exam date
+### Winter 2021
+- January 7 - Classes begin
+- January 20 - Last day for late registration and change of courses
+- February 13 to February 21 - Reading week
+- March 17 - Last day to voluntarily withdraw from courses
+- April 2 - University closed
+- April 9 - Last day of classes
+- April 12 to April 22 - Final exams
+- April 23 - Alternate exam date
 
 ### Summer 2020
 Summer courses are the normal, 12-week courses. This list does not include Intersession.
 
 - May 19 - Classes begin
-- June 27 - July 5 - Reading week
+- June 27 to July 5 - Reading week
 - August 18 - Last day of classes
 - August 21 - August 29 - Final exams
+
+### Fall 2020
+- September 10 - Classes begin
+- September 23 - Last day for late registration and change of courses
+- October 7 - Financial drop date
+- October 10 to October 18 - Reading week
+- November 18 - Last day to voluntarily withdraw from courses
+- December 9 - Last day of classes
+- December 11 to December 22 - Final exams
+- December 15 - Fees due for winter 2021
+- December 23 - Alternate exam date
 
 
 
