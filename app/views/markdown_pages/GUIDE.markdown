@@ -5,8 +5,9 @@ Table of Contents
 - [Contributing](#contributing)
     * [Contributors](#contributors)
 - [Important Dates](#important-dates)
-    * [Winter 2020](#winter-2020)
     * [Summer 2020](#summer-2020)
+    * [Fall 2020](#fall-2020)
+    * [Winter 2020](#winter-2021)
 - [Courses](#courses)
     * [Typical course offerings by semester](#typical-course-offerings-by-semester)
     * [Easy courses](#easy-courses)
@@ -71,16 +72,6 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 # Important Dates
 ------------
 
-### Winter 2021
-- January 7 - Classes begin
-- January 20 - Last day for late registration and change of courses
-- February 13 to February 21 - Reading week
-- March 17 - Last day to voluntarily withdraw from courses
-- April 2 - University closed
-- April 9 - Last day of classes
-- April 12 to April 22 - Final exams
-- April 23 - Alternate exam date
-
 ### Summer 2020
 Summer courses are the normal, 12-week courses. This list does not include Intersession.
 
@@ -100,7 +91,15 @@ Summer courses are the normal, 12-week courses. This list does not include Inter
 - December 15 - Fees due for winter 2021
 - December 23 - Alternate exam date
 
-
+### Winter 2021
+- January 7 - Classes begin
+- January 20 - Last day for late registration and change of courses
+- February 13 to February 21 - Reading week
+- March 17 - Last day to voluntarily withdraw from courses
+- April 2 - University closed
+- April 9 - Last day of classes
+- April 12 to April 22 - Final exams
+- April 23 - Alternate exam date
 
 # Courses
 ------------
