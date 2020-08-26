@@ -1,7 +1,7 @@
-import { useCurrentUserQuery } from '../../../data/queries';
-import { useUpdateUserMutation } from '../../../data/mutations';
+import { useCurrentUserQuery } from '../../data/queries';
+import { useUpdateUserMutation } from '../../data/mutations';
 
-const useProgress = (isLoggedIn) => {
+const useProgress = () => {
   const { data: userData, loading: isLoading } = useCurrentUserQuery();
   const [updateUser, { loading: mutationLoading }] = useUpdateUserMutation();
   
@@ -17,7 +17,7 @@ const useProgress = (isLoggedIn) => {
     }
   }
 
-  const currentProgress = (isLoggedIn) ? parseInt(userData.currentUser.progress) : 0
+  const currentProgress = (!isLoading && userData.currentUser) ? parseInt(userData.currentUser.progress) : 0;
 
   return [ currentProgress, setProgress, isLoading ];
 }

@@ -9,6 +9,8 @@ import './PlayArena.scss'
 
 const PlayArena = (props) => {
 
+  const isLoggedIn = (props.location.state && !props.location.state.loggedIn)
+
   const getClueId = () => {
     let clueId = 1
     let destructured_url = (window.location.pathname).split("/");
@@ -20,7 +22,7 @@ const PlayArena = (props) => {
     return clueId
   }
 
-  if (!queryLoading && !userData.currentUser) {
+  if (isLoggedIn) {
     return (
     <Redirect to={{
      pathname: "/hunt/homepage",
@@ -29,9 +31,9 @@ const PlayArena = (props) => {
    )
   }
 
-  const [progress, setProgress, isProgressLoading] = useProgress(true);
+  const [progress, setProgress, isProgressLoading] = useProgress(isLoggedIn);
 
-  if (queryLoading || isProgressLoading) {
+  if (isProgressLoading) {
     return(
       <h3>Loading your data</h3>
     )

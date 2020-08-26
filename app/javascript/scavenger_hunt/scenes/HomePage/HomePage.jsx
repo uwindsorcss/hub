@@ -6,9 +6,10 @@ import { Alert } from "../../components/Alert";
 import './HomePage.scss';
 
 const HomePage = (props) => {
-  const [progress, _, isProgressLoading] = useProgress((props.location.state && props.location.state.loggedIn));
+  const [progress, _ , isProgressLoading] = useProgress();
 
   const buttonHref = (isProgressLoading) ? `/hunt/play/${progress + 1}` : '/hunt/play/1';
+
 
   return ( 
     <div className="main">
@@ -16,9 +17,13 @@ const HomePage = (props) => {
       <div className="section" id="how-it-works">
         <h1 className="title">How it works</h1>
         <p> this is a test test test </p>
-        <Button href={buttonHref} size="lg">
-          Play
-        </Button>
+        {(!isProgressLoading) ? (
+            <Button href={buttonHref} size="lg">
+              Play
+            </Button>
+          )
+          : (<p>Loading</p>)
+        }
       </div>
       <div className="section" id="scisoc">
         <h1 className="title">Science Society</h1>
