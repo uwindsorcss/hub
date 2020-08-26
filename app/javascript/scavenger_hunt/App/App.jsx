@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+
 import { ApolloProvider } from '../components/Provider'
 import { NavBar } from '../components/NavBar'
 
@@ -8,6 +9,7 @@ import { PlayArena } from '../scenes/PlayArena';
 
 
 const App = () => {
+
   return (
     <ApolloProvider>
       <Router>
@@ -15,7 +17,9 @@ const App = () => {
         <Switch>
           <Route 
             path="/hunt/homepage"
-            render={ (props) => <HomePage {...props}  /> } 
+            render={ (props) => (
+              <HomePage {...props}  
+              />) } 
             exact
           />
           <Route 

@@ -47,16 +47,14 @@ const useStyles = makeStyles({
   completed: {},
 })
 
-const Progress = ({ currentUser }) => {
+const Progress = ({ progress }) => {
   const problemNum = 10;
   const steps = Array(problemNum).fill();
   const styles = useStyles();
 
-  let currentProgress = parseInt(currentUser.progress) || 0;
-  
   return (
     <div className="progressRoot">
-      <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
+      <Stepper alternativeLabel activeStep={progress} connector={<StyleConnector />}>
         {steps.map((_, index) => (
           <Step key={index}>
             <StepButton>
@@ -78,7 +76,7 @@ const Progress = ({ currentUser }) => {
 }
 
 Progress.propTypes = {
-  currentUser: PropTypes.object.isRequired,
+  progress: PropTypes.number.isRequired,
 };
 
 export {Progress};
