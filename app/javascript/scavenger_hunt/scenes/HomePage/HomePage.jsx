@@ -1,9 +1,13 @@
 import React from 'react'
 import { Alert } from "../../components/Alert";
-import './HomePage.scss'
 import { Button } from 'react-bootstrap';
+import './HomePage.scss'
+import { useUserData } from "../../hooks/useUserData";
 
 const HomePage = (props) => {
+  const { userName, progress } = useUserData();
+  console.log(progress);
+  
   return ( 
     <div className="main">
       {props.location.state && !props.location.state.loggedIn &&  <Alert message="You need to log in to access that page" variant="info" /> }
