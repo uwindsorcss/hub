@@ -1,15 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types';
+
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { ApolloProvider } from '../components/Provider'
+import { UserData } from "../context";
+import { Providers } from '../components/Providers'
 import { NavBar } from '../components/NavBar'
 
 import { HomePage } from '../scenes/HomePage';
 import { PlayArena } from '../scenes/PlayArena';
 
 
-const App = () => {
+const App = ({ userData }) => {
   return (
-    <ApolloProvider>
+    <Providers userData={userData} >
       <Router>
         <NavBar />
         <Switch>
@@ -33,8 +36,12 @@ const App = () => {
           />
         </Switch>
       </Router>
-    </ApolloProvider>
+    </Providers>
   );
 }
+
+App.propTypes = {
+  userData: PropTypes.shape(UserData)
+};
 
 export { App }
