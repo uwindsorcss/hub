@@ -207,7 +207,7 @@ Harshdip has followed this exact sequence.
 - Elective (See if you can take another mandatory course you will have to do in the future)
 
 ###### Second Semester
-- ECON-1100 Intro to Economics 1 or Physcology (I took econ because I find it more fun and applicable)
+- ECON-1100 Intro to Economics 1 or Psychology (I took econ because I find it more fun and applicable)
 - COMP-1410 Intro to Programming & Algorithms II
 - COMP-2650 Computer Architecture 1
 - MATH-1730 Integral Calculus
