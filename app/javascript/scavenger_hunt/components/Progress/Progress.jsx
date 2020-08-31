@@ -6,6 +6,7 @@ import StepButton from '@material-ui/core/StepButton';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepConnector from '@material-ui/core/StepConnector';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { Redirect, useHistory } from 'react-router-dom';
 import './Progress.scss';
 
 
@@ -51,13 +52,16 @@ const Progress = ({ currentProgress }) => {
   const problemNum = 10;
   const steps = Array(problemNum).fill();
   const styles = useStyles();
+  const history = useHistory();
 
   return (
     <div className="progressRoot">
       <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
-        {steps.map((_, index) => (
-          <Step key={index}>
-            <StepButton>
+        {steps.map(( _, index) => (
+          <Step key={index+1}>
+            <StepButton onClick={()=>{
+              history.push(`/hunt/play/${index+1}`)
+            }}>
               <StepLabel
                 StepIconProps={{
                   classes: {
