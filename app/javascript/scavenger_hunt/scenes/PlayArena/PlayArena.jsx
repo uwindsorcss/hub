@@ -5,10 +5,13 @@ import { useCurrentUserQuery } from '../../data/queries';
 import { Progress } from '../../components/Progress'
 import { Navigation } from './Navigation';
 import { MainContent } from './MainContent';
+import { useUserData } from '../../hooks/useUserData';
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
-  const { data: userData, loading: queryLoading } = useCurrentUserQuery();
+  const [{ userName, progress }, _ ] = useUserData();
+  console.log(progress);
+  console.log(userName);
   
   const getClueId = () => {
     let clueId = 1
@@ -21,13 +24,7 @@ const PlayArena = (props) => {
     return clueId
   }
 
-  if (queryLoading) {
-    return(
-      <h3>Loading your data</h3>
-    )
-  }
-
-  if (!queryLoading && !userData.currentUser) {
+  if (userName === "Default User") {
     return (
     <Redirect to={{
      pathname: "/hunt/homepage",
@@ -38,8 +35,8 @@ const PlayArena = (props) => {
 
   return (
     <div className="main">       
-      <Progress currentUser={userData.currentUser} />
-      <MainContent progress={parseInt(userData.currentUser.progress)} clueId={getClueId()}/>
+      <Progress currentProgress={progress} />
+      <MainContent progress={progress} clueId={getClueId()}/>
       <Navigation />
     </div>
   );
