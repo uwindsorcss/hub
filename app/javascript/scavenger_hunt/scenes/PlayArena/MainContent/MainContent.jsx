@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './MainContent.scss';
-import { Clues } from '../../../data/staticData/clues';
 import {
   Grid,
   InputLabel,
@@ -9,16 +7,20 @@ import {
   FormHelperText
 } from '@material-ui/core';
 import { Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+import { Clues } from '../../../data/staticData/clues';
+import './MainContent.scss';
 
 
 const MainContent = ({ progress, clueId }) => {
   const [answer, setAnswer] = useState("");
+  const history = useHistory();
 
   const getClue = () => {
     let index = clueId - 1
     if ((clueId - 1) > progress) {
-      window.location.href = `/hunt/play/${progress + 1}`
       index = progress
+      history.push(`/hunt/play/${index+1}`)
     }
     
     return Clues[index]

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom';
 
-import { useCurrentUserQuery } from '../../data/queries';
 import { Progress } from '../../components/Progress'
 import { Navigation } from './Navigation';
 import { MainContent } from './MainContent';
@@ -9,7 +8,7 @@ import { useUserData } from '../../hooks/useUserData';
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
-  const [{ userName, progress }, _ ] = useUserData();
+  const [{ userName, progress }, setUserData ] = useUserData();
   console.log(progress);
   console.log(userName);
   
