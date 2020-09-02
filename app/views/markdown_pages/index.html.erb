@@ -1,0 +1,18 @@
+<h1>News</h1>
+<hr>
+
+<% if @pages.present? %>
+   <% @pages.each do |page| %>
+      <%= render 'markdown_pages/markdown_page', page: page, page_title: @page_title %>
+   <% end %>
+   <%= paginate @pages, theme: 'twitter-bootstrap-4' %>
+<% else %>
+  There is currently no CSS news! Stay tuned for some Hot and exciting news. 
+  <br><br>
+<% end %>
+
+<% if current_user&.is_admin? %>
+   <%= link_to "New page", new_markdown_page_path(title: @page_title), class: "btn btn-success" %>
+<% end %>
+<br><br> 
+

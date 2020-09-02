@@ -1,0 +1,17 @@
+
+.mainform__container {
+  position: absolute;
+  width: 67%;
+  height: 65%;
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mainform__textfield {
+  padding: 2em;
+}

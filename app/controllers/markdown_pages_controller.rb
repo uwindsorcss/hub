@@ -32,12 +32,26 @@ class MarkdownPagesController < ApplicationController
     else
       @page.errors.add(:title, :no_permission, message: "You do not have permission to modify pages!")
       render 'edit'
-    end    
+    end
+  end
+
+  def discord
+    @page_title = "Discord"
+    @page = MarkdownPage.find_by(title: @page_title)
+  end
+
+  def about
+    @page_title = "About"
+    @page = MarkdownPage.find_by(title: @page_title)
+  end
+
+  def guide
+    @page_title = "Student Guide"
+    @page = MarkdownPage.find_by(title: @page_title)
   end
 
   private
-
-  def page_params
-    params.require(:markdown_page).permit(:title, :text)
-  end  
+    def page_params
+      params.require(:markdown_page).permit(:title, :text)
+    end
 end

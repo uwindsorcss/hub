@@ -1,0 +1,7 @@
+<%= react_component('index.App', {
+  userData: {
+    userName: current_user&.name,
+    progress: current_user&.progress,
+    userRole: current_user&.role
+  }
+}) %>

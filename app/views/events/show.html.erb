@@ -41,12 +41,12 @@
       <% if current_user && @event.start_date.future? %>
           <% if @user_registration&.waitlisted %>
             <%= link_to 'Leave Waitlist',
-              registration_path(event_id: @event.id, registration_id: @user_registration),
+              registration_path(user_id: current_user.id),
               method: :delete,
               class: "btn btn-danger" %>
           <% elsif @user_registration %>
             <%= link_to 'Unregister from Event',
-              registration_path(event_id: @event.id, registration_id: @user_registration),
+              registration_path(user_id: current_user.id),
               method: :delete,
               class: "btn btn-danger" %>
           <% elsif @event.current_capacity < @event.capacity %>
@@ -90,7 +90,14 @@
       <li class="list-group-item">There are no users registered for this event.</li>
     <% else %>
       <% @registered_users.each do |guest| %>
-        <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
+        <li class="list-group-item" style="display: list-item;">
+          <%= guest.name %> - <%= guest.email %>
+          <%= link_to 'Remove',
+            registration_path(user_id: guest.id),
+            method: :delete,
+            data: { confirm: "Are you sure? You will remove #{guest.name} from this event."},
+            class: "btn btn-danger pull-right" %>
+        </li>
       <% end %>
     <% end %>
   </ol>
@@ -101,7 +108,9 @@
     When sending an email, paste this list in the <b>Bcc</b> section of your recipients. This will make the email list hidden from everyone you send the email to.
     <div class="card">
       <div class="card-body">
-        <p class="card-text" id="email_ids"><%= @registered_users_email_string %></p>
+        <p class="card-text" id="email_ids">
+          <%= @registered_users_email_string %>
+        </p>
         <button type="button" class="btn btn-primary" onclick="CopyToClipboard()">Copy to Clipboard</button>
       </div>
     </div>
@@ -114,7 +123,14 @@
       <li class="list-group-item">There are no users on the waitlist for this event.</li>
     <% else %>
       <% @waitlisted_users.each do |guest| %>
-        <li class="list-group-item" style="display: list-item;"><%= guest.name %> - <%= guest.email %></li>
+        <li class="list-group-item" style="display: list-item;">
+          <%= guest.name %> - <%= guest.email %>
+          <%= link_to 'Remove',
+            registration_path(user_id: guest.id),
+            method: :delete,
+            data: { confirm: "Are you sure? You will remove #{guest.name} from this event."},
+            class: "btn btn-danger pull-right" %>
+        </li>
       <% end %>
     <% end %>
   </ol>

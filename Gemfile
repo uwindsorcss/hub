@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.6.0'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -7,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
+gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.3.6"
 gem 'certified'
@@ -36,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap4-kaminari-views'
 gem 'kaminari'
 gem 'social-share-button', '~> 1.2', '>= 1.2.1'
+gem 'webpacker'
+gem 'react-rails'
+gem 'graphql', '~> 1.11', '>= 1.11.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,6 +47,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -76,3 +81,9 @@ gem "validate_url"
 gem 'sidekiq'
 gem 'faker'
 gem 'omniauth-microsoft_graph'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+gem 'graphiql-rails', '1.7.0', group: :development
