@@ -5,15 +5,33 @@ import DatePicker from "react-datepicker";
 import './QuestionThree.scss';
 import "react-datepicker/dist/react-datepicker.css";
 
+const formatedDate = (date) => {
+  return date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear(); 
+}
+
 const  QuestionThree = () => {
   const [DateOne, setDateOne] = useState(new Date());
   const [DateTwo, setDateTwo] = useState(new Date());
-
+  const [DateOneString, setDateOneString] = useState(formatedDate(new Date()));
+  const [DateTwoString, setDateTwoString] = useState(formatedDate(new Date()));
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Answer Submitted is: ", DateOne, DateTwo);
+    console.log("Answer Submitted is: ", DateOneString, DateTwoString);
   }
+
+  const handleChange = (date, isFirstDate = false, isSecondDate = false) => {
+    let formated_date = formatedDate(date)
+    console.log(formated_date);
+    if (isFirstDate) { 
+      setDateOne(date);
+      setDateOneString(formated_date); 
+    }
+    if (isSecondDate) {
+      setDateTwo(date);
+      setDateTwoString(formated_date);
+    }
+  } 
 
   return (
     <Card>
@@ -27,10 +45,10 @@ const  QuestionThree = () => {
           </div>
           <div className="center-text">
             <div className="date-picker">
-              <DatePicker selected={DateOne} onChange={date => setDateOne(date)} />
+              <DatePicker selected={DateOne} onChange={date => handleChange(date, true)} />
             </div>
             <div className="date-picker">
-              <DatePicker selected={DateTwo} onChange={date => setDateTwo(date)} />
+              <DatePicker selected={DateTwo} onChange={date => handleChange(date, false, true)} />
             </div>
           </div>
           <FormHelperText id="my-helper-text">
