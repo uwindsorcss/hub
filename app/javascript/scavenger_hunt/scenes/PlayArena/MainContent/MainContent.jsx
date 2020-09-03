@@ -4,7 +4,8 @@ import { Clues } from '../../../data/staticData/clues';
 import { 
     QuestionOne,
     QuestionTwo,
-    QuestionThree
+    QuestionThree,
+    QuestionEight
   } from '../../Questions';
 import { Grid } from '@material-ui/core';
 
@@ -27,6 +28,7 @@ const MainContent = ({ progress, clueId }) => {
         <QuestionOne />
         <QuestionTwo />
         <QuestionThree />
+        <QuestionEight />
       </Grid>
       <Grid item xs={2} />
     </Grid>
