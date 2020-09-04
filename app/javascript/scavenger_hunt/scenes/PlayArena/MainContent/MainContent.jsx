@@ -21,14 +21,12 @@ const MainContent = ({ progress, clueId }) => {
   }
 
   return (
-    <Grid container spacing={0} alignItems="stretch">
-      <Grid item xs={2} />
+    <Grid container spacing={0} justify="center" alignItems="stretch">
       <Grid item xs={8}>
         <QuestionOne />
         <QuestionTwo />
         <QuestionThree />
       </Grid>
-      <Grid item xs={2} />
     </Grid>
   )
 };

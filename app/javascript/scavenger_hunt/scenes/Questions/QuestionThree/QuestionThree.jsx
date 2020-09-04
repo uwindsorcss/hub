@@ -12,25 +12,17 @@ const formatedDate = (date) => {
 const  QuestionThree = () => {
   const [DateOne, setDateOne] = useState(new Date());
   const [DateTwo, setDateTwo] = useState(new Date());
-  const [DateOneString, setDateOneString] = useState(formatedDate(new Date()));
-  const [DateTwoString, setDateTwoString] = useState(formatedDate(new Date()));
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Answer Submitted is: ", DateOneString, DateTwoString);
+    console.log("Answer Submitted is: ", formatedDate(DateOne), formatedDate(DateTwo));
   }
 
   const handleChange = (date, isFirstDate = false, isSecondDate = false) => {
     let formated_date = formatedDate(date)
     console.log(formated_date);
-    if (isFirstDate) { 
-      setDateOne(date);
-      setDateOneString(formated_date); 
-    }
-    if (isSecondDate) {
-      setDateTwo(date);
-      setDateTwoString(formated_date);
-    }
+    if (isFirstDate) { setDateOne(date); }
+    if (isSecondDate) { setDateTwo(date); }
   } 
 
   return (
