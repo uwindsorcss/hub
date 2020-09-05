@@ -1,21 +1,38 @@
 export const Clues = [
   {
-    question: "There’s a student government at UWindsor that represents all undergraduate students in the Faculty of Science. What’s the name of this organization?",
-    hint: "",
-    answer: "1"
+    puzzleNo: '1',
+    answers: ["Science Society"]
   },
   {
-    question: "What’s Science Society’s website? www.________.com",
-    hint: "",
-    answer: "2"
+    puzzleNo: '2',
+    answers: ["uwinscisoc"]
   },
   {
-    question: "Q.3 SciSoc organizes many annual events. In particular, we celebrate two science-related dates every year. What are those days?",
-    hint: "Hint: On one day, we give out free guacaMOLE and on the other, it’s free PIe!",
-    answer: "3"
+    puzzleNo: '3',
+    answers: ["3"]
   },
   {
-    question: "Here are three clues to letters of the alphabet: ",
-    answer: "4"
+    puzzleNo: '4',
+    answers: ["4"]
   },
+  {
+    puzzleNo: '5',
+    answers: ["5"]
+  },
+  {
+    puzzleNo: '6',
+    answers: ["6"]
+  },
+  {
+    puzzleNo: '7',
+    answers: ["7"]
+  },
+  {
+    puzzleNo: '8',
+    answers: ["8"] 
+  },
+  {
+    puzzleNo: '9',
+    answers: []
+  }
 ]

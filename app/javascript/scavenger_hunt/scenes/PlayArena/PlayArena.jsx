@@ -5,6 +5,7 @@ import { Progress } from '../../components/Progress'
 import { Navigation } from './Navigation';
 import { MainContent } from './MainContent';
 import { useUserData } from '../../hooks/useUserData';
+import { Container, Row } from 'react-bootstrap';
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
@@ -33,11 +34,17 @@ const PlayArena = (props) => {
   }
 
   return (
-    <div className="main">       
-      <Progress currentProgress={progress} />
-      <MainContent progress={progress} clueId={getClueId()}/>
+    <>
       <Navigation />
-    </div>
+      <Container className="play-arena-container" fluid>
+        <Row className="play-arena-row1">
+          <Progress currentProgress={progress} />
+        </Row>
+        <Row className="play-arena-row2">
+          <MainContent progress={progress} clueId={getClueId()}/>
+        </Row>
+      </Container>
+    </>
   );
 }
 
