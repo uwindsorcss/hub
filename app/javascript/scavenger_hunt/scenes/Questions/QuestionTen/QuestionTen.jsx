@@ -3,9 +3,18 @@ import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import './QuestionTen.scss';
 
+import One from '../_images/1.png';
+import Two from '../_images/2.png';
+import Three from '../_images/3.png';
+import Four from '../_images/4.png';
 
 function QuestionTen () {
   const [answerOne, setAnswerOne] = useState('');
+  const [answerTwo, setAnswerTwo] = useState('');
+  const [answerThree, setAnswerThree] = useState('');
+  const [answerFour, setAnswerFour] = useState('');
+
+  
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (event) => {
@@ -22,73 +31,82 @@ function QuestionTen () {
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
-          <div className="letter-box">
-            <div>
-              Perhaps your name will join the ranks of these famous scientists someday after you graduate. That year seems far in the future, but it’ll come before you know it!
-            </div>
-            <br/>
-            <br/>
-            <Grid container justify="center" direction="row" >
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                1. Ada Lovelace
-              </Grid>
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                2. Rosalind Franklin
-              </Grid>
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                3. Mary Anning
-              </Grid>
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                4. Jennifer Doudna
-              </Grid>
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                5. Marie Curie
-              </Grid>
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                6. Jane Goodall
-              </Grid>
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                7. Katherine Johnson
-              </Grid>
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                8. Mae C. Jemison
-              </Grid>
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                9. Shirley Ann Jackson
-              </Grid>
-              <Grid container item justify="flex-start"  xs={12} sm={6}>
-                10. Gladys West
-              </Grid>
-
-            </Grid>
-    
-              <br/>
-              <br/>
-              Multiply the lifespans of scientists 1-3. This is value X.
-              <br/>
-              <br/>
-              Sum the birth years of scientists 4-6. This is value Y.
-              <br/>
-              <br/>
-              Sum the years that scientists 7-10 died, and divide it by 5. If the scientist is still alive, don’t include them in the calculation. This is value Z.
-              <br/>
-              <br/>
-              (X+Y)*Z / 101 - 271452 = ?
-              <br/>
-              <br/>
-            </div>
-
-            <div className="center-text">
-              <TextField required 
-                id="question" 
-                label="Answer" 
-                variant="outlined"
-                aria-describedby="Write your answer here" 
-                value={answerOne} 
-                onChange={(e) => setAnswerOne(e.target.value)}
-              />
-            </div>
+          <Grid container direction="column">
+            <Grid container item xs={12}>
+              <div className="letter-box">
+                  UWindsor and the UWSA offer a lot of events and services to support students! Can you name these ones? (Hint: Each _______ is a word in the name!)
           
+            <Grid container direction="row" className="pictionary">
+              <Grid container item xs={8} justify="flex-start">
+                <img src={One} className="emo" />
+              </Grid>
+              <Grid container item xs={4} justify="flex-start">
+                <div className="center-text">
+                  <TextField required 
+                    id="question" 
+                    label="Answer" 
+                    variant="outlined"
+                    aria-describedby="Write your answer here" 
+                    value={answerOne} 
+                    onChange={(e) => setAnswerOne(e.target.value)}
+                  />
+                </div>
+              </Grid>
+            </Grid>
+            <Grid container direction="row" className="pictionary">
+              <Grid container item xs={8} justify="flex-start">
+                <img src={Two} className="emo" />
+              </Grid>
+              <Grid container item xs={4} justify="flex-start">
+                <div className="center-text">
+                  <TextField required 
+                    id="question" 
+                    label="Answer" 
+                    variant="outlined"
+                    aria-describedby="Write your answer here" 
+                    value={answerTwo} 
+                    onChange={(e) => setAnswerTwo(e.target.value)}
+                  />
+                </div>
+              </Grid>
+            </Grid>
+            <Grid container direction="row" className="pictionary">
+              <Grid container item xs={8} justify="flex-start">
+                <img src={Three} className="emo" />
+              </Grid>
+              <Grid container item xs={4} justify="flex-start" alignContent="center">
+                <div className="center-text">
+                  <TextField required 
+                    id="question" 
+                    label="Answer" 
+                    variant="outlined"
+                    aria-describedby="Write your answer here" 
+                    value={answerThree} 
+                    onChange={(e) => setAnswerThree(e.target.value)}
+                  />
+                </div>
+              </Grid>
+            </Grid>
+            <Grid container direction="row" className="pictionary">
+              <Grid container item xs={8} justify="flex-start">
+                <img src={Four} className="emo" />
+              </Grid>
+              <Grid container item xs={4} justify="flex-start" alignItems="center">
+                <div className="center-text">
+                  <TextField required 
+                    id="question" 
+                    label="Answer" 
+                    variant="outlined"
+                    aria-describedby="Write your answer here" 
+                    value={answerFour} 
+                    onChange={(e) => setAnswerFour(e.target.value)}
+                  />
+                </div>
+              </Grid>
+            </Grid>
+          </div>
+
+        </Grid>
             <div className="center-text">
               <Button 
                 type="submit"
@@ -98,7 +116,8 @@ function QuestionTen () {
                 Submit
               </Button>
             </div>
-            
+      
+          </Grid>
         </form>
       </Card.Body>
     </Card>
