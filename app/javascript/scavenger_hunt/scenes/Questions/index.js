@@ -4,3 +4,4 @@ export { QuestionThree } from './QuestionThree';
 export { QuestionFour } from './QuestionFour';
 export { QuestionFive } from './QuestionFive';
 export { QuestionSix } from './QuestionSix';
+export { QuestionSeven} from './QuestionSeven';
