@@ -4,6 +4,7 @@ import { Card, Button } from "react-bootstrap";
 import './QuestionNine.scss';
 
 import Table from '../images/table.png';
+import Gene from '../images/gene.png';
 
 const QuestionNine = () => {
   const [answerOne, setAnswerOne] = useState('');
@@ -29,11 +30,7 @@ const QuestionNine = () => {
             </Grid>
             <Grid container item xs={12}>
               <div className="letter-box">
-                <span className="seq">
-                  3’ - GCTAGCTACGATCTTCGGCTGATTGCTAGATCGATCGATAGA - 5’
-                  <br/>
-                  5’ - CGATCGATGCTAGAAGCCGACTAACGATCTAGCTAGCTATCT - 3’
-                </span>
+                <img src={Gene} className="gene" />
       
                 <br/>
                 <br/>
