@@ -3,9 +3,9 @@ import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import './QuestionNine.scss';
 
-import Table from '../_images/table.png';
+import Table from '../images/table.png';
 
-function QuestionNine () {
+const QuestionNine = () => {
   const [answerOne, setAnswerOne] = useState('');
   const [loading, setLoading] = useState(false);
 

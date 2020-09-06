@@ -4,7 +4,7 @@ import { Card, Button } from "react-bootstrap";
 import './QuestionEleven.scss';
 
 
-function QuestionEleven () {
+const QuestionEleven = () => {
   const [answerOne, setAnswerOne] = useState('');
   const [loading, setLoading] = useState(false);
 

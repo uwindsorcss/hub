@@ -3,7 +3,7 @@ import { TextField,  Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import './QuestionFour.scss';
 
-function QuestionFour () {
+const QuestionFour = () => {
   const [answer, setAnswer] = useState('');
 
   const handleSubmit = (event) => {

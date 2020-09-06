@@ -3,7 +3,7 @@ import { TextField } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import './QuestionFive.scss';
 
-function QuestionFive () {
+const QuestionFive = () => {
   const [answerOne, setAnswerOne] = useState('');
   const [answerTwo, setAnswerTwo] = useState('');
   const [loading, setLoading] = useState(false);
