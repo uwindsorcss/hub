@@ -1,12 +1,15 @@
 import { Clues } from '../../data/staticData/clues';
-import { useUserData } from '../../hooks/useUserData';
 
-const checkAnswer = (userAnswer, clueID, answerIndex=0, updateGQL=false) => {
-  clueAnswer = Clues[clueID].answers[answerIndex];
-  const [{progress}, setUserData] = useUserData();
+const checkAnswer = (userAnswer, progress, setUserData, clueID, answerIndex=0, updateGQL=false) => {
+  console.log(Clues)
+  console.log(Clues[clueID-1])
+  console.log(Clues[clueID-1].answers)
+  console.log(Clues[clueID-1].answers[answerIndex])
+  const clueAnswer = Clues[clueID-1].answers[answerIndex];
 
+  console.log('test')
   if (userAnswer.toLowerCase() === clueAnswer.toLowerCase()){
-    if(clueID === progress+1 && updateGQL){
+    if(clueID === (progress+1) && updateGQL){
       setUserData({progress:progress+1});
     }
     return true;

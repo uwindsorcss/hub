@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { TextField } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 
 import './QuestionOne.scss';
 
-const  QuestionOne = () => {
+const  QuestionOne = ({ checkAnswer, progress, setUserData }) => {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading ] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Answer Submitted is:", answer);
+    console.log(checkAnswer(answer, progress, setUserData, 1))
   }
 
   const handleChange = (event) => {
@@ -45,5 +47,11 @@ const  QuestionOne = () => {
     </Card>
   );
 };
+
+QuestionOne.propTypes = {
+  checkAnswer: PropTypes.func.isRequired,
+  setUserData: PropTypes.func.isRequired,
+  progress: PropTypes.number.isRequired,
+}
 
 export { QuestionOne };

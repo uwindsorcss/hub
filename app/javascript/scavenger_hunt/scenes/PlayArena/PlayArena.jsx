@@ -1,11 +1,12 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom';
+import { Container, Row } from 'react-bootstrap';
 
 import { Progress } from '../../components/Progress'
 import { Navigation } from './Navigation';
 import { MainContent } from './MainContent';
 import { useUserData } from '../../hooks/useUserData';
-import { Container, Row } from 'react-bootstrap';
+import { checkAnswer } from './checkAnswer'
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
@@ -41,7 +42,7 @@ const PlayArena = (props) => {
           <Progress currentProgress={progress} />
         </Row>
         <Row className="play-arena-row2">
-          <MainContent progress={progress} clueId={getClueId()}/>
+          <MainContent checkAnswer={checkAnswer} setUserData={setUserData} progress={progress} clueId={getClueId()}/>
         </Row>
       </Container>
     </>
