@@ -34,5 +34,9 @@ export const Clues = [
   {
     puzzleNo: '9',
     answers: []
+  },
+  {
+    puzzleNo: '10',
+    answers: ['Campus Food Pantry', 'Afrofest', 'Campus Pride Centre', 'Outstanding Scholars']
   }
 ]

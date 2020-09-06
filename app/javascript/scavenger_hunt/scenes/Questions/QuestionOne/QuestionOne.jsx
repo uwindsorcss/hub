@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 
+import './QuestionOne.scss';
+
 const  QuestionOne = () => {
   const [answer, setAnswer] = useState("");
-
+  const [loading, setLoading ] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,7 +24,7 @@ const  QuestionOne = () => {
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
-          <div className="question-text">
+          <div className="letter-box">
             There’s a student government at UWindsor that represents all undergraduate students in the Faculty of Science. What’s the name of this organization?
           </div>
           <div className="center-text">
