@@ -24,7 +24,7 @@ const QuestionFour = () => {
           <div className="question-text">
               Here are three clues to letters of the alphabet:
           </div>
-          <Grid container justify="flex-start" direction="row">
+          <Grid container justify="flex-start" direction="row" className="letter-box">
             <div className="letter">
               Letter #1: I am part of the language that is now used to write Minecraft -- no, it’s not English, nor is it related to coffee!
             </div>
@@ -34,10 +34,11 @@ const QuestionFour = () => {
             <div className="letter">
               Letter #3: I am Sulfur, just shorter!
             </div>
-            <div className="question-text">
-            In the order of Letter #1, 2, and 3, what do these three letters stand for at UWindsor?
-            </div>
+         
           </Grid>
+          <div className="question-text">
+            In the order of Letter #1, 2, and 3, what do these three letters stand for at UWindsor?
+          </div>
           <div className="center-text">
             <TextField required 
               id="question" 
