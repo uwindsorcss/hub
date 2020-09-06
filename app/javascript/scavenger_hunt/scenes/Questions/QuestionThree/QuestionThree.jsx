@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FormHelperText } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import DatePicker from "react-datepicker";
+
 import './QuestionThree.scss';
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -32,7 +33,7 @@ const  QuestionThree = () => {
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
-          <div className="question-text">
+          <div className="letter-box">
             SciSoc organizes many annual events. In particular, we celebrate two science-related dates every year. What are those days? 
           </div>
           <div className="center-text">

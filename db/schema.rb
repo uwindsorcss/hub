@@ -92,4 +92,5 @@ ActiveRecord::Schema.define(version: 2020_08_06_164837) do
     t.boolean "hunter"
     t.integer "progress", default: 1
   end
+
 end

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 
+import './QuestionTwo.scss';
+
 const  QuestionTwo = () => {
   const [answer, setAnswer] = useState("");
 
@@ -22,7 +24,7 @@ const  QuestionTwo = () => {
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
-          <div className="question-text">
+          <div className="letter-box">
             What’s Science Society’s website? www.________.com
           </div>
           <div className="center-text">
