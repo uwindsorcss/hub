@@ -17,7 +17,7 @@ import {
   } from '../../Questions';
 
 
-const MainContent = ({ progress, clueId, checkAnswer, setUserData }) => {
+const MainContent = ({ progress, clueId, checkAnswer }) => {
   const history = useHistory();
 
   const getClue = () => {
@@ -33,7 +33,7 @@ const MainContent = ({ progress, clueId, checkAnswer, setUserData }) => {
   return (
     <Grid container spacing={0} justify="center" alignItems="stretch">
       <Grid item xs={8}>
-        <QuestionOne checkAnswer={checkAnswer} progress={progress} setUserData={setUserData} />
+        <QuestionOne checkAnswer={checkAnswer} />
         <QuestionTwo />
         <QuestionThree />
         <QuestionFour />
@@ -52,7 +52,6 @@ MainContent.propTypes = {
   progress: PropTypes.number.isRequired,
   clueId: PropTypes.number.isRequired,
   checkAnswer: PropTypes.func.isRequired,
-  setUserData: PropTypes.func.isRequired,
 };
 
 export { MainContent };

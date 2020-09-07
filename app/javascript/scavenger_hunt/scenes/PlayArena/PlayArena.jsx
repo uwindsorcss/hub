@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Redirect } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 
@@ -6,7 +6,7 @@ import { Progress } from '../../components/Progress'
 import { Navigation } from './Navigation';
 import { MainContent } from './MainContent';
 import { useUserData } from '../../hooks/useUserData';
-import { checkAnswer } from './checkAnswer'
+import { Clues } from '../../data/staticData/clues';
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
@@ -34,6 +34,21 @@ const PlayArena = (props) => {
    )
   }
 
+  const checkAnswer = ({userAnswer, clueID, answerIndex=0, updateGQL=false}) => {
+    const clueAnswer = Clues[clueID-1].answers[answerIndex];
+    console.log("thing " + progress);
+
+    if (userAnswer.toLowerCase() === clueAnswer.toLowerCase()){
+      if((clueID === (progress+1)) && updateGQL){
+        console.log("updated")
+        setUserData({progress:progress});
+      }
+      return true;
+    }
+    
+    return false;
+  }
+
   return (
     <>
       <Navigation />
@@ -42,7 +57,7 @@ const PlayArena = (props) => {
           <Progress currentProgress={progress} />
         </Row>
         <Row className="play-arena-row2">
-          <MainContent checkAnswer={checkAnswer} setUserData={setUserData} progress={progress} clueId={getClueId()}/>
+          <MainContent checkAnswer={checkAnswer} progress={progress} clueId={getClueId()}/>
         </Row>
       </Container>
     </>
