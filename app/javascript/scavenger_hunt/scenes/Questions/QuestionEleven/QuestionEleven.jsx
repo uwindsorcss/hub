@@ -9,15 +9,37 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import './QuestionEleven.scss';
 
 
-const QuestionEleven = () => {
-  const [answerOne, setAnswerOne] = useState('');
-  const [loading, setLoading] = useState(false);
+const QuestionEleven = ({ progress, setActiveStep, completed, setCompleted  }) => {
+
+  const [answer, setAnswer] = useState("");
+  const [loading, setLoading ] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const ans = Clues[10].answers[0];
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setSubmitted(true);
     setLoading(true);
-    console.log("Answer Submitted is:", answerOne);
+    console.log("progress",  progress)
+    if (check(answer, ans)) {
+      setToggle(true);
+   
+      const newCompleted = completed;
+      newCompleted[progress].score = 1;
+      newCompleted[progress].isCompleted = true;
+      console.log("Answer Submitted is:", newCompleted);
+      setCompleted(newCompleted);
+       
+    } else {
+      setToggle(false);
+    }
     setLoading(false);
+  }
+  // console.log("Answer Submitted is:", toggle);
+  const handleChange = (event) => {
+    setAnswer(event.target.value);
   }
 
   return(
@@ -89,20 +111,34 @@ const QuestionEleven = () => {
                 label="Answer" 
                 variant="outlined"
                 aria-describedby="Write your answer here" 
-                value={answerOne} 
-                onChange={(e) => setAnswerOne(e.target.value)}
+                value={answer} 
+                onChange={(e) => setAnswer(e.target.value)}
               />
             </div>
           
-            <div className="center-text">
-              <Button 
-                type="submit"
-                variant="primary" 
-                disabled={loading}
-              >
-                Submit
-              </Button>
-            </div>
+            <Grid container justify="center" alignItems="center">
+            {
+              submitted && toggle &&
+                <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+            }
+            {
+              submitted && !toggle &&
+                <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+            }
+                  
+            </Grid>
+            {
+            !toggle &&
+              <div className="center-text">
+                <Button 
+                  variant="primary" 
+                  type="submit"
+                  disabled={loading}
+                >
+                  Submit
+                </Button>
+              </div>
+            }
 
         </form>
       </Card.Body>

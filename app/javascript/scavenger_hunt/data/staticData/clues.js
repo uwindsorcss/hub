@@ -41,7 +41,7 @@ export const Clues = [
   },
   {
     puzzleNo: '11',
-    answers: [2024]
+    answers: ["2024"]
   },
   {
     puzzleNo: '12',

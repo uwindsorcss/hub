@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
-
 import { Progress } from '../../components/Progress'
 import { MainContent } from './MainContent';
 import { useUserData } from '../../hooks/useUserData';

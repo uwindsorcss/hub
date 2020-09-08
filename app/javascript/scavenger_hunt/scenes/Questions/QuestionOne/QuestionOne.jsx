@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
@@ -10,6 +9,7 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import './QuestionOne.scss';
 
 const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => {
+  
   const [answer, setAnswer] = useState("");
   const [loading, setLoading ] = useState(false);
   const [toggle, setToggle] = useState(false);
