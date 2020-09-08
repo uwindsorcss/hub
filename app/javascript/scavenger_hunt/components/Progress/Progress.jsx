@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -6,7 +6,7 @@ import StepButton from '@material-ui/core/StepButton';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepConnector from '@material-ui/core/StepConnector';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import { useHistory } from 'react-router-dom';
+import { Grid, Typography } from '@material-ui/core';
 import './Progress.scss';
 
 import { Navigation } from './Navigation';
@@ -45,38 +45,87 @@ const useStyles = makeStyles({
       color: '#6aad5e',
     },
   },
-  active: {},
-  completed: {},
-})
+  active: {
 
-const Progress = ({ currentProgress, setActiveStep }) => {
+  },
+  completed: {
 
-  const problemNum = 13;
-  const steps = Array(problemNum).fill();
+  },
+  word_incomplete: {
+    marginTop: 20,
+    borderRadius: 50,
+    width: 35,
+    height: 35,
+    display: 'flex',
+    justifyContent: 'center',
+    background: '#A8A8A8',
+    alignItems: 'center'
+  },
+  word_complete: {
+    borderRadius: 50,
+    marginTop: 20,
+    width: 35,
+    height: 35,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: '#6aad5e'
+  },
+  number: {
+    color: 'white',
+    fontSize: 20
+  }
+});
+
+
+
+const Progress = ({ currentProgress, setActiveStep, completed, setCompleted }) => {
+
   const styles = useStyles();
-  const history = useHistory();
+  const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+
+    window.addEventListener('resize', () => {
+      const width = window.innerWidth;
+      // show the number only
+      if (width <= 700 ) setToggle(true);
+      else setToggle(false);  
+    })
+   
+
+  }, [])
  
   return (
-  <>
+  <Grid container justify="center">
     <Navigation setActiveStep={setActiveStep} currentProgress={currentProgress} />
-    <div className="progressRoot">
-      <Stepper alternativeLabel activeStep={12} connector={<StyleConnector />}>
-        {steps.map(( _, index) => (
-          <Step key={index+1}>
-            <StepLabel
-              StepIconProps={{
-                classes: {
-                  root: styles.root,
-                  completed: styles.completed,
-                  active: styles.active,
-                }
-              }}
-            />
-          </Step>
-        ))}
-      </Stepper>
-    </div>
-  </>
+    { toggle ? 
+      
+      <Grid container justify="center" className={completed[currentProgress] ? styles.word_complete : styles.word_incomplete}>
+        <Typography className={styles.number}> {currentProgress + 1} </Typography>
+      </Grid>   
+      
+      :
+      <div className="progressRoot">   
+        <Stepper alternativeLabel activeStep={12} connector={<StyleConnector />}>
+          {completed.map(( _, index) => (
+            <Step key={index}>
+              <StepLabel
+                completed={completed[index]}
+                StepIconProps={{
+                  classes: {
+                    root: styles.root,
+                    completed: styles.completed,
+                    active: styles.active,
+                  }
+                }}
+              />
+            </Step>
+          ))}
+        </Stepper>
+      </div>
+      }
+    </Grid>
   );
 }
 

@@ -14,7 +14,8 @@ const PlayArena = (props) => {
   const [{ userName, progress }, setUserData] = useUserData();
 
   const [activeStep, setActiveStep] = useState(progress - 1);
-  const [completed, setCompleted] = useState(Array(12).fill(false))
+  const [completed, setCompleted] = useState(Array(13).fill(false));
+  
   console.log('props', activeStep);
   console.log('completed', completed);
   
