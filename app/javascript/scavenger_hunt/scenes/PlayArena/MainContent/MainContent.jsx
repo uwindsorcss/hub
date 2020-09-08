@@ -70,7 +70,7 @@ const MainContent = ({ progress, setActiveStep, completed, setCompleted }) => {
       <Grid item xs={8}>
      
         {
-          select(12)
+          select(progress)
         }
       </Grid>
     </Grid>

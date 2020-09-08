@@ -14,7 +14,63 @@ const PlayArena = (props) => {
   const [{ userName, progress }, setUserData] = useUserData();
 
   const [activeStep, setActiveStep] = useState(progress - 1);
-  const [completed, setCompleted] = useState(Array(13).fill(false));
+  // have to do this, use fill array causes shallow copy
+  const [completed, setCompleted] = useState([
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+        {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+
+  ]);
+  const [score, setScore] = useState(0);
   
   console.log('props', activeStep);
   console.log('completed', completed);
@@ -37,7 +93,7 @@ const PlayArena = (props) => {
           <Progress currentProgress={activeStep} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         </Row>
         <Row className="play-arena-row2">
-          <MainContent progress={activeStep} completed={completed} setCompleted={setCompleted} />
+          <MainContent progress={activeStep} completed={completed} setCompleted={setCompleted} score={score} setScore={setScore} />
         </Row>
       </Container>
     </>

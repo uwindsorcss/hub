@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
+import { Clues } from '../../../data/staticData/clues';
+import { check } from '../utility';
+
 import './QuestionEleven.scss';
 
 

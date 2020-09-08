@@ -2,7 +2,6 @@ import React, { useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
-import StepButton from '@material-ui/core/StepButton';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepConnector from '@material-ui/core/StepConnector';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
@@ -101,17 +100,17 @@ const Progress = ({ currentProgress, setActiveStep, completed, setCompleted }) =
     <Navigation setActiveStep={setActiveStep} currentProgress={currentProgress} />
     { toggle ? 
       
-      <Grid container justify="center" className={completed[currentProgress] ? styles.word_complete : styles.word_incomplete}>
+      <Grid container justify="center" className={completed[currentProgress].isCompleted ? styles.word_complete : styles.word_incomplete}>
         <Typography className={styles.number}> {currentProgress + 1} </Typography>
       </Grid>   
       
       :
       <div className="progressRoot">   
-        <Stepper alternativeLabel activeStep={12} connector={<StyleConnector />}>
+        <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
           {completed.map(( _, index) => (
             <Step key={index}>
               <StepLabel
-                completed={completed[index]}
+                completed={completed[index].isCompleted}
                 StepIconProps={{
                   classes: {
                     root: styles.root,
