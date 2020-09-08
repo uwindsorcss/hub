@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { Redirect } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 
@@ -7,6 +7,10 @@ import { Navigation } from './Navigation';
 import { MainContent } from './MainContent';
 import { useUserData } from '../../hooks/useUserData';
 import { Clues } from '../../data/staticData/clues';
+
+import { UserDataContext, UserData } from '../../context';
+import { useUpdateUserMutation } from '../../data/mutations';
+
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
