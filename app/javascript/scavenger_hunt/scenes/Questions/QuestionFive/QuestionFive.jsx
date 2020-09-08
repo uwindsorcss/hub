@@ -9,7 +9,7 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 import './QuestionFive.scss';
 
-const QuestionFive = ({progress, setActiveStep, completed, setCompleted }) => {
+const QuestionFive = ({ progress, setActiveStep, completed, setCompleted }) => {
   const [answerOne, setAnswerOne] = useState('');
   const [answerTwo, setAnswerTwo] = useState('');
 
@@ -17,6 +17,7 @@ const QuestionFive = ({progress, setActiveStep, completed, setCompleted }) => {
   const [toggleTwo, setToggleTwo] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
   const ans = Clues[4].answers;
 
   const handleSubmit = (event) => {
@@ -46,6 +47,15 @@ const QuestionFive = ({progress, setActiveStep, completed, setCompleted }) => {
       newCompleted[progress].isCompleted = true;
       setCompleted(newCompleted);
       // graphql query if needed
+      const payload = {
+        progress,
+        completed,
+        status: 'incompleted',
+      }
+      // convert payload JSON object to string
+      // save it in database
+      // query it back and convert JSON object
+      // save payload for every correct answer for all questions
     }
     setLoading(false);
    console.log("completed", newCompleted);
@@ -92,7 +102,7 @@ const QuestionFive = ({progress, setActiveStep, completed, setCompleted }) => {
           </div>
           
           <div className="center-text">
-            <TextField required 
+            <TextField required
               id="question" 
               label="Answer" 
               variant="outlined"

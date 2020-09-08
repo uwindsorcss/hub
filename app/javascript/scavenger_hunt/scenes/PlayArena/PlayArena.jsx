@@ -9,15 +9,17 @@ import { Clues } from '../../data/staticData/clues';
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
-
-  const [{ userName, progress }, setUserData] = useUserData();
+  // progress : 1
+  const [{ userName, progress, data }, setUserData] = useUserData();
   const [start, setStart] = useState(new Date().getTime());
   const [end, setEnd] = useState(new Date().getTime());
   const [isDone, setIsDone] = useState(false);
-
+  // first time => [] 
+  // answered => update => save into database 
+  
   const [activeStep, setActiveStep] = useState(progress - 1);
   // have to do this, use fill array causes shallow copy
-  const [completed, setCompleted] = useState([
+  const [completed, setCompleted] = useState(data ? data : [
     {
       score: 0,
       isCompleted: false
@@ -74,10 +76,7 @@ const PlayArena = (props) => {
   ]);
   const [score, setScore] = useState(0);
   
-  console.log('props', activeStep);
-  console.log('completed', completed);
-  
-  if (userName === "Default User") {
+  if (!userName || userName === "Default User") {
     return (
       <Redirect to={{
       pathname: "/hunt/homepage",
