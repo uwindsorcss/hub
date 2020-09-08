@@ -50,8 +50,8 @@ const useStyles = makeStyles({
 })
 
 const Progress = ({ currentProgress, setActiveStep }) => {
-  const [completed, setCompleted] = useState({})
-  const problemNum = 10;
+
+  const problemNum = 13;
   const steps = Array(problemNum).fill();
   const styles = useStyles();
   const history = useHistory();
@@ -60,7 +60,7 @@ const Progress = ({ currentProgress, setActiveStep }) => {
   <>
     <Navigation setActiveStep={setActiveStep} currentProgress={currentProgress} />
     <div className="progressRoot">
-      <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
+      <Stepper alternativeLabel activeStep={12} connector={<StyleConnector />}>
         {steps.map(( _, index) => (
           <Step key={index+1}>
             <StepLabel

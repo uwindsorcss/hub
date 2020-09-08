@@ -8,3 +8,4 @@ export { QuestionSeven} from './QuestionSeven';
 export { QuestionNine } from './QuestionNine';
 export { QuestionTen } from './QuestionTen';
 export { QuestionEleven } from './QuestionEleven';
+export { End } from './TheEnd';

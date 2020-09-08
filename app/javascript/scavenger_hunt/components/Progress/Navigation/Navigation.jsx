@@ -16,10 +16,9 @@ const styles = {
 const Navigation = withStyles(styles)((props) => {
   const { classes } = props
   const { currentProgress, setActiveStep } = props;
-  console.log("prasda", props);
 
   const forward = (currentProgress) => {
-    if ( currentProgress < 11 ) setActiveStep(currentProgress + 1);
+    if ( currentProgress < 12 ) setActiveStep(currentProgress + 1);
   }
 
   const backward = (currentProgress) => {

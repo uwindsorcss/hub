@@ -14,9 +14,9 @@ const PlayArena = (props) => {
   const [{ userName, progress }, setUserData] = useUserData();
 
   const [activeStep, setActiveStep] = useState(progress - 1);
-
+  const [completed, setCompleted] = useState(Array(12).fill(false))
   console.log('props', activeStep);
-  console.log(userName);
+  console.log('completed', completed);
   
   if (userName === "Default User") {
     return (
@@ -27,21 +27,16 @@ const PlayArena = (props) => {
    )
   }
 
-  const checkAnswer = ({userAnswer,  answerIndex=0, updateGQL=false}) => {
-    const answer = '';
-    if (userAnswer.toLowerCase() === answer.toLowerCase()){
-        setUserData({progress:progress});
-      }
-  }
+
 
   return (
     <>
       <Container className="play-arena-container" fluid>
         <Row className="play-arena-row1">
-          <Progress currentProgress={activeStep} setActiveStep={setActiveStep} />
+          <Progress currentProgress={activeStep} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         </Row>
         <Row className="play-arena-row2">
-          <MainContent checkAnswer={checkAnswer} progress={activeStep}/>
+          <MainContent progress={activeStep} completed={completed} setCompleted={setCompleted} />
         </Row>
       </Container>
     </>

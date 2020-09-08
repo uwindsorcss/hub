@@ -13,24 +13,65 @@ import {
     QuestionSeven,
     QuestionEleven,
     QuestionNine,
-    QuestionTen
+    QuestionTen,
+    End
   } from '../../Questions';
 
-const MainContent = ({ progress, checkAnswer }) => {
+const MainContent = ({ progress, setActiveStep, completed, setCompleted }) => {
 
+  const select = (progress) => {
+    switch (progress) {
+      case 0 :
+        return <QuestionOne progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 1 :
+        return <QuestionTwo progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 2 :
+        return <QuestionThree progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 3 :
+        return <QuestionFour progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 4 :
+        return <QuestionFive progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 5 :
+        return <QuestionSix progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 6 :
+        return <QuestionSeven progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 7 :
+        return <QuestionSeven progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 8 :
+        return <QuestionNine progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 9 :
+        return <QuestionTen progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 10 :
+        return <QuestionEleven progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 11 :
+        return <QuestionEleven progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      case 12 :
+        return <End progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        break;
+      default:
+        return <></>
+  
+  }
+}
   return (
     <Grid container spacing={0} justify="center" alignItems="stretch">
       <Grid item xs={8}>
-        <QuestionOne checkAnswer={checkAnswer} />
-        <QuestionTwo />
-        <QuestionThree />
-        <QuestionFour />
-        <QuestionFive />
-        <QuestionSix />
-        <QuestionSeven />
-        <QuestionNine />
-        <QuestionTen />
-        <QuestionEleven />
+     
+        {
+          select(12)
+        }
       </Grid>
     </Grid>
   )
@@ -38,7 +79,6 @@ const MainContent = ({ progress, checkAnswer }) => {
 
 MainContent.propTypes = {
   progress: PropTypes.number.isRequired,
-  checkAnswer: PropTypes.func.isRequired,
 };
 
 export { MainContent };

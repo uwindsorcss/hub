@@ -5,14 +5,14 @@ import { Card, Button } from "react-bootstrap";
 
 import './QuestionOne.scss';
 
-const  QuestionOne = ({ checkAnswer }) => {
+const  QuestionOne = ({  }) => {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading ] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Answer Submitted is:", answer);
-    console.log(checkAnswer({userAnswer: answer, updateGQL: true}))
+    // console.log(checkAnswer({userAnswer: answer, updateGQL: true}))
   }
 
   const handleChange = (event) => {
@@ -49,7 +49,7 @@ const  QuestionOne = ({ checkAnswer }) => {
 };
 
 QuestionOne.propTypes = {
-  checkAnswer: PropTypes.func.isRequired,
+
 }
 
 export { QuestionOne };
