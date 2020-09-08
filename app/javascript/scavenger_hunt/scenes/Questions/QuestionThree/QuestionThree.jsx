@@ -25,13 +25,13 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
-    const one = check(DateOne.toString(), ans[0].toString());
-    const two = check(DateTwo.toString(), ans[1].toString());
+
+    const one = ans.includes(DateOne.toString());
+    const two = DateOne !== DateTwo ? ans.includes(DateTwo.toString()) : false;
     const newCompleted = completed;
     newCompleted[progress].score = 0;
-    console.log('corect',DateOne, ans[0] )
+    
     if (one) {
-   
       setToggleOne(true);
       newCompleted[progress].score += 1;
     } else {
@@ -51,7 +51,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
       // graphql query if needed
     }
     setLoading(false);
-    console.log("date", !(toggleOne && toggleTwo) )
+
   }
 
   return (
@@ -67,7 +67,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
           <div className="center-text">
             <TextField required 
               id="question" 
-              label="DD/MM" 
+              label="MM/DD" 
               variant="outlined"
               aria-describedby="Write your answer here" 
               value={DateOne}
@@ -88,7 +88,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
           <div className="center-text">
             <TextField required 
               id="question" 
-              label="DD/MM" 
+              label="MM/DD" 
               variant="outlined"
               aria-describedby="Write your answer here" 
               value={DateTwo}
