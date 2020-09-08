@@ -80,7 +80,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
           </div>
           <Grid container justify="center" alignItems="center">
           {
-            submitted && toggleOne &&
+            (completed[progress].isCompleted || (submitted && toggleOne)) &&
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
           }
           {
@@ -90,7 +90,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
           </Grid>
  
           {
-          !toggle &&
+          !toggle && !completed[progress].isCompleted &&
           <div className="center-text">
             <Button 
               variant="primary" 
@@ -122,7 +122,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
                 </div>
                 <Grid container justify="center" alignItems="center">
                 {
-                  submitted && toggleTwo &&
+                  (completed[progress].isCompleted || (submitted && toggleTwo)) &&
                     <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
                 }
                 {
@@ -131,7 +131,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
                 }
                 </Grid>
                 {
-                completed[progress].score != 2 &&
+                completed[progress].score != 2 && !completed[progress].isCompleted &&
                   <div className="center-text">
                     <Button 
                       variant="primary" 

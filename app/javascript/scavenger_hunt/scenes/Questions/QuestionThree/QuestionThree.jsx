@@ -76,7 +76,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
           </div>
           <Grid container justify="center" alignItems="center">
           {
-            submitted && toggleOne &&
+             (completed[progress].isCompleted || (submitted && toggleOne)) &&
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
           }
           {
@@ -97,7 +97,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
           </div>
           <Grid container justify="center" alignItems="center">
           {
-            submitted && toggleTwo &&
+             (completed[progress].isCompleted || (submitted && toggleTwo)) &&
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
           }
           {
@@ -109,7 +109,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
             Hint: On one day, we give out free guacaMOLE and on the other, it’s free PIe!
           </FormHelperText>
           {
-           completed[progress].score != 2 &&
+           completed[progress].score != 2 && !completed[progress].isCompleted &&
             <div className="center-text">
               <Button 
                 variant="primary" 

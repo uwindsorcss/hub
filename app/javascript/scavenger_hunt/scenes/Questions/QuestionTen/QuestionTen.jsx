@@ -220,18 +220,19 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
           </div>
 
         </Grid>
-          {
-           completed[progress].score != 4 &&
-            <div className="center-text">
-              <Button 
-                variant="primary" 
-                type="submit"
-                disabled={loading}
-              >
-                Submit
-              </Button>
-            </div>
-          }
+    
+            {
+            (!completed[progress].score !== 4 && !completed[progress].isCompleted)  &&
+              <div className="center-text">
+                <Button 
+                  variant="primary" 
+                  type="submit"
+                  disabled={loading}
+                >
+                  Submit
+                </Button>
+              </div>
+            }
       
           </Grid>
         </form>

@@ -101,18 +101,20 @@ const QuestionFive = ({progress, setActiveStep, completed, setCompleted }) => {
               onChange={(e) => setAnswerTwo(e.target.value)}
             />
           </div>
+
           <Grid container justify="center" alignItems="center">
           {
-            submitted && toggleTwo &&
+            (completed[progress].isCompleted || (submitted && toggleTwo)) &&
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
           }
           {
             submitted && !toggleTwo &&
               <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
           }
+                 
           </Grid>
           {
-           completed[progress].score != 2 &&
+           (completed[progress].score != 2 && !completed[progress].isCompleted)  &&
             <div className="center-text">
               <Button 
                 variant="primary" 
@@ -123,6 +125,8 @@ const QuestionFive = ({progress, setActiveStep, completed, setCompleted }) => {
               </Button>
             </div>
           }
+
+
         </form>
       </Card.Body>
     </Card>

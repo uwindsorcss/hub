@@ -77,29 +77,29 @@ const QuestionSeven = ({ progress, setActiveStep, completed, setCompleted  }) =>
               />
             </div>
             
-            <Grid container justify="center" alignItems="center">
-            {
-              submitted && toggle &&
-                <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
-            }
-            {
-              submitted && !toggle &&
-                <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
-            }
-                  
-            </Grid>
-            {
-            !toggle &&
-              <div className="center-text">
-                <Button 
-                  variant="primary" 
-                  type="submit"
-                  disabled={loading}
-                >
-                  Submit
-                </Button>
-              </div>
-            }
+          <Grid container justify="center" alignItems="center">
+          {
+            (completed[progress].isCompleted || (submitted && toggle)) &&
+              <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+          }
+          {
+            submitted && !toggle &&
+              <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+          }
+                 
+          </Grid>
+          {
+           (!toggle && !completed[progress].isCompleted)  &&
+            <div className="center-text">
+              <Button 
+                variant="primary" 
+                type="submit"
+                disabled={loading}
+              >
+                Submit
+              </Button>
+            </div>
+          }
         
           </Grid>
           

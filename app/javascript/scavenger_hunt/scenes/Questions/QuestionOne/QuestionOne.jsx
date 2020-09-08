@@ -63,7 +63,7 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
           </div>
           <Grid container justify="center" alignItems="center">
           {
-            submitted && toggle &&
+            (completed[progress].isCompleted || (submitted && toggle)) &&
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
           }
           {
@@ -73,7 +73,7 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
                  
           </Grid>
           {
-           !toggle &&
+           (!toggle && !completed[progress].isCompleted)  &&
             <div className="center-text">
               <Button 
                 variant="primary" 

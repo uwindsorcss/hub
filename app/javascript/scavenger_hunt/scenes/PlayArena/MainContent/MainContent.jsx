@@ -18,7 +18,7 @@ import {
     End
   } from '../../Questions';
 
-const MainContent = ({ start, progress, setActiveStep, completed, setCompleted }) => {
+const MainContent = ({ isDone, setIsDone, start, progress, setActiveStep, completed, setCompleted }) => {
 
   const select = (progress) => {
     switch (progress) {
@@ -59,7 +59,7 @@ const MainContent = ({ start, progress, setActiveStep, completed, setCompleted }
         return <QuestionTwelve progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         break;
       case 12 :
-        return <End  start={start} progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        return <End isDone={isDone} setIsDone={setIsDone} start={start} progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         break;
       default:
         return <></>;
