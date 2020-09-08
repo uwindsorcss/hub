@@ -49,16 +49,16 @@ const useStyles = makeStyles({
   completed: {},
 })
 
-const Progress = ({ currentProgress }) => {
+const Progress = ({ currentProgress, setActiveStep }) => {
   const [completed, setCompleted] = useState({})
   const problemNum = 10;
   const steps = Array(problemNum).fill();
   const styles = useStyles();
   const history = useHistory();
-
+ 
   return (
   <>
-    <Navigation/>
+    <Navigation setActiveStep={setActiveStep} currentProgress={currentProgress} />
     <div className="progressRoot">
       <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
         {steps.map(( _, index) => (

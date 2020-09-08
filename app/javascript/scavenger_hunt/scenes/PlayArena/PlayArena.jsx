@@ -10,7 +10,7 @@ import { Clues } from '../../data/staticData/clues';
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
-  
+
   const [{ userName, progress }, setUserData] = useUserData();
 
   const [activeStep, setActiveStep] = useState(progress - 1);
@@ -38,7 +38,7 @@ const PlayArena = (props) => {
     <>
       <Container className="play-arena-container" fluid>
         <Row className="play-arena-row1">
-          <Progress currentProgress={activeStep} />
+          <Progress currentProgress={activeStep} setActiveStep={setActiveStep} />
         </Row>
         <Row className="play-arena-row2">
           <MainContent checkAnswer={checkAnswer} progress={activeStep}/>
