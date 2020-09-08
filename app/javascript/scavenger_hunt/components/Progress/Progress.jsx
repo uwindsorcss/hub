@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -9,6 +9,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom';
 import './Progress.scss';
 
+import { Navigation } from './Navigation';
 
 const StyleConnector = withStyles({
   alternativeLabel: {
@@ -49,12 +50,15 @@ const useStyles = makeStyles({
 })
 
 const Progress = ({ currentProgress }) => {
+  const [completed, setCompleted] = useState({})
   const problemNum = 10;
   const steps = Array(problemNum).fill();
   const styles = useStyles();
   const history = useHistory();
 
   return (
+  <>
+    <Navigation/>
     <div className="progressRoot">
       <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
         {steps.map(( _, index) => (
@@ -76,6 +80,7 @@ const Progress = ({ currentProgress }) => {
         ))}
       </Stepper>
     </div>
+  </>
   );
 }
 

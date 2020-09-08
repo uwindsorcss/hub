@@ -6,7 +6,7 @@ import { useUserData } from "../../hooks/useUserData";
 
 const HomePage = (props) => {
   const [{ userName, progress }, _ ] = useUserData();
-  console.log(progress);
+  console.log('loggedin', props.location);
   console.log(userName);
 
   return ( 

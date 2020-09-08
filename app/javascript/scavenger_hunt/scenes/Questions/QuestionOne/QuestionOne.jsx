@@ -12,7 +12,7 @@ const  QuestionOne = ({ checkAnswer }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Answer Submitted is:", answer);
-    console.log(checkAnswer({userAnswer: answer, clueID: 1, updateGQL: true}))
+    console.log(checkAnswer({userAnswer: answer, updateGQL: true}))
   }
 
   const handleChange = (event) => {

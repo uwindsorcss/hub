@@ -16,19 +16,7 @@ import {
     QuestionTen
   } from '../../Questions';
 
-
-const MainContent = ({ progress, clueId, checkAnswer }) => {
-  const history = useHistory();
-
-  const getClue = () => {
-    let index = clueId - 1
-    if ((clueId - 1) > progress) {
-      index = progress
-      history.push(`/hunt/play/${index+1}`)
-    }
-
-    return Clues[index]
-  }
+const MainContent = ({ progress, checkAnswer }) => {
 
   return (
     <Grid container spacing={0} justify="center" alignItems="stretch">
@@ -50,7 +38,6 @@ const MainContent = ({ progress, clueId, checkAnswer }) => {
 
 MainContent.propTypes = {
   progress: PropTypes.number.isRequired,
-  clueId: PropTypes.number.isRequired,
   checkAnswer: PropTypes.func.isRequired,
 };
 
