@@ -20,6 +20,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
   const [submitted, setSubmitted] = useState(false);
   const ans = Clues[2].answers;
   console.log("asn", ans);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
@@ -45,6 +46,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
     }
     
     if ( newCompleted[progress].score == 2) {
+      newCompleted[progress].isCompleted = true;
       setCompleted(newCompleted);
       // graphql query if needed
     }

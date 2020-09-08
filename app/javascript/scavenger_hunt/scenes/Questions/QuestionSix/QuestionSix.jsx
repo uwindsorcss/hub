@@ -1,19 +1,55 @@
 import React, { useState } from 'react';
-import { TextField, FormHelperText } from '@material-ui/core';
+import { TextField, Grid, FormHelperText } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
+import { Clues } from '../../../data/staticData/clues';
+import { check } from '../utility';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
 import './QuestionSix.scss';
 
-const QuestionSix = () => {
+const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
+
   const [answerOne, setAnswerOne] = useState('');
   const [answerTwo, setAnswerTwo] = useState('');
   const [toggle, setToggle] = useState(false);
+  const [toggleOne, setToggleOne] = useState(false);
+  const [toggleTwo, setToggleTwo] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const ans = Clues[5].answers;
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setSubmitted(true);
     setLoading(true);
-    console.log("Answers Submitted are:", answerOne, answerTwo);
+    const one = check(answerOne.toString(), ans[0].toString());
+    const two = check(answerTwo.toString(), ans[1].toString());
+    const newCompleted = completed;
+    newCompleted[progress].score = 0;
+    setToggle(true);
+    if (one) {
+      setToggleOne(true);
+      newCompleted[progress].score += 1;
+    } else {
+      setToggleOne(false);
+    }
+
+    if (two) {
+      setToggleTwo(true);
+      newCompleted[progress].score += 1;
+    } else {
+       setToggleTwo(false);
+    }
+    
+    if ( newCompleted[progress].score == 2) {
+      newCompleted[progress].isCompleted = true;
+      setCompleted(newCompleted);
+      // graphql query if needed
+    }
     setLoading(false);
+   console.log("completed", newCompleted);
   }
 
   return(
@@ -42,6 +78,17 @@ const QuestionSix = () => {
               onChange={(e) => setAnswerOne(e.target.value)}
             />
           </div>
+          <Grid container justify="center" alignItems="center">
+          {
+            submitted && toggleOne &&
+              <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+          }
+          {
+            submitted && !toggleOne &&
+              <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+          }
+          </Grid>
+ 
           {
           !toggle &&
           <div className="center-text">
@@ -53,7 +100,7 @@ const QuestionSix = () => {
                   setToggle(true)
               }}
             >
-              Click
+              Submit
             </Button>
           </div>
           }
@@ -73,15 +120,28 @@ const QuestionSix = () => {
                     onChange={(e) => setAnswerTwo(e.target.value)}
                   />
                 </div>
-                <div className="center-text">
-                  <Button 
-                    type="submit"
-                    variant="primary" 
-                    disabled={loading}
-                  >
-                    Submit
-                  </Button>
-                </div>
+                <Grid container justify="center" alignItems="center">
+                {
+                  submitted && toggleTwo &&
+                    <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+                }
+                {
+                  submitted && !toggleTwo &&
+                    <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+                }
+                </Grid>
+                {
+                completed[progress].score != 2 &&
+                  <div className="center-text">
+                    <Button 
+                      variant="primary" 
+                      type="submit"
+                      disabled={loading}
+                    >
+                      Submit
+                    </Button>
+                  </div>
+                }
               </>
             }
           
