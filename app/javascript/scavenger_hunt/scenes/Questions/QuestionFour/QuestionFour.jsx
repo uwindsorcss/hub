@@ -25,7 +25,7 @@ const QuestionFour = ({ progress, setActiveStep, completed, setCompleted  }) => 
       const newCompleted = completed;
       newCompleted[progress].score = 1;
       newCompleted[progress].isCompleted = true;
-      console.log("Answer Submitted is:", newCompleted);
+      console.log("Answer Submitted is:", answer);
       setCompleted(newCompleted);
        
     } else {
