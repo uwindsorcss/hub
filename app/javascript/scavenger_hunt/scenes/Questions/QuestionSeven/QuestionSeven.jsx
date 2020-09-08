@@ -1,20 +1,46 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
-import './QuestionSeven.scss';
+import { Clues } from '../../../data/staticData/clues';
+import { check } from '../utility';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 import Map from '../images/map.png';
 
-const QuestionSeven = () => {
-  const [answerOne, setAnswerOne] = useState('');
-  const [loading, setLoading] = useState(false);
+const QuestionSeven = ({ progress, setActiveStep, completed, setCompleted  }) => {
+  const [answer, setAnswer] = useState("");
+  const [loading, setLoading ] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const ans = Clues[6].answers[0];
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setSubmitted(true);
     setLoading(true);
-    console.log("Answer Submitted is:", answerOne);
+    console.log("progress",  progress)
+    if (check(answer, ans)) {
+      setToggle(true);
+   
+      const newCompleted = completed;
+      newCompleted[progress].score = 1;
+      newCompleted[progress].isCompleted = true;
+      console.log("Answer Submitted is:", newCompleted);
+      setCompleted(newCompleted);
+       
+    } else {
+      setToggle(false);
+    }
     setLoading(false);
   }
+  // console.log("Answer Submitted is:", toggle);
+  const handleChange = (event) => {
+    setAnswer(event.target.value);
+  }
+
 
   return(
     <Card>
@@ -46,21 +72,35 @@ const QuestionSeven = () => {
                 label="Answer" 
                 variant="outlined"
                 aria-describedby="Write your answer here" 
-                value={answerOne} 
-                onChange={(e) => setAnswerOne(e.target.value)}
+                value={answer} 
+                onChange={(e) => setAnswer(e.target.value)}
               />
             </div>
-          
+            
+          <Grid container justify="center" alignItems="center">
+          {
+            (completed[progress].isCompleted || (submitted && toggle)) &&
+              <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+          }
+          {
+            submitted && !toggle &&
+              <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+          }
+                 
+          </Grid>
+          {
+           (!toggle && !completed[progress].isCompleted)  &&
             <div className="center-text">
               <Button 
-                type="submit"
                 variant="primary" 
+                type="submit"
                 disabled={loading}
               >
                 Submit
               </Button>
             </div>
-      
+          }
+        
           </Grid>
           
         </form>

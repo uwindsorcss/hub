@@ -1,51 +1,100 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom';
-
-import { useCurrentUserQuery } from '../../data/queries';
-import { Progress } from '../../components/Progress'
-import { Navigation } from './Navigation';
-import { MainContent } from './MainContent';
 import { Container, Row } from 'react-bootstrap';
+import { Progress } from '../../components/Progress'
+import { MainContent } from './MainContent';
+import { useUserData } from '../../hooks/useUserData';
+import { Clues } from '../../data/staticData/clues';
+
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
-  const { data: userData, loading: queryLoading } = useCurrentUserQuery();
+  // progress : 1
+  const [{ userName, progress, data }, setUserData] = useUserData();
+  const [start, setStart] = useState(new Date().getTime());
+  const [end, setEnd] = useState(new Date().getTime());
+  const [isDone, setIsDone] = useState(false);
+  // first time => [] 
+  // answered => update => save into database 
   
-  const getClueId = () => {
-    let clueId = 1
-    let destructured_url = (window.location.pathname).split("/");
-    let last_element = destructured_url[destructured_url.length - 1]
-    if (parseInt(last_element)) {
-      clueId = parseInt(last_element)
-    }
+  const [activeStep, setActiveStep] = useState(progress - 1);
+  // have to do this, use fill array causes shallow copy
+  const [completed, setCompleted] = useState(data ? data : [
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+        {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
+    {
+      score: 0,
+      isCompleted: false
+    },
 
-    return clueId
-  }
-
-  if (queryLoading) {
-    return(
-      <h3>Loading your data</h3>
-    )
-  }
-
-  if (!queryLoading && !userData.currentUser) {
+  ]);
+  const [score, setScore] = useState(0);
+  
+  if (!userName || userName === "Default User") {
     return (
-    <Redirect to={{
-     pathname: "/hunt/homepage",
-     state: { loggedIn: false}
+      <Redirect to={{
+      pathname: "/hunt/homepage",
+      state: { loggedIn: false}
     }} />
    )
   }
 
+
+
   return (
     <>
-      <Navigation />
       <Container className="play-arena-container" fluid>
         <Row className="play-arena-row1">
-          <Progress currentUser={userData.currentUser} />
+          <Progress currentProgress={activeStep} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         </Row>
         <Row className="play-arena-row2">
-          <MainContent progress={parseInt(userData.currentUser.progress)} clueId={getClueId()}/>
+          <MainContent setIsDone={setIsDone} isDone={isDone} progress={activeStep} completed={completed} setCompleted={setCompleted} score={score} setScore={setScore} start={start}/>
         </Row>
       </Container>
     </>

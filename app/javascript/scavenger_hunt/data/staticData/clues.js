@@ -9,34 +9,42 @@ export const Clues = [
   },
   {
     puzzleNo: '3',
-    answers: ["3"]
+    answers: ["10/23", "03/14"]
   },
   {
     puzzleNo: '4',
-    answers: ["4"]
+    answers: ["Computer Science Society"]
   },
   {
     puzzleNo: '5',
-    answers: ["5"]
+    answers: ["Iceland", "Costa Rica"]
   },
   {
     puzzleNo: '6',
-    answers: ["6"]
+    answers: ["1:16", "Windsor"]
   },
   {
     puzzleNo: '7',
-    answers: ["7"]
+    answers: ["ENERGY"]
   },
   {
     puzzleNo: '8',
-    answers: ["8"] 
+    answers: ["0.5 Hz", "Students Offering Support"] 
   },
   {
     puzzleNo: '9',
-    answers: []
+    answers: ["Leadership, Engagement, Application, Discover"]
   },
   {
     puzzleNo: '10',
     answers: ['Campus Food Pantry', 'Afrofest', 'Campus Pride Centre', 'Outstanding Scholars']
+  },
+  {
+    puzzleNo: '11',
+    answers: ["2024"]
+  },
+  {
+    puzzleNo: '12',
+    answers: ["MATH 1720"]
   }
 ]

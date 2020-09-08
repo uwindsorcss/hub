@@ -5,16 +5,16 @@ import './HomePage.scss'
 import { useUserData } from "../../hooks/useUserData";
 
 const HomePage = (props) => {
-  const { userName, progress } = useUserData();
-  console.log(progress);
-  
+  const [{ userName, progress }, _ ] = useUserData();
+  console.log(userName);
+
   return ( 
     <div className="main">
       {props.location.state && !props.location.state.loggedIn &&  <Alert message="You need to log in to access that page" variant="info" /> }
       <div className="section" id="how-it-works">
         <h1 className="title">How it works</h1>
         <p> this is a test test test </p>
-        <Button href="/hunt/play/1" size="lg">
+        <Button href={`/hunt/play/${progress+1}`} size="lg">
           Play
         </Button>
       </div>

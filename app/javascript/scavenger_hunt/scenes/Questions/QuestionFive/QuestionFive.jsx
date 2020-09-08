@@ -1,18 +1,64 @@
 import React, { useState } from 'react';
-import { TextField } from '@material-ui/core';
+import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
+import { Clues } from '../../../data/staticData/clues';
+import { check } from '../utility';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
+
 import './QuestionFive.scss';
 
-const QuestionFive = () => {
+const QuestionFive = ({ progress, setActiveStep, completed, setCompleted }) => {
   const [answerOne, setAnswerOne] = useState('');
   const [answerTwo, setAnswerTwo] = useState('');
+
+  const [toggleOne, setToggleOne] = useState(false);
+  const [toggleTwo, setToggleTwo] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const ans = Clues[4].answers;
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setSubmitted(true);
     setLoading(true);
-    console.log("Answers Submitted are:", answerOne, answerTwo);
+    const one = check(answerOne.toString(), ans[0].toString());
+    const two = check(answerTwo.toString(), ans[1].toString());
+    const newCompleted = completed;
+    newCompleted[progress].score = 0;
+    if (one) {
+   
+      setToggleOne(true);
+      newCompleted[progress].score += 1;
+    } else {
+      setToggleOne(false);
+    }
+
+    if (two) {
+      setToggleTwo(true);
+      newCompleted[progress].score += 1;
+    } else {
+       setToggleTwo(false);
+    }
+    
+    if ( newCompleted[progress].score == 2) {
+      newCompleted[progress].isCompleted = true;
+      setCompleted(newCompleted);
+      // graphql query if needed
+      const payload = {
+        progress,
+        completed,
+        status: 'incompleted',
+      }
+      // convert payload JSON object to string
+      // save it in database
+      // query it back and convert JSON object
+      // save payload for every correct answer for all questions
+    }
     setLoading(false);
+   console.log("completed", newCompleted);
   }
 
   return(
@@ -40,13 +86,23 @@ const QuestionFive = () => {
               onChange={(e) => setAnswerOne(e.target.value)}
             />
           </div>
+          <Grid container justify="center" alignItems="center">
+          {
+            submitted && toggleOne &&
+              <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+          }
+          {
+            submitted && !toggleOne &&
+              <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+          }
+          </Grid>
  
           <div className="letter-box">
             A veces, el decano de ciencias lleva a los estudiantes a un país tropical para estudiar ecología. Esta oración está escrita en el idioma nacional de ese país. ¿De qué país estamos hablando?
           </div>
           
           <div className="center-text">
-            <TextField required 
+            <TextField required
               id="question" 
               label="Answer" 
               variant="outlined"
@@ -55,15 +111,32 @@ const QuestionFive = () => {
               onChange={(e) => setAnswerTwo(e.target.value)}
             />
           </div>
-          <div className="center-text">
-            <Button 
-              variant="primary" 
-              type="submit"
-              disabled={loading}
-            >
-              Submit
-            </Button>
-          </div>
+
+          <Grid container justify="center" alignItems="center">
+          {
+            (completed[progress].isCompleted || (submitted && toggleTwo)) &&
+              <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+          }
+          {
+            submitted && !toggleTwo &&
+              <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+          }
+                 
+          </Grid>
+          {
+           (completed[progress].score != 2 && !completed[progress].isCompleted)  &&
+            <div className="center-text">
+              <Button 
+                variant="primary" 
+                type="submit"
+                disabled={loading}
+              >
+                Submit
+              </Button>
+            </div>
+          }
+
+
         </form>
       </Card.Body>
     </Card>
