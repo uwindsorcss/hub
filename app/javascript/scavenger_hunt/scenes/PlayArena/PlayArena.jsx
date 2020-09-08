@@ -1,23 +1,61 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 
 import { Progress } from '../../components/Progress'
 import { Navigation } from './Navigation';
 import { MainContent } from './MainContent';
-import { useUserData } from '../../hooks/useUserData';
+// import { useUserData } from '../../hooks/useUserData';
 import { Clues } from '../../data/staticData/clues';
 
-import { UserDataContext, UserData } from '../../context';
+// import { UserDataContext, UserData } from '../../context';
 import { useUpdateUserMutation } from '../../data/mutations';
 
 import './PlayArena.scss'
 
 const PlayArena = (props) => {
-  const [{ userName, progress }, setUserData ] = useUserData();
-  console.log(progress);
-  console.log(userName);
+  // const [{ userName, progress }, setUserData ] = useUserData();
+  // console.log(progress);
+  // console.log(userName);
   
+  const [progress, setProgress] = useState('0');
+  // user name should be the logged in user
+  const [username, setUsername] = useState('Prakort Lean');
+  const [userRole, setUserRole] = useState('Guest');
+  const [start, setStart] = useState(0);
+  const [end, setEnd] = useState(0);
+
+  const checkAnswer = ({userAnswer, clueID, answerIndex=0, updateGQL=false}) => {
+    const clueAnswer = Clues[clueID-1].answers[answerIndex];
+    console.log("thing " + progress);
+
+    if (userAnswer.toLowerCase() === clueAnswer.toLowerCase()){
+      if((clueID === (progress+1)) && updateGQL){
+        console.log("updated")
+        useUpdateUserMutation({progress:progress});
+      }
+      return true;
+    }
+    
+    return false;
+  }
+
+  const DefaultUserData = {
+    progress,
+    username,
+    userRole,
+    start,
+    end,
+    setProgress,
+    setUsername,
+    setUserRole,
+    setStart,
+    setEnd,
+    useUpdateUserMutation,
+    checkAnswer
+  };
+
+
   const getClueId = () => {
     let clueId = 1
     let destructured_url = (window.location.pathname).split("/");
@@ -29,7 +67,7 @@ const PlayArena = (props) => {
     return clueId
   }
 
-  if (userName === "Default User") {
+  if (username === "Default User") {
     return (
     <Redirect to={{
      pathname: "/hunt/homepage",
@@ -38,20 +76,6 @@ const PlayArena = (props) => {
    )
   }
 
-  const checkAnswer = ({userAnswer, clueID, answerIndex=0, updateGQL=false}) => {
-    const clueAnswer = Clues[clueID-1].answers[answerIndex];
-    console.log("thing " + progress);
-
-    if (userAnswer.toLowerCase() === clueAnswer.toLowerCase()){
-      if((clueID === (progress+1)) && updateGQL){
-        console.log("updated")
-        setUserData({progress:progress});
-      }
-      return true;
-    }
-    
-    return false;
-  }
 
   return (
     <>

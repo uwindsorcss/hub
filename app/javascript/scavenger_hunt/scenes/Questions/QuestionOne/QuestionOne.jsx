@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
@@ -8,7 +8,7 @@ import './QuestionOne.scss';
 const  QuestionOne = ({ checkAnswer }) => {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading ] = useState(false);
-
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Answer Submitted is:", answer);
