@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
+import { Clues } from '../../../data/staticData/clues';
+import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
 import './QuestionTen.scss';
 
 import One from '../images/1.png';
@@ -10,13 +13,21 @@ import Two from '../images/2.png';
 import Three from '../images/3.png';
 import Four from '../images/4.png';
 
-import { Clues } from '../../../data/staticData/clues';
-
-const QuestionTen = () => {
+const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
   const [answerOne, setAnswerOne] = useState('');
   const [answerTwo, setAnswerTwo] = useState('');
   const [answerThree, setAnswerThree] = useState('');
   const [answerFour, setAnswerFour] = useState('');
+
+  const [toggleOne, setToggleOne] = useState(false);
+  const [toggleTwo, setToggleTwo] = useState(false);
+  const [toggleThree, setToggleThree] = useState(false);
+  const [toggleFour, setToggleFour] = useState(false);
+
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const ans = Clues[9].answers;
 
   const [validation, setValidation] = useState({
     'one' : false,
@@ -26,17 +37,57 @@ const QuestionTen = () => {
   });
 
   
-  const [loading, setLoading] = useState(false);
-
   const handleSubmit = (event) => {
     event.preventDefault();
+    setSubmitted(true);
     setLoading(true);
-    console.log("Answer Submitted is:", answerOne);
+    const one = check(answerOne.toString(), ans[0].toString());
+    const two = check(answerTwo.toString(), ans[1].toString());
+    const three = check(answerThree.toString(), ans[2].toString());
+    const four = check(answerFour.toString(), ans[3].toString());
+
+    const newCompleted = completed;
+    newCompleted[progress].score = 0;
+    console.log("ansers",ans)
+    console.log(one, two, three, four);
+    if (one) {
+      setToggleOne(true);
+      newCompleted[progress].score += 1;
+    } else {
+      setToggleOne(false);
+    }
+
+    if (two) {
+      setToggleTwo(true);
+      newCompleted[progress].score += 1;
+    } else {
+       setToggleTwo(false);
+    }
+
+    if (three) {
+  
+      setToggleThree(true);
+      newCompleted[progress].score += 1;
+    } else {
+      setToggleThree(false);
+    }
+
+    if (four) {
+      setToggleFour(true);
+      newCompleted[progress].score += 1;
+    } else {
+       setToggleFour(false);
+    }
+    
+    if ( newCompleted[progress].score == 4) {
+      newCompleted[progress].isCompleted = true;
+      setCompleted(newCompleted);
+      // graphql query if needed
+    }
     setLoading(false);
-  };
-
-  const check = (a, b) => a.trim().toLowerCase() === b.trim().toLowerCase();
-
+ 
+  }
+  console.log('completed', completed);
   const data = Clues.find(e => e.puzzleNo === '10');
   const answers = data.answers;
 
@@ -70,11 +121,11 @@ const QuestionTen = () => {
               </Grid>
               <Grid container item xs={2} justify="center" alignItems="center">
                 {
-                  answerOne && check(answerOne, answers[0]) &&
+                  submitted && toggleOne &&
                     <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
                 }
                 {
-                  answerOne && !check(answerOne, answers[0]) &&
+                  submitted && !toggleOne &&
                     <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
                 }
                  
@@ -99,11 +150,11 @@ const QuestionTen = () => {
               </Grid>
               <Grid container item xs={2} justify="center" alignItems="center">
                 {
-                  answerTwo && check(answerTwo, answers[1]) &&
+                  submitted && toggleTwo &&
                     <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
                 }
                 {
-                  answerTwo && !check(answerTwo, answers[1])  &&
+                  submitted && !toggleTwo  &&
                     <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
                 }
                  
@@ -128,11 +179,11 @@ const QuestionTen = () => {
               </Grid>
               <Grid container item xs={2} justify="center" alignItems="center">
                 {
-                  answerThree && check(answerThree, answers[2])  &&
+                  submitted && toggleThree  &&
                     <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
                 }
                 {
-                  answerThree && !check(answerThree, answers[2]) &&
+                  submitted && !toggleThree  &&
                     <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
                 }
                  
@@ -156,11 +207,11 @@ const QuestionTen = () => {
               </Grid>
               <Grid container item xs={2} justify="center" alignItems="center">
                 {
-                  answerFour && check(answerFour, answers[3]) &&
+                  submitted && toggleFour &&
                     <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
                 }
                 {
-                  answerFour && !check(answerFour, answers[3]) &&
+                  submitted && !toggleFour &&
                     <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
                 }
                  
@@ -169,15 +220,18 @@ const QuestionTen = () => {
           </div>
 
         </Grid>
+          {
+           completed[progress].score != 4 &&
             <div className="center-text">
               <Button 
-                type="submit"
                 variant="primary" 
+                type="submit"
                 disabled={loading}
               >
                 Submit
               </Button>
             </div>
+          }
       
           </Grid>
         </form>
