@@ -45,6 +45,6 @@ export const Clues = [
   },
   {
     puzzleNo: '12',
-    answers: ["MATH1720"]
+    answers: ["MATH 1720"]
   }
 ]

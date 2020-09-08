@@ -11,6 +11,8 @@ import './PlayArena.scss'
 const PlayArena = (props) => {
 
   const [{ userName, progress }, setUserData] = useUserData();
+  const [start, setStart] = useState(new Date().getTime());
+  const [end, setEnd] = useState(new Date().getTime());
 
   const [activeStep, setActiveStep] = useState(progress - 1);
   // have to do this, use fill array causes shallow copy
@@ -92,7 +94,7 @@ const PlayArena = (props) => {
           <Progress currentProgress={activeStep} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         </Row>
         <Row className="play-arena-row2">
-          <MainContent progress={activeStep} completed={completed} setCompleted={setCompleted} score={score} setScore={setScore} />
+          <MainContent progress={activeStep} completed={completed} setCompleted={setCompleted} score={score} setScore={setScore} start={start}/>
         </Row>
       </Container>
     </>

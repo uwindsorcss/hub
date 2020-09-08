@@ -14,10 +14,11 @@ import {
     QuestionEleven,
     QuestionNine,
     QuestionTen,
+    QuestionTwelve,
     End
   } from '../../Questions';
 
-const MainContent = ({ progress, setActiveStep, completed, setCompleted }) => {
+const MainContent = ({ start, progress, setActiveStep, completed, setCompleted }) => {
 
   const select = (progress) => {
     switch (progress) {
@@ -55,20 +56,20 @@ const MainContent = ({ progress, setActiveStep, completed, setCompleted }) => {
         return <QuestionEleven progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         break;
       case 11 :
-        return <QuestionEleven progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        return <QuestionTwelve progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         break;
       case 12 :
-        return <End progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        return <End  start={start} progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         break;
       default:
-        return <></>
+        return <></>;
+        break;
   
   }
 }
   return (
     <Grid container spacing={0} justify="center" alignItems="stretch">
       <Grid item xs={8}>
-     
         {
           select(progress)
         }

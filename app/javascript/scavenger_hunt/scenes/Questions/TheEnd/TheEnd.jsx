@@ -1,15 +1,30 @@
 import React, { useState } from 'react';
 import { Grid, TextField } from '@material-ui/core';
 import { Button } from "react-bootstrap";
-const End = (props) => {
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+
+const End = ({ start, progress, setActiveStep, completed, setCompleted  }) => {
 
   const [name, setName] = useState('');
   const [studentId, setStudentId] = useState('');
+  const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     // connect to backend
+    const calculateScore = completed.reduce((a,b) => a.score + b.score);
+    const payload = {
+      score: calculateScore,
+      status: 'completed',
+      name,
+      studentId,
+      time: new Date().getTime() - start
+    }
+    // if query if sucess
+    setSuccess(true);
+    setLoading(false);
 
   }
   return (
@@ -39,9 +54,22 @@ const End = (props) => {
               onChange={(e) => setStudentId(e.target.value)}
             />
           </div>
-          <div className="center-text">
-            <Button variant="primary" type="submit">Submit</Button>
-          </div>
+          {
+           !success ?
+            <div className="center-text">
+              <Button 
+                variant="primary" 
+                type="submit"
+                disabled={loading}
+              >
+                Submit
+              </Button>
+            </div>
+            :
+            <Grid container justify="center" alignItems="center">
+              <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+            </Grid>
+          }
         </form>
     </Grid>
   )
