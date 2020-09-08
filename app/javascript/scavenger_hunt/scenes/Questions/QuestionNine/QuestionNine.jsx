@@ -24,14 +24,15 @@ const QuestionNine = ({ progress, setActiveStep, completed, setCompleted  }) => 
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
-    console.log("progress",  progress)
-    if (check(answer, ans)) {
+    const a = answer.split(', ')
+    const temp = ans.split(', ');
+  
+    if (JSON.stringify(a) === JSON.stringify(temp)) {
+      
       setToggle(true);
-   
       const newCompleted = completed;
       newCompleted[progress].score = 1;
       newCompleted[progress].isCompleted = true;
-      console.log("Answer Submitted is:", newCompleted);
       setCompleted(newCompleted);
        
     } else {
@@ -41,7 +42,7 @@ const QuestionNine = ({ progress, setActiveStep, completed, setCompleted  }) => 
   }
   // console.log("Answer Submitted is:", toggle);
   const handleChange = (event) => {
-    setAnswer(event.target.value);
+    setAnswer(event.target.value.toLowerCase());
   }
 
   return(
