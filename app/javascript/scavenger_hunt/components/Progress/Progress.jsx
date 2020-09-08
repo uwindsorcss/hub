@@ -63,19 +63,15 @@ const Progress = ({ currentProgress, setActiveStep }) => {
       <Stepper alternativeLabel activeStep={currentProgress} connector={<StyleConnector />}>
         {steps.map(( _, index) => (
           <Step key={index+1}>
-            <StepButton onClick={()=>{
-              history.push(`/hunt/play/${index+1}`)
-            }}>
-              <StepLabel
-                StepIconProps={{
-                  classes: {
-                    root: styles.root,
-                    completed: styles.completed,
-                    active: styles.active,
-                  }
-                }}
-              />
-            </StepButton>
+            <StepLabel
+              StepIconProps={{
+                classes: {
+                  root: styles.root,
+                  completed: styles.completed,
+                  active: styles.active,
+                }
+              }}
+            />
           </Step>
         ))}
       </Stepper>
