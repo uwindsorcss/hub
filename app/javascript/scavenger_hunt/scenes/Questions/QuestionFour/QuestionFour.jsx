@@ -100,6 +100,8 @@ const QuestionFour = ({ progress, setActiveStep, completed, setCompleted  }) => 
           </div>
           <div className="center-text">
             <TextField required 
+              disabled={completed[progress].isCompleted}
+              style={{ width: 250}}
               id="question" 
               label="Answer" 
               variant="outlined"
