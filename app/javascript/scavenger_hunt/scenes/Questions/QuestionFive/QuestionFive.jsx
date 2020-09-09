@@ -1,35 +1,33 @@
 import React, { useState } from 'react';
-import { FormHelperText, Grid, TextField } from '@material-ui/core';
+import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
 import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
-import './QuestionThree.scss';
 
+import './QuestionFive.scss';
 
+const QuestionFive = ({ progress, setActiveStep, completed, setCompleted }) => {
+  const [answerOne, setAnswerOne] = useState('');
+  const [answerTwo, setAnswerTwo] = useState('');
 
-const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => {
-  const [DateOne, setDateOne] = useState('');
-  const [DateTwo, setDateTwo] = useState('');
-
-  const [loading, setLoading ] = useState(false);
   const [toggleOne, setToggleOne] = useState(false);
   const [toggleTwo, setToggleTwo] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const ans = Clues[2].answers;
-  console.log("asn", ans);
+  const [loading, setLoading] = useState(false);
+
+  const ans = Clues[4].answers;
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
-    const one = check(DateOne.toString(), ans[0].toString());
-    const two = check(DateTwo.toString(), ans[1].toString());
+    const one = check(answerOne.toString(), ans[0].toString());
+    const two = check(answerTwo.toString(), ans[1].toString());
     const newCompleted = completed;
     newCompleted[progress].score = 0;
-    console.log('corect',DateOne, ans[0] )
     if (one) {
    
       setToggleOne(true);
@@ -49,34 +47,48 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
       newCompleted[progress].isCompleted = true;
       setCompleted(newCompleted);
       // graphql query if needed
+      const payload = {
+        progress,
+        completed,
+        status: 'incompleted',
+      }
+      // convert payload JSON object to string
+      // save it in database
+      // query it back and convert JSON object
+      // save payload for every correct answer for all questions
     }
     setLoading(false);
-    console.log("date", !(toggleOne && toggleTwo) )
+   console.log("completed", newCompleted);
   }
 
-  return (
+  return(
     <Card>
       <Card.Header>
-        <h1>Puzzle #3</h1>
+        <h1>Puzzle #5</h1>
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
-          <div className="letter-box">
-            SciSoc organizes many annual events. In particular, we celebrate two science-related dates every year. What are those days? 
+          <div className="question-text">
+          Science students can go on exchange all across the world!
           </div>
+
+          <div className="letter-box">
+          Umhverfisskólinn býður upp á nokkur grunnnámskeið þar sem þú getur stundað nám erlendis. Þessi setning er skrifuð á þjóðmálum lands þar sem námsmenn hafa ferðast til áður. Hvaða land er þetta?
+          </div>
+        
           <div className="center-text">
             <TextField required 
               id="question" 
-              label="DD/MM" 
+              label="Answer" 
               variant="outlined"
               aria-describedby="Write your answer here" 
-              value={DateOne}
-              onChange={(e) => setDateOne(e.target.value)}
+              value={answerOne} 
+              onChange={(e) => setAnswerOne(e.target.value)}
             />
           </div>
           <Grid container justify="center" alignItems="center">
           {
-             (completed[progress].isCompleted || (submitted && toggleOne)) &&
+            submitted && toggleOne &&
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
           }
           {
@@ -84,32 +96,35 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
               <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
           }
           </Grid>
-
+ 
+          <div className="letter-box">
+            A veces, el decano de ciencias lleva a los estudiantes a un país tropical para estudiar ecología. Esta oración está escrita en el idioma nacional de ese país. ¿De qué país estamos hablando?
+          </div>
+          
           <div className="center-text">
-            <TextField required 
+            <TextField required
               id="question" 
-              label="DD/MM" 
+              label="Answer" 
               variant="outlined"
               aria-describedby="Write your answer here" 
-              value={DateTwo}
-              onChange={(e) => setDateTwo(e.target.value)}
+              value={answerTwo} 
+              onChange={(e) => setAnswerTwo(e.target.value)}
             />
           </div>
+
           <Grid container justify="center" alignItems="center">
           {
-             (completed[progress].isCompleted || (submitted && toggleTwo)) &&
+            (completed[progress].isCompleted || (submitted && toggleTwo)) &&
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
           }
           {
             submitted && !toggleTwo &&
               <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
           }
+                 
           </Grid>
-          <FormHelperText id="my-helper-text">
-            Hint: On one day, we give out free guacaMOLE and on the other, it’s free PIe!
-          </FormHelperText>
           {
-           completed[progress].score != 2 && !completed[progress].isCompleted &&
+           (completed[progress].score != 2 && !completed[progress].isCompleted)  &&
             <div className="center-text">
               <Button 
                 variant="primary" 
@@ -120,10 +135,13 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
               </Button>
             </div>
           }
+
+
         </form>
       </Card.Body>
     </Card>
-  );
-};
 
-export { QuestionThree };
+  )
+}
+
+export { QuestionFive };

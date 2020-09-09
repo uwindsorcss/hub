@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
@@ -6,16 +7,15 @@ import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
-import './QuestionOne.scss';
+import Map from '../images/map.png';
 
-const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => {
-  
+const QuestionSeven = ({ progress, setActiveStep, completed, setCompleted  }) => {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading ] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const ans = Clues[0].answers[0];
+  const ans = Clues[6].answers[0];
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -41,26 +41,42 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
     setAnswer(event.target.value);
   }
 
-  return (
+
+  return(
     <Card>
       <Card.Header>
-        <h1>Puzzle #1</h1>
+        <h1>Puzzle #7</h1>
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
-          <div className="letter-box">
-            There’s a student government at UWindsor that represents all undergraduate students in the Faculty of Science. What’s the name of this organization?
-          </div>
-          <div className="center-text">
-            <TextField required 
-              id="question" 
-              label="Answer" 
-              variant="outlined"
-              aria-describedby="Write your answer here" 
-              value={answer} 
-              onChange={handleChange}
-            />
-          </div>
+          <Grid container direction="column">
+            <Grid container >
+              <div className="letter-box">
+              Roberta is a student at UWindsor. Here’s a day in her life pre-COVID-19! 
+              <br/>
+              <br/>
+              In the morning, she parks her car in the parking garage on campus, then walks to her first lecture in Erie Hall. Before her next class, Earth Science, in Memorial Hall, she heads to Leddy Library to study for a bit. After Earth Sci, it’s lunch time! Roberta grabs a sub from the CAW Student Centre and goes to her last thing for the day: chem lab in Essex Hall!
+              <br/>
+              <br/>
+              Following her route on the map shown, what does her path spell?
+              </div>
+
+            </Grid>
+            <Grid  container justify="center" item>
+              <img src={Map} className="map" />
+            </Grid>
+
+            <div className="center-text">
+              <TextField required 
+                id="question" 
+                label="Answer" 
+                variant="outlined"
+                aria-describedby="Write your answer here" 
+                value={answer} 
+                onChange={(e) => setAnswer(e.target.value)}
+              />
+            </div>
+            
           <Grid container justify="center" alignItems="center">
           {
             (completed[progress].isCompleted || (submitted && toggle)) &&
@@ -84,15 +100,14 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
               </Button>
             </div>
           }
-
+        
+          </Grid>
+          
         </form>
       </Card.Body>
     </Card>
-  );
-};
 
-QuestionOne.propTypes = {
-
+  )
 }
 
-export { QuestionOne };
+export { QuestionSeven };

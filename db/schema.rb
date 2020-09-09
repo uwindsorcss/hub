@@ -51,6 +51,19 @@ ActiveRecord::Schema.define(version: 2020_08_06_164837) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "job_postings", force: :cascade do |t|
+    t.string "company"
+    t.string "job_title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.boolean "approved"
+    t.boolean "reported"
+    t.string "location"
+    t.index ["user_id"], name: "index_job_postings_on_user_id"
+  end
+
   create_table "markdown_pages", force: :cascade do |t|
     t.string "title"
     t.string "text"
@@ -92,4 +105,5 @@ ActiveRecord::Schema.define(version: 2020_08_06_164837) do
     t.boolean "hunter"
     t.integer "progress", default: 1
   end
+
 end

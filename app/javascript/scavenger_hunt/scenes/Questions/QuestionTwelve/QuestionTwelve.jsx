@@ -6,22 +6,22 @@ import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
-import './QuestionOne.scss';
+import './QuestionTwelve.scss';
 
-const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => {
+const  QuestionTwelve = ({ progress, setActiveStep, completed, setCompleted  }) => {
   
   const [answer, setAnswer] = useState("");
   const [loading, setLoading ] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const ans = Clues[0].answers[0];
+  const ans = Clues[11].answers[0];
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
-    console.log("progress",  progress)
+    console.log("answer",  answer, ans )
     if (check(answer, ans)) {
       setToggle(true);
    
@@ -41,15 +41,25 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
     setAnswer(event.target.value);
   }
 
+  const Red = ({l}) => (<span style={{color : 'red'}}>{l}</span>)
+
   return (
     <Card>
       <Card.Header>
-        <h1>Puzzle #1</h1>
+        <h1>Puzzle #12</h1>
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
           <div className="letter-box">
-            There’s a student government at UWindsor that represents all undergraduate students in the Faculty of Science. What’s the name of this organization?
+            IODINE TENNESSINE 1000! CARBON HELIUM <Red l={'C'}/> POTASSIUM BORON LANTHANIUM CARBON POTASSIUM BORON OXYGEN ARGON <Red l={'D'}/>! <Red l={'M'}/> ARGON POTASSIUM SULFUR <Red l={'A'}/> RHENIUM URANIUM PHOSPHORUS FLUORINE OXYGEN <Red l={'R M'}/> ASTATINE HYDROGEN 11010111000!
+
+            <br/>
+            <br/>
+            Huh, what course was that again? 
+            <br/>
+            <br/>
+            (Please provide the answer in a 4-letter 4-number code, such as: AAAA 0000)
+
           </div>
           <div className="center-text">
             <TextField required 
@@ -91,8 +101,5 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
   );
 };
 
-QuestionOne.propTypes = {
 
-}
-
-export { QuestionOne };
+export { QuestionTwelve };

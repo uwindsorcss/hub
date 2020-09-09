@@ -1,12 +1,23 @@
-.date-picker {
-  margin: 1em;
-}
-
 .letter-box {
+  width: 100%;
   border: 1px solid green !important;
   border-radius: 20px;
   font-size: 20px;
   padding: 20px;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.table {
+    width: 80%;
+    height: 300px;
+}
+
+.gene {
+  width: 80%;
+  height: 100px;
+}
+
+.seq {
+  font-size: 12px;;
 }

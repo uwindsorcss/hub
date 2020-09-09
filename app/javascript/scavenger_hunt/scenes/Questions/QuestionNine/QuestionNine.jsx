@@ -6,16 +6,19 @@ import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
-import './QuestionOne.scss';
+import './QuestionNine.scss';
 
-const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => {
-  
+import Table from '../images/table.png';
+import Gene from '../images/gene.png';
+
+const QuestionNine = ({ progress, setActiveStep, completed, setCompleted  }) => {
+
   const [answer, setAnswer] = useState("");
   const [loading, setLoading ] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const ans = Clues[0].answers[0];
+  const ans = Clues[8].answers[0];
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -41,26 +44,42 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
     setAnswer(event.target.value);
   }
 
-  return (
+  return(
     <Card>
       <Card.Header>
-        <h1>Puzzle #1</h1>
+        <h1>Puzzle #9</h1>
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
-          <div className="letter-box">
-            There’s a student government at UWindsor that represents all undergraduate students in the Faculty of Science. What’s the name of this organization?
-          </div>
-          <div className="center-text">
-            <TextField required 
-              id="question" 
-              label="Answer" 
-              variant="outlined"
-              aria-describedby="Write your answer here" 
-              value={answer} 
-              onChange={handleChange}
-            />
-          </div>
+          <Grid container direction="column">
+            <Grid  container justify="center" item>
+              <img src={Table} className="table" />
+            </Grid>
+            <Grid container item xs={12}>
+              <div className="letter-box">
+                <img src={Gene} className="gene" />
+      
+                <br/>
+                <br/>
+                  The Faculty of Science has a program with the same name as the acronym concealed within this DNA sequence. Use the given table to decode the DNA! Treat the top strand as the template, transcribe from 3’ to 5’, and translate.
+                <br/>
+                <br/>
+                  What does each letter stand for in the program we’re referring to?
+              </div>
+
+            </Grid>
+            
+            <div className="center-text">
+              <TextField required 
+                id="question" 
+                label="Answer" 
+                variant="outlined"
+                aria-describedby="Write your answer here" 
+                value={answer} 
+                onChange={handleChange}
+              />
+            </div>
+              
           <Grid container justify="center" alignItems="center">
           {
             (completed[progress].isCompleted || (submitted && toggle)) &&
@@ -84,15 +103,13 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
               </Button>
             </div>
           }
-
+      
+          </Grid>
         </form>
       </Card.Body>
     </Card>
-  );
-};
 
-QuestionOne.propTypes = {
-
+  )
 }
 
-export { QuestionOne };
+export { QuestionNine };

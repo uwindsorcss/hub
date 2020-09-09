@@ -137,7 +137,7 @@ Courses for year
 | COMP-2660 | Computer Architecture II | Offered | Offered | Not Offered | ❤️💙💛💚 | COMP-2650 |
 | COMP-2707 | Advanced Website Design | Offered | Offered | Offered |  | COMP-2057 |
 | COMP-2800 | Software Development | Not Offered | Offered | Not Offered | 💚 | COMP-2120 |
-| COMP-3057 | Cyber-Ethics | Not Offered | Offered | Offered |  | COMP-1047, COMP-2057 |
+| COMP-3057 | Cyber-Ethics | Offered | Offered | Offered |  | COMP-1047, COMP-2057 |
 | COMP-3077 | Web-Based Data Management | Not Offered | Offered | Not Offered |  | COMP-2707 |
 | COMP-3110 | Introduction to Software Engineering | Offered | Not Offered | Not Offered | 💙💚 | COMP-2120, COMP-2540 |
 | COMP-3150 | Database Management Systems | Offered | Offered | Not Offered | ❤️💙💛💚💜🖤 | COMP-2540, COMP-2560 or COMP-2650 |
@@ -161,7 +161,7 @@ Courses for year
 | COMP-4540 | Design and Analysis of Algorithms | Offered | Offered | Not Offered | 💙💚 | COMP-2310, COMP-2540, COMP-3540 |
 | COMP-4670 | Network Security | Offered | Not Offered | Not Offered |  | COMP-3670 |
 | COMP-4680 | Advanced Networking | Not Offered | Offered | Not Offered |  | COMP-3670, COMP-3680 |
-| COMP-4730 | Machine Learning | Offered | Not Offered | Not Offered |  | COMP-3710 |
+| COMP-4730 | Machine Learning | Not Offered | Not Offered | Not Offered |  | COMP-3710 |
 | COMP-4740 | Advanced Topics in AI II | Not Offered | Offered | Not Offered |  | COMP-3710 |
 | COMP-4770 | Artifical Intelligence for Games | Not Offered | Offered | Not Offered |  | COMP-3770 |
 | COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered | 💚 | COMP-3110, COMP-3220, COMP-3300 |

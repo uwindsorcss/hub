@@ -5,30 +5,27 @@ import { Clues } from '../../../data/staticData/clues';
 import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import './QuestionFour.scss';
 
-import './QuestionOne.scss';
+const QuestionFour = ({ progress, setActiveStep, completed, setCompleted  }) => {
 
-const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => {
-  
   const [answer, setAnswer] = useState("");
   const [loading, setLoading ] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-
-  const ans = Clues[0].answers[0];
+  const ans = Clues[3].answers[0];
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
-    console.log("progress",  progress)
     if (check(answer, ans)) {
       setToggle(true);
    
       const newCompleted = completed;
       newCompleted[progress].score = 1;
       newCompleted[progress].isCompleted = true;
-      console.log("Answer Submitted is:", newCompleted);
+      console.log("Answer Submitted is:", answer);
       setCompleted(newCompleted);
        
     } else {
@@ -36,20 +33,34 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
     }
     setLoading(false);
   }
-  // console.log("Answer Submitted is:", toggle);
+
   const handleChange = (event) => {
     setAnswer(event.target.value);
   }
-
-  return (
+  return(
     <Card>
       <Card.Header>
-        <h1>Puzzle #1</h1>
+        <h1>Puzzle #4</h1>
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
-          <div className="letter-box">
-            There’s a student government at UWindsor that represents all undergraduate students in the Faculty of Science. What’s the name of this organization?
+          <div className="question-text">
+              Here are three clues to letters of the alphabet:
+          </div>
+          <Grid container justify="flex-start" direction="row" className="letter-box">
+            <div className="letter">
+              Letter #1: I am part of the language that is now used to write Minecraft -- no, it’s not English, nor is it related to coffee!
+            </div>
+            <div className="letter">
+              Letter #2: Stella and Sam saw seven sharks swimming. I am the letter that is used once in the sentence but nine times before.
+            </div>
+            <div className="letter">
+              Letter #3: I am Sulfur, just shorter!
+            </div>
+         
+          </Grid>
+          <div className="question-text">
+            In the order of Letter #1, 2, and 3, what do these three letters stand for at UWindsor?
           </div>
           <div className="center-text">
             <TextField required 
@@ -84,15 +95,11 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
               </Button>
             </div>
           }
-
         </form>
       </Card.Body>
     </Card>
-  );
-};
 
-QuestionOne.propTypes = {
-
+  )
 }
 
-export { QuestionOne };
+export { QuestionFour };
