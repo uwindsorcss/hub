@@ -40,6 +40,7 @@ gem 'social-share-button', '~> 1.2', '>= 1.2.1'
 gem 'webpacker'
 gem 'react-rails'
 gem 'graphql', '~> 1.11', '>= 1.11.1'
+gem 'data_migrate', '~> 6.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
