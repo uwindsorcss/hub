@@ -63,29 +63,30 @@ const End = ({ isDone, setIsDone, start, completed, setCompleted  }) => {
           
       </Grid>
 
-      <form onSubmit={handleSubmit} >
-          <div className="center-text">
-            <TextField required 
-              id="question" 
-              label="Name" 
-              variant="outlined"
-              aria-describedby="Write your name" 
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className="center-text">
-            <TextField required 
-              id="question" 
-              label="Student ID" 
-              variant="outlined"
-              aria-describedby="Write your answer here" 
-              value={studentId}
-              onChange={(e) => setStudentId(e.target.value)}
-            />
-          </div>
+       <form onSubmit={handleSubmit} > 
           {
            !success && !isDone ?
+            <>
+            <div className="center-text">
+              <TextField required 
+                id="question" 
+                label="Name" 
+                variant="outlined"
+                aria-describedby="Write your name" 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className="center-text">
+              <TextField required 
+                id="question" 
+                label="Student ID" 
+                variant="outlined"
+                aria-describedby="Write your answer here" 
+                value={studentId}
+                onChange={(e) => setStudentId(e.target.value)}
+              />
+            </div>
             <div className="center-text">
               <Button 
                 variant="primary" 
@@ -95,6 +96,8 @@ const End = ({ isDone, setIsDone, start, completed, setCompleted  }) => {
                 Submit
               </Button>
             </div>
+
+            </>
             :
             <Grid container justify="center" alignItems="center">
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>

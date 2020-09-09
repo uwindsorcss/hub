@@ -110,6 +110,7 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
               <Grid container item xs={4} justify="center" >
                 <div className="center-text">
                   <TextField required 
+                    disabled={completed[progress].isCompleted} 
                     id="question" 
                     label="Answer" 
                     variant="outlined"
@@ -138,6 +139,7 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
               <Grid container item xs={4} justify="center">
                 <div className="center-text">
                   <TextField required 
+                    disabled={completed[progress].isCompleted} 
                     id="question" 
                     label="Answer" 
                     variant="outlined"
@@ -167,6 +169,7 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
               <Grid container item xs={4} justify="center" alignContent="center">
                 <div className="center-text">
                   <TextField required 
+                    disabled={completed[progress].isCompleted} 
                     id="question" 
                     label="Answer" 
                     variant="outlined"
@@ -196,6 +199,7 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
               <Grid container item xs={4} justify="center" alignItems="center">
                 <div className="center-text">
                   <TextField required 
+                    disabled={completed[progress].isCompleted} 
                     id="question" 
                     label="Answer" 
                     variant="outlined"

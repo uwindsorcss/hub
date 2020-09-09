@@ -66,6 +66,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
           </div>
           <div className="center-text">
             <TextField required 
+              disabled={completed[progress].isCompleted}
               id="question" 
               label="MM/DD" 
               variant="outlined"
@@ -87,6 +88,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
 
           <div className="center-text">
             <TextField required 
+              disabled={completed[progress].isCompleted}
               id="question" 
               label="MM/DD" 
               variant="outlined"

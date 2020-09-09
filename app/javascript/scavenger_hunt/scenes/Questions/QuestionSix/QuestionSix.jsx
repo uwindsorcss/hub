@@ -70,6 +70,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
 
           <div className="center-text">
             <TextField required 
+              disabled={completed[progress].isCompleted} 
               id="question" 
               label="Answer" 
               variant="outlined"
@@ -111,7 +112,8 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
                 Follow-up question: Which university in Ontario has achieved this outstanding ratio? The University of _________!
               </div>
                 <div className="center-text">
-                  <TextField required 
+                  <TextField required
+                    disabled={completed[progress].isCompleted} 
                     id="question" 
                     label="Answer" 
                     variant="outlined"

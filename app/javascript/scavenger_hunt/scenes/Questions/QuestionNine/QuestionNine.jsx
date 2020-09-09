@@ -28,7 +28,7 @@ const QuestionNine = ({ progress, setActiveStep, completed, setCompleted  }) => 
     const temp = ans.split(', ');
   
     if (JSON.stringify(a) === JSON.stringify(temp)) {
-      
+
       setToggle(true);
       const newCompleted = completed;
       newCompleted[progress].score = 1;
@@ -72,6 +72,7 @@ const QuestionNine = ({ progress, setActiveStep, completed, setCompleted  }) => 
             
             <div className="center-text">
               <TextField required 
+                disabled={completed[progress].isCompleted} 
                 id="question" 
                 label="Answer" 
                 variant="outlined"
