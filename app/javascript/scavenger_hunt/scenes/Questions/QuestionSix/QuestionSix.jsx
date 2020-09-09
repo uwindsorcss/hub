@@ -53,7 +53,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
   }
 
   return(
-    <Card>
+    <Card> 
       <Card.Header>
         <h1>Puzzle #6</h1>
       </Card.Header>
