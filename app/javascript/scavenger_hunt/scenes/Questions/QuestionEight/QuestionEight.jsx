@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FormHelperText, TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Alert } from "../../../components/Alert";
@@ -105,6 +105,7 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
           <div className="center-text">
             <TextField required 
               id="question" 
+              disabled={completed[progress].isCompleted}
               label="Answer" 
               variant="outlined"
               aria-describedby="Write your answer here" 
@@ -153,6 +154,7 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
                 
                 <div className="center-text">
                   <TextField required 
+                    disabled={completed[progress].isCompleted}
                     id="question" 
                     label="Answer" 
                     variant="outlined"
