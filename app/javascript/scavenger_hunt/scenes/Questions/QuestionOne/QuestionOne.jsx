@@ -7,7 +7,7 @@ import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 import { useGetUserAnswerQuery } from '../../../data/queries';
-import { useSaveUserAnswerMutation } from '../../../data/mutations';
+import { useSaveUserAnswerMutation } from '../../../data/mutations'
 
 import './QuestionOne.scss';
 
@@ -17,7 +17,6 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
   const [loading, setLoading ] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const ans = Clues[0].answers[0];
 
   const { data: getUserAnswerQueryData, loading: getUserAnswerQueryLoading } = useGetUserAnswerQuery({
     variables: {
@@ -26,6 +25,7 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
   });
 
   const [saveUserAnswer, { loading: mutationLoading }] = useSaveUserAnswerMutation();
+
 
   useEffect(() => {
     if(!getUserAnswerQueryLoading) {
@@ -36,6 +36,8 @@ const  QuestionOne = ({ progress, setActiveStep, completed, setCompleted  }) => 
       }
     }
   });
+
+  const ans = Clues[0].answers[0];
 
   const updateCompleted = () => {
     const newCompleted = completed;
