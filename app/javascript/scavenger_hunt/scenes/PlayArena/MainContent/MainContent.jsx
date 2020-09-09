@@ -12,6 +12,7 @@ import {
     QuestionSix,
     QuestionSeven,
     QuestionEleven,
+    QuestionEight,
     QuestionNine,
     QuestionTen,
     QuestionTwelve,
@@ -44,7 +45,7 @@ const MainContent = ({ isDone, setIsDone, start, progress, setActiveStep, comple
         return <QuestionSeven progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         break;
       case 7 :
-        return <QuestionSeven progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
+        return <QuestionEight progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />
         break;
       case 8 :
         return <QuestionNine progress={progress} setActiveStep={setActiveStep} completed={completed} setCompleted={setCompleted} />

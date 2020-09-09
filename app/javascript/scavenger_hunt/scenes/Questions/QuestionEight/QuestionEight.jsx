@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { TextField, Grid, FormHelperText } from '@material-ui/core';
+import { FormHelperText, TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
+import { Alert } from "../../../components/Alert";
 import { Clues } from '../../../data/staticData/clues';
 import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
-import './QuestionSix.scss';
+import "./QuestionEight.scss";
 
-const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
-
+const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => {
   const [answerOne, setAnswerOne] = useState('');
   const [answerTwo, setAnswerTwo] = useState('');
   const [toggle, setToggle] = useState(false);
@@ -18,7 +18,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const ans = Clues[5].answers;
+  const ans = Clues[7].answers;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -52,48 +52,47 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
    console.log("completed", newCompleted);
   }
 
-  return(
-    <Card> 
+  return (
+    <Card>
       <Card.Header>
-        <h1>Puzzle #6</h1>
+        <h1>Puzzle #8</h1>
       </Card.Header>
       <Card.Body>
         <form onSubmit={handleSubmit} >
-
           <div className="letter-box">
-            At an arbitrary university, there are 458 staff, 20,135 undergraduate students, and 1,864 graduate students in the Faculty of Science. Assuming that at any given time, 1.2% of the staff are inactive on campus due to extended leave and 10.33% of the remaining staff do not engage in research, while 78.9% of undergraduate students are eager to begin in a lab and 100% of the graduate students already have lab positions, what is the best faculty to student ratio offered by a university in Ontario for science?
+            Someone’s sending you a distress signal on radio waves! Type the correct frequency to receive the message. Don’t forget the units!
           </div>
-
-          <FormHelperText id="my-helper-text">
-            Hint: It’s our Dean of Science’s favourite ratio!
-          </FormHelperText>
-
+          <div className="center-text">
+            <Card.Img className="card-image" variant="bottom" src="https://i.imgur.com/BcMwUzV.png" />
+          </div>
           <div className="center-text">
             <TextField required 
               id="question" 
               label="Answer" 
               variant="outlined"
               aria-describedby="Write your answer here" 
-              value={answerOne} 
+              value={answerOne}
               onChange={(e) => setAnswerOne(e.target.value)}
             />
           </div>
+
           <Grid container justify="center" alignItems="center">
           {
             (completed[progress].isCompleted || (submitted && toggleOne)) &&
-              <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+              <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}} />
           }
           {
             submitted && !toggleOne &&
-              <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+              <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}} />
           }
           </Grid>
- 
+
           {
           !toggle && !completed[progress].isCompleted &&
           <div className="center-text">
             <Button 
               variant="primary" 
+              type="submit"
               disabled={loading}
               onClick={() => {
                 if(answerOne)
@@ -106,31 +105,39 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
           }
           {
             toggle &&
-            <>        
-              <div className="letter-box">
-                Follow-up question: Which university in Ontario has achieved this outstanding ratio? The University of _________!
-              </div>
+            <div>
+              <Alert message="Good Job! you unlocked the second part of this puzzle" variant="success" isdismissible={true} />
+                <div className="letter-box">
+                  UWindsor has a club with the same name as the encoded acronym. The organization offers tutoring sessions before midterms and final exams, and all proceeds go to charity. What’s the complete name of this organization?
+                  <div className="center-text">
+                    ••• --- •••
+                  </div>
+                </div>
+                
                 <div className="center-text">
                   <TextField required 
                     id="question" 
                     label="Answer" 
                     variant="outlined"
                     aria-describedby="Write your answer here" 
-                    value={answerTwo} 
+                    value={answerTwo}
                     onChange={(e) => setAnswerTwo(e.target.value)}
                   />
                 </div>
+                <FormHelperText id="my-helper-text">
+                    Hint: Don't just write the abbreviation
+                </FormHelperText>
                 <Grid container justify="center" alignItems="center">
-                {
-                  (completed[progress].isCompleted || (submitted && toggleTwo)) &&
-                    <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
-                }
-                {
-                  submitted && !toggleTwo &&
-                    <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
-                }
-                </Grid>
-                {
+                  {
+                    (completed[progress].isCompleted || (submitted && toggleTwo)) &&
+                      <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+                  }
+                  {
+                    submitted && !toggleTwo &&
+                      <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+                  }     
+                  </Grid>
+                  {
                 completed[progress].score != 2 && !completed[progress].isCompleted &&
                   <div className="center-text">
                     <Button 
@@ -142,14 +149,12 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
                     </Button>
                   </div>
                 }
-              </>
-            }
-          
+            </div>
+          }
         </form>
       </Card.Body>
     </Card>
+  );
+};
 
-  )
-}
-
-export { QuestionSix };
+export { QuestionEight };
