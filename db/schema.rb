@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_06_164837) do
+ActiveRecord::Schema.define(version: 2020_09_09_043626) do
+
+  create_table "answers", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
+  end
 
   create_table "discord_users", force: :cascade do |t|
     t.integer "discord_uid", limit: 8
@@ -51,19 +60,6 @@ ActiveRecord::Schema.define(version: 2020_08_06_164837) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "job_postings", force: :cascade do |t|
-    t.string "company"
-    t.string "job_title"
-    t.string "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.boolean "approved"
-    t.boolean "reported"
-    t.string "location"
-    t.index ["user_id"], name: "index_job_postings_on_user_id"
-  end
-
   create_table "markdown_pages", force: :cascade do |t|
     t.string "title"
     t.string "text"
@@ -74,6 +70,12 @@ ActiveRecord::Schema.define(version: 2020_08_06_164837) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.integer "question_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -91,9 +93,9 @@ ActiveRecord::Schema.define(version: 2020_08_06_164837) do
   create_table "sparkles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reason"
     t.integer "sender_id"
     t.integer "receiver_id"
-    t.string "reason"
   end
 
   create_table "users", force: :cascade do |t|
