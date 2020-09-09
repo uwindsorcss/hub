@@ -77,7 +77,7 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
             "input": {
               "answerAttributes": {
                 "questionNumber": 8,
-                "answer": answer
+                "answer": `${answerOne}, ${answerTwo}`
               }
             }
           }
