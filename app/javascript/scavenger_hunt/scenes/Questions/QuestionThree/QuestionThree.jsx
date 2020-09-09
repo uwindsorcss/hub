@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FormHelperText, Grid, TextField } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
@@ -8,7 +8,8 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 import './QuestionThree.scss';
 
-
+import { useGetUserAnswerQuery } from '../../../data/queries';
+import { useSaveUserAnswerMutation } from '../../../data/mutations';
 
 const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => {
   const [DateOne, setDateOne] = useState('');
@@ -20,7 +21,33 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
   const [submitted, setSubmitted] = useState(false);
   const ans = Clues[2].answers;
 
+  const { data: getUserAnswerQueryData, loading: getUserAnswerQueryLoading } = useGetUserAnswerQuery({
+    variables: {
+      question_number: 3
+    }
+  });
+
+  const [saveUserAnswer, { loading: mutationLoading }] = useSaveUserAnswerMutation();
+
+  useEffect(() => {
+    if(!getUserAnswerQueryLoading) {
+      let persisted_user_answer = getUserAnswerQueryData.currentUser.answerTo;
+      if(persisted_user_answer){
+        updateCompleted();
+        setAnswer(persisted_user_answer);
+      }
+    }
+  });
+
+  const updateCompleted = () => {
+    const newCompleted = completed;
+    newCompleted[progress].score = 1;
+    newCompleted[progress].isCompleted = true;
+    setCompleted(newCompleted);
+  }
+
   const handleSubmit = (event) => {
+
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
@@ -44,9 +71,21 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
     }
     
     if ( newCompleted[progress].score == 2) {
-      newCompleted[progress].isCompleted = true;
-      setCompleted(newCompleted);
-      // graphql query if needed
+      if(!mutationLoading){
+        saveUserAnswer({
+          variables: {
+            "input": {
+              "answerAttributes": {
+                "questionNumber": 3,
+                "answer": `${DateOne}, ${DateTwo}`
+              }
+            }
+          }
+        });
+      }
+      updateCompleted();
+      // newCompleted[progress].isCompleted = true;
+      // setCompleted(newCompleted);
     }
     setLoading(false);
     console.log("date", !(toggleOne && toggleTwo) )

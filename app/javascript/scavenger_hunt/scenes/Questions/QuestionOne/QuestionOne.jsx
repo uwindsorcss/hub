@@ -7,7 +7,7 @@ import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 import { useGetUserAnswerQuery } from '../../../data/queries';
-import { useSaveUserAnswerMutation } from '../../../data/mutations'
+import { useSaveUserAnswerMutation } from '../../../data/mutations';
 
 import './QuestionOne.scss';
 
