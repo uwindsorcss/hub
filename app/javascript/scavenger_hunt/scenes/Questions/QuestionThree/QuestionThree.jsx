@@ -34,14 +34,16 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
       let persisted_user_answer = getUserAnswerQueryData.currentUser.answerTo;
       if(persisted_user_answer){
         updateCompleted();
-        setAnswer(persisted_user_answer);
+  
+        setDateOne(persisted_user_answer.split(', ')[0]);
+        setDateTwo(persisted_user_answer.split(', ')[1]);
       }
     }
   });
 
   const updateCompleted = () => {
     const newCompleted = completed;
-    newCompleted[progress].score = 1;
+    newCompleted[progress].score = 2;
     newCompleted[progress].isCompleted = true;
     setCompleted(newCompleted);
   }
