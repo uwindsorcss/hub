@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
 import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
+import { useGetUserAnswerQuery } from '../../../data/queries';
+import { useSaveUserAnswerMutation } from '../../../data/mutations'
 
 import './QuestionTwo.scss';
 
@@ -13,7 +16,33 @@ const  QuestionTwo = ({ progress, setActiveStep, completed, setCompleted  }) => 
   const [loading, setLoading ] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  const { data: getUserAnswerQueryData, loading: getUserAnswerQueryLoading } = useGetUserAnswerQuery({
+    variables: {
+      question_number: 2
+    }
+  });
+
+  const [saveUserAnswer, { loading: mutationLoading }] = useSaveUserAnswerMutation();
+
+  useEffect(() => {
+    if(!getUserAnswerQueryLoading) {
+      let persisted_user_answer = getUserAnswerQueryData.currentUser.answerTo;
+      if(persisted_user_answer){
+        updateCompleted();
+        setAnswer(persisted_user_answer);
+      }
+    }
+  });
+
   const ans = Clues[1].answers[0];
+
+  const updateCompleted = () => {
+    const newCompleted = completed;
+    newCompleted[progress].score = 1;
+    newCompleted[progress].isCompleted = true;
+    setCompleted(newCompleted);
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,13 +50,19 @@ const  QuestionTwo = ({ progress, setActiveStep, completed, setCompleted  }) => 
     setLoading(true);
     if (check(answer, ans)) {
       setToggle(true);
-   
-      const newCompleted = completed;
-      newCompleted[progress].score = 1;
-      newCompleted[progress].isCompleted = true;
-      console.log("Answer Submitted is:", newCompleted);
-      setCompleted(newCompleted);
-       
+      updateCompleted();
+      if(!mutationLoading){
+        saveUserAnswer({
+          variables: {
+            "input": {
+              "answerAttributes": {
+                "questionNumber": 2,
+                "answer": answer
+              }
+            }
+          }
+        });
+      }
     } else {
       setToggle(false);
     }
@@ -49,7 +84,8 @@ const  QuestionTwo = ({ progress, setActiveStep, completed, setCompleted  }) => 
             What’s Science Society’s website? www.________.com
           </div>
           <div className="center-text">
-            <TextField required 
+            <TextField required
+            disabled={completed[progress].isCompleted}
               id="question" 
               label="Answer" 
               variant="outlined"
