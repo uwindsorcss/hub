@@ -5,7 +5,6 @@ Table of Contents
 - [Contributing](#contributing)
     * [Contributors](#contributors)
 - [Important Dates](#important-dates)
-    * [Summer 2020](#summer-2020)
     * [Fall 2020](#fall-2020)
     * [Winter 2020](#winter-2021)
 - [Courses](#courses)
@@ -72,13 +71,6 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 # Important Dates
 ------------
 
-### Summer 2020
-Summer courses are the normal, 12-week courses. This list does not include Intersession.
-
-- May 19 - Classes begin
-- June 27 to July 5 - Reading week
-- August 18 - Last day of classes
-- August 21 - August 29 - Final exams
 
 ### Fall 2020
 - September 10 - Classes begin
