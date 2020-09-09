@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Grid } from '@material-ui/core';
+import { TextField, Grid, FormHelperText } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
 import { check } from '../utility';
@@ -61,6 +61,11 @@ const QuestionFour = ({ progress, setActiveStep, completed, setCompleted  }) => 
           </Grid>
           <div className="question-text">
             In the order of Letter #1, 2, and 3, what do these three letters stand for at UWindsor?
+            <br/>
+            <br/>
+          </div>
+          <div>
+          Separate the words with a comma and space (e.g. word, word, word)   
           </div>
           <div className="center-text">
             <TextField required 

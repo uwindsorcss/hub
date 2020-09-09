@@ -66,6 +66,9 @@ const QuestionNine = ({ progress, setActiveStep, completed, setCompleted  }) => 
                 <br/>
                 <br/>
                   What does each letter stand for in the program we’re referring to?
+                <br/>
+                <br/>
+                  Separate the words with a comma and space (e.g. word, word, word)
               </div>
 
             </Grid>

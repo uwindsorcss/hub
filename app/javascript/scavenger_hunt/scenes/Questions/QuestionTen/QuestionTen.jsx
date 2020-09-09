@@ -101,8 +101,12 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
           <Grid container direction="column">
             <Grid container item xs={12}>
               <div className="letter-box">
-                  UWindsor and the UWSA offer a lot of events and services to support students! Can you name these ones? (Hint: Each _______ is a word in the name!)
-          
+                UWindsor and the UWSA offer a lot of events and services to support students! Can you name these ones? (Hint: Each _______ is a word in the name!)
+
+                <br/>
+                <br/>
+                Separate words with a space (e.g. word word word)
+        
             <Grid container direction="row" className="pictionary">
               <Grid container item xs={6} justify="flex-start">
                 <img src={One} className="emo" />
