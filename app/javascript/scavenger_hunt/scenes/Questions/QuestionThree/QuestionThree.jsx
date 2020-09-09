@@ -19,7 +19,6 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
   const [toggleTwo, setToggleTwo] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const ans = Clues[2].answers;
-  console.log("asn", ans);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,9 +28,8 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
     const two = check(DateTwo.toString(), ans[1].toString());
     const newCompleted = completed;
     newCompleted[progress].score = 0;
-    console.log('corect',DateOne, ans[0] )
+    
     if (one) {
-   
       setToggleOne(true);
       newCompleted[progress].score += 1;
     } else {

@@ -5,6 +5,8 @@ module Types
 
     field :users, [Types::UserType], null: false, description: "returns all the users"
     field :current_user, Types::UserType, null: true, description: "returns the current user"
+    field :answers, [Types::AnswerType], null: true, description: "returns all the answers by all the users"
+    
 
     def users
       User.all
@@ -17,6 +19,10 @@ module Types
       else
         nil
       end
+    end
+
+    def answers
+      Answer.all
     end
   end
 end
