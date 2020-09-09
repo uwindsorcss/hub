@@ -85,6 +85,8 @@ GEM
     concurrent-ruby (1.1.6)
     connection_pool (2.2.3)
     crass (1.0.6)
+    data_migrate (6.3.0)
+      rails (>= 5.0)
     date_validator (0.10.0)
       activemodel (>= 3)
       activesupport (>= 3)
@@ -354,6 +356,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   certified
   coffee-rails (~> 4.2)
+  data_migrate (~> 6.3)
   date_validator
   factory_bot_rails
   faker
