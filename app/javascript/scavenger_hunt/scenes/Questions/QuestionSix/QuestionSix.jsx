@@ -36,7 +36,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
       if(persisted_user_answer){
         updateCompleted();
         setAnswerOne(persisted_user_answer.split(', ')[0]);
-        setAnswerOne(persisted_user_answer.split(', ')[1]);
+        setAnswerTwo(persisted_user_answer.split(', ')[1]);
       }
     }
   });
@@ -144,7 +144,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
           </div>
           }
           {
-            toggle &&
+            (completed[progress].isCompleted || toggle) &&
             <>        
               <div className="letter-box">
                 Follow-up question: Which university in Ontario has achieved this outstanding ratio? The University of _________!
