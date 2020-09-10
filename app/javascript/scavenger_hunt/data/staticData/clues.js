@@ -33,7 +33,7 @@ export const Clues = [
   },
   {
     puzzleNo: '9',
-    answers: ["Leadership, Engagement, Application, Discover"]
+    answers: ["leadership, engagement, application, discovery"]
   },
   {
     puzzleNo: '10',

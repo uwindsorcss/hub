@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FormHelperText, Grid, TextField } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
@@ -8,7 +8,8 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 import './QuestionThree.scss';
 
-
+import { useGetUserAnswerQuery } from '../../../data/queries';
+import { useSaveUserAnswerMutation } from '../../../data/mutations';
 
 const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => {
   const [DateOne, setDateOne] = useState('');
@@ -19,19 +20,44 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
   const [toggleTwo, setToggleTwo] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const ans = Clues[2].answers;
-  console.log("asn", ans);
 
+  const { data: getUserAnswerQueryData, loading: getUserAnswerQueryLoading } = useGetUserAnswerQuery({
+    variables: {
+      question_number: 3
+    }
+  });
+
+  const [saveUserAnswer, { loading: mutationLoading }] = useSaveUserAnswerMutation();
+
+  useEffect(() => {
+    if(!getUserAnswerQueryLoading) {
+      let persisted_user_answer = getUserAnswerQueryData.currentUser.answerTo;
+      if(persisted_user_answer){
+        updateCompleted();
+        setDateOne(persisted_user_answer.split(', ')[0]);
+        setDateTwo(persisted_user_answer.split(', ')[1]);
+      }
+    }
+  });
+
+  const updateCompleted = () => {
+    const newCompleted = completed;
+    newCompleted[progress].score = 2;
+    newCompleted[progress].isCompleted = true;
+    setCompleted(newCompleted);
+  }
   const handleSubmit = (event) => {
+
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
-    const one = check(DateOne.toString(), ans[0].toString());
-    const two = check(DateTwo.toString(), ans[1].toString());
+    const one =   ans.includes(DateOne.toString());
+    const two =  ans.includes(DateTwo.toString()) && DateOne !== DateTwo;
+    
     const newCompleted = completed;
     newCompleted[progress].score = 0;
-    console.log('corect',DateOne, ans[0] )
+    
     if (one) {
-   
       setToggleOne(true);
       newCompleted[progress].score += 1;
     } else {
@@ -46,9 +72,21 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
     }
     
     if ( newCompleted[progress].score == 2) {
-      newCompleted[progress].isCompleted = true;
-      setCompleted(newCompleted);
-      // graphql query if needed
+      if(!mutationLoading){
+        saveUserAnswer({
+          variables: {
+            "input": {
+              "answerAttributes": {
+                "questionNumber": 3,
+                "answer": `${DateOne}, ${DateTwo}`
+              }
+            }
+          }
+        });
+      }
+      updateCompleted();
+      // newCompleted[progress].isCompleted = true;
+      // setCompleted(newCompleted);
     }
     setLoading(false);
     console.log("date", !(toggleOne && toggleTwo) )
@@ -66,6 +104,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
           </div>
           <div className="center-text">
             <TextField required 
+              disabled={completed[progress].isCompleted}
               id="question" 
               label="DD/MM" 
               variant="outlined"
@@ -87,6 +126,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
 
           <div className="center-text">
             <TextField required 
+              disabled={completed[progress].isCompleted}
               id="question" 
               label="DD/MM" 
               variant="outlined"

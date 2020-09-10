@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
 import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import { useGetUserAnswerQuery } from '../../../data/queries';
+import { useSaveUserAnswerMutation } from '../../../data/mutations';
 
 import Map from '../images/map.png';
 
@@ -17,19 +18,52 @@ const QuestionSeven = ({ progress, setActiveStep, completed, setCompleted  }) =>
 
   const ans = Clues[6].answers[0];
 
+  const { data: getUserAnswerQueryData, loading: getUserAnswerQueryLoading } = useGetUserAnswerQuery({
+    variables: {
+      question_number: 7
+    }
+  });
+
+  const [saveUserAnswer, { loading: mutationLoading }] = useSaveUserAnswerMutation();
+
+  useEffect(() => {
+    if(!getUserAnswerQueryLoading) {
+      let persisted_user_answer = getUserAnswerQueryData.currentUser.answerTo;
+      if(persisted_user_answer){
+        updateCompleted();
+        setAnswer(persisted_user_answer);
+      }
+    }
+  });
+
+  const updateCompleted = () => {
+    const newCompleted = completed;
+    newCompleted[progress].score = 1;
+    newCompleted[progress].isCompleted = true;
+    setCompleted(newCompleted);
+  }
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
     console.log("progress",  progress)
     if (check(answer, ans)) {
+      if(!mutationLoading){
+        saveUserAnswer({
+          variables: {
+            "input": {
+              "answerAttributes": {
+                "questionNumber": 7,
+                "answer": answer
+              }
+            }
+          }
+        });
+      }
       setToggle(true);
-   
-      const newCompleted = completed;
-      newCompleted[progress].score = 1;
-      newCompleted[progress].isCompleted = true;
-      console.log("Answer Submitted is:", newCompleted);
-      setCompleted(newCompleted);
+      updateCompleted();
        
     } else {
       setToggle(false);
@@ -68,6 +102,7 @@ const QuestionSeven = ({ progress, setActiveStep, completed, setCompleted  }) =>
 
             <div className="center-text">
               <TextField required 
+                disabled={completed[progress].isCompleted}
                 id="question" 
                 label="Answer" 
                 variant="outlined"

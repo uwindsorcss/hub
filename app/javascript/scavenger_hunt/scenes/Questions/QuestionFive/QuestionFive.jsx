@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
@@ -6,6 +6,8 @@ import { check } from '../utility';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
+import { useGetUserAnswerQuery } from '../../../data/queries';
+import { useSaveUserAnswerMutation } from '../../../data/mutations';
 
 import './QuestionFive.scss';
 
@@ -19,6 +21,31 @@ const QuestionFive = ({ progress, setActiveStep, completed, setCompleted }) => {
   const [loading, setLoading] = useState(false);
 
   const ans = Clues[4].answers;
+  const { data: getUserAnswerQueryData, loading: getUserAnswerQueryLoading } = useGetUserAnswerQuery({
+    variables: {
+      question_number: 5
+    }
+  });
+
+  const [saveUserAnswer, { loading: mutationLoading }] = useSaveUserAnswerMutation();
+
+  useEffect(() => {
+    if(!getUserAnswerQueryLoading) {
+      let persisted_user_answer = getUserAnswerQueryData.currentUser.answerTo;
+      if(persisted_user_answer){
+        updateCompleted();
+        setAnswerOne(persisted_user_answer.split(', ')[0]);
+        setAnswerTwo(persisted_user_answer.split(', ')[1]);
+      }
+    }
+  });
+
+  const updateCompleted = () => {
+    const newCompleted = completed;
+    newCompleted[progress].score = 1;
+    newCompleted[progress].isCompleted = true;
+    setCompleted(newCompleted);
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -44,18 +71,19 @@ const QuestionFive = ({ progress, setActiveStep, completed, setCompleted }) => {
     }
     
     if ( newCompleted[progress].score == 2) {
-      newCompleted[progress].isCompleted = true;
-      setCompleted(newCompleted);
-      // graphql query if needed
-      const payload = {
-        progress,
-        completed,
-        status: 'incompleted',
+      if(!mutationLoading){
+        saveUserAnswer({
+          variables: {
+            "input": {
+              "answerAttributes": {
+                "questionNumber": 5,
+                "answer": `${answerOne}, ${answerTwo}`
+              }
+            }
+          }
+        });
       }
-      // convert payload JSON object to string
-      // save it in database
-      // query it back and convert JSON object
-      // save payload for every correct answer for all questions
+      updateCompleted();
     }
     setLoading(false);
    console.log("completed", newCompleted);
@@ -78,6 +106,7 @@ const QuestionFive = ({ progress, setActiveStep, completed, setCompleted }) => {
         
           <div className="center-text">
             <TextField required 
+              disabled={completed[progress].isCompleted}
               id="question" 
               label="Answer" 
               variant="outlined"
@@ -103,6 +132,7 @@ const QuestionFive = ({ progress, setActiveStep, completed, setCompleted }) => {
           
           <div className="center-text">
             <TextField required
+              disabled={completed[progress].isCompleted}
               id="question" 
               label="Answer" 
               variant="outlined"

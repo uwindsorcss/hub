@@ -1,7 +1,7 @@
 module Mutations::User
   class Update < Mutations::BaseMutation
     graphql_name "UpdateUser"
-    description "returns what question a user is in scavenger hunt"
+    description "updates the user"
 
     argument :user_attributes, Types::InputObjects::UserAttributes, required: true
 
