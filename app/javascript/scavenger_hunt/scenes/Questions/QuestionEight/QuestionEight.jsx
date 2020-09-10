@@ -142,7 +142,7 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
           </div>
           }
           {
-            toggle &&
+            (completed[progress].isCompleted || toggle) && 
             <div>
               <Alert message="Good Job! you unlocked the second part of this puzzle" variant="success" isdismissible={true} />
                 <div className="letter-box">

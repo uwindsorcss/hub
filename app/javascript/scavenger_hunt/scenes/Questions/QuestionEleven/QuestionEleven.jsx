@@ -19,10 +19,10 @@ const QuestionEleven = ({ progress, setActiveStep, completed, setCompleted  }) =
   const [submitted, setSubmitted] = useState(false);
 
   const ans = Clues[10].answers[0];
-
+ 
   const { data: getUserAnswerQueryData, loading: getUserAnswerQueryLoading } = useGetUserAnswerQuery({
     variables: {
-      question_number: 11
+      question_number: i
     }
   });
 
