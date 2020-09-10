@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Grid } from '@material-ui/core';
 import { Card, Button } from "react-bootstrap";
 import { Clues } from '../../../data/staticData/clues';
@@ -12,6 +12,9 @@ import One from '../images/1.png';
 import Two from '../images/2.png';
 import Three from '../images/3.png';
 import Four from '../images/4.png';
+
+import { useGetUserAnswerQuery } from '../../../data/queries';
+import { useSaveUserAnswerMutation } from '../../../data/mutations';
 
 const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
   const [answerOne, setAnswerOne] = useState('');
@@ -28,6 +31,34 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
   const [loading, setLoading] = useState(false);
 
   const ans = Clues[9].answers;
+
+  const { data: getUserAnswerQueryData, loading: getUserAnswerQueryLoading } = useGetUserAnswerQuery({
+    variables: {
+      question_number: 10
+    }
+  });
+
+  const [saveUserAnswer, { loading: mutationLoading }] = useSaveUserAnswerMutation();
+
+  useEffect(() => {
+    if(!getUserAnswerQueryLoading) {
+      let persisted_user_answer = getUserAnswerQueryData.currentUser.answerTo;
+      if(persisted_user_answer){
+        updateCompleted();
+        setAnswerOne(persisted_user_answer.split(', ')[0]);
+        setAnswerTwo(persisted_user_answer.split(', ')[1]);
+        setAnswerThree(persisted_user_answer.split(', ')[2]);
+        setAnswerFour(persisted_user_answer.split(', ')[3]);
+      }
+    }
+  });
+
+  const updateCompleted = () => {
+    const newCompleted = completed;
+    newCompleted[progress].score = 4;
+    newCompleted[progress].isCompleted = true;
+    setCompleted(newCompleted);
+  }
 
   const [validation, setValidation] = useState({
     'one' : false,
@@ -80,16 +111,25 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
     }
     
     if ( newCompleted[progress].score == 4) {
-      newCompleted[progress].isCompleted = true;
-      setCompleted(newCompleted);
+      if(!mutationLoading){
+        saveUserAnswer({
+          variables: {
+            "input": {
+              "answerAttributes": {
+                "questionNumber": 10,
+                "answer": `${answerOne}, ${answerTwo}, ${answerThree}, ${answerFour}`
+              }
+            }
+          }
+        });
+      }
+      updateCompleted();
       // graphql query if needed
     }
     setLoading(false);
  
   }
-  console.log('completed', completed);
-  const data = Clues.find(e => e.puzzleNo === '10');
-  const answers = data.answers;
+
 
   return(
     <Card>
@@ -110,6 +150,7 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
               <Grid container item xs={4} justify="center" >
                 <div className="center-text">
                   <TextField required 
+                    disabled={completed[progress].isCompleted}
                     id="question" 
                     label="Answer" 
                     variant="outlined"
@@ -138,6 +179,7 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
               <Grid container item xs={4} justify="center">
                 <div className="center-text">
                   <TextField required 
+                    disabled={completed[progress].isCompleted}
                     id="question" 
                     label="Answer" 
                     variant="outlined"
@@ -166,7 +208,8 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
               </Grid>
               <Grid container item xs={4} justify="center" alignContent="center">
                 <div className="center-text">
-                  <TextField required 
+                  <TextField required
+                    disabled={completed[progress].isCompleted} 
                     id="question" 
                     label="Answer" 
                     variant="outlined"
@@ -196,6 +239,7 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
               <Grid container item xs={4} justify="center" alignItems="center">
                 <div className="center-text">
                   <TextField required 
+                    disabled={completed[progress].isCompleted}
                     id="question" 
                     label="Answer" 
                     variant="outlined"
