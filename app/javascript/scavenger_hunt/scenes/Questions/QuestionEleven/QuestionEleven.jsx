@@ -22,7 +22,7 @@ const QuestionEleven = ({ progress, setActiveStep, completed, setCompleted  }) =
  
   const { data: getUserAnswerQueryData, loading: getUserAnswerQueryLoading } = useGetUserAnswerQuery({
     variables: {
-      question_number: i
+      question_number: 11
     }
   });
 
