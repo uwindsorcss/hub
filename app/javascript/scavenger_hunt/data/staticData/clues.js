@@ -29,7 +29,7 @@ export const Clues = [
   },
   {
     puzzleNo: '8',
-    answers: ["0.5 Hz", "Students Offering Support"] 
+    answers: ["0.25 Hz", "Students Offering Support"] 
   },
   {
     puzzleNo: '9',
