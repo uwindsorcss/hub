@@ -141,98 +141,101 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
           <Grid container direction="column">
             <Grid container item xs={12}>
               <div className="letter-box">
-                  UWindsor and the UWSA offer a lot of events and services to support students! Can you name these ones? (Hint: Each _______ is a word in the name!)
-          
-            <Grid container direction="row" className="pictionary">
-              <Grid container item xs={6} justify="flex-start">
-                <img src={One} className="emo" />
-              </Grid>
-              <Grid container item xs={4} justify="center" >
-                <div className="center-text">
-                  <TextField required 
-                    disabled={completed[progress].isCompleted}
-                    id="question" 
-                    label="Answer" 
-                    variant="outlined"
-                    aria-describedby="Write your answer here" 
-                    value={answerOne} 
-                    onChange={(e) => setAnswerOne(e.target.value)}
-                  />
-                </div>
-              </Grid>
-              <Grid container item xs={2} justify="center" alignItems="center">
-                {
-                  submitted && toggleOne &&
-                    <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
-                }
-                {
-                  submitted && !toggleOne &&
-                    <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
-                }
-                 
-              </Grid>
-            </Grid>
-            <Grid container direction="row" className="pictionary">
-              <Grid container item xs={6} justify="flex-start">
-                <img src={Two} className="emo" />
-              </Grid>
-              <Grid container item xs={4} justify="center">
-                <div className="center-text">
-                  <TextField required 
-                    disabled={completed[progress].isCompleted}
-                    id="question" 
-                    label="Answer" 
-                    variant="outlined"
-                    aria-describedby="Write your answer here" 
-                    value={answerTwo} 
-                    onChange={(e) => setAnswerTwo(e.target.value)}
-                 
-                  />
-                </div>
-              </Grid>
-              <Grid container item xs={2} justify="center" alignItems="center">
-                {
-                  submitted && toggleTwo &&
-                    <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
-                }
-                {
-                  submitted && !toggleTwo  &&
-                    <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
-                }
-                 
-              </Grid>
-            </Grid>
-            <Grid container direction="row" className="pictionary">
-              <Grid container item xs={6} justify="flex-start">
-                <img src={Three} className="emo" />
-              </Grid>
-              <Grid container item xs={4} justify="center" alignContent="center">
-                <div className="center-text">
-                  <TextField required
-                    disabled={completed[progress].isCompleted} 
-                    id="question" 
-                    label="Answer" 
-                    variant="outlined"
-                    aria-describedby="Write your answer here" 
-                    value={answerThree} 
-                    onChange={(e) => setAnswerThree(e.target.value)}
-              
-                  />
-                </div>
-              </Grid>
-              <Grid container item xs={2} justify="center" alignItems="center">
-                {
-                  submitted && toggleThree  &&
-                    <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
-                }
-                {
-                  submitted && !toggleThree  &&
-                    <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
-                }
-                 
-              </Grid>
-            </Grid>
-            <Grid container direction="row" className="pictionary">
+                UWindsor and the UWSA offer a lot of events and services to support students! Can you name these ones? 
+                (Hint: Each _______ is a word in the name!. Also, Separate the words with a space (e.g. word word word ...)
+                <br/>
+                <br/>
+
+                <Grid container direction="row" className="pictionary">
+                  <Grid container item xs={6} justify="flex-start">
+                    <img src={One} className="emo" />
+                  </Grid>
+                  <Grid container item xs={4} justify="center" >
+                    <div className="center-text">
+                      <TextField required 
+                        disabled={completed[progress].isCompleted}
+                        id="question" 
+                        label="Answer" 
+                        variant="outlined"
+                        aria-describedby="Write your answer here" 
+                        value={answerOne} 
+                        onChange={(e) => setAnswerOne(e.target.value)}
+                      />
+                    </div>
+                  </Grid>
+                  <Grid container item xs={2} justify="center" alignItems="center">
+                    {
+                      submitted && toggleOne &&
+                        <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+                    }
+                    {
+                      submitted && !toggleOne &&
+                        <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+                    }
+                    
+                  </Grid>
+                </Grid>
+                <Grid container direction="row" className="pictionary">
+                  <Grid container item xs={6} justify="flex-start">
+                    <img src={Two} className="emo" />
+                  </Grid>
+                  <Grid container item xs={4} justify="center">
+                    <div className="center-text">
+                      <TextField required 
+                        disabled={completed[progress].isCompleted}
+                        id="question" 
+                        label="Answer" 
+                        variant="outlined"
+                        aria-describedby="Write your answer here" 
+                        value={answerTwo} 
+                        onChange={(e) => setAnswerTwo(e.target.value)}
+                    
+                      />
+                    </div>
+                  </Grid>
+                  <Grid container item xs={2} justify="center" alignItems="center">
+                    {
+                      submitted && toggleTwo &&
+                        <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+                    }
+                    {
+                      submitted && !toggleTwo  &&
+                        <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+                    }
+                    
+                  </Grid>
+                </Grid>
+                <Grid container direction="row" className="pictionary">
+                  <Grid container item xs={6} justify="flex-start">
+                    <img src={Three} className="emo" />
+                  </Grid>
+                  <Grid container item xs={4} justify="center" alignContent="center">
+                    <div className="center-text">
+                      <TextField required
+                        disabled={completed[progress].isCompleted} 
+                        id="question" 
+                        label="Answer" 
+                        variant="outlined"
+                        aria-describedby="Write your answer here" 
+                        value={answerThree} 
+                        onChange={(e) => setAnswerThree(e.target.value)}
+                  
+                      />
+                    </div>
+                  </Grid>
+                  <Grid container item xs={2} justify="center" alignItems="center">
+                    {
+                      submitted && toggleThree  &&
+                        <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
+                    }
+                    {
+                      submitted && !toggleThree  &&
+                        <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
+                    }
+                    
+                  </Grid>
+                </Grid>
+                <Grid container direction="row" className="pictionary">
               <Grid container item xs={6} justify="flex-start">
                 <img src={Four} className="emo" />
               </Grid>
@@ -261,9 +264,8 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
                  
               </Grid>
             </Grid>
-          </div>
-
-        </Grid>
+              </div>
+            </Grid>
     
             {
             (!completed[progress].score !== 4 && !completed[progress].isCompleted)  &&
