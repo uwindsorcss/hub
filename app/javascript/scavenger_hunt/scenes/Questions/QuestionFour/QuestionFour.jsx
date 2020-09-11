@@ -98,6 +98,12 @@ const QuestionFour = ({ progress, setActiveStep, completed, setCompleted  }) => 
           <div className="question-text">
             In the order of Letter #1, 2, and 3, what do these three letters stand for at UWindsor?
           </div>
+
+          <br/>
+          Separate the words with a space (e.g. word word word)
+          <br/>
+          <br/>
+
           <div className="center-text">
             <TextField required 
               disabled={completed[progress].isCompleted}
