@@ -13,10 +13,10 @@ import { useSaveUserAnswerMutation } from '../../../data/mutations';
 const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => {
   const [answerOne, setAnswerOne] = useState('');
   const [answerTwo, setAnswerTwo] = useState('');
-  const [toggle, setToggle] = useState(false);
   const [toggleOne, setToggleOne] = useState(false);
   const [toggleTwo, setToggleTwo] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [submittedOne, setSubmittedOne] = useState(false);
+  const [submittedTwo, setSubmittedTwo] = useState(false);  
   const [loading, setLoading] = useState(false);
 
   const ans = Clues[7].answers;
@@ -47,30 +47,26 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
     setCompleted(newCompleted);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmitOne = (event) => {
     event.preventDefault();
-    setSubmitted(true);
+    setSubmittedOne(true);
     setLoading(true);
     const one = check(answerOne.toString(), ans[0].toString());
-    const two = check(answerTwo.toString(), ans[1].toString());
-    const newCompleted = completed;
-    newCompleted[progress].score = 0;
-    setToggle(true);
+
     if (one) {
       setToggleOne(true);
-      newCompleted[progress].score += 1;
-    } else {
-      setToggleOne(false);
     }
+    setLoading(false);
+  }
+
+  const handleSubmitTwo = (event) => {
+    event.preventDefault();
+    setSubmittedTwo(true);
+    setLoading(true);
+    const two = check(answerTwo.toString(), ans[1].toString());
 
     if (two) {
       setToggleTwo(true);
-      newCompleted[progress].score += 1;
-    } else {
-       setToggleTwo(false);
-    }
-    
-    if ( newCompleted[progress].score == 2) {
       if(!mutationLoading){
         saveUserAnswer({
           variables: {
@@ -86,7 +82,6 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
       updateCompleted();
     }
     setLoading(false);
-   console.log("completed", newCompleted);
   }
 
   return (
@@ -95,7 +90,7 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
         <h1>Puzzle #8</h1>
       </Card.Header>
       <Card.Body>
-        <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmitOne} >
           <div className="letter-box">
             Someone’s sending you a distress signal on radio waves! Type the correct frequency to receive the message. Don’t forget the units!
           </div>
@@ -116,34 +111,32 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
 
           <Grid container justify="center" alignItems="center">
           {
-            (completed[progress].isCompleted || (submitted && toggleOne)) &&
+            (submittedOne && toggleOne) &&
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}} />
           }
           {
-            submitted && !toggleOne &&
+            submittedOne && !toggleOne &&
               <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}} />
           }
           </Grid>
 
           {
-          !toggle && !completed[progress].isCompleted &&
+          !toggleOne && !completed[progress].isCompleted &&
           <div className="center-text">
             <Button 
               variant="primary" 
               type="submit"
               disabled={loading}
-              onClick={() => {
-                if(answerOne)
-                  setToggle(true)
-              }}
             >
               Submit
             </Button>
           </div>
           }
+        </form>
           {
-            (completed[progress].isCompleted || toggle) && 
-            <div>
+            toggleOne &&
+            <form onSubmit={handleSubmitTwo} >        
+              <div>
               <Alert message="Good Job! you unlocked the second part of this puzzle" variant="success" isdismissible={true} />
                 <div className="letter-box">
                   UWindsor has a club with the same name as the encoded acronym. The organization offers tutoring sessions before midterms and final exams, and all proceeds go to charity. What’s the complete name of this organization?
@@ -168,11 +161,11 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
                 </FormHelperText>
                 <Grid container justify="center" alignItems="center">
                   {
-                    (completed[progress].isCompleted || (submitted && toggleTwo)) &&
+                    (completed[progress].isCompleted || (submittedTwo && toggleTwo)) &&
                       <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
                   }
                   {
-                    submitted && !toggleTwo &&
+                    submittedTwo && !toggleTwo &&
                       <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
                   }     
                   </Grid>
@@ -189,8 +182,8 @@ const  QuestionEight = ({progress, setActiveStep, completed, setCompleted }) => 
                   </div>
                 }
             </div>
+            </form>
           }
-        </form>
       </Card.Body>
     </Card>
   );
