@@ -41,10 +41,10 @@ export const Clues = [
   },
   {
     puzzleNo: '11',
-    answers: ["2024"]
+    answers: ["MATH 1720"]
   },
   {
     puzzleNo: '12',
-    answers: ["MATH 1720"]
+    answers: ["2024"]
   }
 ]
