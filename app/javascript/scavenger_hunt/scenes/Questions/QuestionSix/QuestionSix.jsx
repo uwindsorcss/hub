@@ -14,10 +14,10 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
 
   const [answerOne, setAnswerOne] = useState('');
   const [answerTwo, setAnswerTwo] = useState('');
-  const [toggle, setToggle] = useState(false);
   const [toggleOne, setToggleOne] = useState(false);
   const [toggleTwo, setToggleTwo] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [submittedOne, setSubmittedOne] = useState(false);
+  const [submittedTwo, setSubmittedTwo] = useState(false);  
   const [loading, setLoading] = useState(false);
 
   const ans = Clues[5].answers;
@@ -48,30 +48,26 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
     setCompleted(newCompleted);
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmitOne = (event) => {
     event.preventDefault();
-    setSubmitted(true);
+    setSubmittedOne(true);
     setLoading(true);
     const one = check(answerOne.toString(), ans[0].toString());
-    const two = check(answerTwo.toString(), ans[1].toString());
-    const newCompleted = completed;
-    newCompleted[progress].score = 0;
-    setToggle(true);
+
     if (one) {
       setToggleOne(true);
-      newCompleted[progress].score += 1;
-    } else {
-      setToggleOne(false);
     }
+    setLoading(false);
+  }
+
+  const handleSubmitTwo = (event) => {
+    event.preventDefault();
+    setSubmittedTwo(true);
+    setLoading(true);
+    const two = check(answerTwo.toString(), ans[1].toString());
 
     if (two) {
       setToggleTwo(true);
-      newCompleted[progress].score += 1;
-    } else {
-       setToggleTwo(false);
-    }
-    
-    if ( newCompleted[progress].score == 2) {
       if(!mutationLoading){
         saveUserAnswer({
           variables: {
@@ -87,7 +83,6 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
       updateCompleted();
     }
     setLoading(false);
-   console.log("completed", newCompleted);
   }
 
   return(
@@ -96,7 +91,7 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
         <h1>Puzzle #6</h1>
       </Card.Header>
       <Card.Body>
-        <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmitOne} >
 
           <div className="letter-box">
             At an arbitrary university, there are 458 staff, 20,135 undergraduate students, and 1,864 graduate students in the Faculty of Science. Assuming that at any given time, 1.2% of the staff are inactive on campus due to extended leave and 10.33% of the remaining staff do not engage in research, while 78.9% of undergraduate students are eager to begin in a lab and 100% of the graduate students already have lab positions, what is the best faculty to student ratio offered by a university in Ontario for science?
@@ -119,33 +114,32 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
           </div>
           <Grid container justify="center" alignItems="center">
           {
-            (completed[progress].isCompleted || (submitted && toggleOne)) &&
+            (submittedOne && toggleOne) &&
               <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
           }
           {
-            submitted && !toggleOne &&
+            submittedOne && !toggleOne &&
               <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
           }
           </Grid>
  
           {
-          !toggle && !completed[progress].isCompleted &&
+           !toggleOne && !completed[progress].isCompleted &&
           <div className="center-text">
             <Button 
-              variant="primary" 
+              variant="primary"
+              type="submit" 
               disabled={loading}
-              onClick={() => {
-                if(answerOne)
-                  setToggle(true)
-              }}
             >
               Submit
             </Button>
-          </div>
+          </div>  
           }
+        </form>
           {
-            (completed[progress].isCompleted || toggle) &&
-            <>        
+            toggleOne &&
+
+            <form onSubmit={handleSubmitTwo} >        
               <div className="letter-box">
                 Follow-up question: Which university in Ontario has achieved this outstanding ratio? The University of _________!
               </div>
@@ -162,11 +156,11 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
                 </div>
                 <Grid container justify="center" alignItems="center">
                 {
-                  (completed[progress].isCompleted || (submitted && toggleTwo)) &&
+                  (completed[progress].isCompleted || (submittedTwo && toggleTwo)) &&
                     <CheckCircleOutlineIcon style={{ color: 'green', width: 50, height: 50}}/>
                 }
                 {
-                  submitted && !toggleTwo &&
+                  submittedTwo && !toggleTwo &&
                     <HighlightOffIcon style={{ color: 'red', width: 50, height: 50}}/>
                 }
                 </Grid>
@@ -182,10 +176,8 @@ const QuestionSix = ({progress, setActiveStep, completed, setCompleted })  => {
                     </Button>
                   </div>
                 }
-              </>
+              </form>
             }
-          
-        </form>
       </Card.Body>
     </Card>
 
