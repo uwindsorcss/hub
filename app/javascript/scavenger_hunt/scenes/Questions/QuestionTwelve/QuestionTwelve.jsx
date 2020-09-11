@@ -85,7 +85,7 @@ const QuestionTwelve = ({ progress, setActiveStep, completed, setCompleted  }) =
         <form onSubmit={handleSubmit} >
           <div className="letter-box">
             <div>
-              Perhaps your name will join the ranks of these famous scientists someday after you graduate. <strong> That year seems far in the future, but it’ll come before you know it!</strong>
+              Perhaps your name will join the ranks of these famous scientists someday after you graduate. <strong> That year seems far in the future, but it’ll come before you know it!Keep that year in mind.</strong>
             </div>
             <br/>
             <br/>

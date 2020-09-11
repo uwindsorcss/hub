@@ -85,8 +85,6 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
         });
       }
       updateCompleted();
-      // newCompleted[progress].isCompleted = true;
-      // setCompleted(newCompleted);
     }
     setLoading(false);
     console.log("date", !(toggleOne && toggleTwo) )
@@ -106,7 +104,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
             <TextField required 
               disabled={completed[progress].isCompleted}
               id="question" 
-              label="DD/MM" 
+              label="MM/DD"
               variant="outlined"
               aria-describedby="Write your answer here" 
               value={DateOne}
