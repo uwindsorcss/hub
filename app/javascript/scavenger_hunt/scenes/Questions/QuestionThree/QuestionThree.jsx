@@ -126,7 +126,7 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
             <TextField required 
               disabled={completed[progress].isCompleted}
               id="question" 
-              label="DD/MM" 
+              label="MM/DD" 
               variant="outlined"
               aria-describedby="Write your answer here" 
               value={DateTwo}

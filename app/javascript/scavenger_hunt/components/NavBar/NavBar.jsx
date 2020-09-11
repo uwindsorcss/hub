@@ -53,7 +53,7 @@ const NavBar = () => {
         <Nav className="mr-auto">
           <Link className="nav-link" to="/hunt/homepage#home">Home</Link>
           <Link className="nav-link" to="/hunt/homepage#how_it_works">How it Works</Link>
-          <Link className="nav-link" to="/hunt/homepage#scisoc">SciSco</Link>
+          <Link className="nav-link" to="/hunt/homepage#scisoc">SciSoc</Link>
           <Link className="nav-link" to="/hunt/homepage#css">CSS</Link>
         </Nav>
          { !currentUser ?
