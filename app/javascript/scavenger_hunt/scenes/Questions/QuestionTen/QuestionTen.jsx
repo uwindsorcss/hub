@@ -79,8 +79,6 @@ const QuestionTen = ({progress, setActiveStep, completed, setCompleted }) => {
 
     const newCompleted = completed;
     newCompleted[progress].score = 0;
-    console.log("ansers",ans)
-    console.log(one, two, three, four);
     if (one) {
       setToggleOne(true);
       newCompleted[progress].score += 1;

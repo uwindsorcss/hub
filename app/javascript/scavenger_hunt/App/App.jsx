@@ -11,7 +11,6 @@ import { PlayArena } from '../scenes/PlayArena';
 
 
 const App = ({ userData }) => {
-  // console.log('user data', userData);
 
   return (
     <Providers userData={userData} >

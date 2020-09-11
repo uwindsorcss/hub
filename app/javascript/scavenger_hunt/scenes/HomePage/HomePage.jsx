@@ -6,7 +6,6 @@ import { useUserData } from "../../hooks/useUserData";
 
 const HomePage = (props) => {
   const [{ userName, progress }, _ ] = useUserData();
-  console.log(userName);
 
   return ( 
     <div className="main">

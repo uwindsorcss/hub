@@ -86,7 +86,6 @@ const QuestionFive = ({ progress, setActiveStep, completed, setCompleted }) => {
       updateCompleted();
     }
     setLoading(false);
-   console.log("completed", newCompleted);
   }
 
   return(

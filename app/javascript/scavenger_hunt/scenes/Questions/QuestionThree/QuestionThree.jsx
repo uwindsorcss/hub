@@ -87,7 +87,6 @@ const  QuestionThree = ({progress, setActiveStep, completed, setCompleted }) => 
       updateCompleted();
     }
     setLoading(false);
-    console.log("date", !(toggleOne && toggleTwo) )
   }
 
   return (

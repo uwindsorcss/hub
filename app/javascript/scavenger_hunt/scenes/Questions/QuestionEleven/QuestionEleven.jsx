@@ -50,7 +50,6 @@ const QuestionEleven = ({ progress, setActiveStep, completed, setCompleted  }) =
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
-    console.log("answer",  answer, ans )
     if (check(answer, ans)) {
       if(!mutationLoading){
         saveUserAnswer({

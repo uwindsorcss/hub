@@ -30,7 +30,6 @@ const NavBar = () => {
           }
         }
       }).then((res) => {
-        console.log(res.data);
         window.location.href = "/hunt";
       });
     }

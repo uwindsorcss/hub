@@ -49,7 +49,6 @@ const QuestionTwelve = ({ progress, setActiveStep, completed, setCompleted  }) =
     event.preventDefault();
     setSubmitted(true);
     setLoading(true);
-    console.log("progress",  progress)
     if (check(answer, ans)) {
       if(!mutationLoading){
         saveUserAnswer({
@@ -71,7 +70,6 @@ const QuestionTwelve = ({ progress, setActiveStep, completed, setCompleted  }) =
     }
     setLoading(false);
   }
-  // console.log("Answer Submitted is:", toggle);
   const handleChange = (event) => {
     setAnswer(event.target.value);
   }

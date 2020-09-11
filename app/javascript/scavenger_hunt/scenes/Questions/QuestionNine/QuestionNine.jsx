@@ -73,7 +73,6 @@ const QuestionNine = ({ progress, setActiveStep, completed, setCompleted  }) => 
     }
     setLoading(false);
   }
-  // console.log("Answer Submitted is:", toggle);
   const handleChange = (event) => {
     setAnswer(event.target.value.toLowerCase());
   }
