@@ -6,9 +6,9 @@ Table of Contents
     * [Contributors](#contributors)
 - [Important Dates](#important-dates)
     * [Fall 2020](#fall-2020)
-    * [Winter 2020](#winter-2021)
+    * [Winter 2021](#winter-2021)
 - [Courses](#courses)
-    * [Typical course offerings by semester](#typical-course-offerings-by-semester)
+    * [Course offerings by semester](#course-offerings-by-semester)
     * [Easy courses](#easy-courses)
     * [School Resources](#school-resources)
     * [Planning your courses](#planning-your-courses)
@@ -277,6 +277,7 @@ A: For most co-op applications you must submit your transcript. Smaller/local co
 - [Eric Pickup](https://drive.google.com/file/d/1QUNbEYP0TBf33-JeCfXFwp_eoqI5YDql/view)
 - [Brandon Lucier](https://blucier.com/Resume.pdf)
 - [Harshdip Singh Deogan](https://hsdeogan.com/Resume-HarshdipSinghDeogan.pdf)
+- [Ryan Prairie](https://ryanprairie.com/static/extras/resume.pdf)
 
 
 ### Job Boards
@@ -327,7 +328,7 @@ If you plan to do graduate studies, research is the best way to get you started.
 
 If you do not want to continue the study, I suggest focusing on [Co-op/Internships](#co-op-and-internships) instead. You will gain different practical skills and experience that will help you. 
 
-######Pros: 
+###### Pros: 
 - Paid placement 2nd/3rd years get $16.35/hour and 4th years get $17.30/hour.
 - Flexible total hours: 45-100 hours per placement.
 - Great opportunity to pursue grad school.
@@ -336,7 +337,7 @@ If you do not want to continue the study, I suggest focusing on [Co-op/Internshi
 - You could put it on your resume.
 - Oustanding Scholars Medal & Golden Maple Leaf Medallion will be awarded.
 
-######Cons:
+###### Cons:
 - Time consuming.
 - Depending on the research project, there is a lot of reading material.
 - Depending on the research project, do not expect to code a lot. Unless you are buidling a training model for a machine learning algorithm or simulating model.
@@ -346,14 +347,14 @@ If you do not want to continue the study, I suggest focusing on [Co-op/Internshi
 
 ### How to get in the OS program? 
 
-######Apply from high school. 
+###### Apply from high school. 
 - You will be considered as a candidate directly from high school if you are selected. In the second year, your placement will start.
 - However, you still need to apply again after first year.
 
-######Apply after the first year. 
+###### Apply after the first year. 
 - You will be invited to apply for the OS program after completing two semesters. Then if you are selected, your research placement will start the next term.
 
-######Requirements:
+###### Requirements:
 - Academic accomplishments: GPA 85% or higher.
 - Evident desire to do research or original creative work.
 - Evidence of community service.
@@ -361,12 +362,11 @@ If you do not want to continue the study, I suggest focusing on [Co-op/Internshi
 - Specific research project that you are interested in.
 - A reference letter from a faculty member or instructor. To get a greate reference letter, you could get to know more about a professor's research project during their office hours. This will show that you are curious and willing to learn. They will put a good word in for you.
 
-######Bugs in the OS program system
+###### Bugs in the OS program system
 - If you complete only 9 courses for 2 semesters in first year, then you will not receive an invitation to apply for the program. Do not worry, you can contact [Dr. Simon du Toit](scholars@uwindsor.ca) to inform him about your interests in the program.
 - If you have completed more than 14 or 15 courses already, can you apply? Answer is ***YES***. What is the problem regarding the number of courses you have taken? As mentioned above, in order to graduate as an OS student, One must complete 6 placements. This is 6 semesters or 3 years of your study. If you have completed more than 10 courses then you have less than 6 semesters left. Therefor, you will not meet the requirement. ***However***, if you plan to take an extra summer course and do a research placement, then you are eligible to apply. Contact [Dr. Simon du Toit](scholars@uwindsor.ca) and explain your goal to complete the program.
 
 ### CSS members in OS program
-- [Prakort Lean](leanp@uwindsor.ca)
 - [Andrea Bonato](bonato11@uwindsor.ca)
 - [Aman Patel](patel1wq@uwindsor.ca)
 - [Jeremie Bornais](borna113@uwindsor.ca)
