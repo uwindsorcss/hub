@@ -418,6 +418,7 @@ Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Miche
 #### Tutorials
 - [The Modern JavaScript Tutorial](https://javascript.info/) - Super in-depth tutorial for modern JavaScript.
 - [OpenGL Tutorial](http://www.opengl-tutorial.org/) - Decent tutorial series on OpenGL including source code in the provided GitHub.
+- [Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg) - Steven recommends any series from Net Ninja if you're looking to get into web development
 
 # Goodies
 
