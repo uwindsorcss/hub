@@ -226,7 +226,7 @@ Harshdip has followed this exact sequence.
 
 They are 3 credits PASS/FAIL courses that will count toward your electives. These courses are the flexible version of co-op placement. 
 
-###### How to enrol?
+###### How to enroll?
 1st-4th year students are eligible to enroll but with the instructor's permission [Michelle Bondy](mbondy@uwindsor.ca). First, you will need a placement such as a lab work, research, or an internship that is related to your program. Do not worry, if you could not find any, there are placements listed for these courses that you could pick from. However, it is better to find your own paid placement. Paid or volunteer placement is valid since the purpose of the courses is to help you gain experience in the professional work environment.
 
 ###### Requirements:
@@ -414,6 +414,7 @@ Jose thinks exchanges are fun and 100% worth it. The Exchange Coordinator, Miche
 - [http://docs.gl/](http://docs.gl/) - Nicely laid out OpenGL API documentation.
 - [https://crontab.guru/](https://crontab.guru/) - Simple but helpful website for configuring crontabs
 - [The Rust Programming Language](https://doc.rust-lang.org/book/) - Detailed book on the Rust programming language.
+- [EzTrackr](https://chrome.google.com/webstore/detail/eztrackr/kdpbamlhffmfbgglmaedhopenkpgkfdg) - An open-source Chrome extension made by Harshdip Singh to help you organize your job search on a Trello board.
 
 #### Tutorials
 - [The Modern JavaScript Tutorial](https://javascript.info/) - Super in-depth tutorial for modern JavaScript.
