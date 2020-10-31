@@ -99,7 +99,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 ### Course offerings by semester
 Courses for year
 
-*Updated Fall 2020*
+*Updated Winter 2021*
 
 ###### Requirements Legend
 
@@ -118,11 +118,11 @@ Courses for year
 | COMP-1410 | Intro to Programming and Algorithms II | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1000 or MATH-1720, COMP-1400 |   
 | COMP-2057 | Intro to the Internet | Offered | Offered | Offered | | COMP-1047 or COMP-2067 or COMP-1400|
 | COMP-2067 | Programming for Beginners | Offered | Offered | Offered | | |
-| COMP-2077 | Problem Solving and Information on the Internet | Offered | Offered | Offered | | COMP-1047, COMP-2057|
+| COMP-2077 | Problem Solving and Information on the Internet | Offered | Not Offered | Offered | | COMP-1047, COMP-2057|
 | COMP-2097 | Social Media and Mobile Technology for End Users | Offered | Offered | Offered |  |  |
 | COMP-2120 | Object Oriented Programming Using Java | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1410|
 | COMP-2140 | Computer Languages, Grammars and Translators | Not Offered | Offered | Not Offered | 💙💚🖤 | COMP-1000, COMP-2120 |
-| COMP-2310 | Theoretical Foundations of Computer Science | Offered | Not Offered | Offered | 💙💚🖤 | COMP-1000, MATH-1020 |
+| COMP-2310 | Theoretical Foundations of Computer Science | Offered | Offered | Offered | 💙💚🖤 | COMP-1000, MATH-1020 |
 | COMP-2540 | Data Structures and Algorithms | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1000, COMP-1410 |
 | COMP-2560 | System Programming | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1410 |
 | COMP-2650 | Computer Architecture I | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1400 |
