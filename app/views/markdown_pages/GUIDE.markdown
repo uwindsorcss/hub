@@ -159,12 +159,12 @@ Courses for year
 | COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered | 💚 | COMP-3110, COMP-3220, COMP-3300 |
 | COMP-4960 | Research Project | Offered | Offered | Offered | 💙💚 | |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 | |
-| MATH-1020 | Mathematical Foundations | Not Offered | Offered | Offered | 💙 | One of COMP-1000, MATH-1250, MATH-1260 or MATH-1270 |
-| MATH-1250 | Linear Algebra I | Offered | Offered | Offered | 💙 | |
-| MATH-1720 | Differential Calculus | Offered | Offered | Not Offered | 💙 | |
-| MATH-1730 | Integral Calculus | Not Offered | Offered | Offered | 💙 | MATH-1760 or MATH-1720 |
-| MATH-3940 | Numerical Analysis for Computer Scientists | Offered | Not Offered | Not Offered | 💙 | COMP-1410, MATH-1730 and one of MATH-1250, MATH-1260 or MATH-1270 |
-| STAT-2910 | Statistics for the Sciences | Offered | Offered | Offered | 💙 | |
+| MATH-1020 | Mathematical Foundations | Not Offered | Offered | Offered | 💙💚 | One of COMP-1000, MATH-1250, MATH-1260 or MATH-1270 |
+| MATH-1250 | Linear Algebra I | Offered | Offered | Offered | 💙💚| |
+| MATH-1720 | Differential Calculus | Offered | Offered | Not Offered | 💙💚 | |
+| MATH-1730 | Integral Calculus | Not Offered | Offered | Offered | 💙💚 | MATH-1760 or MATH-1720 |
+| MATH-3940 | Numerical Analysis for Computer Scientists | Offered | Not Offered | Not Offered | 💙💚 | COMP-1410, MATH-1730 and one of MATH-1250, MATH-1260 or MATH-1270 |
+| STAT-2910 | Statistics for the Sciences | Offered | Offered | Offered | 💙💚 | |
 
 #### Easy courses
 
