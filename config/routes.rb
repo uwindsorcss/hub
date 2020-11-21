@@ -29,6 +29,6 @@ Rails.application.routes.draw do
   # This scope should be last in routes.rb
   scope module: 'science_society' do
     resources :scavenger_hunt, path: '/hunt', only: %i[index]
-    get "*path", to: 'scavenger_hunt#index'
+    get "science_society/*path", to: 'scavenger_hunt#index'
   end
 end
