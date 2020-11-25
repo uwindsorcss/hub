@@ -15,6 +15,7 @@ Table of Contents
     * [Internship Courses](#internship-courses)
 - [Co-op/Internships](#co-op-and-internships)
     * [Frequently Asked Questions](#frequently-asked-questions)
+    * [Pros And Cons](#pros-and-cons)
     * [Resume Examples](#resume-examples)
     * [Job Boards](#job-boards)
     * [Interview Preparation](#interview-preparation)
@@ -242,6 +243,12 @@ You could enrol in this course while you are an [OS program placement](#research
 
 See [Eric's presentation](https://docs.google.com/presentation/d/1SmtxP4vNIoEEulzTKZvc8nDBA1utS7O0fIA_d3h0gOU/edit?usp=sharing) on behalf of CSS for landing an internship. This covers a bit of everything (resumes, applying, interviews).
 
+***WARNING*** 
+
+Co-op has been know to decline offers for winter internships for students because they havent completed their co-op course training. If you wish to have a winter internship before you have done your co-op course training, make sure it is one that doesnt go through co-op.
+
+
+
 ### Frequently Asked Questions
 
 **Q: Can I do an internship/co-op during 1st-year?**
@@ -271,6 +278,12 @@ A: Co-op advisors advise against applying without their permission, but in the e
 
 **Q: Do grades matter?**
 A: For most co-op applications you must submit your transcript. Smaller/local companies may look at grades. However, for internships, you will not need to submit your transcript for 99% of applications.
+
+### Pros and Cons
+| | Pros | Cons |
+| :---------- | :---------- | :---------- |
+| Co-op | <ul><li>It provides more opportunities especially for international students</li></ul> | <ul><li>$500 every work semester</li><li>Not specialized advice for comp sci students leading to worse resumes </li></ul>|
+| Internship |<ul><li>It's free to apply</li></ul> | <ul><li>It's hard to get your foot in the door</li></ul> |
 
 ### Resume Examples
 - [Jose Nicolas Alba Aguado](http://josealba.org/files/JoseAlba_Resume.pdf)
@@ -430,5 +443,5 @@ As a student in Computer Science there are many free trials, offers, and product
 - [1Password 6 Month Student Trial](https://www.studentappcentre.com/discounts/1password)
 - [Office 365](https://www.microsoft.com/en-ca/education/products/office)
 - [Amazon Prime Student](https://www.amazon.com/amazonprime?_encoding=UTF8&%2AVersion%2A=1&%2Aentries%2A=0&planOptimizationId=WLPStudentMonthlyEligiblePlans&primeCampaignId=studentWlpPrimeRedir&ref_=st_wlp_pr_redir)
-- [Figma] (https://www.figma.com/education/) - allows you to create quick prototypes for your project
-- [Spotify] (https://www.spotify.com/ca-en/student/) - 3 months free
+- [Figma](https://www.figma.com/education/) - allows you to create quick prototypes for your project
+- [Spotify](https://www.spotify.com/ca-en/student/) - 3 months free
