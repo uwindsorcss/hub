@@ -296,6 +296,7 @@ A: For most co-op applications you must submit your transcript. Smaller/local co
 ### Job Boards
 - [intern.supply](http://intern.supply) - Links are usually broken but this is a master list of fantastic companies that offer internships which you can search for yourself.
 - [LinkedIn](https://www.linkedin.com/jobs/) - It's not just a social network for bugging recruiters. LinkedIn has an integrated job board where you can find *tons* of internships.
+- [Pitt-CSC](https://github.com/Pitt-CSC/Summer2021-Internships) - giant open source repo that tracks open CS internships for a lot of companies. If you are about to graduate check out the [new grad repo](https://github.com/Pitt-CSC/NewGrad-2021) 
 
 
 ### Interview Preparation
