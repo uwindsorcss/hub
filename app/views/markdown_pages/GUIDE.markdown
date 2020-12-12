@@ -282,7 +282,7 @@ A: For most co-op applications you must submit your transcript. Smaller/local co
 ### Pros and Cons
 | | Pros | Cons |
 | :---------- | :---------- | :---------- |
-| Co-op | <ul><li>It provides more opportunities especially for international students</li></ul> | <ul><li>$500 every work semester</li><li>Not specialized advice for comp sci students leading to worse resumes </li></ul>|
+| Co-op | <ul><li> It provides more opportunities especially for international students</li></ul> | <ul><li> $500 every semester even if you are not on work term</li><li> Some students believe that Coop is not specialized in advising comp science students leading to worse resumes </li></ul>|
 | Internship |<ul><li>It's free to apply</li></ul> | <ul><li>It's hard to get your foot in the door</li></ul> |
 
 ### Resume Examples
