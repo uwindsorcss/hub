@@ -242,7 +242,7 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     redis (4.2.1)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
