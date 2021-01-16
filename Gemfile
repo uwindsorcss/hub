@@ -42,6 +42,11 @@ gem 'react-rails'
 gem 'graphql', '~> 1.11', '>= 1.11.1'
 gem 'data_migrate', '~> 6.3'
 
+# Use Active Storage variant
+gem 'image_processing', '~> 1.2'
+gem 'activestorage-imgur'
+gem 'active_storage_validations'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
