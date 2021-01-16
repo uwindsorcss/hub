@@ -8,8 +8,8 @@ local:
 
   imgur:
   service: Imgur
-  client_id: <%= ENV['IMGUR_CLIENT_ID'] %> a61777823485f8d
-  client_secret: <%= ENV['IMGUR_CLIENT_SECRET'] %> 11696aabf704145f94616a02b4159e7cbdbaf848
+  client_id: <%= ENV['IMGUR_CLIENT_ID'] %> 
+  client_secret: <%= ENV['IMGUR_CLIENT_SECRET'] %>
   access_token: <%= ENV['IMGUR_ACCESS_TOKEN'] %>
   refresh_token: <%= ENV['IMGUR_REFRESH_TOKEN'] %>
 
