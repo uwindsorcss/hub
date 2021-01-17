@@ -1,0 +1,18 @@
+<h1>KoolKat's Setup</h1>
+
+<% if current_user&.is_admin? %>
+<%= link_to 'New Image', new_contest_kool_kat_path, class: "btn btn-success" %>
+<% end %>
+
+<div class="img-grid">
+  <% @kool_kats.each do |kool_kat| %>
+     <div class="img-wrap">
+      <% if kool_kat.image.attached? %>
+        <%= image_tag(kool_kat.image, width: 400) %>
+        <div class="img-overlay">
+          <div class="img-title"><%= kool_kat.email %></div>
+        </div>
+      <% end %>
+     </div>
+  <% end %>
+</div>

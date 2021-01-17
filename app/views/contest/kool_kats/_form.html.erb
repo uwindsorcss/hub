@@ -1,0 +1,27 @@
+<%= form_with(model: kool_kat, url: contest_kool_kats_path, local: true) do |form| %>
+  <% if kool_kat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kool_kat.errors.count, "error") %> prohibited this KoolKat's Image from being saved:</h2>
+
+      <ul>
+      <% kool_kat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :image %>
+    <%= form.file_field :image, class: "form-control" %>
+  </div>
+
+   <div class="form-group">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

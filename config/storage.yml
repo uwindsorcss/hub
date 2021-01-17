@@ -6,7 +6,7 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-  imgur:
+imgur:
   service: Imgur
   client_id: <%= ENV['IMGUR_CLIENT_ID'] %> 
   client_secret: <%= ENV['IMGUR_CLIENT_SECRET'] %>

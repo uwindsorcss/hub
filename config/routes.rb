@@ -16,8 +16,10 @@ Rails.application.routes.draw do
   resources :events
   resources :markdown_pages, only: [:index, :edit, :update, :new, :create]
   resources :posts, only: [:index, :edit, :update, :new, :create]
-
   resources :registration
+  namespace :contest do
+    resources :kool_kats
+  end
     
 
   get '/discord', to: 'markdown_pages#discord', as: 'discord_path'
