@@ -10,7 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_09_043626) do
+ActiveRecord::Schema.define(version: 2021_01_16_231327) do
+
+  create_table "_users_old", force: :cascade do |t|
+    t.string "email"
+    t.string "name"
+    t.string "role", default: "guest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "hunter"
+    t.integer "progress"
+  end
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.integer "record_id", null: false
+    t.integer "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "active_storage_imgur_key_mappings", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "imgur_id", null: false
+    t.index ["key"], name: "index_active_storage_imgur_key_mappings_on_key", unique: true
+  end
 
   create_table "answers", force: :cascade do |t|
     t.integer "user_id"
@@ -20,6 +57,9 @@ ActiveRecord::Schema.define(version: 2020_09_09_043626) do
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
+  end
+
+  create_table "data_migrations", primary_key: "version", id: :string, force: :cascade do |t|
   end
 
   create_table "discord_users", force: :cascade do |t|
@@ -43,6 +83,43 @@ ActiveRecord::Schema.define(version: 2020_09_09_043626) do
     t.bigint "discord_message_id"
     t.boolean "discord_enabled"
     t.datetime "end_date"
+  end
+
+  create_table "forum_categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "slug", null: false
+    t.string "color", default: "000000"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_posts", force: :cascade do |t|
+    t.integer "forum_thread_id"
+    t.integer "user_id"
+    t.text "body"
+    t.boolean "solved", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_subscriptions", force: :cascade do |t|
+    t.integer "forum_thread_id"
+    t.integer "user_id"
+    t.string "subscription_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_threads", force: :cascade do |t|
+    t.integer "forum_category_id"
+    t.integer "user_id"
+    t.string "title", null: false
+    t.string "slug", null: false
+    t.integer "forum_posts_count", default: 0
+    t.boolean "pinned", default: false
+    t.boolean "solved", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "guests", force: :cascade do |t|
@@ -73,6 +150,15 @@ ActiveRecord::Schema.define(version: 2020_09_09_043626) do
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
