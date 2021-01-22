@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_17_000855) do
+ActiveRecord::Schema.define(version: 2021_01_22_193909) do
 
   create_table "_users_old", force: :cascade do |t|
     t.string "email"
@@ -142,6 +142,7 @@ ActiveRecord::Schema.define(version: 2021_01_17_000855) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "votes", default: 0
   end
 
   create_table "markdown_pages", force: :cascade do |t|
@@ -199,6 +200,14 @@ ActiveRecord::Schema.define(version: 2021_01_17_000855) do
     t.datetime "updated_at", null: false
     t.boolean "hunter"
     t.integer "progress", default: 1
+    t.boolean "voted", default: false
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer "kool_kat_id"
+    t.integer "user_id"
+    t.index ["kool_kat_id"], name: "index_votes_on_kool_kat_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
 end

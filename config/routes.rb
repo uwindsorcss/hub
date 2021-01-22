@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   resources :registration
   namespace :contest do
     resources :kool_kats
-  end
+    post '/vote', to: 'kool_kats#update_votes'
+  end 
     
 
   get '/discord', to: 'markdown_pages#discord', as: 'discord_path'

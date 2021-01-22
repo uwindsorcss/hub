@@ -2,17 +2,13 @@ class Contest::KoolKatsController < ApplicationController
   layout 'contest'
   
   def index
+    flash[:info] = nil
     @kool_kats = KoolKat.all.order(created_at: :DESC)
+    flash[:info] = "You will have to log in to vote" if !current_user
   end
 
   def new
     @kool_kat = KoolKat.new
-  end
-
-  def edit
-  end
-
-  def update
   end
 
   def create
@@ -20,7 +16,7 @@ class Contest::KoolKatsController < ApplicationController
 
     respond_to do |format|
       if @kool_kat.save
-        format.html { redirect_to contest_kool_kats_url, notice: 'Image was successfully Saved.' }
+        format.html { redirect_to contest_kool_kats_url, flash: { success: 'Image was successfully Saved.' }} 
         format.json { render :json, status: :created, location: contest_kool_kats_url }
       else
         format.html { render :new }
@@ -29,19 +25,33 @@ class Contest::KoolKatsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+  end
+
   def show
-    @event = Event.find(params[:id])
-    @registered_users = @event.registered_users
-    @registered_users_email_string = @registered_users.each_with_object("") { |u, s| s << "#{u.email}, " }
-    @waitlisted_users = @event.waitlisted_users
-    if current_user
-      @user_registration = @event.registrations.find_by(user_id: current_user.id)
+  end
+
+  def update_votes
+    return redirect_to contest_kool_kats_path, flash: { error: 'Looks like you already voted once'} if current_user.voted  
+
+    kool_kat_ids = params[:image_ids]
+    kool_kat_ids.each do |kool_kat_id| 
+      kool_kat = KoolKat.find_by(id: kool_kat_id)
+      if kool_kat
+        existing_votes = kool_kat.votes 
+        kool_kat.update(votes: existing_votes + 1)
+      end
     end
+    current_user.update(voted: true)
+    redirect_to contest_kool_kats_path, flash: { success: 'Your votes were sucessfully saved, thanks for voting :)'} 
   end
 
   private
 
-  def kool_kat_params
-    params.require(:kool_kat).permit(:email, :description, :image)
-  end
+    def kool_kat_params
+      params.require(:kool_kat).permit(:email, :description, :image)
+    end
 end

@@ -1,3 +1,19 @@
+.contest-header {
+  padding: 10px 16px;
+  position: fixed;
+  color: white;
+  top: 95px;
+  width: 100%;
+}
+.contest-header p {
+  font-style: oblique;
+}
+.contest-body {
+  padding-top: 102px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .img-grid{
   margin: 20px auto;
   display: grid;
@@ -11,10 +27,6 @@
   /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
   transition: transform .25s ease;
-}
-
-.img-wrap:hover{
-  transform: scale(1.05);
 }
 
 .img-wrap img{
@@ -40,13 +52,14 @@
   opacity: 0;
   transition: opacity 0.25s;
 }
+
 .img-overlay > * {
   transform: translateY(-20px);
   transition: transform 0.25s;
 }
 
 .img-overlay:hover{
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .img-overlay:hover > * {
