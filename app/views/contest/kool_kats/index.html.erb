@@ -1,47 +1,35 @@
 <div class='contest-header'>
   <h1>KoolKat's Computer Setup</h1>
-  <p>You can vote for maximum 3 images </p>
+  <p>Select upto <b>3 images</b> you want to vote for and press Submit!</p>
 </div>
 
 <div class='contest-body'>
   <% if current_user&.is_admin? %>
-    <%= link_to 'New Image', new_contest_kool_kat_path, class: "btn btn-success" %>
+    <p>Hello admin, upload new contenstant images with this button</p>
+    <%= link_to 'Upload new image', new_contest_kool_kat_path, class: "btn btn-success" %>
   <% end %>
-
-  <%= form_with(model: @kool_kat, url: contest_vote_path, local: true) do |form| %>
-    <%= select_tag :image_ids, options_for_select(@kool_kats.map{ |i| [i.email, i.id, {'data-img-src'=> i.image.service_url}] }), 
-      class:"image-picker show-html", multiple: true %>
-    <br>
-    <% if current_user %>
-      <%= form.submit 'Submit', class: "btn btn-success", disabled: !current_user %>
+  <div class="contest-form">
+    <%= form_with(model: @kool_kat, url: contest_vote_path, local: true) do |form| %>
+      <%= select_tag :image_ids, options_for_select(@kool_kats.map{ |i| [i.email, i.id, {'data-img-src'=> i.image.service_url}] }), 
+        class:"image-picker show-html", multiple: true, size: 5 %>
+      <br>
+      <% if current_user %>
+        <%= form.submit 'Submit your vote', class: "btn btn-success", disabled: !current_user %>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
-<!-- <div class="img-grid">
-    <% @kool_kats.each do |kool_kat| %>
-      <div class="img-wrap">
-        <% if kool_kat.image.attached? %>
-        <%= image_tag(kool_kat.image, width: 400) %>
-        <div class="img-overlay">
-          <div class="img-title"><%= kool_kat.email %></div>
-        </div>
-        <% end %>
-      </div>
-    <% end %> 
-</div>
--->
-
 
 <script type="text/javascript">
   $(document).ready(function(){ 
   $("select").imagepicker({
-  hide_select:  true, 
-  show_label:   true,
-  limit: 3,
-  limit_reached: function(){alert('You are allowed to vote for maximum 3 pictures')},
-  clicked:function(){
-    console.log($(this).find("option[value='" + $(this).val() + "']").data('img-src'));
-    }
-  });
+    hide_select:  true, 
+    show_label:   true,
+    limit: 3,
+    limit_reached: function(){alert('You are allowed to vote for maximum 3 pictures')},
+    clicked: function(){
+      console.log($(this).find("option[value='" + $(this).val() + "']").data('img-src'));
+      }
+    });
  }); 
 </script>
