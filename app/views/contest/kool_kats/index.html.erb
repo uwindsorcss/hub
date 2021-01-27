@@ -10,12 +10,14 @@
   <% end %>
 
   <%= form_with(model: @kool_kat, url: contest_vote_path, local: true) do |form| %>
-    <%= select_tag :image_ids, options_for_select(@kool_kats.map{ |i| [i.email, i.id, {'data-img-src'=> i.image.service_url}] }), 
-      class:"image-picker show-html", multiple: true, size: 5 %>
-    <br>
-    <% if current_user %>
-      <%= form.submit 'Submit your vote', class: "btn btn-success", disabled: !current_user %>
-    <% end %>
+    <div style="text-align: center;">
+      <%= select_tag :image_ids, options_for_select(@kool_kats.map{ |i| [i.email, i.id, {'data-img-src'=> i.image.service_url}] }), 
+        class:"image-picker show-html", multiple: true, size: 5 %>
+      <br>
+      <% if current_user %>
+        <%= form.submit 'Submit your vote', class: "btn btn-success", disabled: !current_user %>
+      <% end %>
+    </div>
   <% end %>
 </div>
 
