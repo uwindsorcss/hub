@@ -8,9 +8,12 @@
   font-style: oblique;
 }
 .contest-body {
-  padding-top: 102px;
+  padding-top: 10px;
   padding-left: 16px;
   padding-right: 16px;
+  p {
+    color: white;
+  }
 }
 
 .img-grid{
@@ -52,19 +55,6 @@
   transition: opacity 0.25s;
 }
 
-.img-overlay > * {
-  transform: translateY(-20px);
-  transition: transform 0.25s;
-}
-
-.img-overlay:hover{
-  opacity: 0.8;
-}
-
-.img-overlay:hover > * {
-  transform: translateY(0);
-}
-
 .img-title{
   padding-left: 1rem;
   padding-top: 1rem;
@@ -73,4 +63,16 @@
 .img-trash-icon{
   padding-right: 1rem;
   padding-top: 1rem;
+}
+
+ul.thumbnails.image_picker_selector{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+ul.thumbnails.image_picker_selector::-webkit-scrollbar { display: none; }
+
+.contest-form {
+  margin-top: 10px;
 }

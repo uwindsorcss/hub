@@ -8,17 +8,16 @@
     <p>Hello admin, upload new contenstant images with this button</p>
     <%= link_to 'Upload new image', new_contest_kool_kat_path, class: "btn btn-success" %>
   <% end %>
-
-  <%= form_with(model: @kool_kat, url: contest_vote_path, local: true) do |form| %>
-    <div style="text-align: center;">
+  <div class="contest-form">
+    <%= form_with(model: @kool_kat, url: contest_vote_path, local: true) do |form| %>
       <%= select_tag :image_ids, options_for_select(@kool_kats.map{ |i| [i.email, i.id, {'data-img-src'=> i.image.service_url}] }), 
         class:"image-picker show-html", multiple: true, size: 5 %>
       <br>
       <% if current_user %>
         <%= form.submit 'Submit your vote', class: "btn btn-success", disabled: !current_user %>
       <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
 <script type="text/javascript">
