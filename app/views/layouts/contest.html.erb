@@ -99,7 +99,8 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="col-2"></div>
+        <div class="col-8">
           <br>
           <% if flash[:error] %>
             <div class="alert alert-danger" role="alert" align="center">
@@ -124,6 +125,7 @@
 
           <%= yield %>
         </div>
+        <div class="col-2"></div>
       </div>
     </div>
   </body>
