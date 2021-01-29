@@ -1,6 +1,6 @@
 <div class='contest-header'>
   <h1>KoolKat's Computer Setup</h1>
-  <p>Select upto <b>3 images</b> you want to vote for and press Submit!</p>
+  <p>Select the <b>image</b> you want to vote for and press Submit!</p>
 </div>
 
 <div class='contest-body'>
@@ -10,7 +10,7 @@
   <% end %>
   <div class="contest-form">
     <%= form_with(model: @kool_kat, url: contest_vote_path, local: true) do |form| %>
-      <%= select_tag :image_ids, options_for_select(@kool_kats.map{ |i| [i.email, i.id, {'data-img-src'=> i.image.service_url}] }), 
+      <%= select_tag :image_id, options_for_select(@kool_kats.map{ |i| [i.email, i.id, {'data-img-src'=> i.image.service_url}] }), 
         class:"image-picker show-html", multiple: true, size: 5 %>
       <br>
       <div class="contest-submit-button">
@@ -27,8 +27,8 @@
   $("select").imagepicker({
     hide_select:  true, 
     show_label:   true,
-    limit: 3,
-    limit_reached: function(){alert('You are allowed to vote for maximum 3 pictures')},
+    limit: 1,
+    limit_reached: function(){alert('You are allowed to vote for 1 picture')},
     clicked: function(){
       console.log($(this).find("option[value='" + $(this).val() + "']").data('img-src'));
       }

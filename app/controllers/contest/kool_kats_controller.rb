@@ -37,8 +37,8 @@ class Contest::KoolKatsController < ApplicationController
   def update_votes
     return redirect_to contest_kool_kats_path, flash: { error: 'Looks like you already voted once'} if current_user.voted  
 
-    kool_kat_ids = params[:image_ids]
-    kool_kat_ids.each do |kool_kat_id| 
+    kool_kat_id = params[:image_id]
+    kool_kat_id.each do |kool_kat_id| 
       kool_kat = KoolKat.find_by(id: kool_kat_id)
       if kool_kat
         existing_votes = kool_kat.votes 
