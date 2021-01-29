@@ -16,6 +16,13 @@
   }
 }
 
+.contest-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .img-grid{
   margin: 20px auto;
   display: grid;
@@ -67,11 +74,11 @@
 
 ul.thumbnails.image_picker_selector{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow-x: auto;
 }
-
-ul.thumbnails.image_picker_selector::-webkit-scrollbar { display: none; }
 
 .contest-form {
   margin-top: 10px;
