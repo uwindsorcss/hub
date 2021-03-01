@@ -67,6 +67,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Jeremie Bornais](https://github.com/jere-mie)
 - [Prakort Lean](https://github.com/prakort)
 - [Yuxi Wang](https://github.com/yuxi-w)
+- [Sehaj Khaira](https://github.com/sehji)
 
 
 # Important Dates
