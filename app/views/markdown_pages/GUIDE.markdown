@@ -5,8 +5,8 @@ Table of Contents
 - [Contributing](#contributing)
     * [Contributors](#contributors)
 - [Important Dates](#important-dates)
-    * [Fall 2020](#fall-2020)
     * [Winter 2021](#winter-2021)
+    * [Summer 2021](#summer-2021)
 - [Courses](#courses)
     * [Course offerings by semester](#course-offerings-by-semester)
     * [Easy courses](#easy-courses)
@@ -72,19 +72,6 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 
 # Important Dates
 ------------
-
-
-### Fall 2020
-- September 10 - Classes begin
-- September 23 - Last day for late registration and change of courses
-- October 7 - Financial drop date
-- October 10 to October 18 - Reading week
-- November 18 - Last day to voluntarily withdraw from courses
-- December 9 - Last day of classes
-- December 11 to December 22 - Final exams
-- December 15 - Fees due for winter 2021
-- December 23 - Alternate exam date
-
 ### Winter 2021
 - January 7 - Classes begin
 - January 20 - Last day for late registration and change of courses
@@ -95,6 +82,15 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - April 12 to April 22 - Final exams
 - April 23 - Alternate exam date
 
+### Summer 2021
+- May 10 - Classes begin (Full Summer and Inter-Session)
+- May 21 - Last day for late registration and change of courses
+- June 17 to June 27th - Reading week
+- June 6, June 18 - Last day to voluntarily withdraw from courses (Inter-Session and Full Summer respectively)
+- August 2 - University closed
+- June 21, August 10 - Last day of classes (Inter-Session and Full Summer respectively)
+- August 14 to August 23 - Final exams
+- December 22 - Alternate exam date
 # Courses
 ------------
  
@@ -124,7 +120,7 @@ Courses for year
 | COMP-2097 | Social Media and Mobile Technology for End Users | Offered | Offered | Offered |  |  |
 | COMP-2120 | Object Oriented Programming Using Java | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1410|
 | COMP-2140 | Computer Languages, Grammars and Translators | Not Offered | Offered | Not Offered | 💙💚🖤 | COMP-1000, COMP-2120 |
-| COMP-2310 | Theoretical Foundations of Computer Science | Offered | Offered | Offered | 💙💚🖤 | COMP-1000, MATH-1020 |
+| COMP-2310 | Theoretical Foundations of Computer Science | Offered | Offered | Not Offered | 💙💚🖤 | COMP-1000, MATH-1020 |
 | COMP-2540 | Data Structures and Algorithms | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1000, COMP-1410 |
 | COMP-2560 | System Programming | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1410 |
 | COMP-2650 | Computer Architecture I | Offered | Offered | Offered | ❤️💙💛💚💜🖤| COMP-1400 |
@@ -159,7 +155,7 @@ Courses for year
 | COMP-4740 | Advanced Topics in AI II | Not Offered | Offered | Not Offered |  | COMP-3710 |
 | COMP-4770 | Artifical Intelligence for Games | Not Offered | Offered | Not Offered |  | COMP-3770 |
 | COMP-4800 | Selected Topics in Software Engineering | Not Offered | Offered | Not Offered | 💚 | COMP-3110, COMP-3220, COMP-3300 |
-| COMP-4960 | Research Project | Offered | Offered | Offered | 💙💚 | |
+| COMP-4960 | Research Project | Offered | Offered | Not Offered | 💙💚 | |
 | COMP-4990 | Project Management: Techniques and Tools | Offered | Offered | Not Offered | 💙💛💚 | |
 | MATH-1020 | Mathematical Foundations | Not Offered | Offered | Offered | 💙💚 | One of COMP-1000, MATH-1250, MATH-1260 or MATH-1270 |
 | MATH-1250 | Linear Algebra I | Offered | Offered | Offered | 💙💚| |
