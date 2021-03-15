@@ -91,6 +91,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - June 21, August 10 - Last day of classes (Inter-Session and Full Summer respectively)
 - August 14 to August 23 - Final exams
 - December 22 - Alternate exam date
+
 # Courses
 ------------
  
