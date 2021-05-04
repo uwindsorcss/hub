@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :has_admin_role, only: [:new, :create, :edit, :update]
+  before_action :has_admin_role, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @posts = Post.order(created_at: :desc).page(params[:page])
@@ -30,6 +30,13 @@ class PostsController < ApplicationController
     else
       flash[:error] = "#{@post.errors.size} errors prohibited this page from being saved:\n#{@post.errors.full_messages}"
       redirect_to edit_post_path(@post)
+    end
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    if post.destroy
+      redirect_to posts_path, flash: { success: "Successfully delete the post" }
     end
   end
 

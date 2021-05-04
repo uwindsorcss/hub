@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   root to: 'posts#index'
   resources :events
   resources :markdown_pages, only: [:index, :edit, :update, :new, :create]
-  resources :posts, only: [:index, :edit, :update, :new, :create]
+  resources :posts, only: [:index, :edit, :update, :new, :create, :destroy]
   resources :registration
   namespace :contest do
     resources :kool_kats
