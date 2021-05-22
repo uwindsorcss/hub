@@ -1,10 +1,12 @@
+<%= stylesheet_link_tag    'feedback', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 <h1> Feedback Form </h1>
 <hr/>
 <h5> Have an issue? Write it anonymously here. </h5>
 <%= form_with url: feedback_index_path, method: :post do |form| =%>
 	<%= form.label :feedback =%>
-	<%= form.text_area :feedback, size: "10x6", :class => "form-control" =%>
-	<%= form.submit "Submit", :class => "btn btn-primary" =%>
+	<%= form.text_area :feedback, size: "10x6", class: "form-control" =%>
+	<%= form.submit "Submit", class: "btn btn-primary feedback_submit_button" =%>
 <% end %>
 
 <br/>
