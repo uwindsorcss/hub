@@ -1,8 +1,10 @@
 class FeedbackController < ApplicationController
 
+	# GET /feedback
 	def index
 	end
 
+	# POST /feedback
 	def create
 		@feedback = feedback_params
 		DiscordMessageService.send_message!(DiscordMessageService::DISCORD_MOD_CHANNEL_ID, build_feedback_message(@feedback))

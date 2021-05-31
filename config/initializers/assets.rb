@@ -13,4 +13,3 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 Rails.application.config.assets.precompile += %w( materialize.min.css contest.scss )
 Rails.application.config.assets.precompile += %w( materialize.min.js )
-Rails.application.config.assets.precompile += %w( feedback.css )
