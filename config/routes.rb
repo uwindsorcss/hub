@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     
 
   get '/discord', to: 'markdown_pages#discord', as: 'discord_path'
+	get '/welcome', to: redirect('/discord')
   get '/guide', to: 'markdown_pages#guide', as: 'guide'
   get '/about', to: 'markdown_pages#about', as: 'about'
   get '/spikeball', to: redirect('/events/17')
