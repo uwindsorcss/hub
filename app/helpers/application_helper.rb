@@ -57,7 +57,7 @@ module ApplicationHelper
     end
 
     def url_link(link)
-      if URI.parse(link).host == "www.youtube.com"
+      if URI.parse(link).host == "www.youtube.com" && link.index('v=')
         youtube_link(link)
       else
         normal_link(link)
