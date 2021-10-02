@@ -68,6 +68,7 @@ Please add yourself to this list (link is optional) if you've contributed to thi
 - [Prakort Lean](https://github.com/prakort)
 - [Yuxi Wang](https://github.com/yuxi-w)
 - [Sehaj Khaira](https://github.com/sehji)
+- [Abdulaziz Khan](https://abdulazizkhan75.github.io/AboutMe/)
 
 
 # Important Dates
@@ -288,6 +289,7 @@ A: For most co-op applications you must submit your transcript. Smaller/local co
 - [Brandon Lucier](https://blucier.com/Resume.pdf)
 - [Harshdip Singh Deogan](https://hsdeogan.com/Resume-HarshdipSinghDeogan.pdf)
 - [Ryan Prairie](https://ryanprairie.com/static/extras/resume.pdf)
+- [Abdulaziz Khan](https://drive.google.com/file/d/1giKnKYCMVJna55LkK2gHYxM3ex0j-53S/view?usp=sharing)
 
 
 ### Job Boards
