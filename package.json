@@ -16,7 +16,7 @@
     "dotenv": "^8.2.0",
     "graphql": "^15.3.0",
     "graphql-tag": "^2.10.4",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
