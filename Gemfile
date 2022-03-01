@@ -43,7 +43,7 @@ gem 'graphql', '~> 1.11', '>= 1.11.1'
 gem 'data_migrate', '~> 6.3'
 
 # Use Active Storage variant
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem 'activestorage-imgur'
 gem 'active_storage_validations'
 
