@@ -1,0 +1,20 @@
+[Unit]
+Description=UWindsor CSS website
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Environment="RAILS_ENV=production"
+Environment="SECRET_KEY_BASE=<secret key base>"
+Type=exec
+Restart=always
+RestartSec=5
+User=discordadm
+WorkingDirectory=/home/discordadm/uwindsor-css-hub
+ExecStart=/usr/share/rvm/bin/rvm-exec 2.6.0 rails s -p 8000 -b localhost
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=%n
+
+[Install]
+WantedBy=multi-user.target
