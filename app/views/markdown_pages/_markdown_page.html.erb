@@ -1,7 +1,0 @@
-<% if current_user&.is_admin? %>
-  <%= link_to "Edit page", edit_markdown_page_path(page), class: "btn btn-warning text-right float-right" %>
-<% end %>
-<%= markdown(page.text) %>
-<hr>
-<br>
-

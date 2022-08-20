@@ -1,9 +1,0 @@
-<% title "Student Guide" %>
-<% meta_tag :description, "A guide created by University of Windsor students, for students. Anyone can contribute. Contains helpful info about courses, dates, co-op/internships, and many other topics." %>
-<% meta_tag :og_description, "A guide created by University of Windsor students, for students. Anyone can contribute. Contains helpful info about courses, dates, co-op/internships, and many other topics." %>
-<% meta_tag :og_title, "Student Guide | Computer Science Society" %>
-<% meta_tag :keywords, ("student,guide,contribute,computer,science,society,css,uwindsor,university,of,windsor") %>
-
-<%= link_to "Contribute to guide", "https://github.com/UWindsorCSS/hub/blob/master/app/views/markdown_pages/GUIDE.markdown", class: "btn btn-primary text-right float-right" %>
-
-<%= markdown(File.read("app/views/markdown_pages/GUIDE.markdown")) %>

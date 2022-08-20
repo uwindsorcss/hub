@@ -1,1 +1,0 @@
-export { useUpdateUserMutation, UPDATE_USER_MUTATION } from './UpdateUserMutation';
