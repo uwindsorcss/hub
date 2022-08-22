@@ -3,7 +3,7 @@ package start
 import (
 	"fmt"
 
-	"github.com/UWindsorCSS/hub/pkg/config"
+	"github.com/uwindsorcss/hub/pkg/config"
 )
 
 func Run() {

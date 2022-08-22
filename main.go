@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/UWindsorCSS/hub/pkg/start"
+	"github.com/uwindsorcss/hub/pkg/start"
 )
 
 func main() {
