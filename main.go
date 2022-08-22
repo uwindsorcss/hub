@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"github.com/UWindsorCSS/hub/pkg/start"
 )
 
 func main() {
-	fmt.Println("Hello, World!")
+	start.Run()
 }
